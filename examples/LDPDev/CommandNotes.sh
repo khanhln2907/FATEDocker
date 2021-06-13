@@ -25,4 +25,4 @@ flow data upload -c ./examples/LDPDev/upload_data_host_predict.json
 flow data upload -c ./examples/LDPDev/upload_data_guest_predict.json
 
 # Submit prediction process
-flow job submit -c ./examples/LDPDev/dsl/v2/hetero_secureboost/test_predict_conf.json 
+flow job submit -c ./examples/LDPDev/test_predict_conf.json 
