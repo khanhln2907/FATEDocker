@@ -1,0 +1,107 @@
+{
+    "dsl_version": 2,
+    "initiator": {
+        "role": "guest",
+        "party_id": 9999
+    },
+    "role": {
+        "host": [
+            10000
+        ],
+        "guest": [
+            9999
+        ]
+    },
+    "job_parameters": {
+        "job_type": "train",
+        "work_mode": 0,
+        "backend": 0,
+        "computing_engine": "STANDALONE",
+        "federation_engine": "STANDALONE",
+        "storage_engine": "STANDALONE",
+        "engines_address": {
+            "computing": {
+                "nodes": 1,
+                "cores_per_node": 20
+            },
+            "federation": {
+                "nodes": 1,
+                "cores_per_node": 20
+            },
+            "storage": {
+                "nodes": 1,
+                "cores_per_node": 20
+            }
+        },
+        "federated_mode": "SINGLE",
+        "task_parallelism": 1,
+        "computing_partitions": 4,
+        "federated_status_collect_type": "PULL",
+        "model_id": "guest-9999#host-10000#model",
+        "model_version": "202106131640336474715",
+        "eggroll_run": {
+            "eggroll.session.processors.per.node": 4
+        },
+        "spark_run": {},
+        "rabbitmq_run": {},
+        "pulsar_run": {},
+        "adaptation_parameters": {
+            "task_nodes": 1,
+            "task_cores_per_node": 4,
+            "task_memory_per_node": 0,
+            "request_task_cores": 4,
+            "if_initiator_baseline": false
+        }
+    },
+    "component_parameters": {
+        "role": {
+            "host": {
+                "0": {
+                    "dataio_0": {
+                        "with_label": false
+                    },
+                    "reader_0": {
+                        "table": {
+                            "name": "breast_hetero_host",
+                            "namespace": "experiment"
+                        }
+                    }
+                }
+            },
+            "guest": {
+                "0": {
+                    "reader_0": {
+                        "table": {
+                            "name": "breast_hetero_guest",
+                            "namespace": "experiment"
+                        }
+                    }
+                }
+            }
+        },
+        "common": {
+            "dataio_0": {
+                "with_label": true
+            },
+            "hetero_secureboost_0": {
+                "task_type": "classification",
+                "objective_param": {
+                    "objective": "cross_entropy"
+                },
+                "num_trees": 5,
+                "bin_num": 16,
+                "encrypt_param": {
+                    "method": "iterativeAffine"
+                },
+                "tree_param": {
+                    "max_depth": 3
+                }
+            },
+            "evaluation_0": {
+                "eval_type": "binary"
+            }
+        }
+    },
+    "dsl_path": "/tmp/tmp_1gss6w2/job_dsl.json",
+    "conf_path": "/tmp/tmp_1gss6w2/job_runtime_conf.json"
+}

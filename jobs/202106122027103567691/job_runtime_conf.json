@@ -1,0 +1,66 @@
+{
+    "initiator": {
+        "role": "guest",
+        "party_id": 10000
+    },
+    "job_parameters": {
+        "job_type": "train",
+        "work_mode": 0,
+        "backend": 0,
+        "computing_engine": "STANDALONE",
+        "federation_engine": "STANDALONE",
+        "storage_engine": "STANDALONE",
+        "engines_address": {},
+        "federated_mode": "SINGLE",
+        "task_cores": 2,
+        "task_parallelism": 1,
+        "computing_partitions": 2,
+        "federated_status_collect_type": "PULL",
+        "model_id": "guest-10000#host-10000#model",
+        "model_version": "202106122027103567691",
+        "eggroll_run": {},
+        "spark_run": {},
+        "rabbitmq_run": {},
+        "pulsar_run": {},
+        "adaptation_parameters": {
+            "task_nodes": 1,
+            "task_cores_per_node": 2,
+            "task_memory_per_node": 0,
+            "request_task_cores": 2,
+            "if_initiator_baseline": true
+        }
+    },
+    "role": {
+        "guest": [
+            10000
+        ],
+        "host": [
+            10000
+        ]
+    },
+    "role_parameters": {
+        "guest": {
+            "secure_add_example_0": {
+                "seed": [
+                    123
+                ]
+            }
+        },
+        "host": {
+            "secure_add_example_0": {
+                "seed": [
+                    321
+                ]
+            }
+        }
+    },
+    "algorithm_parameters": {
+        "secure_add_example_0": {
+            "partition": 48,
+            "data_num": 1000
+        }
+    },
+    "config": "/fate/examples/toy_example/test/toy_example_conf.json_1623529629_4108",
+    "dsl": "/fate/examples/toy_example/toy_example_dsl.json",
+    "function": "submit_job"
+}
