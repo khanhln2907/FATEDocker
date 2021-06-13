@@ -4,19 +4,7 @@
 			"path": ".git"
 		},
 		{
-			"path": "examples"
-		},
-		{
-			"path": "fateboard"
-		},
-		{
-			"path": "jobs"
-		},
-		{
-			"path": "KhanhsTests"
-		},
-		{
-			"path": "python"
+			"path": "."
 		}
 	],
 	"settings": {}
