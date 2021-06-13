@@ -7,9 +7,9 @@ import sys
 import time
 
 home_dir = os.path.split(os.path.realpath(__file__))[0]
-fate_flow_path = os.path.join(home_dir, "..", "..", "python", "fate_flow", "fate_flow_client.py")
-dsl_path = os.path.join(home_dir, "toy_example_dsl.json")
-conf_path = os.path.join(home_dir, "toy_example_conf.json")
+fate_flow_path = os.path.join(home_dir, "..", "python", "fate_flow", "fate_flow_client.py")
+dsl_path = os.path.join(home_dir, "examples", "toy_example", "toy_example_dsl.json")
+conf_path = os.path.join(home_dir, "examples", "toy_example", "toy_example_conf.json")
 
 guest_party_id = -1
 host_party_id = -1
