@@ -30,7 +30,7 @@
                 "0": {
                     "reader_0": {
                         "table": {
-                            "name": "upload_data_guest_predict",
+                            "name": "default_credit_hetero_guest",
                             "namespace": "experiment"
                         }
                     }
@@ -40,7 +40,7 @@
                 "0": {
                     "reader_0": {
                         "table": {
-                            "name": "upload_data_host_predict",
+                            "name": "default_credit_hetero_host",
                             "namespace": "experiment"
                         }
                     }
