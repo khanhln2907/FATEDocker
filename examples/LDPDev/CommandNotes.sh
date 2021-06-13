@@ -21,8 +21,8 @@ flow model deploy --model-id guest-9999#host-9998#model --model-version 20210613
 flow job config -j 202106132103219414043 -r guest -p 9999 -o ./
 
 # Update data table for prediction
-flow data upload -c ./examples/LDPDev/upload_data_host_predict.json
-flow data upload -c ./examples/LDPDev/upload_data_guest_predict.json
+flow data upload -c ./examples/LDPDev/upload_data_host_predict.json --verbose --drop
+flow data upload -c ./examples/LDPDev/upload_data_guest_predict.json --verbose --drop
 
 # Submit prediction process
 flow job submit -c ./examples/LDPDev/test_predict_conf.json 
