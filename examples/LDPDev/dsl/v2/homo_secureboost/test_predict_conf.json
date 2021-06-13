@@ -20,8 +20,8 @@
             "work_mode": 0,
             "backend": 0,
             "job_type": "predict",
-            "model_id": "arbiter-9999#guest-10000#host-9999#model",
-            "model_version": "20200928191922241821123"
+            "model_id": "guest-9999#host-9998#model",
+            "model_version": "202106132115200811456"
         }
     },
     "component_parameters": {
@@ -30,7 +30,7 @@
                 "0": {
                     "reader_0": {
                         "table": {
-                            "name": "breast_homo_guest",
+                            "name": "upload_data_guest_predict",
                             "namespace": "experiment"
                         }
                     }
@@ -40,7 +40,7 @@
                 "0": {
                     "reader_0": {
                         "table": {
-                            "name": "breast_homo_host",
+                            "name": "upload_data_host_predict",
                             "namespace": "experiment"
                         }
                     }
