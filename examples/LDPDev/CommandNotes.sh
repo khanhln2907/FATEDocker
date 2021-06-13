@@ -17,6 +17,9 @@ flow job submit -c ./examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_
 # Deploy the trained model
 flow model deploy --model-id guest-9999#host-9998#model --model-version 202106132103219414043 --cpn-list "dataio_0, intersection_0, hetero_secure_boost_0"
 
+# Query 
+flow job config -j 202106132103219414043 -r guest -p 9999 -o ./
+
 # Update data table for prediction
 flow data upload -c ./examples/LDPDev/upload_data_host_predict.json
 flow data upload -c ./examples/LDPDev/upload_data_guest_predict.json

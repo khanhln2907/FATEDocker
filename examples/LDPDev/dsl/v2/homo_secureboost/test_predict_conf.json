@@ -21,7 +21,7 @@
             "backend": 0,
             "job_type": "predict",
             "model_id": "guest-9999#host-9998#model",
-            "model_version": "202106132115200811456"
+            "model_version": "202106132103219414043"
         }
     },
     "component_parameters": {
