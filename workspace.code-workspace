@@ -1,10 +1,22 @@
 {
 	"folders": [
 		{
-			"path": "..\\Research Workspace\\Khanh_ForschungsPraxis\\Experiments"
+			"path": ".git"
 		},
 		{
-			"path": "..\\Research Workspace\\Khanh_ForschungsPraxis\\Evaluation"
+			"path": "examples"
+		},
+		{
+			"path": "fateboard"
+		},
+		{
+			"path": "jobs"
+		},
+		{
+			"path": "KhanhsTests"
+		},
+		{
+			"path": "python"
 		}
 	],
 	"settings": {}
