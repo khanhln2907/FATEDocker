@@ -6,6 +6,7 @@ data/*
 */logs/*
 *.tar
 *.tar.gz
+model_local_cache/*
 *.db
 jdk-8u192/*
 
