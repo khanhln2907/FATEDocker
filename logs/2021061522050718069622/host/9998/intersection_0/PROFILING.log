@@ -1,0 +1,76 @@
+[DEBUG] [2021-06-15 22:05:24,888] [4148:139989672605504] - profile.py[line:84]: [computing#41d092c3c4]function_stack: [component_properties.py:225]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 22:05:24,889] [4148:139989672605504] - profile.py[line:87]: [computing#41d092c3c4]start
+[DEBUG] [2021-06-15 22:05:24,892] [4148:139989672605504] - profile.py[line:93]: [computing#41d092c3c4]done, elapse: 0.004050254821777344, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:24,895] [4148:139989672605504] - profile.py[line:84]: [computing#04fa511af2]function_stack: [intersect.py:292]intersect_send_id <-[intersect_host.py:183]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:24,896] [4148:139989672605504] - profile.py[line:87]: [computing#04fa511af2]start
+[DEBUG] [2021-06-15 22:05:24,972] [4148:139989672605504] - profile.py[line:93]: [computing#04fa511af2]done, elapse: 0.07691025733947754, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:24,974] [4148:139989672605504] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.send_ids_host.fit]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:25,006] [4148:139989672605504] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.send_ids_host.fit]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 22:05:25,007] [4148:139989672605504] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.intersect_ids_guest.fit]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:25,214] [4148:139989672605504] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.intersect_ids_guest.fit]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 22:05:25,217] [4148:139989672605504] - profile.py[line:84]: [computing#695637ebbb]function_stack: [intersect.py:82]_get_value_from_data <-[intersect.py:344]intersect_send_id <-[intersect_host.py:183]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,217] [4148:139989672605504] - profile.py[line:87]: [computing#695637ebbb]start
+[DEBUG] [2021-06-15 22:05:25,277] [4148:139989672605504] - profile.py[line:93]: [computing#695637ebbb]done, elapse: 0.06026053428649902, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:25,330] [4148:139989672605504] - profile.py[line:84]: [computing#d211fdd088]function_stack: [intersect_model.py:139]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,330] [4148:139989672605504] - profile.py[line:87]: [computing#d211fdd088]start
+[DEBUG] [2021-06-15 22:05:25,335] [4148:139989672605504] - profile.py[line:93]: [computing#d211fdd088]done, elapse: 0.004988193511962891, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:25,337] [4148:139989672605504] - profile.py[line:84]: [computing#1f115043d3]function_stack: [intersect_model.py:140]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,337] [4148:139989672605504] - profile.py[line:87]: [computing#1f115043d3]start
+[DEBUG] [2021-06-15 22:05:25,342] [4148:139989672605504] - profile.py[line:93]: [computing#1f115043d3]done, elapse: 0.005164146423339844, function: count(self: Table(partition=4)) -> int
+[INFO] [2021-06-15 22:05:25,684] [4148:139989672605504] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   1   0.077     0.077    0.077   |
+|          |    join      1    0.06     0.06      0.06   |
+|          |    count     3   0.014     0.005    0.005   |
++----------+---------------------------------------------+
+|  total   |  n=5, sum=0.1514, mean=0.0303, max=0.0769   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.207  |  0.207  | 0.207   |
+|        |            ble.RawIntersectTransferVariable.intersect_ids_guest            |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.032  |  0.032  | 0.032   |
+|        |               ble.RawIntersectTransferVariable.send_ids_host               |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=2, sum=0.2391, mean=0.1196, max=0.2068                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-15 22:05:25,685] [4148:139989672605504] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0769 │ 0.0769  │ 0.0769 │ 04fa511af2 │ [intersect.py:292]intersect_send_id                |
+|       |            │   │        │         │        │            │ [intersect_host.py:183]run_intersect               |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0603 │ 0.0603  │ 0.0603 │ 695637ebbb │ [intersect.py:82]_get_value_from_data              |
+|       |            │   │        │         │        │            │ [intersect.py:344]intersect_send_id                |
+|       |            │   │        │         │        │            │ [intersect_host.py:183]run_intersect               |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0052 │ 0.0052  │ 0.0052 │ 1f115043d3 │ [intersect_model.py:140]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.005  │  0.005  │ 0.005  │ d211fdd088 │ [intersect_model.py:139]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0041 │ 0.0041  │ 0.0041 │ 41d092c3c4 │ [component_properties.py:225]extract_input_data    |
+|       |            │   │        │         │        │            │ [component_properties.py:238]extract_running_rule  |
+|       |            │   │        │         │        │            │ s                                                  |
+|       |            │   │        │         │        │            │ [model_base.py:87]run                              |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                   n=5, sum=0.1514, mean=0.0303, max=0.0769                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

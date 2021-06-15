@@ -1,0 +1,26 @@
+[ERROR] [2021-06-13 11:53:21,645] [8:139726518462208] - job_tracker.py[line:475]: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_guest_10000/e113f474-cc3d-11eb-990b-0242ac110002'
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 386, in cleanup
+    shutil.rmtree(table)
+  File "/usr/local/lib/python3.6/shutil.py", line 490, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/usr/local/lib/python3.6/shutil.py", line 488, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_guest_10000/e113f474-cc3d-11eb-990b-0242ac110002'
+[ERROR] [2021-06-13 11:53:22,136] [8:139726518462208] - job_tracker.py[line:475]: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_host_10000/e890df28-cc3d-11eb-91df-0242ac110002'
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 386, in cleanup
+    shutil.rmtree(table)
+  File "/usr/local/lib/python3.6/shutil.py", line 490, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/usr/local/lib/python3.6/shutil.py", line 488, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_host_10000/e890df28-cc3d-11eb-91df-0242ac110002'

@@ -1,0 +1,205 @@
+[INFO] [2021-06-15 21:56:38,664] [2994:139943419057984] - task_executor.py[line:313]: report task 2021061521563264143218_reader_0 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:38,665] [2994:139943419057984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998
+[INFO] [2021-06-15 21:56:39,094] [2994:139943419057984] - task_executor.py[line:150]: Run 2021061521563264143218 reader_0 2021061521563264143218_reader_0 host 9998 task
+[INFO] [2021-06-15 21:56:39,095] [2994:139943419057984] - task_executor.py[line:151]: Component parameters on party {'ReaderParam': {'table': {'namespace': 'experiment', 'name': 'default_credit_hetero_host'}}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061521542761899517', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'role': {'guest': [9999], 'host': [9998]}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'host': {'0': {'reader_0': {'table': {'namespace': 'experiment', 'name': 'default_credit_hetero_host'}}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}, 'dataio_1': {'with_label': False}}}, 'guest': {'0': {'reader_0': {'table': {'namespace': 'experiment', 'name': 'default_credit_hetero_guest'}}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}}}}}, 'dsl_version': 2, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'initiator': {'role': 'guest', 'party_id': 9999}, 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'fate_flow/components/reader.py/Reader', 'module': 'Reader', 'output_data_name': ['data']}
+[INFO] [2021-06-15 21:56:39,096] [2994:139943419057984] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-15 21:56:39,577] [2994:139943419057984] - reader.py[line:66]: the STANDALONE input table needs to be transform format
+[INFO] [2021-06-15 21:56:39,692] [2994:139943419057984] - reader.py[line:166]: start copying table
+[INFO] [2021-06-15 21:56:39,693] [2994:139943419057984] - reader.py[line:168]: source table name: default_credit_hetero_host namespace: experiment engine: STANDALONE
+[INFO] [2021-06-15 21:56:39,693] [2994:139943419057984] - reader.py[line:170]: destination table name: 8fd3491ece2411eb9ef90242ac110002 namespace: output_data_2021061521563264143218_reader_0_0 engine: STANDALONE
+[INFO] [2021-06-15 21:56:40,746] [2994:139943419057984] - reader.py[line:194]: copy successfully
+[INFO] [2021-06-15 21:56:40,829] [2994:139943419057984] - tracker_client.py[line:127]: Request save job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998 data data info
+[INFO] [2021-06-15 21:56:41,494] [2994:139943419057984] - tracker_client.py[line:103]: Request save job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998 metric reader_namespace reader_name meta
+[INFO] [2021-06-15 21:56:41,554] [2994:139943419057984] - profile.py[line:249]: 
+Computing:
++----------+------------------------------------------+
+| function |                                          |
++----------+------------------------------------------+
+|  total   | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++----------+------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-15 21:56:41,555] [2994:139943419057984] - task_executor.py[line:313]: report task 2021061521563264143218_reader_0 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:41,555] [2994:139943419057984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998
+[INFO] [2021-06-15 21:56:41,602] [2994:139943419057984] - task_executor.py[line:202]: task 2021061521563264143218_reader_0 host 9998 start time: 2021-06-15 21:56:38
+[INFO] [2021-06-15 21:56:41,603] [2994:139943419057984] - task_executor.py[line:204]: task 2021061521563264143218_reader_0 host 9998 end time: 2021-06-15 21:56:41
+[INFO] [2021-06-15 21:56:41,603] [2994:139943419057984] - task_executor.py[line:206]: task 2021061521563264143218_reader_0 host 9998 takes 3.147s
+[INFO] [2021-06-15 21:56:41,603] [2994:139943419057984] - task_executor.py[line:209]: Finish 2021061521563264143218 reader_0 2021061521563264143218_reader_0 0 host 9998 task success
+[INFO] [2021-06-15 21:56:41,604] [2994:139943419057984] - task_executor.py[line:313]: report task 2021061521563264143218_reader_0 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:41,604] [2994:139943419057984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998
+[INFO] [2021-06-15 21:56:45,747] [3074:139995760379712] - task_executor.py[line:313]: report task 2021061521563264143218_dataio_0 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:45,748] [3074:139995760379712] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_dataio_0 0 on host 9998
+[INFO] [2021-06-15 21:56:46,165] [3074:139995760379712] - task_executor.py[line:150]: Run 2021061521563264143218 dataio_0 2021061521563264143218_dataio_0 host 9998 task
+[INFO] [2021-06-15 21:56:46,166] [3074:139995760379712] - task_executor.py[line:151]: Component parameters on party {'DataIOParam': {'input_format': 'dense', 'delimitor': ',', 'data_type': 'float64', 'exclusive_data_type': None, 'tag_with_value': False, 'tag_value_delimitor': ':', 'missing_fill': False, 'default_value': 0, 'missing_fill_method': None, 'missing_impute': None, 'outlier_replace': False, 'outlier_replace_method': None, 'outlier_impute': None, 'outlier_replace_value': 0, 'with_label': False, 'label_name': 'y', 'label_type': 'int', 'output_format': 'dense', 'need_run': True}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061521542761899517', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'guest': {'0': {'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'namespace': 'experiment', 'name': 'default_credit_hetero_guest'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}}}, 'host': {'0': {'dataio_1': {'with_label': False}, 'reader_0': {'table': {'namespace': 'experiment', 'name': 'default_credit_hetero_host'}}, 'dataio_0': {'with_label': False}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}}}}}, 'initiator': {'party_id': 9999, 'role': 'guest'}, 'dsl_version': 2, 'role': {'guest': [9999], 'host': [9998]}, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'federatedml/util/data_io.py/DataIO', 'module': 'DataIO', 'output_data_name': ['data']}
+[INFO] [2021-06-15 21:56:46,166] [3074:139995760379712] - task_executor.py[line:152]: Task input dsl {'model': ['pipeline.dataio_0.model'], 'data': {'data': ['reader_0.data']}}
+[INFO] [2021-06-15 21:56:46,189] [3074:139995760379712] - pipelined_model.py[line:185]: parse DataIOMeta proto object normal
+[INFO] [2021-06-15 21:56:46,200] [3074:139995760379712] - pipelined_model.py[line:185]: parse DataIOParam proto object normal
+[INFO] [2021-06-15 21:56:46,201] [3074:139995760379712] - tracker_client.py[line:150]: Request read job 2021061521563264143218 task None None on host 9998 data data info
+[INFO] [2021-06-15 21:56:46,230] [3074:139995760379712] - task_executor.py[line:269]: load computing table use 4
+[WARNING] [2021-06-15 21:56:46,864] [3074:139995760379712] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[INFO] [2021-06-15 21:56:46,880] [3074:139995760379712] - data_io.py[line:118]: start to read dense data and change data to instance
+[ERROR] [2021-06-15 21:56:52,087] [3074:139995760379712] - task_executor.py[line:191]: fit & transform data' header should be same
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/federatedml/model_base.py", line 98, in run
+    this_data_output = func(*real_param)
+  File "/fate/python/federatedml/util/data_io.py", line 895, in transform
+    return self.reader.read_data(data_inst, "transform")
+  File "/fate/python/federatedml/util/data_io.py", line 150, in read_data
+    data_instance = data_overview.header_alignment(data_instance, fit_header)
+  File "/fate/python/federatedml/statistic/data_overview.py", line 75, in header_alignment
+    raise ValueError("fit & transform data' header should be same")
+ValueError: fit & transform data' header should be same
+[INFO] [2021-06-15 21:56:52,236] [3074:139995760379712] - task_executor.py[line:313]: report task 2021061521563264143218_dataio_0 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:52,236] [3074:139995760379712] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_dataio_0 0 on host 9998
+[INFO] [2021-06-15 21:56:52,319] [3074:139995760379712] - task_executor.py[line:202]: task 2021061521563264143218_dataio_0 host 9998 start time: 2021-06-15 21:56:45
+[INFO] [2021-06-15 21:56:52,319] [3074:139995760379712] - task_executor.py[line:204]: task 2021061521563264143218_dataio_0 host 9998 end time: 2021-06-15 21:56:52
+[INFO] [2021-06-15 21:56:52,319] [3074:139995760379712] - task_executor.py[line:206]: task 2021061521563264143218_dataio_0 host 9998 takes 6.633s
+[INFO] [2021-06-15 21:56:52,320] [3074:139995760379712] - task_executor.py[line:209]: Finish 2021061521563264143218 dataio_0 2021061521563264143218_dataio_0 0 host 9998 task failed
+[INFO] [2021-06-15 21:56:52,342] [3074:139995760379712] - task_executor.py[line:313]: report task 2021061521563264143218_dataio_0 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:52,343] [3074:139995760379712] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_dataio_0 0 on host 9998
+[INFO] [2021-06-15 21:56:57,840] [3155:140175784003392] - task_executor.py[line:313]: report task 2021061521563264143218_reader_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:57,842] [3155:140175784003392] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_1 0 on host 9998
+[INFO] [2021-06-15 21:56:58,382] [3155:140175784003392] - task_executor.py[line:150]: Run 2021061521563264143218 reader_1 2021061521563264143218_reader_1 host 9998 task
+[INFO] [2021-06-15 21:56:58,383] [3155:140175784003392] - task_executor.py[line:151]: Component parameters on party {'ReaderParam': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'role': {'guest': [9999], 'host': [9998]}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061521542761899517', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'guest': {'0': {'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'name': 'default_credit_hetero_guest', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}}}, 'host': {'0': {'dataio_1': {'with_label': False}, 'dataio_0': {'with_label': False}, 'reader_0': {'table': {'name': 'default_credit_hetero_host', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}}}}}, 'dsl_version': 2, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'initiator': {'party_id': 9999, 'role': 'guest'}, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'fate_flow/components/reader.py/Reader', 'module': 'Reader', 'output_data_name': ['data']}
+[INFO] [2021-06-15 21:56:58,384] [3155:140175784003392] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-15 21:56:58,671] [3155:140175784003392] - reader.py[line:66]: the STANDALONE input table needs to be transform format
+[INFO] [2021-06-15 21:56:58,723] [3155:140175784003392] - reader.py[line:166]: start copying table
+[INFO] [2021-06-15 21:56:58,723] [3155:140175784003392] - reader.py[line:168]: source table name: breast_hetero_host namespace: experiment engine: STANDALONE
+[INFO] [2021-06-15 21:56:58,724] [3155:140175784003392] - reader.py[line:170]: destination table name: 9b611806ce2411ebb0120242ac110002 namespace: output_data_2021061521563264143218_reader_1_0 engine: STANDALONE
+[INFO] [2021-06-15 21:56:58,827] [3155:140175784003392] - reader.py[line:194]: copy successfully
+[INFO] [2021-06-15 21:56:58,896] [3155:140175784003392] - tracker_client.py[line:127]: Request save job 2021061521563264143218 task 2021061521563264143218_reader_1 0 on host 9998 data data info
+[INFO] [2021-06-15 21:56:58,922] [3155:140175784003392] - tracker_client.py[line:103]: Request save job 2021061521563264143218 task 2021061521563264143218_reader_1 0 on host 9998 metric reader_namespace reader_name meta
+[INFO] [2021-06-15 21:56:58,977] [3155:140175784003392] - profile.py[line:249]: 
+Computing:
++----------+------------------------------------------+
+| function |                                          |
++----------+------------------------------------------+
+|  total   | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++----------+------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-15 21:56:58,978] [3155:140175784003392] - task_executor.py[line:313]: report task 2021061521563264143218_reader_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:58,978] [3155:140175784003392] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_1 0 on host 9998
+[INFO] [2021-06-15 21:56:59,035] [3155:140175784003392] - task_executor.py[line:202]: task 2021061521563264143218_reader_1 host 9998 start time: 2021-06-15 21:56:57
+[INFO] [2021-06-15 21:56:59,035] [3155:140175784003392] - task_executor.py[line:204]: task 2021061521563264143218_reader_1 host 9998 end time: 2021-06-15 21:56:58
+[INFO] [2021-06-15 21:56:59,036] [3155:140175784003392] - task_executor.py[line:206]: task 2021061521563264143218_reader_1 host 9998 takes 1.403s
+[INFO] [2021-06-15 21:56:59,036] [3155:140175784003392] - task_executor.py[line:209]: Finish 2021061521563264143218 reader_1 2021061521563264143218_reader_1 0 host 9998 task success
+[INFO] [2021-06-15 21:56:59,036] [3155:140175784003392] - task_executor.py[line:313]: report task 2021061521563264143218_reader_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:56:59,036] [3155:140175784003392] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_1 0 on host 9998
+[INFO] [2021-06-15 21:57:03,695] [3233:140059497649984] - task_executor.py[line:313]: report task 2021061521563264143218_dataio_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:57:03,696] [3233:140059497649984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_dataio_1 0 on host 9998
+[INFO] [2021-06-15 21:57:04,181] [3233:140059497649984] - task_executor.py[line:150]: Run 2021061521563264143218 dataio_1 2021061521563264143218_dataio_1 host 9998 task
+[INFO] [2021-06-15 21:57:04,182] [3233:140059497649984] - task_executor.py[line:151]: Component parameters on party {'DataIOParam': {'input_format': 'dense', 'delimitor': ',', 'data_type': 'float64', 'exclusive_data_type': None, 'tag_with_value': False, 'tag_value_delimitor': ':', 'missing_fill': False, 'default_value': 0, 'missing_fill_method': None, 'missing_impute': None, 'outlier_replace': False, 'outlier_replace_method': None, 'outlier_impute': None, 'outlier_replace_value': 0, 'with_label': False, 'label_name': 'y', 'label_type': 'int', 'output_format': 'dense', 'need_run': True}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'dsl_version': 2, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'role': {'host': [9998], 'guest': [9999]}, 'initiator': {'party_id': 9999, 'role': 'guest'}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'host': {'0': {'dataio_1': {'with_label': False}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}, 'reader_0': {'table': {'name': 'default_credit_hetero_host', 'namespace': 'experiment'}}}}, 'guest': {'0': {'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'name': 'default_credit_hetero_guest', 'namespace': 'experiment'}}}}}}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061521542761899517', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'federatedml/util/data_io.py/DataIO', 'module': 'DataIO', 'output_data_name': ['data']}
+[INFO] [2021-06-15 21:57:04,182] [3233:140059497649984] - task_executor.py[line:152]: Task input dsl {'model': ['pipeline.dataio_1.model'], 'data': {'data': ['reader_1.data']}}
+[INFO] [2021-06-15 21:57:04,200] [3233:140059497649984] - pipelined_model.py[line:185]: parse DataIOMeta proto object normal
+[INFO] [2021-06-15 21:57:04,211] [3233:140059497649984] - pipelined_model.py[line:185]: parse DataIOParam proto object normal
+[INFO] [2021-06-15 21:57:04,212] [3233:140059497649984] - tracker_client.py[line:150]: Request read job 2021061521563264143218 task None None on host 9998 data data info
+[INFO] [2021-06-15 21:57:04,242] [3233:140059497649984] - task_executor.py[line:269]: load computing table use 4
+[WARNING] [2021-06-15 21:57:04,281] [3233:140059497649984] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[INFO] [2021-06-15 21:57:04,294] [3233:140059497649984] - data_io.py[line:118]: start to read dense data and change data to instance
+[INFO] [2021-06-15 21:57:04,455] [3233:140059497649984] - tracker_client.py[line:173]: Request save job 2021061521563264143218 task 2021061521563264143218_dataio_1 0 on host 9998 component summary
+[INFO] [2021-06-15 21:57:04,617] [3233:140059497649984] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   2   0.117     0.059    0.065   |
+|          |    count     4   0.019     0.005    0.005   |
++----------+---------------------------------------------+
+|  total   |  n=6, sum=0.1366, mean=0.0228, max=0.0648   |
++----------+---------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-15 21:57:04,747] [3233:140059497649984] - pipelined_model.py[line:73]: Save dataio_1 default DataIOMeta buffer
+[INFO] [2021-06-15 21:57:04,748] [3233:140059497649984] - pipelined_model.py[line:73]: Save dataio_1 default DataIOParam buffer
+[INFO] [2021-06-15 21:57:04,768] [3233:140059497649984] - pipelined_model.py[line:78]: Save dataio_1 default successfully
+[INFO] [2021-06-15 21:57:04,769] [3233:140059497649984] - task_executor.py[line:313]: report task 2021061521563264143218_dataio_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:57:04,769] [3233:140059497649984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_dataio_1 0 on host 9998
+[INFO] [2021-06-15 21:57:04,863] [3233:140059497649984] - task_executor.py[line:202]: task 2021061521563264143218_dataio_1 host 9998 start time: 2021-06-15 21:57:03
+[INFO] [2021-06-15 21:57:04,864] [3233:140059497649984] - task_executor.py[line:204]: task 2021061521563264143218_dataio_1 host 9998 end time: 2021-06-15 21:57:04
+[INFO] [2021-06-15 21:57:04,864] [3233:140059497649984] - task_executor.py[line:206]: task 2021061521563264143218_dataio_1 host 9998 takes 1.3s
+[INFO] [2021-06-15 21:57:04,865] [3233:140059497649984] - task_executor.py[line:209]: Finish 2021061521563264143218 dataio_1 2021061521563264143218_dataio_1 0 host 9998 task success
+[INFO] [2021-06-15 21:57:04,918] [3233:140059497649984] - task_executor.py[line:313]: report task 2021061521563264143218_dataio_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:57:04,919] [3233:140059497649984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_dataio_1 0 on host 9998
+[INFO] [2021-06-15 21:57:09,483] [3323:140186488915776] - task_executor.py[line:313]: report task 2021061521563264143218_intersection_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:57:09,484] [3323:140186488915776] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_intersection_1 0 on host 9998
+[INFO] [2021-06-15 21:57:10,042] [3323:140186488915776] - task_executor.py[line:150]: Run 2021061521563264143218 intersection_1 2021061521563264143218_intersection_1 host 9998 task
+[INFO] [2021-06-15 21:57:10,043] [3323:140186488915776] - task_executor.py[line:151]: Component parameters on party {'IntersectParam': {'intersect_method': 'raw', 'random_bit': 128, 'sync_intersect_ids': True, 'join_role': 'guest', 'with_encode': False, 'encode_params': {'salt': '', 'encode_method': 'none', 'base64': False}, 'rsa_params': {'salt': '', 'hash_method': 'sha256', 'final_hash_method': 'sha256', 'split_calculation': False, 'random_base_fraction': None, 'key_length': 1024}, 'only_output_key': False, 'intersect_cache_param': {'use_cache': False, 'id_type': 'phone', 'encrypt_type': 'sha256'}, 'repeated_id_process': False, 'repeated_id_owner': 'guest', 'allow_info_share': False, 'info_owner': 'guest', 'with_sample_id': False}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'initiator': {'party_id': 9999, 'role': 'guest'}, 'dsl_version': 2, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061521542761899517', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'role': {'host': [9998], 'guest': [9999]}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'guest': {'0': {'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'name': 'default_credit_hetero_guest', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}}}, 'host': {'0': {'dataio_1': {'with_label': False}, 'dataio_0': {'with_label': False}, 'reader_0': {'table': {'name': 'default_credit_hetero_host', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}}}}}, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'federatedml/statistic/intersect/intersect_model.py/IntersectHost', 'module': 'Intersection', 'output_data_name': ['data']}
+[INFO] [2021-06-15 21:57:10,044] [3323:140186488915776] - task_executor.py[line:152]: Task input dsl {'data': {'data': ['dataio_1.data']}}
+[INFO] [2021-06-15 21:57:10,045] [3323:140186488915776] - tracker_client.py[line:150]: Request read job 2021061521563264143218 task None None on host 9998 data data info
+[INFO] [2021-06-15 21:57:10,071] [3323:140186488915776] - task_executor.py[line:269]: load computing table use 4
+[WARNING] [2021-06-15 21:57:11,797] [3323:140186488915776] - intersect_param.py[line:63]: 'EncodeParam' will be renamed to 'RawParam' in future release.Please do not rely on current param naming in application.
+[INFO] [2021-06-15 21:57:11,816] [3323:140186488915776] - intersect_model.py[line:50]: Using raw intersection, role is host
+[INFO] [2021-06-15 21:57:11,816] [3323:140186488915776] - intersect_host.py[line:180]: Start raw intersection
+[INFO] [2021-06-15 21:57:12,467] [3323:140186488915776] - intersect.py[line:294]: Send id role is host
+[INFO] [2021-06-15 21:57:12,540] [3323:140186488915776] - intersect.py[line:309]: Remote data_sid to role-join
+[INFO] [2021-06-15 21:57:12,749] [3323:140186488915776] - intersect.py[line:320]: Get intersect ids from role-join!
+[INFO] [2021-06-15 21:57:12,749] [3323:140186488915776] - intersect.py[line:323]: recv_intersect_ids_list's size is 1
+[INFO] [2021-06-15 21:57:12,806] [3323:140186488915776] - intersect.py[line:84]: obtain intersect data_instances!
+[INFO] [2021-06-15 21:57:12,987] [3323:140186488915776] - intersect_model.py[line:136]: Finish intersection
+[INFO] [2021-06-15 21:57:13,019] [3323:140186488915776] - tracker_client.py[line:70]: Request save job 2021061521563264143218 task 2021061521563264143218_intersection_1 0 on host 9998 metric train intersection data
+[INFO] [2021-06-15 21:57:13,131] [3323:140186488915776] - tracker_client.py[line:103]: Request save job 2021061521563264143218 task 2021061521563264143218_intersection_1 0 on host 9998 metric train intersection meta
+[INFO] [2021-06-15 21:57:13,175] [3323:140186488915776] - tracker_client.py[line:173]: Request save job 2021061521563264143218 task 2021061521563264143218_intersection_1 0 on host 9998 component summary
+[INFO] [2021-06-15 21:57:13,366] [3323:140186488915776] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   1   0.649     0.649    0.649   |
+|          |    join      1   0.056     0.056    0.056   |
+|          |    count     3   0.027     0.009    0.011   |
++----------+---------------------------------------------+
+|  total   |  n=5, sum=0.7318, mean=0.1464, max=0.6485   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.208  |  0.208  | 0.208   |
+|        |            ble.RawIntersectTransferVariable.intersect_ids_guest            |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.071  |  0.071  | 0.071   |
+|        |               ble.RawIntersectTransferVariable.send_ids_host               |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=2, sum=0.2782, mean=0.1391, max=0.2077                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-15 21:57:13,371] [3323:140186488915776] - intersect_model.py[line:154]: intersect_ids count:569
+[INFO] [2021-06-15 21:57:13,372] [3323:140186488915776] - intersect_model.py[line:155]: intersect_ids header schema:{'header': ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13', 'x14', 'x15', 'x16', 'x17', 'x18', 'x19'], 'sid_name': 'id', 'label_name': 'y'}
+[INFO] [2021-06-15 21:57:13,480] [3323:140186488915776] - task_executor.py[line:313]: report task 2021061521563264143218_intersection_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:57:13,481] [3323:140186488915776] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_intersection_1 0 on host 9998
+[INFO] [2021-06-15 21:57:13,573] [3323:140186488915776] - task_executor.py[line:202]: task 2021061521563264143218_intersection_1 host 9998 start time: 2021-06-15 21:57:09
+[INFO] [2021-06-15 21:57:13,573] [3323:140186488915776] - task_executor.py[line:204]: task 2021061521563264143218_intersection_1 host 9998 end time: 2021-06-15 21:57:13
+[INFO] [2021-06-15 21:57:13,574] [3323:140186488915776] - task_executor.py[line:206]: task 2021061521563264143218_intersection_1 host 9998 takes 4.229s
+[INFO] [2021-06-15 21:57:13,574] [3323:140186488915776] - task_executor.py[line:209]: Finish 2021061521563264143218 intersection_1 2021061521563264143218_intersection_1 0 host 9998 task success
+[INFO] [2021-06-15 21:57:13,635] [3323:140186488915776] - task_executor.py[line:313]: report task 2021061521563264143218_intersection_1 0 host 9998 to driver
+[INFO] [2021-06-15 21:57:13,636] [3323:140186488915776] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_intersection_1 0 on host 9998

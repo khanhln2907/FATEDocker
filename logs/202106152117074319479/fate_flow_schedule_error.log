@@ -1,0 +1,9 @@
+[ERROR] [2021-06-15 21:17:14,192] [7:140198455301888] - job_tracker.py[line:475]: namespace dir /fate/data/202106152117074319479_upload_0_0_local_0 does not exist
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 383, in cleanup
+    raise EnvironmentError(f"namespace dir {namespace_dir} does not exist")
+OSError: namespace dir /fate/data/202106152117074319479_upload_0_0_local_0 does not exist

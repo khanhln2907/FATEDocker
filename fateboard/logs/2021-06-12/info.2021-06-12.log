@@ -1,0 +1,32 @@
+[INFO ] 2021-06-12 20:14:49 [main] c.w.a.fate.board.bootstrap.Bootstrap - Starting Bootstrap on fea1b009c07d with PID 8 (/fate/fateboard/fateboard-1.6.0.jar started by root in /fate/fateboard)
+[INFO ] 2021-06-12 20:14:49 [main] c.w.a.fate.board.bootstrap.Bootstrap - No active profile set, falling back to default profiles: default
+[INFO ] 2021-06-12 20:14:49 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-12 20:14:49 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-06-12 20:14:49 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-06-12 20:14:49 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2021-06-12 20:14:49 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2021-06-12 20:14:49 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-06-12 20:14:49 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5033 ms
+[INFO ] 2021-06-12 20:14:49 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+[INFO ] 2021-06-12 20:14:49 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'asyncServiceExecutor'
+[INFO ] 2021-06-12 20:14:49 [main] c.w.a.f.b.ssh.SshConfigFileWatcher - use system path /fate/fateboard/ssh/
+[INFO ] 2021-06-12 20:14:49 [main] c.w.a.f.b.ssh.SshConfigFileWatcher - Scanning /fate/fateboard/ssh ...
+[INFO ] 2021-06-12 20:14:49 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2021-06-12 20:14:49 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 2021-06-12 20:14:49 [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO ] 2021-06-12 20:14:49 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-06-12 20:14:49 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2021-06-12 20:14:49 [main] c.w.a.fate.board.bootstrap.Bootstrap - Started Bootstrap in 10.378 seconds (JVM running for 11.975)
+[INFO ] 2021-06-12 20:14:49 [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-06-12 20:14:49 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2021-06-12 20:14:49 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 26 ms
+[INFO ] 2021-06-12 20:14:49 [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2021-06-12 20:14:49 [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor2] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"host","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"guest":[10000]},"roles":{"host":[10000]}},"retcode":0,"retmsg":"success"}
+
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor1] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"guest","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"host":[10000]},"roles":{"guest":[10000],"host":[10000]}},"retcode":0,"retmsg":"success"}
+
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor3] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"guest","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"host":[10000]},"roles":{"guest":[10000],"host":[10000]}},"retcode":0,"retmsg":"success"}
+
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor4] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"host","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"guest":[10000]},"roles":{"host":[10000]}},"retcode":0,"retmsg":"success"}
+

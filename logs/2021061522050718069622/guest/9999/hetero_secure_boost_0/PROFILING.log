@@ -1,0 +1,291 @@
+[DEBUG] [2021-06-15 22:05:35,001] [4267:140282551203648] - profile.py[line:84]: [computing#ee81c7eeaf]function_stack: [io_check.py:28]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,002] [4267:140282551203648] - profile.py[line:87]: [computing#ee81c7eeaf]start
+[DEBUG] [2021-06-15 22:05:35,006] [4267:140282551203648] - profile.py[line:93]: [computing#ee81c7eeaf]done, elapse: 0.0046694278717041016, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:35,008] [4267:140282551203648] - profile.py[line:84]: [computing#fb0da9fcf0]function_stack: [abnormal_detection.py:27]empty_table_detection <-[boosting.py:207]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_guest.py:349]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,009] [4267:140282551203648] - profile.py[line:87]: [computing#fb0da9fcf0]start
+[DEBUG] [2021-06-15 22:05:35,010] [4267:140282551203648] - profile.py[line:93]: [computing#fb0da9fcf0]done, elapse: 0.001977205276489258, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:35,012] [4267:140282551203648] - profile.py[line:84]: [computing#398d2c6ee3]function_stack: [data_overview.py:30]get_features_shape <-[data_overview.py:136]is_empty_feature <-[abnormal_detection.py:33]empty_feature_detection <-[boosting.py:208]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_guest.py:349]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,012] [4267:140282551203648] - profile.py[line:87]: [computing#398d2c6ee3]start
+[DEBUG] [2021-06-15 22:05:35,019] [4267:140282551203648] - profile.py[line:93]: [computing#398d2c6ee3]done, elapse: 0.007218837738037109, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 22:05:35,021] [4267:140282551203648] - profile.py[line:84]: [computing#e85d6a211b]function_stack: [boosting.py:210]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_guest.py:349]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,021] [4267:140282551203648] - profile.py[line:87]: [computing#e85d6a211b]start
+[DEBUG] [2021-06-15 22:05:35,181] [4267:140282551203648] - profile.py[line:93]: [computing#e85d6a211b]done, elapse: 0.15982723236083984, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:35,184] [4267:140282551203648] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.predict]guest->[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:35,204] [4267:140282551203648] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.predict]guest->[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:35,216] [4267:140282551203648] - profile.py[line:84]: [computing#5acccbcbba]function_stack: [hetero_secureboost_guest.py:302]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,216] [4267:140282551203648] - profile.py[line:87]: [computing#5acccbcbba]start
+[DEBUG] [2021-06-15 22:05:35,300] [4267:140282551203648] - profile.py[line:93]: [computing#5acccbcbba]done, elapse: 0.08451008796691895, function: mapValues(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:35,302] [4267:140282551203648] - profile.py[line:84]: [computing#0045654bef]function_stack: [hetero_secureboost_guest.py:303]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,302] [4267:140282551203648] - profile.py[line:87]: [computing#0045654bef]start
+[DEBUG] [2021-06-15 22:05:35,354] [4267:140282551203648] - profile.py[line:93]: [computing#0045654bef]done, elapse: 0.05223560333251953, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:35,355] [4267:140282551203648] - profile.py[line:84]: [computing#d32f1bccea]function_stack: [hetero_secureboost_guest.py:311]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,355] [4267:140282551203648] - profile.py[line:87]: [computing#d32f1bccea]start
+[DEBUG] [2021-06-15 22:05:36,194] [4267:140282551203648] - profile.py[line:93]: [computing#d32f1bccea]done, elapse: 0.8383636474609375, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:36,227] [4267:140282551203648] - profile.py[line:84]: [computing#28f3524e74]function_stack: [hetero_secureboost_guest.py:289]save_leaf_pos_and_mask_leaf_pos <-[hetero_secureboost_guest.py:312]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:36,227] [4267:140282551203648] - profile.py[line:87]: [computing#28f3524e74]start
+[DEBUG] [2021-06-15 22:05:36,969] [4267:140282551203648] - profile.py[line:93]: [computing#28f3524e74]done, elapse: 0.7420554161071777, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:36,970] [4267:140282551203648] - profile.py[line:84]: [computing#a91d9f3830]function_stack: [hetero_secureboost_guest.py:290]save_leaf_pos_and_mask_leaf_pos <-[hetero_secureboost_guest.py:312]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:36,970] [4267:140282551203648] - profile.py[line:87]: [computing#a91d9f3830]start
+[DEBUG] [2021-06-15 22:05:37,391] [4267:140282551203648] - profile.py[line:93]: [computing#a91d9f3830]done, elapse: 0.4217205047607422, function: subtractByKey(self: Table(partition=4), other: Table(partition=4)) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:37,392] [4267:140282551203648] - profile.py[line:84]: [computing#126fdeb060]function_stack: [hetero_secureboost_guest.py:291]save_leaf_pos_and_mask_leaf_pos <-[hetero_secureboost_guest.py:312]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:37,393] [4267:140282551203648] - profile.py[line:87]: [computing#126fdeb060]start
+[DEBUG] [2021-06-15 22:05:38,122] [4267:140282551203648] - profile.py[line:93]: [computing#126fdeb060]done, elapse: 0.7296745777130127, function: union(self: Table(partition=4), other: Table(partition=4)) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:38,124] [4267:140282551203648] - profile.py[line:84]: [computing#460777db54]function_stack: [hetero_secureboost_guest.py:293]save_leaf_pos_and_mask_leaf_pos <-[hetero_secureboost_guest.py:312]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:38,124] [4267:140282551203648] - profile.py[line:87]: [computing#460777db54]start
+[DEBUG] [2021-06-15 22:05:38,166] [4267:140282551203648] - profile.py[line:93]: [computing#460777db54]done, elapse: 0.04199719429016113, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:38,252] [4267:140282551203648] - profile.py[line:84]: [computing#0ebdaee88f]function_stack: [hetero_secureboost_guest.py:315]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:38,252] [4267:140282551203648] - profile.py[line:87]: [computing#0ebdaee88f]start
+[DEBUG] [2021-06-15 22:05:38,659] [4267:140282551203648] - profile.py[line:93]: [computing#0ebdaee88f]done, elapse: 0.4071464538574219, function: filter(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:38,660] [4267:140282551203648] - profile.py[line:84]: [computing#be7f780ca8]function_stack: [hetero_secureboost_guest.py:316]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:38,661] [4267:140282551203648] - profile.py[line:87]: [computing#be7f780ca8]start
+[DEBUG] [2021-06-15 22:05:39,482] [4267:140282551203648] - profile.py[line:93]: [computing#be7f780ca8]done, elapse: 0.8219256401062012, function: subtractByKey(self: Table(partition=4), other: Table(partition=4)) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:39,511] [4267:140282551203648] - profile.py[line:84]: [computing#d2dae1ea3c]function_stack: [hetero_secureboost_guest.py:318]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:39,511] [4267:140282551203648] - profile.py[line:87]: [computing#d2dae1ea3c]start
+[DEBUG] [2021-06-15 22:05:39,515] [4267:140282551203648] - profile.py[line:93]: [computing#d2dae1ea3c]done, elapse: 0.0045697689056396484, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:39,516] [4267:140282551203648] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.0]guest->[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:39,529] [4267:140282551203648] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.0]guest->[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:39,529] [4267:140282551203648] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.predict.2.0.0]guest->[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:39,616] [4267:140282551203648] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.predict.2.0.0]guest->[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:39,616] [4267:140282551203648] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.predict.2.0.0]guest<-[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:40,129] [4267:140282551203648] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.predict.2.0.0]guest<-[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:40,130] [4267:140282551203648] - profile.py[line:84]: [computing#2388685882]function_stack: [hetero_secureboost_guest.py:328]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:40,130] [4267:140282551203648] - profile.py[line:87]: [computing#2388685882]start
+[DEBUG] [2021-06-15 22:05:40,187] [4267:140282551203648] - profile.py[line:93]: [computing#2388685882]done, elapse: 0.05682182312011719, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,212] [4267:140282551203648] - profile.py[line:87]: [computing#d32f1bccea]start
+[DEBUG] [2021-06-15 22:05:40,480] [4267:140282551203648] - profile.py[line:93]: [computing#d32f1bccea]done, elapse: 0.2677009105682373, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,501] [4267:140282551203648] - profile.py[line:87]: [computing#28f3524e74]start
+[DEBUG] [2021-06-15 22:05:40,539] [4267:140282551203648] - profile.py[line:93]: [computing#28f3524e74]done, elapse: 0.03854227066040039, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,541] [4267:140282551203648] - profile.py[line:87]: [computing#a91d9f3830]start
+[DEBUG] [2021-06-15 22:05:40,562] [4267:140282551203648] - profile.py[line:93]: [computing#a91d9f3830]done, elapse: 0.021419763565063477, function: subtractByKey(self: Table(partition=4), other: Table(partition=4)) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,563] [4267:140282551203648] - profile.py[line:87]: [computing#126fdeb060]start
+[DEBUG] [2021-06-15 22:05:40,583] [4267:140282551203648] - profile.py[line:93]: [computing#126fdeb060]done, elapse: 0.01960015296936035, function: union(self: Table(partition=4), other: Table(partition=4)) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,584] [4267:140282551203648] - profile.py[line:87]: [computing#460777db54]start
+[DEBUG] [2021-06-15 22:05:40,623] [4267:140282551203648] - profile.py[line:93]: [computing#460777db54]done, elapse: 0.03892970085144043, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,699] [4267:140282551203648] - profile.py[line:87]: [computing#0ebdaee88f]start
+[DEBUG] [2021-06-15 22:05:40,734] [4267:140282551203648] - profile.py[line:93]: [computing#0ebdaee88f]done, elapse: 0.0345149040222168, function: filter(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,757] [4267:140282551203648] - profile.py[line:87]: [computing#be7f780ca8]start
+[DEBUG] [2021-06-15 22:05:40,768] [4267:140282551203648] - profile.py[line:93]: [computing#be7f780ca8]done, elapse: 0.011267423629760742, function: subtractByKey(self: Table(partition=4), other: Table(partition=4)) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:40,793] [4267:140282551203648] - profile.py[line:87]: [computing#d2dae1ea3c]start
+[DEBUG] [2021-06-15 22:05:40,795] [4267:140282551203648] - profile.py[line:93]: [computing#d2dae1ea3c]done, elapse: 0.002197265625, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:40,795] [4267:140282551203648] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.1]guest->[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:40,804] [4267:140282551203648] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.1]guest->[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:40,806] [4267:140282551203648] - profile.py[line:84]: [computing#7ae5f601cb]function_stack: [hetero_secureboost_guest.py:264]get_predict_scores <-[hetero_secureboost_guest.py:340]boosting_fast_predict <-[hetero_secureboost_guest.py:378]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:40,806] [4267:140282551203648] - profile.py[line:87]: [computing#7ae5f601cb]start
+[DEBUG] [2021-06-15 22:05:41,041] [4267:140282551203648] - profile.py[line:93]: [computing#7ae5f601cb]done, elapse: 0.23432636260986328, function: mapValues(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,141] [4267:140282551203648] - profile.py[line:84]: [computing#9405e8722e]function_stack: [predict_cache.py:67]add_data <-[predict_cache.py:44]add_data <-[hetero_secureboost_guest.py:379]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,141] [4267:140282551203648] - profile.py[line:87]: [computing#9405e8722e]start
+[DEBUG] [2021-06-15 22:05:41,174] [4267:140282551203648] - profile.py[line:93]: [computing#9405e8722e]done, elapse: 0.032831668853759766, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,175] [4267:140282551203648] - profile.py[line:84]: [computing#8d22fadfa9]function_stack: [boosting.py:463]score_to_predict_result <-[hetero_secureboost_guest.py:387]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,176] [4267:140282551203648] - profile.py[line:87]: [computing#8d22fadfa9]start
+[DEBUG] [2021-06-15 22:05:41,215] [4267:140282551203648] - profile.py[line:93]: [computing#8d22fadfa9]done, elapse: 0.03963828086853027, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,216] [4267:140282551203648] - profile.py[line:84]: [computing#973f58fade]function_stack: [model_base.py:216]predict_score_to_output <-[boosting.py:476]score_to_predict_result <-[hetero_secureboost_guest.py:387]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,217] [4267:140282551203648] - profile.py[line:87]: [computing#973f58fade]start
+[DEBUG] [2021-06-15 22:05:41,247] [4267:140282551203648] - profile.py[line:93]: [computing#973f58fade]done, elapse: 0.030867576599121094, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,249] [4267:140282551203648] - profile.py[line:84]: [computing#2875cb7c7d]function_stack: [model_base.py:217]predict_score_to_output <-[boosting.py:476]score_to_predict_result <-[hetero_secureboost_guest.py:387]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,249] [4267:140282551203648] - profile.py[line:87]: [computing#2875cb7c7d]start
+[DEBUG] [2021-06-15 22:05:41,279] [4267:140282551203648] - profile.py[line:93]: [computing#2875cb7c7d]done, elapse: 0.030507802963256836, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,280] [4267:140282551203648] - profile.py[line:84]: [computing#bf7c8bc995]function_stack: [model_base.py:218]predict_score_to_output <-[boosting.py:476]score_to_predict_result <-[hetero_secureboost_guest.py:387]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,280] [4267:140282551203648] - profile.py[line:87]: [computing#bf7c8bc995]start
+[DEBUG] [2021-06-15 22:05:41,317] [4267:140282551203648] - profile.py[line:93]: [computing#bf7c8bc995]done, elapse: 0.03730893135070801, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,742] [4267:140282551203648] - profile.py[line:84]: [computing#29225282ec]function_stack: [model_base.py:220]predict_score_to_output <-[boosting.py:476]score_to_predict_result <-[hetero_secureboost_guest.py:387]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,743] [4267:140282551203648] - profile.py[line:87]: [computing#29225282ec]start
+[DEBUG] [2021-06-15 22:05:41,783] [4267:140282551203648] - profile.py[line:93]: [computing#29225282ec]done, elapse: 0.04043388366699219, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:41,904] [4267:140282551203648] - profile.py[line:84]: [computing#57aae4ba1c]function_stack: [io_check.py:34]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:41,905] [4267:140282551203648] - profile.py[line:87]: [computing#57aae4ba1c]start
+[DEBUG] [2021-06-15 22:05:41,906] [4267:140282551203648] - profile.py[line:93]: [computing#57aae4ba1c]done, elapse: 0.0019397735595703125, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:41,907] [4267:140282551203648] - profile.py[line:84]: [computing#6b13afccb8]function_stack: [component_properties.py:319]union_data <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:41,908] [4267:140282551203648] - profile.py[line:87]: [computing#6b13afccb8]start
+[DEBUG] [2021-06-15 22:05:41,942] [4267:140282551203648] - profile.py[line:93]: [computing#6b13afccb8]done, elapse: 0.034601688385009766, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[INFO] [2021-06-15 22:05:42,858] [4267:140282551203648] - profile.py[line:249]: 
+Computing:
++----------+--------------------------------------------------+
+| function |    function      n    sum(s)   mean(s)   max(s)  |
+|          | --------------- ---- -------- --------- -------- |
+|          |      join        7    2.021     0.289    0.838   |
+|          |  subtractByKey   4    1.276     0.319    0.822   |
+|          |    mapValues     11    0.78     0.071    0.234   |
+|          |      union       2    0.749     0.375     0.73   |
+|          |     filter       2    0.442     0.221    0.407   |
+|          |      count       5    0.015     0.003    0.005   |
+|          |      first       1    0.007     0.007    0.007   |
++----------+--------------------------------------------------+
+|  total   |    n=32, sum=5.2913, mean=0.1654, max=0.8384     |
++----------+--------------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.512  |  0.512  | 0.512   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data  |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.086  |  0.086  | 0.086   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 2 | 0.022  |  0.011  | 0.013   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 1 | 0.019  |  0.019  | 0.019   |
+|        |          iable.HeteroBoostingTransferVariable.predict_start_round          |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=5, sum=0.6394, mean=0.1279, max=0.5123                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-15 22:05:42,859] [4267:140282551203648] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 2 │ 1.1061 │  0.553  │ 0.8384 │ d32f1bccea │ [hetero_secureboost_guest.py:311]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  subtractB │ 2 │ 0.8332 │ 0.4166  │ 0.8219 │ be7f780ca8 │ [hetero_secureboost_guest.py:316]boosting_fast_pr  |
+|       |    yKey    │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 2 │ 0.7806 │ 0.3903  │ 0.7421 │ 28f3524e74 │ [hetero_secureboost_guest.py:289]save_leaf_pos_an  |
+|       |            │   │        │         │        │            │ d_mask_leaf_pos                                    |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:312]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    union   │ 2 │ 0.7493 │ 0.3746  │ 0.7297 │ 126fdeb060 │ [hetero_secureboost_guest.py:291]save_leaf_pos_an  |
+|       |            │   │        │         │        │            │ d_mask_leaf_pos                                    |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:312]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  subtractB │ 2 │ 0.4431 │ 0.2216  │ 0.4217 │ a91d9f3830 │ [hetero_secureboost_guest.py:290]save_leaf_pos_an  |
+|       |    yKey    │   │        │         │        │            │ d_mask_leaf_pos                                    |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:312]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |   filter   │ 2 │ 0.4417 │ 0.2208  │ 0.4071 │ 0ebdaee88f │ [hetero_secureboost_guest.py:315]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.2343 │ 0.2343  │ 0.2343 │ 7ae5f601cb │ [hetero_secureboost_guest.py:264]get_predict_scor  |
+|       |            │   │        │         │        │            │ es                                                 |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:340]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.1598 │ 0.1598  │ 0.1598 │ e85d6a211b │ [boosting.py:210]data_alignment                    |
+|       |            │   │        │         │        │            │ [boosting.py:225]data_and_header_alignment         |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:349]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0845 │ 0.0845  │ 0.0845 │ 5acccbcbba │ [hetero_secureboost_guest.py:302]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 2 │ 0.0809 │ 0.0405  │ 0.042  │ 460777db54 │ [hetero_secureboost_guest.py:293]save_leaf_pos_an  |
+|       |            │   │        │         │        │            │ d_mask_leaf_pos                                    |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:312]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0568 │ 0.0568  │ 0.0568 │ 2388685882 │ [hetero_secureboost_guest.py:328]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0522 │ 0.0522  │ 0.0522 │ 0045654bef │ [hetero_secureboost_guest.py:303]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0404 │ 0.0404  │ 0.0404 │ 29225282ec │ [model_base.py:220]predict_score_to_output         |
+|       |            │   │        │         │        │            │ [boosting.py:476]score_to_predict_result           |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:387]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0396 │ 0.0396  │ 0.0396 │ 8d22fadfa9 │ [boosting.py:463]score_to_predict_result           |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:387]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0373 │ 0.0373  │ 0.0373 │ bf7c8bc995 │ [model_base.py:218]predict_score_to_output         |
+|       |            │   │        │         │        │            │ [boosting.py:476]score_to_predict_result           |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:387]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0346 │ 0.0346  │ 0.0346 │ 6b13afccb8 │ [component_properties.py:319]union_data            |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0328 │ 0.0328  │ 0.0328 │ 9405e8722e │ [predict_cache.py:67]add_data                      |
+|       |            │   │        │         │        │            │ [predict_cache.py:44]add_data                      |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:379]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0309 │ 0.0309  │ 0.0309 │ 973f58fade │ [model_base.py:216]predict_score_to_output         |
+|       |            │   │        │         │        │            │ [boosting.py:476]score_to_predict_result           |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:387]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0305 │ 0.0305  │ 0.0305 │ 2875cb7c7d │ [model_base.py:217]predict_score_to_output         |
+|       |            │   │        │         │        │            │ [boosting.py:476]score_to_predict_result           |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:387]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    first   │ 1 │ 0.0072 │ 0.0072  │ 0.0072 │ 398d2c6ee3 │ [data_overview.py:30]get_features_shape            |
+|       |            │   │        │         │        │            │ [data_overview.py:136]is_empty_feature             |
+|       |            │   │        │         │        │            │ [abnormal_detection.py:33]empty_feature_detection  |
+|       |            │   │        │         │        │            │ [boosting.py:208]data_alignment                    |
+|       |            │   │        │         │        │            │ [boosting.py:225]data_and_header_alignment         |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:349]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 2 │ 0.0068 │ 0.0034  │ 0.0046 │ d2dae1ea3c │ [hetero_secureboost_guest.py:318]boosting_fast_pr  |
+|       |            │   │        │         │        │            │ edict                                              |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:378]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0047 │ 0.0047  │ 0.0047 │ ee81c7eeaf │ [io_check.py:28]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.002  │  0.002  │ 0.002  │ fb0da9fcf0 │ [abnormal_detection.py:27]empty_table_detection    |
+|       |            │   │        │         │        │            │ [boosting.py:207]data_alignment                    |
+|       |            │   │        │         │        │            │ [boosting.py:225]data_and_header_alignment         |
+|       |            │   │        │         │        │            │ [hetero_secureboost_guest.py:349]predict           |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0019 │ 0.0019  │ 0.0019 │ 57aae4ba1c │ [io_check.py:34]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                  n=32, sum=5.2913, mean=0.1654, max=0.8384                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

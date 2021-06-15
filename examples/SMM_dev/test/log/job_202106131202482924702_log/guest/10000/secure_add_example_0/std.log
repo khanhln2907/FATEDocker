@@ -1,0 +1,6 @@
+/usr/local/lib/python3.6/site-packages/beautifultable/utils.py:113: FutureWarning: 'BeautifulTable.get_string' has been deprecated in 'v1.0.0' and will be removed in 'v1.2.0'. Use 'str' instead.
+  warnings.warn(message, FutureWarning)
+host sum is 2088.2744
+guest sum is -88.2744
+Secure Add Result is 2000.0000
+Finish 202106131202482924702 secure_add_example_0 202106131202482924702_secure_add_example_0 0 guest 10000 task success

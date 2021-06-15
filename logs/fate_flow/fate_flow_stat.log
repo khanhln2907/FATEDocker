@@ -1,0 +1,713 @@
+[INFO] [2021-06-15 20:02:15,217] [7:140198731532096] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 20:02:17,764] [7:140198731532096] - resource_manager.py[line:75]: update computing engine EGGROLL clustermanager registration information
+[INFO] [2021-06-15 20:02:17,808] [7:140198731532096] - resource_manager.py[line:75]: update storage engine EGGROLL clustermanager registration information
+[INFO] [2021-06-15 20:02:17,841] [7:140198731532096] - resource_manager.py[line:75]: update federation engine EGGROLL rollsite registration information
+[INFO] [2021-06-15 20:02:17,878] [7:140198731532096] - resource_manager.py[line:75]: update computing engine SPARK spark registration information
+[INFO] [2021-06-15 20:02:17,931] [7:140198731532096] - resource_manager.py[line:75]: update storage engine HDFS hdfs registration information
+[INFO] [2021-06-15 20:02:17,971] [7:140198731532096] - resource_manager.py[line:75]: update federation engine RABBITMQ rabbitmq registration information
+[INFO] [2021-06-15 20:02:18,019] [7:140198731532096] - resource_manager.py[line:75]: update federation engine PULSAR pulsar registration information
+[INFO] [2021-06-15 20:02:18,031] [7:140198731532096] - resource_manager.py[line:75]: update computing engine STANDALONE fateflow registration information
+[INFO] [2021-06-15 20:02:18,042] [7:140198731532096] - resource_manager.py[line:75]: update storage engine STANDALONE fateflow registration information
+[INFO] [2021-06-15 20:02:18,051] [7:140198731532096] - resource_manager.py[line:75]: update federation engine STANDALONE fateflow registration information
+[INFO] [2021-06-15 20:02:18,061] [7:140198731532096] - resource_manager.py[line:75]: update computing engine STANDALONE fateflow registration information
+[INFO] [2021-06-15 20:02:18,073] [7:140198731532096] - resource_manager.py[line:75]: update storage engine STANDALONE fateflow registration information
+[INFO] [2021-06-15 20:02:18,084] [7:140198731532096] - resource_manager.py[line:75]: update federation engine STANDALONE fateflow registration information
+[INFO] [2021-06-15 20:02:18,086] [7:140198731532096] - fate_flow_server.py[line:107]: start grpc server thread pool by 40 max workers
+[INFO] [2021-06-15 20:02:18,112] [7:140198731532096] - fate_flow_server.py[line:115]: FATE Flow grpc server start successfully
+[INFO] [2021-06-15 20:02:18,112] [7:140198731532096] - fate_flow_server.py[line:118]: FATE Flow http server start...
+[INFO] [2021-06-15 20:59:10,333] [7:140195651385088] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106132103219414043
+[ERROR] [2021-06-15 20:59:10,361] [7:140195651385088] - model_app.py[line:51]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/model_app.py", line 601, in deploy
+    retcode, retmsg, model_info = model_utils.query_model_info_from_file(model_id=model_id, model_version=model_version, to_dict=True)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 105, in query_model_info_from_file
+    model_info = gather_model_info_data(pipeline_model, query_filters=query_filters)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 133, in gather_model_info_data
+    pipeline = model.read_component_model('pipeline', 'pipeline')['Pipeline']
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+[INFO] [2021-06-15 21:00:29,548] [7:140195651385088] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106132103219414043
+[ERROR] [2021-06-15 21:00:29,570] [7:140195651385088] - model_app.py[line:51]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/model_app.py", line 601, in deploy
+    retcode, retmsg, model_info = model_utils.query_model_info_from_file(model_id=model_id, model_version=model_version, to_dict=True)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 105, in query_model_info_from_file
+    model_info = gather_model_info_data(pipeline_model, query_filters=query_filters)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 133, in gather_model_info_data
+    pipeline = model.read_component_model('pipeline', 'pipeline')['Pipeline']
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+[INFO] [2021-06-15 21:00:33,091] [7:140195651385088] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106132103219414043
+[ERROR] [2021-06-15 21:00:33,105] [7:140195651385088] - model_app.py[line:51]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/model_app.py", line 601, in deploy
+    retcode, retmsg, model_info = model_utils.query_model_info_from_file(model_id=model_id, model_version=model_version, to_dict=True)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 105, in query_model_info_from_file
+    model_info = gather_model_info_data(pipeline_model, query_filters=query_filters)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 133, in gather_model_info_data
+    pipeline = model.read_component_model('pipeline', 'pipeline')['Pipeline']
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+[INFO] [2021-06-15 21:01:12,593] [327:139836860213056] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:12,666] [325:140505822156608] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:15,091] [7:140198731532096] - job_utils.py[line:346]: child process 325 exit with exitcode 0
+[INFO] [2021-06-15 21:01:15,091] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:15,134] [7:140198731532096] - job_utils.py[line:346]: child process 327 exit with exitcode 0
+[WARNING] [2021-06-15 21:01:15,135] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:01:17,695] [7:140198731532096] - job_utils.py[line:346]: child process 361 exit with exitcode 0
+[INFO] [2021-06-15 21:01:17,695] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:17,725] [7:140198731532096] - job_utils.py[line:346]: child process 363 exit with exitcode 0
+[INFO] [2021-06-15 21:01:17,726] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:18,096] [369:140114657933120] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:18,229] [385:140435254474560] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:20,141] [7:140198731532096] - job_utils.py[line:346]: child process 369 exit with exitcode 0
+[INFO] [2021-06-15 21:01:20,141] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:20,362] [7:140198731532096] - job_utils.py[line:346]: child process 385 exit with exitcode 0
+[WARNING] [2021-06-15 21:01:20,363] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:01:23,394] [7:140198731532096] - job_utils.py[line:346]: child process 461 exit with exitcode 0
+[INFO] [2021-06-15 21:01:23,394] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:23,461] [7:140198731532096] - job_utils.py[line:346]: child process 463 exit with exitcode 0
+[INFO] [2021-06-15 21:01:23,461] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:23,913] [476:140407154415424] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:23,976] [485:140580380071744] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:26,272] [7:140198731532096] - job_utils.py[line:346]: child process 476 exit with exitcode 0
+[INFO] [2021-06-15 21:01:26,273] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:26,372] [7:140198731532096] - job_utils.py[line:346]: child process 485 exit with exitcode 0
+[WARNING] [2021-06-15 21:01:26,373] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:01:28,993] [7:140198731532096] - job_utils.py[line:346]: child process 543 exit with exitcode 0
+[INFO] [2021-06-15 21:01:28,993] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:28,997] [7:140198731532096] - job_utils.py[line:346]: child process 541 exit with exitcode 0
+[INFO] [2021-06-15 21:01:28,997] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:29,310] [548:139797654320960] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:29,562] [558:139956870829888] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:34,323] [7:140198731532096] - job_utils.py[line:346]: child process 558 exit with exitcode 0
+[INFO] [2021-06-15 21:01:34,324] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:34,326] [7:140198731532096] - job_utils.py[line:346]: child process 548 exit with exitcode 0
+[WARNING] [2021-06-15 21:01:34,326] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:01:36,736] [7:140198731532096] - job_utils.py[line:346]: child process 633 exit with exitcode 0
+[INFO] [2021-06-15 21:01:36,737] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:36,758] [7:140198731532096] - job_utils.py[line:346]: child process 635 exit with exitcode 0
+[INFO] [2021-06-15 21:01:36,758] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:37,069] [640:140129451722560] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:37,165] [650:140013398787904] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:39,496] [7:140198731532096] - job_utils.py[line:346]: child process 640 exit with exitcode 0
+[INFO] [2021-06-15 21:01:39,497] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:39,666] [7:140198731532096] - job_utils.py[line:346]: child process 650 exit with exitcode 0
+[WARNING] [2021-06-15 21:01:39,666] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:01:42,131] [7:140198731532096] - job_utils.py[line:346]: child process 713 exit with exitcode 0
+[INFO] [2021-06-15 21:01:42,131] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:42,193] [7:140198731532096] - job_utils.py[line:346]: child process 715 exit with exitcode 0
+[INFO] [2021-06-15 21:01:42,194] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:42,579] [720:140199518553920] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:42,731] [737:140342711281472] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:47,020] [7:140198731532096] - job_utils.py[line:346]: child process 720 exit with exitcode 0
+[INFO] [2021-06-15 21:01:47,020] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:47,135] [7:140198731532096] - job_utils.py[line:346]: child process 737 exit with exitcode 0
+[WARNING] [2021-06-15 21:01:47,135] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:01:49,856] [7:140198731532096] - job_utils.py[line:346]: child process 807 exit with exitcode 0
+[INFO] [2021-06-15 21:01:49,856] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:49,893] [7:140198731532096] - job_utils.py[line:346]: child process 805 exit with exitcode 0
+[INFO] [2021-06-15 21:01:49,894] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:01:50,203] [815:139802724972352] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:01:50,257] [811:140231370778432] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:02:41,331] [7:140198731532096] - job_utils.py[line:346]: child process 811 exit with exitcode 0
+[INFO] [2021-06-15 21:02:41,331] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:45,853] [7:140198731532096] - job_utils.py[line:346]: child process 815 exit with exitcode 0
+[WARNING] [2021-06-15 21:02:45,853] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:02:47,608] [7:140198731532096] - job_utils.py[line:346]: child process 1048 exit with exitcode 0
+[INFO] [2021-06-15 21:02:47,608] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:47,629] [7:140198731532096] - job_utils.py[line:346]: child process 1046 exit with exitcode 0
+[INFO] [2021-06-15 21:02:47,630] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:48,136] [1052:139728038655808] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:02:48,198] [1055:140673578129216] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:02:51,464] [7:140198731532096] - job_utils.py[line:346]: child process 1052 exit with exitcode 0
+[INFO] [2021-06-15 21:02:51,465] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:53,020] [7:140198731532096] - job_utils.py[line:346]: child process 1055 exit with exitcode 0
+[WARNING] [2021-06-15 21:02:53,020] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:02:55,132] [7:140196725126912] - pipelined_model.py[line:73]: Save pipeline pipeline Pipeline buffer
+[INFO] [2021-06-15 21:02:55,160] [7:140196725126912] - pipelined_model.py[line:78]: Save pipeline pipeline successfully
+[INFO] [2021-06-15 21:02:55,205] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:02:55,338] [7:140196725126912] - pipelined_model.py[line:73]: Save pipeline pipeline Pipeline buffer
+[INFO] [2021-06-15 21:02:55,364] [7:140196725126912] - pipelined_model.py[line:78]: Save pipeline pipeline successfully
+[INFO] [2021-06-15 21:02:55,400] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:02:55,785] [7:140198731532096] - job_utils.py[line:346]: child process 1197 exit with exitcode 0
+[INFO] [2021-06-15 21:02:55,786] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:55,943] [7:140198731532096] - job_utils.py[line:346]: child process 1199 exit with exitcode 0
+[INFO] [2021-06-15 21:02:55,948] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:57,844] [7:140198731532096] - job_utils.py[line:346]: child process 1232 exit with exitcode 0
+[INFO] [2021-06-15 21:02:57,861] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:57,866] [7:140198731532096] - job_utils.py[line:346]: child process 1231 exit with exitcode 0
+[INFO] [2021-06-15 21:02:57,866] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:57,970] [7:140198731532096] - job_utils.py[line:346]: child process 1234 exit with exitcode 0
+[INFO] [2021-06-15 21:02:57,970] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:58,064] [7:140198731532096] - job_utils.py[line:346]: child process 1236 exit with exitcode 0
+[INFO] [2021-06-15 21:02:58,066] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:58,347] [7:140198731532096] - job_utils.py[line:346]: child process 1233 exit with exitcode 0
+[INFO] [2021-06-15 21:02:58,348] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,206] [7:140198731532096] - job_utils.py[line:346]: child process 1235 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,206] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,211] [7:140198731532096] - job_utils.py[line:346]: child process 1270 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,212] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,599] [7:140198731532096] - job_utils.py[line:346]: child process 1238 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,601] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,657] [7:140198731532096] - job_utils.py[line:346]: child process 1290 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,658] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,662] [7:140198731532096] - job_utils.py[line:346]: child process 1237 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,663] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,898] [7:140198731532096] - job_utils.py[line:346]: child process 1289 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,898] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:02:59,904] [7:140198731532096] - job_utils.py[line:346]: child process 1300 exit with exitcode 0
+[INFO] [2021-06-15 21:02:59,905] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:00,052] [7:140198731532096] - job_utils.py[line:346]: child process 1288 exit with exitcode 0
+[INFO] [2021-06-15 21:03:00,053] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:00,109] [7:140198731532096] - job_utils.py[line:346]: child process 1278 exit with exitcode 0
+[INFO] [2021-06-15 21:03:00,110] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:00,146] [7:140198731532096] - job_utils.py[line:346]: child process 1308 exit with exitcode 0
+[INFO] [2021-06-15 21:03:00,146] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:00,219] [7:140198731532096] - job_utils.py[line:346]: child process 1298 exit with exitcode 0
+[WARNING] [2021-06-15 21:03:00,220] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:03:03,080] [7:140198731532096] - job_utils.py[line:346]: child process 1385 exit with exitcode 0
+[INFO] [2021-06-15 21:03:03,080] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:03,168] [7:140198731532096] - job_utils.py[line:346]: child process 1384 exit with exitcode 0
+[INFO] [2021-06-15 21:03:03,169] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:03,556] [7:140198731532096] - job_utils.py[line:346]: child process 1388 exit with exitcode 0
+[INFO] [2021-06-15 21:03:03,556] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:04,031] [7:140198731532096] - job_utils.py[line:346]: child process 1389 exit with exitcode 0
+[INFO] [2021-06-15 21:03:04,032] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:04,523] [7:140198731532096] - job_utils.py[line:346]: child process 1387 exit with exitcode 0
+[INFO] [2021-06-15 21:03:04,523] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:04,632] [7:140198731532096] - job_utils.py[line:346]: child process 1383 exit with exitcode 0
+[INFO] [2021-06-15 21:03:04,632] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:04,806] [7:140198731532096] - job_utils.py[line:346]: child process 1391 exit with exitcode 0
+[INFO] [2021-06-15 21:03:04,807] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:04,903] [7:140198731532096] - job_utils.py[line:346]: child process 1386 exit with exitcode 0
+[INFO] [2021-06-15 21:03:04,904] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:04,997] [7:140198731532096] - job_utils.py[line:346]: child process 1436 exit with exitcode 0
+[INFO] [2021-06-15 21:03:04,997] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,000] [7:140198731532096] - job_utils.py[line:346]: child process 1409 exit with exitcode 0
+[INFO] [2021-06-15 21:03:05,001] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,062] [7:140198731532096] - job_utils.py[line:346]: child process 1446 exit with exitcode 0
+[INFO] [2021-06-15 21:03:05,063] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,422] [7:140198731532096] - job_utils.py[line:346]: child process 1438 exit with exitcode 0
+[INFO] [2021-06-15 21:03:05,423] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,483] [7:140198731532096] - job_utils.py[line:346]: child process 1456 exit with exitcode 0
+[INFO] [2021-06-15 21:03:05,483] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,482] [7:140198731532096] - job_utils.py[line:346]: child process 1419 exit with exitcode 0
+[INFO] [2021-06-15 21:03:05,485] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,525] [7:140198731532096] - job_utils.py[line:346]: child process 1428 exit with exitcode 0
+[INFO] [2021-06-15 21:03:05,525] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:03:05,575] [7:140198731532096] - job_utils.py[line:346]: child process 1447 exit with exitcode 0
+[WARNING] [2021-06-15 21:03:05,575] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:06:03,841] [7:140196188256000] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106152101093465361
+[INFO] [2021-06-15 21:06:03,860] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:03,883] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:03,937] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:03,976] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:03,998] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:04,073] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:04,104] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:04,133] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[ERROR] [2021-06-15 21:06:17,817] [7:140196188256000] - api_utils.py[line:49]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/2021061322283590321442/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/job_app.py", line 50, in submit_job
+    submit_result = DAGScheduler.submit(request.json)
+  File "/fate/python/fate_flow/scheduler/dag_scheduler.py", line 61, in submit
+    pipeline_model = tracker.get_output_model('pipeline')
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 188, in get_output_model
+    model_alias=model_alias)
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/2021061322283590321442/variables/data/pipeline/pipeline/Pipeline'
+[INFO] [2021-06-15 21:06:48,960] [7:140196188256000] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106152101093465361
+[INFO] [2021-06-15 21:06:48,971] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:48,982] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:49,023] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:49,050] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:49,062] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:49,121] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:49,150] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:06:49,166] [7:140196699948800] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:16,264] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:16,281] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[ERROR] [2021-06-15 21:08:16,283] [7:140196188256000] - api_utils.py[line:49]: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/job_app.py", line 50, in submit_job
+    submit_result = DAGScheduler.submit(request.json)
+  File "/fate/python/fate_flow/scheduler/dag_scheduler.py", line 67, in submit
+    raise Exception(f"Model {common_job_parameters.model_id} {common_job_parameters.model_version} has not been deployed yet.")
+Exception: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+[INFO] [2021-06-15 21:08:46,047] [7:140196725126912] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106152101093465361
+[INFO] [2021-06-15 21:08:46,070] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,089] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,133] [7:140196179863296] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,173] [7:140196179863296] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,209] [7:140196179863296] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,285] [7:140196179863296] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,321] [7:140196179863296] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:46,340] [7:140196179863296] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:49,765] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:08:49,784] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[ERROR] [2021-06-15 21:08:49,786] [7:140196725126912] - api_utils.py[line:49]: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/job_app.py", line 50, in submit_job
+    submit_result = DAGScheduler.submit(request.json)
+  File "/fate/python/fate_flow/scheduler/dag_scheduler.py", line 67, in submit
+    raise Exception(f"Model {common_job_parameters.model_id} {common_job_parameters.model_version} has not been deployed yet.")
+Exception: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+[INFO] [2021-06-15 21:10:49,891] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:10:49,912] [7:140196725126912] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:10:51,784] [1763:140455588374336] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:10:51,953] [1761:140248252319552] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:10:53,311] [7:140198731532096] - job_utils.py[line:346]: child process 1763 exit with exitcode 0
+[INFO] [2021-06-15 21:10:53,311] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:53,453] [7:140198731532096] - job_utils.py[line:346]: child process 1761 exit with exitcode 0
+[INFO] [2021-06-15 21:10:53,455] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:54,136] [7:140198731532096] - job_utils.py[line:346]: child process 1789 exit with exitcode 0
+[INFO] [2021-06-15 21:10:54,137] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:54,339] [7:140198731532096] - job_utils.py[line:346]: child process 1791 exit with exitcode 0
+[INFO] [2021-06-15 21:10:54,339] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:54,942] [7:140198731532096] - job_utils.py[line:346]: child process 1815 exit with exitcode 0
+[INFO] [2021-06-15 21:10:54,943] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:55,268] [7:140198731532096] - job_utils.py[line:346]: child process 1817 exit with exitcode 0
+[INFO] [2021-06-15 21:10:55,269] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:55,479] [7:140198731532096] - job_utils.py[line:346]: child process 1839 exit with exitcode 0
+[INFO] [2021-06-15 21:10:55,479] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:10:55,483] [7:140198731532096] - job_utils.py[line:346]: child process 1829 exit with exitcode 0
+[WARNING] [2021-06-15 21:10:55,483] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:17:10,856] [1923:139697816266560] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:17:13,941] [7:140198731532096] - job_utils.py[line:346]: child process 1923 exit with exitcode 0
+[WARNING] [2021-06-15 21:17:13,941] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:17:14,275] [7:140198455301888] - pipelined_model.py[line:73]: Save pipeline pipeline Pipeline buffer
+[INFO] [2021-06-15 21:17:14,281] [7:140198455301888] - pipelined_model.py[line:78]: Save pipeline pipeline successfully
+[INFO] [2021-06-15 21:17:14,998] [7:140198731532096] - job_utils.py[line:346]: child process 1943 exit with exitcode 0
+[INFO] [2021-06-15 21:17:14,999] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:17:15,086] [7:140198731532096] - job_utils.py[line:346]: child process 1947 exit with exitcode 0
+[INFO] [2021-06-15 21:17:15,086] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:17:15,340] [7:140198731532096] - job_utils.py[line:346]: child process 1951 exit with exitcode 0
+[WARNING] [2021-06-15 21:17:15,340] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:17:34,209] [1984:140346208028480] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:17:37,370] [7:140198731532096] - job_utils.py[line:346]: child process 1984 exit with exitcode 0
+[WARNING] [2021-06-15 21:17:37,370] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:17:37,831] [7:140196188256000] - pipelined_model.py[line:73]: Save pipeline pipeline Pipeline buffer
+[INFO] [2021-06-15 21:17:37,837] [7:140196188256000] - pipelined_model.py[line:78]: Save pipeline pipeline successfully
+[INFO] [2021-06-15 21:17:38,542] [7:140198731532096] - job_utils.py[line:346]: child process 2004 exit with exitcode 0
+[INFO] [2021-06-15 21:17:38,543] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:17:38,712] [7:140198731532096] - job_utils.py[line:346]: child process 2008 exit with exitcode 0
+[INFO] [2021-06-15 21:17:38,712] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:17:38,837] [7:140198731532096] - job_utils.py[line:346]: child process 2019 exit with exitcode 0
+[WARNING] [2021-06-15 21:17:38,838] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:22:04,165] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:22:04,184] [7:140196188256000] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:22:06,737] [2075:140167217764160] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:22:06,791] [2077:140419511437120] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:22:08,552] [7:140198731532096] - job_utils.py[line:346]: child process 2075 exit with exitcode 0
+[INFO] [2021-06-15 21:22:08,552] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:08,609] [7:140198731532096] - job_utils.py[line:346]: child process 2077 exit with exitcode 0
+[WARNING] [2021-06-15 21:22:08,609] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:22:11,602] [7:140198731532096] - job_utils.py[line:346]: child process 2109 exit with exitcode 0
+[INFO] [2021-06-15 21:22:11,603] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:11,627] [7:140198731532096] - job_utils.py[line:346]: child process 2107 exit with exitcode 0
+[WARNING] [2021-06-15 21:22:11,627] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:22:12,648] [7:140198731532096] - job_utils.py[line:346]: child process 2133 exit with exitcode 0
+[INFO] [2021-06-15 21:22:12,648] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:12,810] [7:140198731532096] - job_utils.py[line:346]: child process 2135 exit with exitcode 0
+[INFO] [2021-06-15 21:22:12,811] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:12,925] [7:140198731532096] - job_utils.py[line:346]: child process 2147 exit with exitcode 0
+[INFO] [2021-06-15 21:22:12,925] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:12,980] [7:140198731532096] - job_utils.py[line:346]: child process 2150 exit with exitcode 0
+[WARNING] [2021-06-15 21:22:12,980] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:22:29,397] [7:140198312691456] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:22:29,419] [7:140198312691456] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:22:32,159] [2236:139947529258816] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:22:32,300] [2238:140470493980480] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:22:34,188] [7:140198731532096] - job_utils.py[line:346]: child process 2236 exit with exitcode 0
+[INFO] [2021-06-15 21:22:34,188] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:34,343] [7:140198731532096] - job_utils.py[line:346]: child process 2238 exit with exitcode 0
+[WARNING] [2021-06-15 21:22:34,344] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:22:37,052] [7:140198731532096] - job_utils.py[line:346]: child process 2268 exit with exitcode 0
+[INFO] [2021-06-15 21:22:37,053] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:37,114] [7:140198731532096] - job_utils.py[line:346]: child process 2270 exit with exitcode 0
+[INFO] [2021-06-15 21:22:37,115] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:37,747] [7:140198731532096] - job_utils.py[line:346]: child process 2294 exit with exitcode 0
+[INFO] [2021-06-15 21:22:37,748] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:38,026] [7:140198731532096] - job_utils.py[line:346]: child process 2316 exit with exitcode 0
+[INFO] [2021-06-15 21:22:38,026] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:38,316] [7:140198731532096] - job_utils.py[line:346]: child process 2336 exit with exitcode 0
+[INFO] [2021-06-15 21:22:38,317] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:22:38,468] [7:140198731532096] - job_utils.py[line:346]: child process 2338 exit with exitcode 0
+[WARNING] [2021-06-15 21:22:38,469] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:26:48,326] [7:140198312691456] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:26:48,347] [7:140198312691456] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:26:49,948] [2393:140514615891776] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:26:50,021] [2395:140252984997696] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:26:51,614] [7:140198731532096] - job_utils.py[line:346]: child process 2393 exit with exitcode 0
+[INFO] [2021-06-15 21:26:51,614] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:51,674] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:52,339] [7:140198731532096] - job_utils.py[line:346]: child process 2423 exit with exitcode 0
+[INFO] [2021-06-15 21:26:52,339] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:52,350] [7:140198731532096] - job_utils.py[line:346]: child process 2425 exit with exitcode 0
+[INFO] [2021-06-15 21:26:52,350] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:52,974] [7:140198731532096] - job_utils.py[line:346]: child process 2449 exit with exitcode 0
+[INFO] [2021-06-15 21:26:52,975] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:53,154] [7:140198731532096] - job_utils.py[line:346]: child process 2451 exit with exitcode 0
+[INFO] [2021-06-15 21:26:53,155] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:53,283] [7:140198731532096] - job_utils.py[line:346]: child process 2464 exit with exitcode 0
+[INFO] [2021-06-15 21:26:53,284] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:26:53,396] [7:140198731532096] - job_utils.py[line:346]: child process 2473 exit with exitcode 0
+[WARNING] [2021-06-15 21:26:53,396] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:31:50,333] [7:140198455301888] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:31:50,349] [7:140198455301888] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:31:53,727] [2571:140502191126336] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:31:53,748] [2573:139793912252224] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:31:55,794] [7:140198731532096] - job_utils.py[line:346]: child process 2571 exit with exitcode 0
+[INFO] [2021-06-15 21:31:55,795] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:31:55,814] [7:140198731532096] - job_utils.py[line:346]: child process 2573 exit with exitcode 0
+[WARNING] [2021-06-15 21:31:55,814] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:31:58,665] [7:140198731532096] - job_utils.py[line:346]: child process 2603 exit with exitcode 0
+[INFO] [2021-06-15 21:31:58,666] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:31:58,856] [7:140198731532096] - job_utils.py[line:346]: child process 2605 exit with exitcode 0
+[INFO] [2021-06-15 21:31:58,858] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:31:59,523] [7:140198731532096] - job_utils.py[line:346]: child process 2629 exit with exitcode 0
+[INFO] [2021-06-15 21:31:59,524] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:31:59,989] [7:140198731532096] - job_utils.py[line:346]: child process 2659 exit with exitcode 0
+[INFO] [2021-06-15 21:31:59,989] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:00,456] [7:140198731532096] - job_utils.py[line:346]: child process 2671 exit with exitcode 0
+[INFO] [2021-06-15 21:32:00,456] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:00,551] [7:140198731532096] - job_utils.py[line:346]: child process 2673 exit with exitcode 0
+[WARNING] [2021-06-15 21:32:00,552] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:32:08,937] [7:140197287143168] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:32:08,952] [7:140197287143168] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:32:12,463] [2704:140624301725504] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:32:12,523] [2706:140029013866304] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:32:14,142] [7:140198731532096] - job_utils.py[line:346]: child process 2704 exit with exitcode 0
+[INFO] [2021-06-15 21:32:14,144] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:14,311] [7:140198731532096] - job_utils.py[line:346]: child process 2706 exit with exitcode 0
+[INFO] [2021-06-15 21:32:14,312] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:15,170] [7:140198731532096] - job_utils.py[line:346]: child process 2734 exit with exitcode 0
+[INFO] [2021-06-15 21:32:15,171] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:15,244] [7:140198731532096] - job_utils.py[line:346]: child process 2736 exit with exitcode 0
+[INFO] [2021-06-15 21:32:15,245] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:15,841] [7:140198731532096] - job_utils.py[line:346]: child process 2760 exit with exitcode 0
+[INFO] [2021-06-15 21:32:15,842] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:16,042] [7:140198731532096] - job_utils.py[line:346]: child process 2762 exit with exitcode 0
+[INFO] [2021-06-15 21:32:16,042] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:16,271] [7:140198731532096] - job_utils.py[line:346]: child process 2774 exit with exitcode 0
+[INFO] [2021-06-15 21:32:16,271] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:32:16,388] [7:140198731532096] - job_utils.py[line:346]: child process 2784 exit with exitcode 0
+[WARNING] [2021-06-15 21:32:16,388] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:39:41,755] [7:140197278750464] - pipelined_model.py[line:185]: parse BoostingTreeModelMeta proto object normal
+[INFO] [2021-06-15 21:39:41,757] [7:140197278750464] - pipelined_model.py[line:185]: parse BoostingTreeModelParam proto object normal
+[INFO] [2021-06-15 21:41:12,453] [2864:140640813619008] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:41:15,422] [7:140198731532096] - job_utils.py[line:346]: child process 2864 exit with exitcode 0
+[WARNING] [2021-06-15 21:41:15,423] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:41:16,069] [7:140197278750464] - pipelined_model.py[line:73]: Save pipeline pipeline Pipeline buffer
+[INFO] [2021-06-15 21:41:16,075] [7:140197278750464] - pipelined_model.py[line:78]: Save pipeline pipeline successfully
+[INFO] [2021-06-15 21:41:16,822] [7:140198731532096] - job_utils.py[line:346]: child process 2884 exit with exitcode 0
+[INFO] [2021-06-15 21:41:16,822] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:41:17,005] [7:140198731532096] - job_utils.py[line:346]: child process 2888 exit with exitcode 0
+[INFO] [2021-06-15 21:41:17,005] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:41:17,117] [7:140198731532096] - job_utils.py[line:346]: child process 2899 exit with exitcode 0
+[WARNING] [2021-06-15 21:41:17,117] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:54:27,572] [7:140196691556096] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106152101093465361
+[INFO] [2021-06-15 21:54:27,596] [7:140196691556096] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,617] [7:140196691556096] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,657] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,693] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,718] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,798] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,831] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:54:27,857] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:56:32,657] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:56:32,670] [7:140197278750464] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:56:37,006] [2992:140470760322880] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:56:37,101] [2994:139943419057984] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:56:41,769] [7:140198731532096] - job_utils.py[line:346]: child process 2992 exit with exitcode 0
+[INFO] [2021-06-15 21:56:41,769] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:41,850] [7:140198731532096] - job_utils.py[line:346]: child process 2994 exit with exitcode 0
+[WARNING] [2021-06-15 21:56:41,850] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:56:43,938] [7:140198731532096] - job_utils.py[line:346]: child process 3050 exit with exitcode 0
+[INFO] [2021-06-15 21:56:43,938] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:43,972] [7:140198731532096] - job_utils.py[line:346]: child process 3052 exit with exitcode 0
+[INFO] [2021-06-15 21:56:43,972] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:44,523] [3058:140146818275136] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:56:44,587] [3074:139995760379712] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:56:52,653] [7:140198731532096] - job_utils.py[line:346]: child process 3074 exit with exitcode 0
+[INFO] [2021-06-15 21:56:52,654] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:54,775] [7:140198731532096] - job_utils.py[line:346]: child process 3058 exit with exitcode 0
+[INFO] [2021-06-15 21:56:54,778] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:55,689] [7:140198731532096] - job_utils.py[line:346]: child process 3130 exit with exitcode 0
+[INFO] [2021-06-15 21:56:55,690] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:55,755] [7:140198731532096] - job_utils.py[line:346]: child process 3132 exit with exitcode 0
+[INFO] [2021-06-15 21:56:55,756] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:56,261] [3145:140075917207360] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:56:56,595] [3155:140175784003392] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:56:58,888] [7:140198731532096] - job_utils.py[line:346]: child process 3145 exit with exitcode 0
+[INFO] [2021-06-15 21:56:58,889] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:56:59,305] [7:140198731532096] - job_utils.py[line:346]: child process 3155 exit with exitcode 0
+[WARNING] [2021-06-15 21:56:59,306] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:57:01,776] [7:140198731532096] - job_utils.py[line:346]: child process 3207 exit with exitcode 0
+[INFO] [2021-06-15 21:57:01,777] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:01,845] [7:140198731532096] - job_utils.py[line:346]: child process 3209 exit with exitcode 0
+[INFO] [2021-06-15 21:57:01,845] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:02,378] [3224:139687530084160] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:57:02,469] [3233:140059497649984] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:57:05,275] [7:140198731532096] - job_utils.py[line:346]: child process 3233 exit with exitcode 0
+[INFO] [2021-06-15 21:57:05,276] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:07,580] [7:140198731532096] - job_utils.py[line:346]: child process 3313 exit with exitcode 0
+[INFO] [2021-06-15 21:57:07,581] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:07,593] [7:140198731532096] - job_utils.py[line:346]: child process 3315 exit with exitcode 0
+[INFO] [2021-06-15 21:57:07,593] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:08,058] [3319:139692560086848] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:57:08,145] [3323:140186488915776] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 21:57:14,114] [7:140198731532096] - job_utils.py[line:346]: child process 3323 exit with exitcode 0
+[INFO] [2021-06-15 21:57:14,115] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:14,145] [7:140198731532096] - job_utils.py[line:346]: child process 3319 exit with exitcode 0
+[WARNING] [2021-06-15 21:57:14,146] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:57:17,263] [7:140198731532096] - job_utils.py[line:346]: child process 3440 exit with exitcode 0
+[INFO] [2021-06-15 21:57:17,264] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:17,356] [7:140198731532096] - job_utils.py[line:346]: child process 3442 exit with exitcode 0
+[INFO] [2021-06-15 21:57:17,356] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,029] [7:140198731532096] - job_utils.py[line:346]: child process 3475 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,030] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,079] [7:140198731532096] - job_utils.py[line:346]: child process 3474 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,080] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,306] [7:140198731532096] - job_utils.py[line:346]: child process 3508 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,307] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,358] [7:140198731532096] - job_utils.py[line:346]: child process 3476 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,358] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,367] [7:140198731532096] - job_utils.py[line:346]: child process 3472 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,367] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,378] [7:140198731532096] - job_utils.py[line:346]: child process 3477 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,378] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,390] [7:140198731532096] - job_utils.py[line:346]: child process 3480 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,390] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,508] [7:140198731532096] - job_utils.py[line:346]: child process 3491 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,509] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,512] [7:140198731532096] - job_utils.py[line:346]: child process 3482 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,514] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:19,773] [7:140198731532096] - job_utils.py[line:346]: child process 3517 exit with exitcode 0
+[INFO] [2021-06-15 21:57:19,775] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:21,325] [7:140198731532096] - job_utils.py[line:346]: child process 3571 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,326] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:21,355] [7:140198731532096] - job_utils.py[line:346]: child process 3572 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,356] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:21,578] [7:140198731532096] - job_utils.py[line:346]: child process 3570 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,578] [7:140198731532096] - job_utils.py[line:346]: child process 3573 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,578] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:21,816] [7:140198731532096] - job_utils.py[line:346]: child process 3578 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,816] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:21,871] [7:140198731532096] - job_utils.py[line:346]: child process 3595 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,871] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:21,872] [7:140198731532096] - job_utils.py[line:346]: child process 3574 exit with exitcode 0
+[INFO] [2021-06-15 21:57:21,872] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:22,059] [7:140198731532096] - job_utils.py[line:346]: child process 3611 exit with exitcode 0
+[INFO] [2021-06-15 21:57:22,060] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:22,073] [7:140198731532096] - job_utils.py[line:346]: child process 3587 exit with exitcode 0
+[INFO] [2021-06-15 21:57:22,073] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 21:57:22,115] [7:140198731532096] - job_utils.py[line:346]: child process 3614 exit with exitcode 0
+[WARNING] [2021-06-15 21:57:22,115] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 21:58:11,207] [7:140198170081024] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106152101093465361
+[INFO] [2021-06-15 21:58:11,222] [7:140198170081024] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,231] [7:140198170081024] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,281] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,323] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,346] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,429] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,463] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 21:58:11,481] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:35,806] [7:140198170081024] - model_utils.py[line:100]: glob model dir: /fate/model_local_cache/*#*#guest-9999#host-9998#model/202106152101093465361
+[INFO] [2021-06-15 22:02:35,829] [7:140198170081024] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:35,850] [7:140198170081024] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:35,897] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:35,928] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:35,950] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:36,030] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:36,063] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:02:36,081] [7:140198027470592] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:03:16,546] [7:140198170081024] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:03:16,561] [7:140198170081024] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:03:19,039] [3717:140216257398592] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:03:19,195] [3719:139868736038720] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:03:22,212] [7:140198731532096] - job_utils.py[line:346]: child process 3719 exit with exitcode 0
+[INFO] [2021-06-15 22:03:22,212] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:22,440] [7:140198731532096] - job_utils.py[line:346]: child process 3717 exit with exitcode 0
+[WARNING] [2021-06-15 22:03:22,440] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 22:03:23,751] [7:140198731532096] - job_utils.py[line:346]: child process 3753 exit with exitcode 0
+[INFO] [2021-06-15 22:03:23,751] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:23,762] [7:140198731532096] - job_utils.py[line:346]: child process 3755 exit with exitcode 0
+[INFO] [2021-06-15 22:03:23,763] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:24,126] [3760:140577387210560] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:03:24,135] [3770:140701168691008] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:03:30,092] [7:140198731532096] - job_utils.py[line:346]: child process 3770 exit with exitcode 0
+[INFO] [2021-06-15 22:03:30,092] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:30,757] [7:140198731532096] - job_utils.py[line:346]: child process 3760 exit with exitcode 0
+[INFO] [2021-06-15 22:03:30,758] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:31,638] [7:140198731532096] - job_utils.py[line:346]: child process 3844 exit with exitcode 0
+[INFO] [2021-06-15 22:03:31,638] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:31,769] [7:140198731532096] - job_utils.py[line:346]: child process 3846 exit with exitcode 0
+[INFO] [2021-06-15 22:03:31,769] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:32,689] [7:140198731532096] - job_utils.py[line:346]: child process 3873 exit with exitcode 0
+[INFO] [2021-06-15 22:03:32,690] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:32,749] [7:140198731532096] - job_utils.py[line:346]: child process 3872 exit with exitcode 0
+[INFO] [2021-06-15 22:03:32,750] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:32,803] [7:140198731532096] - job_utils.py[line:346]: child process 3875 exit with exitcode 0
+[INFO] [2021-06-15 22:03:32,804] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:33,066] [7:140198731532096] - job_utils.py[line:346]: child process 3876 exit with exitcode 0
+[INFO] [2021-06-15 22:03:33,067] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:33,397] [7:140198731532096] - job_utils.py[line:346]: child process 3906 exit with exitcode 0
+[INFO] [2021-06-15 22:03:33,398] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:33,428] [7:140198731532096] - job_utils.py[line:346]: child process 3897 exit with exitcode 0
+[INFO] [2021-06-15 22:03:33,428] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:33,454] [7:140198731532096] - job_utils.py[line:346]: child process 3918 exit with exitcode 0
+[INFO] [2021-06-15 22:03:33,454] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:03:33,466] [7:140198731532096] - job_utils.py[line:346]: child process 3915 exit with exitcode 0
+[WARNING] [2021-06-15 22:03:33,467] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 22:05:07,197] [7:140198312691456] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:05:07,208] [7:140198312691456] - pipelined_model.py[line:185]: parse Pipeline proto object normal
+[INFO] [2021-06-15 22:05:10,616] [3984:139640211384128] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:10,745] [3986:140508089186112] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:13,271] [7:140198731532096] - job_utils.py[line:346]: child process 3984 exit with exitcode 0
+[INFO] [2021-06-15 22:05:13,271] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:13,447] [7:140198731532096] - job_utils.py[line:346]: child process 3986 exit with exitcode 0
+[WARNING] [2021-06-15 22:05:13,448] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 22:05:15,405] [7:140198731532096] - job_utils.py[line:346]: child process 4022 exit with exitcode 0
+[INFO] [2021-06-15 22:05:15,405] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:15,411] [7:140198731532096] - job_utils.py[line:346]: child process 4020 exit with exitcode 0
+[INFO] [2021-06-15 22:05:15,412] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:16,017] [4034:140389192021824] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:16,101] [4055:140633721222976] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:18,928] [7:140198731532096] - job_utils.py[line:346]: child process 4034 exit with exitcode 0
+[INFO] [2021-06-15 22:05:18,929] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:18,934] [7:140198731532096] - job_utils.py[line:346]: child process 4055 exit with exitcode 0
+[WARNING] [2021-06-15 22:05:18,934] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 22:05:21,092] [7:140198731532096] - job_utils.py[line:346]: child process 4132 exit with exitcode 0
+[INFO] [2021-06-15 22:05:21,092] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:21,245] [7:140198731532096] - job_utils.py[line:346]: child process 4134 exit with exitcode 0
+[INFO] [2021-06-15 22:05:21,245] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:21,703] [4148:139989672605504] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:21,706] [4139:139980156176192] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:26,819] [7:140198731532096] - job_utils.py[line:346]: child process 4148 exit with exitcode 0
+[INFO] [2021-06-15 22:05:26,820] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:27,036] [7:140198731532096] - job_utils.py[line:346]: child process 4139 exit with exitcode 0
+[WARNING] [2021-06-15 22:05:27,037] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 22:05:28,968] [7:140198731532096] - job_utils.py[line:346]: child process 4259 exit with exitcode 0
+[INFO] [2021-06-15 22:05:28,968] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:28,972] [7:140198731532096] - job_utils.py[line:346]: child process 4261 exit with exitcode 0
+[INFO] [2021-06-15 22:05:28,972] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:29,283] [4267:140282551203648] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:29,458] [4271:140646451431232] - db_models.py[line:57]: init sqlite database on standalone mode successfully
+[INFO] [2021-06-15 22:05:42,402] [7:140198731532096] - job_utils.py[line:346]: child process 4271 exit with exitcode 0
+[INFO] [2021-06-15 22:05:42,404] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:44,052] [7:140198731532096] - job_utils.py[line:346]: child process 4267 exit with exitcode 0
+[WARNING] [2021-06-15 22:05:44,053] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.
+[INFO] [2021-06-15 22:05:46,385] [7:140198731532096] - job_utils.py[line:346]: child process 4442 exit with exitcode 0
+[INFO] [2021-06-15 22:05:46,386] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:46,553] [7:140198731532096] - job_utils.py[line:346]: child process 4444 exit with exitcode 0
+[INFO] [2021-06-15 22:05:46,554] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:47,707] [7:140198731532096] - job_utils.py[line:346]: child process 4472 exit with exitcode 0
+[INFO] [2021-06-15 22:05:47,707] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:47,736] [7:140198731532096] - job_utils.py[line:346]: child process 4471 exit with exitcode 0
+[INFO] [2021-06-15 22:05:47,736] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:47,764] [7:140198731532096] - job_utils.py[line:346]: child process 4468 exit with exitcode 0
+[INFO] [2021-06-15 22:05:47,768] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:47,887] [7:140198731532096] - job_utils.py[line:346]: child process 4476 exit with exitcode 0
+[INFO] [2021-06-15 22:05:47,892] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:47,925] [7:140198731532096] - job_utils.py[line:346]: child process 4475 exit with exitcode 0
+[INFO] [2021-06-15 22:05:47,925] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:47,951] [7:140198731532096] - job_utils.py[line:346]: child process 4473 exit with exitcode 0
+[INFO] [2021-06-15 22:05:47,952] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:48,374] [7:140198731532096] - job_utils.py[line:346]: child process 4478 exit with exitcode 0
+[INFO] [2021-06-15 22:05:48,374] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:48,605] [7:140198731532096] - job_utils.py[line:346]: child process 4488 exit with exitcode 0
+[INFO] [2021-06-15 22:05:48,606] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:48,952] [7:140198731532096] - job_utils.py[line:346]: child process 4533 exit with exitcode 0
+[INFO] [2021-06-15 22:05:48,953] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,008] [7:140198731532096] - job_utils.py[line:346]: child process 4545 exit with exitcode 0
+[INFO] [2021-06-15 22:05:49,009] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,022] [7:140198731532096] - job_utils.py[line:346]: child process 4544 exit with exitcode 0
+[INFO] [2021-06-15 22:05:49,022] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,093] [7:140198731532096] - job_utils.py[line:346]: child process 4542 exit with exitcode 0
+[INFO] [2021-06-15 22:05:49,093] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,210] [7:140198731532096] - job_utils.py[line:346]: child process 4554 exit with exitcode 0
+[INFO] [2021-06-15 22:05:49,210] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,260] [7:140198731532096] - job_utils.py[line:346]: child process 4556 exit with exitcode 0
+[INFO] [2021-06-15 22:05:49,261] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,296] [7:140198731532096] - job_utils.py[line:346]: child process 4568 exit with exitcode 0
+[INFO] [2021-06-15 22:05:49,296] [7:140198731532096] - job_utils.py[line:343]: no child process was immediately available
+[INFO] [2021-06-15 22:05:49,332] [7:140198731532096] - job_utils.py[line:346]: child process 4566 exit with exitcode 0
+[WARNING] [2021-06-15 22:05:49,332] [7:140198731532096] - job_utils.py[line:349]: current process has no existing unwaited-for child processes.

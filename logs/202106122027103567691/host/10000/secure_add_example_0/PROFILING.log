@@ -1,0 +1,74 @@
+[DEBUG] [2021-06-12 20:27:16,196] [835:140611736864576] - profile.py[line:84]: [computing#22f4a65d94]function_stack: [secure_add_host.py:64]secure <-[secure_add_host.py:94]run
+[DEBUG] [2021-06-12 20:27:16,196] [835:140611736864576] - profile.py[line:87]: [computing#22f4a65d94]start
+[DEBUG] [2021-06-12 20:27:16,405] [835:140611736864576] - profile.py[line:93]: [computing#22f4a65d94]done, elapse: 0.20891833305358887, function: mapValues(self: Table(partition=48), func: method) -> Table(partition=48)
+[DEBUG] [2021-06-12 20:27:16,406] [835:140611736864576] - profile.py[line:84]: [computing#6c384ecb9e]function_stack: [secure_add_host.py:65]secure <-[secure_add_host.py:94]run
+[DEBUG] [2021-06-12 20:27:16,407] [835:140611736864576] - profile.py[line:87]: [computing#6c384ecb9e]start
+[DEBUG] [2021-06-12 20:27:16,528] [835:140611736864576] - profile.py[line:93]: [computing#6c384ecb9e]done, elapse: 0.12124013900756836, function: mapValues(self: Table(partition=48), func: function) -> Table(partition=48)
+[DEBUG] [2021-06-12 20:27:16,529] [835:140611736864576] - profile.py[line:84]: [computing#9a6a1b9345]function_stack: [secure_add_host.py:66]secure <-[secure_add_host.py:94]run
+[DEBUG] [2021-06-12 20:27:16,530] [835:140611736864576] - profile.py[line:87]: [computing#9a6a1b9345]start
+[DEBUG] [2021-06-12 20:27:16,686] [835:140611736864576] - profile.py[line:93]: [computing#9a6a1b9345]done, elapse: 0.15697479248046875, function: mapValues(self: Table(partition=48), func: function) -> Table(partition=48)
+[DEBUG] [2021-06-12 20:27:16,968] [835:140611736864576] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.guest_share.default]host<-[Party(role=guest, party_id=10000)] start
+[DEBUG] [2021-06-12 20:27:17,278] [835:140611736864576] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.guest_share.default]host<-[Party(role=guest, party_id=10000)] done
+[DEBUG] [2021-06-12 20:27:17,278] [835:140611736864576] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_share.default]host->[Party(role=guest, party_id=10000)] start
+[DEBUG] [2021-06-12 20:27:17,586] [835:140611736864576] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_share.default]host->[Party(role=guest, party_id=10000)] done
+[DEBUG] [2021-06-12 20:27:17,587] [835:140611736864576] - profile.py[line:84]: [computing#ddff236459]function_stack: [secure_add_host.py:69]add <-[secure_add_host.py:103]run
+[DEBUG] [2021-06-12 20:27:17,587] [835:140611736864576] - profile.py[line:87]: [computing#ddff236459]start
+[DEBUG] [2021-06-12 20:27:17,735] [835:140611736864576] - profile.py[line:93]: [computing#ddff236459]done, elapse: 0.14760470390319824, function: join(self: Table(partition=48), other: Table(partition=48), func: function) -> Table(partition=48)
+[DEBUG] [2021-06-12 20:27:17,736] [835:140611736864576] - profile.py[line:84]: [computing#dd97fc8f89]function_stack: [secure_add_host.py:70]add <-[secure_add_host.py:103]run
+[DEBUG] [2021-06-12 20:27:17,737] [835:140611736864576] - profile.py[line:87]: [computing#dd97fc8f89]start
+[DEBUG] [2021-06-12 20:27:17,829] [835:140611736864576] - profile.py[line:93]: [computing#dd97fc8f89]done, elapse: 0.09232640266418457, function: reduce(self: Table(partition=48), func: function) -> float
+[DEBUG] [2021-06-12 20:27:17,830] [835:140611736864576] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_sum.default]host->[Party(role=guest, party_id=10000)] start
+[DEBUG] [2021-06-12 20:27:17,855] [835:140611736864576] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_sum.default]host->[Party(role=guest, party_id=10000)] done
+[INFO] [2021-06-12 20:27:18,094] [835:140611736864576] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   3   0.487     0.162    0.209   |
+|          |    join      1   0.148     0.148    0.148   |
+|          |   reduce     1   0.092     0.092    0.092   |
++----------+---------------------------------------------+
+|  total   |  n=5, sum=0.7271, mean=0.1454, max=0.2089   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 0.309  |  0.309  | 0.309   |
+|        |            variable.SecureAddExampleTransferVariable.guest_share           |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 0.307  |  0.307  | 0.307   |
+|        |            variable.SecureAddExampleTransferVariable.host_share            |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 0.025  |  0.025  | 0.025   |
+|        |             variable.SecureAddExampleTransferVariable.host_sum             |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=3, sum=0.6418, mean=0.2139, max=0.3090                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-12 20:27:18,095] [835:140611736864576] - profile.py[line:250]: 
+Detailed Computing:
++-------+------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │             stack              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |  mapValues │ 1 │ 0.2089 │ 0.2089  │ 0.2089 │ 22f4a65d94 │ [secure_add_host.py:64]secure  |
+|       |            │   │        │         │        │            │ [secure_add_host.py:94]run     |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |  mapValues │ 1 │ 0.157  │  0.157  │ 0.157  │ 9a6a1b9345 │ [secure_add_host.py:66]secure  |
+|       |            │   │        │         │        │            │ [secure_add_host.py:94]run     |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |    join    │ 1 │ 0.1476 │ 0.1476  │ 0.1476 │ ddff236459 │ [secure_add_host.py:69]add     |
+|       |            │   │        │         │        │            │ [secure_add_host.py:103]run    |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |  mapValues │ 1 │ 0.1212 │ 0.1212  │ 0.1212 │ 6c384ecb9e │ [secure_add_host.py:65]secure  |
+|       |            │   │        │         │        │            │ [secure_add_host.py:94]run     |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |   reduce   │ 1 │ 0.0923 │ 0.0923  │ 0.0923 │ dd97fc8f89 │ [secure_add_host.py:70]add     |
+|       |            │   │        │         │        │            │ [secure_add_host.py:103]run    |
++-------+------------------------------------------------------------------------------------------+
+| total |                         n=5, sum=0.7271, mean=0.1454, max=0.2089                         |
++-------+------------------------------------------------------------------------------------------+
+

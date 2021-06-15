@@ -1,0 +1,221 @@
+[INFO] [2021-06-15 22:05:11,870] [3984:139640211384128] - task_executor.py[line:313]: report task 2021061522050718069622_reader_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:11,871] [3984:139640211384128] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_reader_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:12,287] [3984:139640211384128] - task_executor.py[line:150]: Run 2021061522050718069622 reader_0 2021061522050718069622_reader_0 guest 9999 task
+[INFO] [2021-06-15 22:05:12,287] [3984:139640211384128] - task_executor.py[line:151]: Component parameters on party {'ReaderParam': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'host': {'0': {'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}, 'dataio_1': {'with_label': False}, 'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}}}, 'guest': {'0': {'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}}}}}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061522023585229020', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'role': {'host': [9998], 'guest': [9999]}, 'dsl_version': 2, 'initiator': {'party_id': 9999, 'role': 'guest'}, 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'fate_flow/components/reader.py/Reader', 'module': 'Reader', 'output_data_name': ['data']}
+[INFO] [2021-06-15 22:05:12,288] [3984:139640211384128] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-15 22:05:12,447] [3984:139640211384128] - reader.py[line:66]: the STANDALONE input table needs to be transform format
+[INFO] [2021-06-15 22:05:12,475] [3984:139640211384128] - reader.py[line:166]: start copying table
+[INFO] [2021-06-15 22:05:12,475] [3984:139640211384128] - reader.py[line:168]: source table name: breast_hetero_guest namespace: experiment engine: STANDALONE
+[INFO] [2021-06-15 22:05:12,476] [3984:139640211384128] - reader.py[line:170]: destination table name: c1b4a95ece2511eb9d460242ac110002 namespace: output_data_2021061522050718069622_reader_0_0 engine: STANDALONE
+[INFO] [2021-06-15 22:05:12,554] [3984:139640211384128] - reader.py[line:194]: copy successfully
+[INFO] [2021-06-15 22:05:12,634] [3984:139640211384128] - tracker_client.py[line:127]: Request save job 2021061522050718069622 task 2021061522050718069622_reader_0 0 on guest 9999 data data info
+[INFO] [2021-06-15 22:05:12,660] [3984:139640211384128] - tracker_client.py[line:103]: Request save job 2021061522050718069622 task 2021061522050718069622_reader_0 0 on guest 9999 metric reader_namespace reader_name meta
+[INFO] [2021-06-15 22:05:12,902] [3984:139640211384128] - profile.py[line:249]: 
+Computing:
++----------+------------------------------------------+
+| function |                                          |
++----------+------------------------------------------+
+|  total   | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++----------+------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-15 22:05:12,903] [3984:139640211384128] - task_executor.py[line:313]: report task 2021061522050718069622_reader_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:12,903] [3984:139640211384128] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_reader_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:12,985] [3984:139640211384128] - task_executor.py[line:202]: task 2021061522050718069622_reader_0 guest 9999 start time: 2021-06-15 22:05:11
+[INFO] [2021-06-15 22:05:12,985] [3984:139640211384128] - task_executor.py[line:204]: task 2021061522050718069622_reader_0 guest 9999 end time: 2021-06-15 22:05:12
+[INFO] [2021-06-15 22:05:12,985] [3984:139640211384128] - task_executor.py[line:206]: task 2021061522050718069622_reader_0 guest 9999 takes 1.205s
+[INFO] [2021-06-15 22:05:12,986] [3984:139640211384128] - task_executor.py[line:209]: Finish 2021061522050718069622 reader_0 2021061522050718069622_reader_0 0 guest 9999 task success
+[INFO] [2021-06-15 22:05:12,986] [3984:139640211384128] - task_executor.py[line:313]: report task 2021061522050718069622_reader_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:12,986] [3984:139640211384128] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_reader_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:17,350] [4034:140389192021824] - task_executor.py[line:313]: report task 2021061522050718069622_dataio_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:17,351] [4034:140389192021824] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:17,796] [4034:140389192021824] - task_executor.py[line:150]: Run 2021061522050718069622 dataio_0 2021061522050718069622_dataio_0 guest 9999 task
+[INFO] [2021-06-15 22:05:17,796] [4034:140389192021824] - task_executor.py[line:151]: Component parameters on party {'DataIOParam': {'input_format': 'dense', 'delimitor': ',', 'data_type': 'float64', 'exclusive_data_type': None, 'tag_with_value': False, 'tag_value_delimitor': ':', 'missing_fill': False, 'default_value': 0, 'missing_fill_method': None, 'missing_impute': None, 'outlier_replace': False, 'outlier_replace_method': None, 'outlier_impute': None, 'outlier_replace_value': 0, 'with_label': True, 'label_name': 'y', 'label_type': 'int', 'output_format': 'dense', 'need_run': True}, 'initiator': {'role': 'guest', 'party_id': 9999}, 'component_parameters': {'role': {'host': {'0': {'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_1': {'with_label': False}, 'dataio_0': {'with_label': False}}}, 'guest': {'0': {'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}}}}, 'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061522023585229020', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'conf_path': './examples/LDPDev/test_predict_conf.json', 'dsl_version': 2, 'role': {'host': [9998], 'guest': [9999]}, 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'federatedml/util/data_io.py/DataIO', 'module': 'DataIO', 'output_data_name': ['data']}
+[INFO] [2021-06-15 22:05:17,797] [4034:140389192021824] - task_executor.py[line:152]: Task input dsl {'data': {'data': ['reader_0.data']}, 'model': ['pipeline.dataio_0.model']}
+[INFO] [2021-06-15 22:05:17,797] [4034:140389192021824] - tracker_client.py[line:150]: Request read job 2021061522050718069622 task None None on guest 9999 data data info
+[INFO] [2021-06-15 22:05:17,825] [4034:140389192021824] - task_executor.py[line:269]: load computing table use 4
+[INFO] [2021-06-15 22:05:17,882] [4034:140389192021824] - pipelined_model.py[line:185]: parse DataIOMeta proto object normal
+[INFO] [2021-06-15 22:05:17,887] [4034:140389192021824] - pipelined_model.py[line:185]: parse DataIOParam proto object normal
+[WARNING] [2021-06-15 22:05:17,891] [4034:140389192021824] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[INFO] [2021-06-15 22:05:17,903] [4034:140389192021824] - data_io.py[line:118]: start to read dense data and change data to instance
+[INFO] [2021-06-15 22:05:18,122] [4034:140389192021824] - tracker_client.py[line:173]: Request save job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on guest 9999 component summary
+[INFO] [2021-06-15 22:05:18,359] [4034:140389192021824] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   2   0.097     0.048    0.062   |
+|          |    join      1   0.053     0.053    0.053   |
+|          |    count     4   0.012     0.003    0.004   |
+|          |    first     1   0.002     0.002    0.002   |
++----------+---------------------------------------------+
+|  total   |  n=8, sum=0.1642, mean=0.0205, max=0.0617   |
++----------+---------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-15 22:05:18,469] [4034:140389192021824] - pipelined_model.py[line:73]: Save dataio_0 default DataIOMeta buffer
+[INFO] [2021-06-15 22:05:18,469] [4034:140389192021824] - pipelined_model.py[line:73]: Save dataio_0 default DataIOParam buffer
+[INFO] [2021-06-15 22:05:18,486] [4034:140389192021824] - pipelined_model.py[line:78]: Save dataio_0 default successfully
+[INFO] [2021-06-15 22:05:18,487] [4034:140389192021824] - task_executor.py[line:313]: report task 2021061522050718069622_dataio_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:18,487] [4034:140389192021824] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:18,576] [4034:140389192021824] - task_executor.py[line:202]: task 2021061522050718069622_dataio_0 guest 9999 start time: 2021-06-15 22:05:17
+[INFO] [2021-06-15 22:05:18,577] [4034:140389192021824] - task_executor.py[line:204]: task 2021061522050718069622_dataio_0 guest 9999 end time: 2021-06-15 22:05:18
+[INFO] [2021-06-15 22:05:18,577] [4034:140389192021824] - task_executor.py[line:206]: task 2021061522050718069622_dataio_0 guest 9999 takes 1.308s
+[INFO] [2021-06-15 22:05:18,577] [4034:140389192021824] - task_executor.py[line:209]: Finish 2021061522050718069622 dataio_0 2021061522050718069622_dataio_0 0 guest 9999 task success
+[INFO] [2021-06-15 22:05:18,624] [4034:140389192021824] - task_executor.py[line:313]: report task 2021061522050718069622_dataio_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:18,625] [4034:140389192021824] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:22,880] [4139:139980156176192] - task_executor.py[line:313]: report task 2021061522050718069622_intersection_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:22,881] [4139:139980156176192] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_intersection_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:23,261] [4139:139980156176192] - task_executor.py[line:150]: Run 2021061522050718069622 intersection_0 2021061522050718069622_intersection_0 guest 9999 task
+[INFO] [2021-06-15 22:05:23,261] [4139:139980156176192] - task_executor.py[line:151]: Component parameters on party {'IntersectParam': {'intersect_method': 'raw', 'random_bit': 128, 'sync_intersect_ids': True, 'join_role': 'guest', 'with_encode': False, 'encode_params': {'salt': '', 'encode_method': 'none', 'base64': False}, 'rsa_params': {'salt': '', 'hash_method': 'sha256', 'final_hash_method': 'sha256', 'split_calculation': False, 'random_base_fraction': None, 'key_length': 1024}, 'only_output_key': False, 'intersect_cache_param': {'use_cache': False, 'id_type': 'phone', 'encrypt_type': 'sha256'}, 'repeated_id_process': False, 'repeated_id_owner': 'guest', 'allow_info_share': False, 'info_owner': 'guest', 'with_sample_id': False}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061522023585229020', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'dsl_version': 2, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'conf_path': './examples/LDPDev/test_predict_conf.json', 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'host': {'0': {'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'reader_0': {'table': {'namespace': 'experiment', 'name': 'breast_hetero_host'}}, 'dataio_0': {'with_label': False}, 'dataio_1': {'with_label': False}}}, 'guest': {'0': {'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'reader_0': {'table': {'namespace': 'experiment', 'name': 'breast_hetero_guest'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}}}}}, 'initiator': {'role': 'guest', 'party_id': 9999}, 'role': {'host': [9998], 'guest': [9999]}, 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'federatedml/statistic/intersect/intersect_model.py/IntersectGuest', 'module': 'Intersection', 'output_data_name': ['data']}
+[INFO] [2021-06-15 22:05:23,261] [4139:139980156176192] - task_executor.py[line:152]: Task input dsl {'data': {'data': ['dataio_0.data']}}
+[INFO] [2021-06-15 22:05:23,262] [4139:139980156176192] - tracker_client.py[line:150]: Request read job 2021061522050718069622 task None None on guest 9999 data data info
+[INFO] [2021-06-15 22:05:23,291] [4139:139980156176192] - task_executor.py[line:269]: load computing table use 4
+[WARNING] [2021-06-15 22:05:24,852] [4139:139980156176192] - intersect_param.py[line:63]: 'EncodeParam' will be renamed to 'RawParam' in future release.Please do not rely on current param naming in application.
+[INFO] [2021-06-15 22:05:24,863] [4139:139980156176192] - intersect_model.py[line:50]: Using raw intersection, role is guest
+[INFO] [2021-06-15 22:05:24,864] [4139:139980156176192] - intersect_guest.py[line:239]: Start raw intersection
+[INFO] [2021-06-15 22:05:24,864] [4139:139980156176192] - intersect.py[line:349]: Join id role is guest
+[INFO] [2021-06-15 22:05:25,053] [4139:139980156176192] - intersect.py[line:373]: Get ids_list from role-send, ids_list size is 1
+[INFO] [2021-06-15 22:05:25,089] [4139:139980156176192] - intersect.py[line:384]: Finish intersect_ids computing
+[INFO] [2021-06-15 22:05:25,126] [4139:139980156176192] - intersect.py[line:399]: Remote intersect ids to role-send
+[INFO] [2021-06-15 22:05:25,170] [4139:139980156176192] - intersect.py[line:84]: obtain intersect data_instances!
+[INFO] [2021-06-15 22:05:25,240] [4139:139980156176192] - intersect.py[line:421]: save guest_0's id in name:2021061522050718069622_intersection_0_0_0, namespace:9999#None#mountain
+[INFO] [2021-06-15 22:05:25,326] [4139:139980156176192] - intersect_model.py[line:136]: Finish intersection
+[INFO] [2021-06-15 22:05:25,336] [4139:139980156176192] - tracker_client.py[line:70]: Request save job 2021061522050718069622 task 2021061522050718069622_intersection_0 0 on guest 9999 metric train intersection data
+[INFO] [2021-06-15 22:05:25,388] [4139:139980156176192] - tracker_client.py[line:103]: Request save job 2021061522050718069622 task 2021061522050718069622_intersection_0 0 on guest 9999 metric train intersection meta
+[INFO] [2021-06-15 22:05:25,447] [4139:139980156176192] - tracker_client.py[line:173]: Request save job 2021061522050718069622 task 2021061522050718069622_intersection_0 0 on guest 9999 component summary
+[INFO] [2021-06-15 22:05:25,848] [4139:139980156176192] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |    join      2   0.077     0.039    0.043   |
+|          |  mapValues   1   0.077     0.077    0.077   |
+|          |    save      1   0.033     0.033    0.033   |
+|          |    count     4   0.015     0.004    0.005   |
+|          |   collect    1    0.0       0.0      0.0    |
++----------+---------------------------------------------+
+|  total   |  n=9, sum=0.2023, mean=0.0225, max=0.0769   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.108  |  0.108  | 0.108   |
+|        |               ble.RawIntersectTransferVariable.send_ids_host               |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.036  |  0.036  | 0.036   |
+|        |            ble.RawIntersectTransferVariable.intersect_ids_guest            |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=2, sum=0.1440, mean=0.0720, max=0.1083                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-15 22:05:25,855] [4139:139980156176192] - intersect_model.py[line:154]: intersect_ids count:569
+[INFO] [2021-06-15 22:05:25,856] [4139:139980156176192] - intersect_model.py[line:155]: intersect_ids header schema:{'header': ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9'], 'sid_name': 'id', 'label_name': 'y'}
+[INFO] [2021-06-15 22:05:25,982] [4139:139980156176192] - task_executor.py[line:313]: report task 2021061522050718069622_intersection_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:25,983] [4139:139980156176192] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_intersection_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:26,187] [4139:139980156176192] - task_executor.py[line:202]: task 2021061522050718069622_intersection_0 guest 9999 start time: 2021-06-15 22:05:22
+[INFO] [2021-06-15 22:05:26,187] [4139:139980156176192] - task_executor.py[line:204]: task 2021061522050718069622_intersection_0 guest 9999 end time: 2021-06-15 22:05:25
+[INFO] [2021-06-15 22:05:26,188] [4139:139980156176192] - task_executor.py[line:206]: task 2021061522050718069622_intersection_0 guest 9999 takes 3.303s
+[INFO] [2021-06-15 22:05:26,188] [4139:139980156176192] - task_executor.py[line:209]: Finish 2021061522050718069622 intersection_0 2021061522050718069622_intersection_0 0 guest 9999 task success
+[INFO] [2021-06-15 22:05:26,668] [4139:139980156176192] - task_executor.py[line:313]: report task 2021061522050718069622_intersection_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:26,669] [4139:139980156176192] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_intersection_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:30,444] [4267:140282551203648] - task_executor.py[line:313]: report task 2021061522050718069622_hetero_secure_boost_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:30,445] [4267:140282551203648] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:30,890] [4267:140282551203648] - task_executor.py[line:150]: Run 2021061522050718069622 hetero_secure_boost_0 2021061522050718069622_hetero_secure_boost_0 guest 9999 task
+[INFO] [2021-06-15 22:05:30,891] [4267:140282551203648] - task_executor.py[line:151]: Component parameters on party {'HeteroSecureBoostParam': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy', 'params': None}, 'learning_rate': 0.3, 'num_trees': 3, 'subsample_feature_rate': 1.0, 'n_iter_no_change': True, 'tol': 0.0001, 'bin_num': 32, 'predict_param': {'threshold': 0.5}, 'cv_param': {'n_splits': 5, 'mode': 'hetero', 'role': 'guest', 'shuffle': True, 'random_seed': 1, 'need_cv': False, 'output_fold_history': True, 'history_value_type': 'score'}, 'validation_freqs': 1, 'metrics': None, 'random_seed': 100, 'binning_error': 0.0001, 'encrypt_param': {'method': 'iterativeAffine', 'key_length': 1024}, 'encrypted_mode_calculator_param': {'mode': 'strict', 're_encrypted_rate': 1}, 'early_stopping_rounds': None, 'use_first_metric_only': False, 'tree_param': {'criterion_method': 'xgboost', 'criterion_params': [0.1, 0], 'max_depth': 3, 'min_sample_split': 2, 'min_impurity_split': 0.001, 'min_leaf_node': 1, 'min_child_weight': 0, 'max_split_nodes': 65536, 'feature_importance_type': 'split', 'n_iter_no_change': True, 'tol': 0.001, 'use_missing': False, 'zero_as_missing': False, 'deterministic': False}, 'zero_as_missing': False, 'use_missing': False, 'complete_secure': False, 'sparse_optimization': False, 'run_goss': False, 'top_rate': 0.2, 'other_rate': 0.1, 'cipher_compress_error': None, 'new_ver': True}, 'role': {'host': [9998], 'guest': [9999]}, 'initiator': {'party_id': 9999, 'role': 'guest'}, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061522023585229020', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'component_parameters': {'role': {'host': {'0': {'dataio_0': {'with_label': False}, 'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_1': {'with_label': False}}}, 'guest': {'0': {'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}}}}, 'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}}, 'dsl_version': 2, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'federatedml/ensemble/boosting/hetero/hetero_secureboost_guest.py/HeteroSecureBoostingTreeGuest', 'module': 'HeteroSecureBoost', 'output_data_name': ['data']}
+[INFO] [2021-06-15 22:05:30,891] [4267:140282551203648] - task_executor.py[line:152]: Task input dsl {'data': {'test_data': ['intersection_0.data']}, 'model': ['pipeline.hetero_secure_boost_0.model']}
+[INFO] [2021-06-15 22:05:30,891] [4267:140282551203648] - tracker_client.py[line:150]: Request read job 2021061522050718069622 task None None on guest 9999 data data info
+[INFO] [2021-06-15 22:05:30,962] [4267:140282551203648] - task_executor.py[line:269]: load computing table use 4
+[INFO] [2021-06-15 22:05:31,097] [4267:140282551203648] - pipelined_model.py[line:185]: parse BoostingTreeModelMeta proto object normal
+[INFO] [2021-06-15 22:05:31,099] [4267:140282551203648] - pipelined_model.py[line:185]: parse BoostingTreeModelParam proto object normal
+[INFO] [2021-06-15 22:05:34,920] [4267:140282551203648] - boosting.py[line:527]: load model
+[INFO] [2021-06-15 22:05:34,921] [4267:140282551203648] - boosting.py[line:292]: set objective, objective is cross_entropy
+[INFO] [2021-06-15 22:05:35,006] [4267:140282551203648] - hetero_secureboost_guest.py[line:346]: running prediction
+[INFO] [2021-06-15 22:05:35,183] [4267:140282551203648] - hetero_boosting.py[line:135]: sync predict start round 0
+[INFO] [2021-06-15 22:05:35,205] [4267:140282551203648] - splitter.py[line:70]: splitter init!
+[INFO] [2021-06-15 22:05:35,206] [4267:140282551203648] - criterion.py[line:47]: splitter criterion setting done: l1 0.0, l2 0.1
+[INFO] [2021-06-15 22:05:35,207] [4267:140282551203648] - decision_tree.py[line:311]: load tree model
+[INFO] [2021-06-15 22:05:35,208] [4267:140282551203648] - boosting.py[line:393]: generate flowid, flowid predict
+[INFO] [2021-06-15 22:05:35,208] [4267:140282551203648] - decision_tree.py[line:130]: set flowid, flowid is predict.0.0
+[INFO] [2021-06-15 22:05:35,208] [4267:140282551203648] - splitter.py[line:70]: splitter init!
+[INFO] [2021-06-15 22:05:35,208] [4267:140282551203648] - criterion.py[line:47]: splitter criterion setting done: l1 0.0, l2 0.1
+[INFO] [2021-06-15 22:05:35,209] [4267:140282551203648] - decision_tree.py[line:311]: load tree model
+[INFO] [2021-06-15 22:05:35,209] [4267:140282551203648] - boosting.py[line:393]: generate flowid, flowid predict
+[INFO] [2021-06-15 22:05:35,209] [4267:140282551203648] - decision_tree.py[line:130]: set flowid, flowid is predict.1.0
+[INFO] [2021-06-15 22:05:35,209] [4267:140282551203648] - splitter.py[line:70]: splitter init!
+[INFO] [2021-06-15 22:05:35,210] [4267:140282551203648] - criterion.py[line:47]: splitter criterion setting done: l1 0.0, l2 0.1
+[INFO] [2021-06-15 22:05:35,210] [4267:140282551203648] - decision_tree.py[line:311]: load tree model
+[INFO] [2021-06-15 22:05:35,210] [4267:140282551203648] - boosting.py[line:393]: generate flowid, flowid predict
+[INFO] [2021-06-15 22:05:35,211] [4267:140282551203648] - decision_tree.py[line:130]: set flowid, flowid is predict.2.0
+[INFO] [2021-06-15 22:05:35,354] [4267:140282551203648] - hetero_secureboost_guest.py[line:309]: cur predict round is 0
+[INFO] [2021-06-15 22:05:40,211] [4267:140282551203648] - hetero_secureboost_guest.py[line:309]: cur predict round is 1
+[INFO] [2021-06-15 22:05:40,805] [4267:140282551203648] - hetero_secureboost_guest.py[line:332]: federated prediction process done
+[INFO] [2021-06-15 22:05:41,985] [4267:140282551203648] - tracker_client.py[line:173]: Request save job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on guest 9999 component summary
+[INFO] [2021-06-15 22:05:42,858] [4267:140282551203648] - profile.py[line:249]: 
+Computing:
++----------+--------------------------------------------------+
+| function |    function      n    sum(s)   mean(s)   max(s)  |
+|          | --------------- ---- -------- --------- -------- |
+|          |      join        7    2.021     0.289    0.838   |
+|          |  subtractByKey   4    1.276     0.319    0.822   |
+|          |    mapValues     11    0.78     0.071    0.234   |
+|          |      union       2    0.749     0.375     0.73   |
+|          |     filter       2    0.442     0.221    0.407   |
+|          |      count       5    0.015     0.003    0.005   |
+|          |      first       1    0.007     0.007    0.007   |
++----------+--------------------------------------------------+
+|  total   |    n=32, sum=5.2913, mean=0.1654, max=0.8384     |
++----------+--------------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.512  |  0.512  | 0.512   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data  |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.086  |  0.086  | 0.086   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 2 | 0.022  |  0.011  | 0.013   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 1 | 0.019  |  0.019  | 0.019   |
+|        |          iable.HeteroBoostingTransferVariable.predict_start_round          |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=5, sum=0.6394, mean=0.1279, max=0.5123                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-15 22:05:43,275] [4267:140282551203648] - pipelined_model.py[line:73]: Save hetero_secure_boost_0 default HeteroSecureBoostingTreeGuestMeta buffer
+[INFO] [2021-06-15 22:05:43,276] [4267:140282551203648] - pipelined_model.py[line:73]: Save hetero_secure_boost_0 default HeteroSecureBoostingTreeGuestParam buffer
+[INFO] [2021-06-15 22:05:43,297] [4267:140282551203648] - pipelined_model.py[line:78]: Save hetero_secure_boost_0 default successfully
+[INFO] [2021-06-15 22:05:43,298] [4267:140282551203648] - task_executor.py[line:313]: report task 2021061522050718069622_hetero_secure_boost_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:43,298] [4267:140282551203648] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on guest 9999
+[INFO] [2021-06-15 22:05:43,346] [4267:140282551203648] - task_executor.py[line:202]: task 2021061522050718069622_hetero_secure_boost_0 guest 9999 start time: 2021-06-15 22:05:30
+[INFO] [2021-06-15 22:05:43,346] [4267:140282551203648] - task_executor.py[line:204]: task 2021061522050718069622_hetero_secure_boost_0 guest 9999 end time: 2021-06-15 22:05:43
+[INFO] [2021-06-15 22:05:43,346] [4267:140282551203648] - task_executor.py[line:206]: task 2021061522050718069622_hetero_secure_boost_0 guest 9999 takes 13.004s
+[INFO] [2021-06-15 22:05:43,347] [4267:140282551203648] - task_executor.py[line:209]: Finish 2021061522050718069622 hetero_secure_boost_0 2021061522050718069622_hetero_secure_boost_0 0 guest 9999 task success
+[INFO] [2021-06-15 22:05:43,439] [4267:140282551203648] - task_executor.py[line:313]: report task 2021061522050718069622_hetero_secure_boost_0 0 guest 9999 to driver
+[INFO] [2021-06-15 22:05:43,440] [4267:140282551203648] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on guest 9999

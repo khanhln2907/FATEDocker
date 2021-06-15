@@ -1,0 +1,3 @@
+[WARNING] [2021-06-15 21:02:09,588] [815:139802724972352] - evaluation_param.py[line:149]: use default metric ['auc', 'ks'] for eval type binary
+[WARNING] [2021-06-15 21:02:21,733] [815:139802724972352] - evaluation_param.py[line:149]: use default metric ['auc', 'ks'] for eval type binary
+[WARNING] [2021-06-15 21:02:35,042] [815:139802724972352] - evaluation_param.py[line:149]: use default metric ['auc', 'ks'] for eval type binary

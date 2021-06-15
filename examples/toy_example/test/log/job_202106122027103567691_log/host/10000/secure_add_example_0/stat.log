@@ -1,0 +1,19 @@
+[INFO] [2021-06-12 20:27:14,886] [835:140611736864576] - control_client.py[line:42]: request update job 202106122027103567691 task 202106122027103567691_secure_add_example_0 0 on host 10000
+[DEBUG] [2021-06-12 20:27:15,310] [835:140611736864576] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7fe2b6f73390>, federation_session_id=202106122027103567691_secure_add_example_0_0, party=Party(role=host, party_id=10000)
+[DEBUG] [2021-06-12 20:27:15,323] [835:140611736864576] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-12 20:27:15,716] [835:140611736864576] - secure_add_host.py[line:87]: begin to init parameters of secure add example host
+[INFO] [2021-06-12 20:27:15,717] [835:140611736864576] - secure_add_host.py[line:90]: begin to make host data
+[INFO] [2021-06-12 20:27:16,194] [835:140611736864576] - secure_add_host.py[line:93]: split data into two random parts
+[INFO] [2021-06-12 20:27:16,968] [835:140611736864576] - secure_add_host.py[line:96]: get share of one random part data from guest
+[DEBUG] [2021-06-12 20:27:16,969] [835:140611736864576] - _standalone.py[line:564]: [federation.standalone.get.hash.5041d1ce9a14064a36e7.guest_share.default]
+[DEBUG] [2021-06-12 20:27:17,275] [835:140611736864576] - _standalone.py[line:643]: [GET] Got 202106122027103567691_secure_add_example_0_0-hash.5041d1ce9a14064a36e7.guest_share-default-guest-10000-host-10000 type Table
+[DEBUG] [2021-06-12 20:27:17,276] [835:140611736864576] - _standalone.py[line:581]: [federation.standalone.get.hash.5041d1ce9a14064a36e7.guest_share.default] got Table(namespace=202106122027103567691_secure_add_example_0_0_guest_10000, name=94390d0a-cbbc-11eb-a23a-0242ac110002, partitions=48)
+[INFO] [2021-06-12 20:27:17,278] [835:140611736864576] - secure_add_host.py[line:99]: share one random part data to guest
+[DEBUG] [2021-06-12 20:27:17,278] [835:140611736864576] - _standalone.py[line:535]: [federation.standalone.remote.hash.d80c5eb8797618002f85.host_share.default]remote data, type=<class 'fate_arch._standalone.Table'>
+[DEBUG] [2021-06-12 20:27:17,279] [835:140611736864576] - _standalone.py[line:539]: [federation.standalone.remote.hash.d80c5eb8797618002f85.host_share.default]remote Table(namespace=202106122027103567691_secure_add_example_0_0_host_10000, name=941bdb4a-cbbc-11eb-8bd8-0242ac110002, partitions=48)
+[DEBUG] [2021-06-12 20:27:17,279] [835:140611736864576] - _standalone.py[line:550]: [federation.standalone.remote.hash.d80c5eb8797618002f85.host_share.default]save Table(namespace=202106122027103567691_secure_add_example_0_0_host_10000, name=941bdb4a-cbbc-11eb-8bd8-0242ac110002, partitions=48) as Table(namespace=202106122027103567691_secure_add_example_0_0_host_10000, name=94a0de4e-cbbc-11eb-8bd8-0242ac110002, partitions=48)
+[INFO] [2021-06-12 20:27:17,586] [835:140611736864576] - secure_add_host.py[line:102]: begin to get sum of host and guest
+[INFO] [2021-06-12 20:27:17,829] [835:140611736864576] - secure_add_host.py[line:105]: send host sum to guest
+[DEBUG] [2021-06-12 20:27:17,830] [835:140611736864576] - _standalone.py[line:535]: [federation.standalone.remote.hash.202137af1a7fdcf8862f.host_sum.default]remote data, type=<class 'float'>
+[DEBUG] [2021-06-12 20:27:17,830] [835:140611736864576] - _standalone.py[line:543]: [federation.standalone.remote.hash.202137af1a7fdcf8862f.host_sum.default]remote object with type: <class 'float'>
+[INFO] [2021-06-12 20:27:18,096] [835:140611736864576] - control_client.py[line:42]: request update job 202106122027103567691 task 202106122027103567691_secure_add_example_0 0 on host 10000

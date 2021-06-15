@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/playhouse/apsw_ext.py", line 112, in execute_sql
+    cursor.execute(sql, params or ())
+  File "src/cursor.c", line 236, in resetcursor
+apsw.ConstraintError: ConstraintError: UNIQUE constraint failed: t_storage_table_meta.f_name, t_storage_table_meta.f_namespace
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/fate_flow/components/upload.py", line 101, in run
+    self.table = storage_session.create_table(address=address, **self.parameters)
+  File "/fate/python/fate_arch/storage/_session.py", line 90, in create_table
+    table_meta.create()
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 394, in inner
+    return fn(*args, **kwargs)
+  File "/fate/python/fate_arch/storage/_table.py", line 155, in create
+    raise e
+  File "/fate/python/fate_arch/storage/_table.py", line 147, in create
+    rows = table_meta.save(force_insert=True)
+  File "/fate/python/fate_arch/storage/metastore/base_model.py", line 89, in save
+    return super(BaseModel, self).save(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 5964, in save
+    self.insert(**field_dict).execute()
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 1737, in inner
+    return method(self, database, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 1808, in execute
+    return self._execute(database)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2512, in _execute
+    return super(Insert, self)._execute(database)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2275, in _execute
+    cursor = database.execute(self)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2888, in execute
+    return self.execute_sql(sql, params, commit=commit)
+  File "/usr/local/lib/python3.6/site-packages/playhouse/apsw_ext.py", line 112, in execute_sql
+    cursor.execute(sql, params or ())
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2666, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 179, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/playhouse/apsw_ext.py", line 112, in execute_sql
+    cursor.execute(sql, params or ())
+  File "src/cursor.c", line 236, in resetcursor
+peewee.IntegrityError: ConstraintError: UNIQUE constraint failed: t_storage_table_meta.f_name, t_storage_table_meta.f_namespace
+Finish 202106132125020148129 upload_0 202106132125020148129_upload_0 0 local 0 task failed

@@ -1,0 +1,77 @@
+[DEBUG] [2021-06-15 22:05:17,980] [4055:140633721222976] - profile.py[line:84]: [computing#41d092c3c4]function_stack: [component_properties.py:225]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 22:05:17,982] [4055:140633721222976] - profile.py[line:87]: [computing#41d092c3c4]start
+[DEBUG] [2021-06-15 22:05:17,987] [4055:140633721222976] - profile.py[line:93]: [computing#41d092c3c4]done, elapse: 0.00665283203125, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:17,990] [4055:140633721222976] - profile.py[line:84]: [computing#7a5e4c5159]function_stack: [abnormal_detection.py:27]empty_table_detection <-[data_io.py:120]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:17,990] [4055:140633721222976] - profile.py[line:87]: [computing#7a5e4c5159]start
+[DEBUG] [2021-06-15 22:05:17,995] [4055:140633721222976] - profile.py[line:93]: [computing#7a5e4c5159]done, elapse: 0.0044362545013427734, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:17,997] [4055:140633721222976] - profile.py[line:84]: [computing#5d186c544e]function_stack: [data_io.py:143]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:17,997] [4055:140633721222976] - profile.py[line:87]: [computing#5d186c544e]start
+[DEBUG] [2021-06-15 22:05:18,079] [4055:140633721222976] - profile.py[line:93]: [computing#5d186c544e]done, elapse: 0.08167648315429688, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:18,083] [4055:140633721222976] - profile.py[line:84]: [computing#0aeead51ce]function_stack: [io_check.py:28]_func <-[data_io.py:148]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:18,083] [4055:140633721222976] - profile.py[line:87]: [computing#0aeead51ce]start
+[DEBUG] [2021-06-15 22:05:18,086] [4055:140633721222976] - profile.py[line:93]: [computing#0aeead51ce]done, elapse: 0.0035185813903808594, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:18,088] [4055:140633721222976] - profile.py[line:84]: [computing#f5cbdb5719]function_stack: [data_io.py:227]gen_data_instance <-[data_io.py:175]transform <-[io_check.py:31]_func <-[data_io.py:148]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:18,088] [4055:140633721222976] - profile.py[line:87]: [computing#f5cbdb5719]start
+[DEBUG] [2021-06-15 22:05:18,139] [4055:140633721222976] - profile.py[line:93]: [computing#f5cbdb5719]done, elapse: 0.051377296447753906, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:18,140] [4055:140633721222976] - profile.py[line:84]: [computing#fba26d134a]function_stack: [io_check.py:34]_func <-[data_io.py:148]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:18,140] [4055:140633721222976] - profile.py[line:87]: [computing#fba26d134a]start
+[DEBUG] [2021-06-15 22:05:18,143] [4055:140633721222976] - profile.py[line:93]: [computing#fba26d134a]done, elapse: 0.0025434494018554688, function: count(self: Table(partition=4)) -> int
+[INFO] [2021-06-15 22:05:18,354] [4055:140633721222976] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   2   0.133     0.067    0.082   |
+|          |    count     4   0.017     0.004    0.007   |
++----------+---------------------------------------------+
+|  total   |  n=6, sum=0.1502, mean=0.0250, max=0.0817   |
++----------+---------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[DEBUG] [2021-06-15 22:05:18,355] [4055:140633721222976] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0817 │ 0.0817  │ 0.0817 │ 5d186c544e │ [data_io.py:143]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:895]transform                          |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0514 │ 0.0514  │ 0.0514 │ f5cbdb5719 │ [data_io.py:227]gen_data_instance                  |
+|       |            │   │        │         │        │            │ [data_io.py:175]transform                          |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [data_io.py:148]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:895]transform                          |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0067 │ 0.0067  │ 0.0067 │ 41d092c3c4 │ [component_properties.py:225]extract_input_data    |
+|       |            │   │        │         │        │            │ [component_properties.py:238]extract_running_rule  |
+|       |            │   │        │         │        │            │ s                                                  |
+|       |            │   │        │         │        │            │ [model_base.py:87]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0044 │ 0.0044  │ 0.0044 │ 7a5e4c5159 │ [abnormal_detection.py:27]empty_table_detection    |
+|       |            │   │        │         │        │            │ [data_io.py:120]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:895]transform                          |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0035 │ 0.0035  │ 0.0035 │ 0aeead51ce │ [io_check.py:28]_func                              |
+|       |            │   │        │         │        │            │ [data_io.py:148]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:895]transform                          |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0025 │ 0.0025  │ 0.0025 │ fba26d134a │ [io_check.py:34]_func                              |
+|       |            │   │        │         │        │            │ [data_io.py:148]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:895]transform                          |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                   n=6, sum=0.1502, mean=0.0250, max=0.0817                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

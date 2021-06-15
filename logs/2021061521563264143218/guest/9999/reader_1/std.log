@@ -1,0 +1,3 @@
+/usr/local/lib/python3.6/site-packages/beautifultable/utils.py:113: FutureWarning: 'BeautifulTable.get_string' has been deprecated in 'v1.0.0' and will be removed in 'v1.2.0'. Use 'str' instead.
+  warnings.warn(message, FutureWarning)
+Finish 2021061521563264143218 reader_1 2021061521563264143218_reader_1 0 guest 9999 task success

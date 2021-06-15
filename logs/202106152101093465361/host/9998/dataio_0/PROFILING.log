@@ -1,0 +1,60 @@
+[DEBUG] [2021-06-15 21:01:25,438] [476:140407154415424] - profile.py[line:84]: [computing#41d092c3c4]function_stack: [component_properties.py:225]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 21:01:25,439] [476:140407154415424] - profile.py[line:87]: [computing#41d092c3c4]start
+[DEBUG] [2021-06-15 21:01:25,441] [476:140407154415424] - profile.py[line:93]: [computing#41d092c3c4]done, elapse: 0.0027518272399902344, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:25,445] [476:140407154415424] - profile.py[line:84]: [computing#c20dcf4011]function_stack: [abnormal_detection.py:27]empty_table_detection <-[data_io.py:120]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:01:25,445] [476:140407154415424] - profile.py[line:87]: [computing#c20dcf4011]start
+[DEBUG] [2021-06-15 21:01:25,448] [476:140407154415424] - profile.py[line:93]: [computing#c20dcf4011]done, elapse: 0.002605915069580078, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:25,449] [476:140407154415424] - profile.py[line:84]: [computing#72f96ccd16]function_stack: [data_io.py:143]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:01:25,449] [476:140407154415424] - profile.py[line:87]: [computing#72f96ccd16]start
+[DEBUG] [2021-06-15 21:01:25,536] [476:140407154415424] - profile.py[line:93]: [computing#72f96ccd16]done, elapse: 0.08723688125610352, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:25,539] [476:140407154415424] - profile.py[line:84]: [computing#95de1eaf63]function_stack: [data_io.py:227]gen_data_instance <-[data_io.py:161]fit <-[data_io.py:146]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:01:25,539] [476:140407154415424] - profile.py[line:87]: [computing#95de1eaf63]start
+[DEBUG] [2021-06-15 21:01:25,607] [476:140407154415424] - profile.py[line:93]: [computing#95de1eaf63]done, elapse: 0.06821966171264648, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[INFO] [2021-06-15 21:01:25,831] [476:140407154415424] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   2   0.155     0.078    0.087   |
+|          |    count     2   0.005     0.003    0.003   |
++----------+---------------------------------------------+
+|  total   |  n=4, sum=0.1608, mean=0.0402, max=0.0872   |
++----------+---------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[DEBUG] [2021-06-15 21:01:25,831] [476:140407154415424] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0872 │ 0.0872  │ 0.0872 │ 72f96ccd16 │ [data_io.py:143]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0682 │ 0.0682  │ 0.0682 │ 95de1eaf63 │ [data_io.py:227]gen_data_instance                  |
+|       |            │   │        │         │        │            │ [data_io.py:161]fit                                |
+|       |            │   │        │         │        │            │ [data_io.py:146]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0028 │ 0.0028  │ 0.0028 │ 41d092c3c4 │ [component_properties.py:225]extract_input_data    |
+|       |            │   │        │         │        │            │ [component_properties.py:238]extract_running_rule  |
+|       |            │   │        │         │        │            │ s                                                  |
+|       |            │   │        │         │        │            │ [model_base.py:87]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0026 │ 0.0026  │ 0.0026 │ c20dcf4011 │ [abnormal_detection.py:27]empty_table_detection    |
+|       |            │   │        │         │        │            │ [data_io.py:120]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                   n=4, sum=0.1608, mean=0.0402, max=0.0872                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

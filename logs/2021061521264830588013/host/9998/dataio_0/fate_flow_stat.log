@@ -1,0 +1,2 @@
+[INFO] [2021-06-15 21:26:51,471] [2395:140252984997696] - pipelined_model.py[line:185]: parse DataIOMeta proto object normal
+[INFO] [2021-06-15 21:26:51,480] [2395:140252984997696] - pipelined_model.py[line:185]: parse DataIOParam proto object normal

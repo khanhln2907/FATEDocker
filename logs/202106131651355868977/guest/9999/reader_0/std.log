@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/fate_flow/components/reader.py", line 51, in run
+    output_storage_address=output_storage_address)
+  File "/fate/python/fate_flow/components/reader.py", line 125, in convert_check
+    raise RuntimeError(f"can not found table name: {input_name} namespace: {input_namespace}")
+RuntimeError: can not found table name: breast_hetero_guest namespace: experiment
+Finish 202106131651355868977 reader_0 202106131651355868977_reader_0 0 guest 9999 task failed

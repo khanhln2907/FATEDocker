@@ -1,0 +1,12 @@
+[INFO] [2021-06-13 21:25:07,152] [1618:140390386353984] - control_client.py[line:42]: request update job 202106132125020148129 task 202106132125020148129_upload_0 0 on local 0
+[DEBUG] [2021-06-13 21:25:07,582] [1618:140390386353984] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7faeeb582ba8>, federation_session_id=202106132125020148129_upload_0_0, party=Party(role=local, party_id=0)
+[DEBUG] [2021-06-13 21:25:07,593] [1618:140390386353984] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 21:25:07,742] [1618:140390386353984] - upload.py[line:41]: {'file': '/fate/jobs/202106132125020148129/fate_upload_tmp/default_credit_hetero_host.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'default_credit_hetero_host', 'storage_engine': '', 'storage_address': None, 'destroy': False}
+[INFO] [2021-06-13 21:25:07,743] [1618:140390386353984] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7faeea90fb70>}
+[DEBUG] [2021-06-13 21:25:07,763] [1618:140390386353984] - _session.py[line:147]: save session 202106132125020148129_upload_0_0_local_0_storage_d3997d96cc8d11ebb5770242ac110002 record
+[DEBUG] [2021-06-13 21:25:07,776] [1618:140390386353984] - _session.py[line:156]: delete session 202106132125020148129_upload_0_0_local_0_storage_d3997d96cc8d11ebb5770242ac110002 record
+[DEBUG] [2021-06-13 21:25:07,786] [1618:140390386353984] - _session.py[line:147]: save session 202106132125020148129_upload_0_0_local_0_storage_d39e9056cc8d11ebb5770242ac110002 record
+[INFO] [2021-06-13 21:25:07,787] [1618:140390386353984] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'default_credit_hetero_host', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[DEBUG] [2021-06-13 21:25:07,803] [1618:140390386353984] - _session.py[line:156]: delete session 202106132125020148129_upload_0_0_local_0_storage_d39e9056cc8d11ebb5770242ac110002 record
+[INFO] [2021-06-13 21:25:07,811] [1618:140390386353984] - control_client.py[line:42]: request update job 202106132125020148129 task 202106132125020148129_upload_0 0 on local 0
+[INFO] [2021-06-13 21:25:07,903] [1618:140390386353984] - control_client.py[line:42]: request update job 202106132125020148129 task 202106132125020148129_upload_0 0 on local 0

@@ -1,0 +1,27 @@
+[DEBUG] [2021-06-15 21:56:46,809] [3058:140146818275136] - profile.py[line:84]: [computing#41d092c3c4]function_stack: [component_properties.py:225]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 21:56:46,810] [3058:140146818275136] - profile.py[line:87]: [computing#41d092c3c4]start
+[DEBUG] [2021-06-15 21:56:46,813] [3058:140146818275136] - profile.py[line:93]: [computing#41d092c3c4]done, elapse: 0.004004240036010742, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:56:46,816] [3058:140146818275136] - profile.py[line:84]: [computing#7a5e4c5159]function_stack: [abnormal_detection.py:27]empty_table_detection <-[data_io.py:120]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:46,817] [3058:140146818275136] - profile.py[line:87]: [computing#7a5e4c5159]start
+[DEBUG] [2021-06-15 21:56:46,820] [3058:140146818275136] - profile.py[line:93]: [computing#7a5e4c5159]done, elapse: 0.0039196014404296875, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:56:46,822] [3058:140146818275136] - profile.py[line:84]: [computing#9133971679]function_stack: [data_overview.py:123]get_data_shape <-[data_io.py:131]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:46,822] [3058:140146818275136] - profile.py[line:87]: [computing#9133971679]start
+[DEBUG] [2021-06-15 21:56:46,828] [3058:140146818275136] - profile.py[line:93]: [computing#9133971679]done, elapse: 0.005975246429443359, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:56:46,830] [3058:140146818275136] - profile.py[line:84]: [computing#2b2e549bd4]function_stack: [data_io.py:136]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:46,830] [3058:140146818275136] - profile.py[line:87]: [computing#2b2e549bd4]start
+[DEBUG] [2021-06-15 21:56:47,870] [3058:140146818275136] - profile.py[line:93]: [computing#2b2e549bd4]done, elapse: 1.039942741394043, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:56:47,872] [3058:140146818275136] - profile.py[line:84]: [computing#4509abf693]function_stack: [data_io.py:139]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:47,873] [3058:140146818275136] - profile.py[line:87]: [computing#4509abf693]start
+[DEBUG] [2021-06-15 21:56:48,903] [3058:140146818275136] - profile.py[line:93]: [computing#4509abf693]done, elapse: 1.030724048614502, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:56:48,906] [3058:140146818275136] - profile.py[line:84]: [computing#0aeead51ce]function_stack: [io_check.py:28]_func <-[data_io.py:148]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:48,907] [3058:140146818275136] - profile.py[line:87]: [computing#0aeead51ce]start
+[DEBUG] [2021-06-15 21:56:48,911] [3058:140146818275136] - profile.py[line:93]: [computing#0aeead51ce]done, elapse: 0.004680633544921875, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:56:48,914] [3058:140146818275136] - profile.py[line:84]: [computing#82552c8a50]function_stack: [data_io.py:224]gen_data_instance <-[data_io.py:175]transform <-[io_check.py:31]_func <-[data_io.py:148]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:48,914] [3058:140146818275136] - profile.py[line:87]: [computing#82552c8a50]start
+[DEBUG] [2021-06-15 21:56:52,425] [3058:140146818275136] - profile.py[line:93]: [computing#82552c8a50]done, elapse: 3.5118141174316406, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:56:52,427] [3058:140146818275136] - profile.py[line:84]: [computing#fba26d134a]function_stack: [io_check.py:34]_func <-[data_io.py:148]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:52,427] [3058:140146818275136] - profile.py[line:87]: [computing#fba26d134a]start
+[DEBUG] [2021-06-15 21:56:52,431] [3058:140146818275136] - profile.py[line:93]: [computing#fba26d134a]done, elapse: 0.0041201114654541016, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:56:52,434] [3058:140146818275136] - profile.py[line:84]: [computing#74262d6ac8]function_stack: [data_overview.py:117]header_alignment <-[data_io.py:150]read_data <-[data_io.py:895]transform <-[model_base.py:98]run
+[DEBUG] [2021-06-15 21:56:52,434] [3058:140146818275136] - profile.py[line:87]: [computing#74262d6ac8]start
+[DEBUG] [2021-06-15 21:56:54,716] [3058:140146818275136] - profile.py[line:93]: [computing#74262d6ac8]done, elapse: 2.282369613647461, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)

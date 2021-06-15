@@ -1,0 +1,635 @@
+[INFO] [2021-06-13 11:52:28,558] [8:139726518462208] - dag_scheduler.py[line:40]: submit job, job_id 202106131152285573461, body {'job_dsl': {'components': {'secure_add_example_0': {'module': 'SecureAddExample'}}}, 'job_runtime_conf': {'initiator': {'role': 'guest', 'party_id': 10000}, 'job_parameters': {'work_mode': 0, 'backend': 0, 'task_cores': 2}, 'role': {'guest': [10000], 'host': [10000]}, 'role_parameters': {'guest': {'secure_add_example_0': {'seed': [123]}}, 'host': {'secure_add_example_0': {'seed': [321]}}}, 'algorithm_parameters': {'secure_add_example_0': {'partition': 48, 'data_num': 1000}}, 'config': '/fate/examples/toy_example/test/toy_example_conf.json_1623585147_1232', 'dsl': '/fate/examples/toy_example/toy_example_dsl.json', 'function': 'submit_job'}}
+[INFO] [2021-06-13 11:52:28,605] [8:139726510069504] - job_controller.py[line:52]: job parameters:{'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {}, 'federated_mode': 'SINGLE', 'task_cores': 2, 'task_parallelism': 1, 'computing_partitions': 2, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-10000#host-10000#model', 'model_version': '202106131152285573461', 'eggroll_run': {}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 2, 'task_memory_per_node': 0, 'request_task_cores': 2, 'if_initiator_baseline': True}}
+[INFO] [2021-06-13 11:52:28,757] [8:139726510069504] - job_controller.py[line:52]: job parameters:{'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {}, 'federated_mode': 'SINGLE', 'task_cores': 2, 'task_parallelism': 1, 'computing_partitions': 2, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-10000#host-10000#model', 'model_version': '202106131152285573461', 'eggroll_run': {}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 2, 'task_memory_per_node': 0, 'request_task_cores': 2, 'if_initiator_baseline': True}}
+[INFO] [2021-06-13 11:52:28,818] [8:139726518462208] - dag_scheduler.py[line:122]: submit job successfully, job id is 202106131152285573461, model id is guest-10000#host-10000#model
+[INFO] [2021-06-13 11:52:30,175] [8:139726560425728] - federated_scheduler.py[line:39]: try to apply job 202106131152285573461 resource
+[INFO] [2021-06-13 11:52:30,201] [8:139726518462208] - resource_manager.py[line:176]: apply job 202106131152285573461 resource(cores 2 memory 0) on guest 10000 successfully, remaining cores: 18 remaining memory: 0
+[INFO] [2021-06-13 11:52:30,224] [8:139726518462208] - resource_manager.py[line:176]: apply job 202106131152285573461 resource(cores 2 memory 0) on host 10000 successfully, remaining cores: 16 remaining memory: 0
+[INFO] [2021-06-13 11:52:30,232] [8:139726560425728] - federated_scheduler.py[line:42]: apply job 202106131152285573461 resource successfully
+[INFO] [2021-06-13 11:52:30,233] [8:139726560425728] - dag_scheduler.py[line:279]: try to start job 202106131152285573461 on initiator guest 10000
+[INFO] [2021-06-13 11:52:30,246] [8:139726518462208] - job_controller.py[line:261]: try to start job 202106131152285573461 on guest 10000
+[INFO] [2021-06-13 11:52:30,247] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to running
+[INFO] [2021-06-13 11:52:30,269] [8:139726518462208] - job_saver.py[line:48]: update job 202106131152285573461 status successfully
+[INFO] [2021-06-13 11:52:30,270] [8:139726518462208] - job_saver.py[line:61]: try to update job 202106131152285573461
+[INFO] [2021-06-13 11:52:30,287] [8:139726518462208] - job_saver.py[line:64]: job 202106131152285573461 update successfully: {'job_id': '202106131152285573461', 'role': 'guest', 'party_id': 10000, 'status': 'running', 'start_time': 1623585150247}
+[INFO] [2021-06-13 11:52:30,287] [8:139726518462208] - job_controller.py[line:275]: start job 202106131152285573461 on guest 10000 successfully
+[INFO] [2021-06-13 11:52:30,302] [8:139726518462208] - job_controller.py[line:261]: try to start job 202106131152285573461 on host 10000
+[INFO] [2021-06-13 11:52:30,302] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to running
+[INFO] [2021-06-13 11:52:30,333] [8:139726518462208] - job_saver.py[line:48]: update job 202106131152285573461 status successfully
+[INFO] [2021-06-13 11:52:30,334] [8:139726518462208] - job_saver.py[line:61]: try to update job 202106131152285573461
+[INFO] [2021-06-13 11:52:30,350] [8:139726518462208] - job_saver.py[line:64]: job 202106131152285573461 update successfully: {'job_id': '202106131152285573461', 'role': 'host', 'party_id': 10000, 'status': 'running', 'start_time': 1623585150302}
+[INFO] [2021-06-13 11:52:30,350] [8:139726518462208] - job_controller.py[line:275]: start job 202106131152285573461 on host 10000 successfully
+[INFO] [2021-06-13 11:52:30,354] [8:139726560425728] - dag_scheduler.py[line:292]: start job 202106131152285573461 on initiator guest 10000
+[INFO] [2021-06-13 11:52:30,361] [8:139726560425728] - dag_scheduler.py[line:247]: reset job 202106131152285573461 ready signal True
+[INFO] [2021-06-13 11:52:30,368] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:30,370] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:30,386] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-13 11:52:30,386] [8:139726560425728] - task_scheduler.py[line:80]: try to start job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000
+[INFO] [2021-06-13 11:52:30,399] [8:139726560425728] - resource_manager.py[line:286]: task 202106131152285573461_secure_add_example_0 0 apply resource successfully
+[INFO] [2021-06-13 11:52:30,399] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:30,412] [8:139726560425728] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'guest', 'party_id': '10000', 'status': 'running'}
+[INFO] [2021-06-13 11:52:30,412] [8:139726560425728] - task_scheduler.py[line:93]: start job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000
+[INFO] [2021-06-13 11:52:30,412] [8:139726560425728] - federated_scheduler.py[line:192]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 is running, sync to all party
+[INFO] [2021-06-13 11:52:30,420] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:30,426] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'guest', 'party_id': '10000', 'status': 'running'}
+[WARNING] [2021-06-13 11:52:30,435] [8:139726560425728] - federated_scheduler.py[line:260]: an error occurred while status/running the task to role guest party 10000: 
+update task status failed
+[INFO] [2021-06-13 11:52:30,441] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:30,455] [8:139726518462208] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'host', 'party_id': '10000', 'status': 'running'}
+[INFO] [2021-06-13 11:52:30,462] [8:139726560425728] - federated_scheduler.py[line:197]: sync job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status running to all party failed: 
+{'guest': {10000: {'retcode': 103, 'retmsg': 'update task status failed'}}, 'host': {10000: {'retcode': 0, 'retmsg': 'success'}}}
+[INFO] [2021-06-13 11:52:30,472] [8:139726518462208] - task_controller.py[line:71]: try to start job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000 executor subprocess
+[INFO] [2021-06-13 11:52:30,475] [8:139726518462208] - task_controller.py[line:90]: use computing engine STANDALONE
+[INFO] [2021-06-13 11:52:30,475] [8:139726518462208] - task_controller.py[line:145]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000 executor subprocess is ready
+[INFO] [2021-06-13 11:52:30,475] [8:139726518462208] - job_utils.py[line:310]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106131152285573461 -n secure_add_example_0 -t 202106131152285573461_secure_add_example_0 -v 0 -r guest -p 10000 -c /fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380
+[INFO] [2021-06-13 11:52:30,481] [8:139726518462208] - job_utils.py[line:334]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106131152285573461 -n secure_add_example_0 -t 202106131152285573461_secure_add_example_0 -v 0 -r guest -p 10000 -c /fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380 successfully, pid is 2671
+[INFO] [2021-06-13 11:52:30,483] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:30,499] [8:139726518462208] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:30,504] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:30,523] [8:139726518462208] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'guest', 'party_id': '10000', 'party_status': 'running', 'start_time': 1623585150483}
+[INFO] [2021-06-13 11:52:30,529] [8:139726518462208] - task_controller.py[line:164]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000 executor subprocess start success
+[INFO] [2021-06-13 11:52:30,546] [8:139726518462208] - task_controller.py[line:71]: try to start job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on host 10000 executor subprocess
+[INFO] [2021-06-13 11:52:30,554] [8:139726518462208] - task_controller.py[line:90]: use computing engine STANDALONE
+[INFO] [2021-06-13 11:52:30,554] [8:139726518462208] - task_controller.py[line:145]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on host 10000 executor subprocess is ready
+[INFO] [2021-06-13 11:52:30,554] [8:139726518462208] - job_utils.py[line:310]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106131152285573461 -n secure_add_example_0 -t 202106131152285573461_secure_add_example_0 -v 0 -r host -p 10000 -c /fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380
+[INFO] [2021-06-13 11:52:30,560] [8:139726518462208] - job_utils.py[line:334]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106131152285573461 -n secure_add_example_0 -t 202106131152285573461_secure_add_example_0 -v 0 -r host -p 10000 -c /fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380 successfully, pid is 2673
+[INFO] [2021-06-13 11:52:30,560] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:30,580] [8:139726518462208] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:30,589] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:30,608] [8:139726518462208] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'host', 'party_id': '10000', 'party_status': 'running', 'start_time': 1623585150560}
+[INFO] [2021-06-13 11:52:30,614] [8:139726518462208] - task_controller.py[line:164]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on host 10000 executor subprocess start success
+[INFO] [2021-06-13 11:52:30,620] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:30,620] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:30,620] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:32,660] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:32,663] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:32,719] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:32,725] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:32,725] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:32,739] [2671:140529261025088] - task_executor.py[line:56]: enter task process
+[INFO] [2021-06-13 11:52:32,740] [2671:140529261025088] - task_executor.py[line:57]: Namespace(component_name='secure_add_example_0', config='/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', job_id='202106131152285573461', job_server='127.0.0.1:9380', party_id=10000, role='guest', run_ip='127.0.0.1', task_id='202106131152285573461_secure_add_example_0', task_version=0)
+[INFO] [2021-06-13 11:52:32,753] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:32,754] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:32,760] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:32,760] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:32,770] [2673:139815829055296] - task_executor.py[line:56]: enter task process
+[INFO] [2021-06-13 11:52:32,770] [2673:139815829055296] - task_executor.py[line:57]: Namespace(component_name='secure_add_example_0', config='/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', job_id='202106131152285573461', job_server='127.0.0.1:9380', party_id=10000, role='host', run_ip='127.0.0.1', task_id='202106131152285573461_secure_add_example_0', task_version=0)
+[INFO] [2021-06-13 11:52:32,777] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:32,783] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:32,783] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:32,783] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:32,783] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:32,976] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:33,019] [8:139727092389632] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:33,024] [8:139726518462208] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:33,032] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:33,043] [8:139727092389632] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:33,049] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'component_name': 'secure_add_example_0', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'guest', 'party_id': '10000', 'run_ip': '127.0.0.1', 'run_pid': 2671, 'party_status': 'running'}
+[INFO] [2021-06-13 11:52:33,054] [8:139727092389632] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:33,062] [8:139727092389632] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'component_name': 'secure_add_example_0', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'host', 'party_id': '10000', 'run_ip': '127.0.0.1', 'run_pid': 2673, 'party_status': 'running'}
+[INFO] [2021-06-13 11:52:34,834] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:34,837] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:34,899] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:34,907] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:34,907] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:35,316] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:35,317] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:35,324] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:35,325] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:35,344] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:35,350] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:35,351] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:35,351] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:35,351] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:37,411] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:37,414] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:38,220] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:38,236] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:38,236] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:39,895] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:39,895] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:39,902] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:39,903] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:41,894] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:41,904] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:41,904] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:41,904] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:41,905] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:44,494] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:44,497] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:44,605] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:44,610] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:44,610] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:45,362] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:45,362] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:45,370] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:45,371] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:46,683] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:46,714] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:46,724] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:46,724] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:46,725] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:48,762] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:48,764] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:48,808] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:48,818] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:48,819] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:49,598] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:49,599] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:49,606] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:49,606] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:49,701] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:49,710] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:49,710] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:49,710] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:49,710] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:51,762] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:51,765] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:51,819] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:51,826] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:51,826] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:51,846] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:51,847] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:51,852] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:51,852] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:51,868] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:51,876] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:51,877] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:51,879] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:51,879] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:53,920] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:53,923] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:53,962] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:53,970] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:53,971] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:53,997] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:53,997] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:54,002] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:54,002] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:54,025] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:54,033] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:54,033] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:54,033] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:54,033] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:56,071] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:56,073] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:56,116] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:56,121] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:56,121] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:56,162] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:56,162] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:56,167] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:56,167] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:56,184] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:56,189] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:56,190] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:56,190] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:56,190] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:58,219] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:52:58,221] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:58,274] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:58,282] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:52:58,282] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:58,296] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:58,296] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:52:58,302] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:52:58,302] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:52:58,320] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:52:58,324] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:52:58,325] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:52:58,325] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:52:58,325] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:00,361] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:00,365] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:00,414] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:00,422] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:53:00,422] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:00,441] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:00,441] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:00,447] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:53:00,448] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:00,462] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:00,467] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:53:00,467] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:00,468] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:53:00,468] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:02,777] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:02,781] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:02,829] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:02,837] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:53:02,838] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:04,479] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:04,479] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:04,486] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:53:04,486] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:11,701] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:11,706] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:53:11,706] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:11,707] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:53:11,707] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:13,740] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:13,742] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:15,376] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:15,384] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:53:15,385] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:15,560] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:15,560] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:15,567] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:53:15,567] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:15,593] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:15,599] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:53:15,599] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:15,599] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:53:15,599] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:17,758] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:17,760] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:17,833] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:17,845] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:53:17,846] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:18,150] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:18,151] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:18,156] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'running', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:53:18,156] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:18,785] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:18,794] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is running, calculate by task party status list: ['running', 'running']
+[INFO] [2021-06-13 11:53:18,794] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:18,795] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 11:53:18,795] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:18,986] [2673:139815829055296] - job_tracker.py[line:159]: task id 202106131152285573461_secure_add_example_0 output data table is none
+[INFO] [2021-06-13 11:53:18,994] [8:139727092389632] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:19,010] [8:139727092389632] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:19,015] [8:139727092389632] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:19,026] [2671:140529261025088] - job_tracker.py[line:159]: task id 202106131152285573461_secure_add_example_0 output data table is none
+[INFO] [2021-06-13 11:53:19,036] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:19,037] [8:139727092389632] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'component_name': 'secure_add_example_0', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'host', 'party_id': '10000', 'run_ip': '127.0.0.1', 'run_pid': 2673, 'party_status': 'success', 'end_time': 1623585198986, 'elapsed': 46216}
+[INFO] [2021-06-13 11:53:19,062] [8:139726518462208] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:19,076] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:19,098] [8:139726518462208] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'component_name': 'secure_add_example_0', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'guest', 'party_id': '10000', 'run_ip': '127.0.0.1', 'run_pid': 2671, 'party_status': 'success', 'end_time': 1623585199026, 'elapsed': 46286}
+[INFO] [2021-06-13 11:53:20,835] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:20,838] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:20,877] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:20,882] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': 46286, 'end_time': 1623585199026, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'success', 'role': 'guest', 'start_time': 1623585150483, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148775}
+[INFO] [2021-06-13 11:53:20,882] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:20,950] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:20,951] [8:139726560425728] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:20,959] [8:139726560425728] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'elapsed': 46216, 'end_time': 1623585198986, 'job_id': '202106131152285573461', 'party_id': '10000', 'party_status': 'success', 'role': 'host', 'start_time': 1623585150560, 'status': 'running', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'update_time': 1623585148638}
+[INFO] [2021-06-13 11:53:20,959] [8:139726560425728] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:21,013] [8:139726560425728] - job_saver.py[line:84]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update successfully
+[INFO] [2021-06-13 11:53:21,020] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is success, calculate by task party status list: ['success', 'success']
+[INFO] [2021-06-13 11:53:21,020] [8:139726560425728] - federated_scheduler.py[line:192]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 is success, sync to all party
+[INFO] [2021-06-13 11:53:21,035] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:21,064] [8:139726518462208] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'guest', 'party_id': '10000', 'status': 'success'}
+[INFO] [2021-06-13 11:53:21,108] [8:139726518462208] - resource_manager.py[line:286]: task 202106131152285573461_secure_add_example_0 0 return resource successfully
+[INFO] [2021-06-13 11:53:21,115] [8:139726518462208] - job_tracker.py[line:424]: clean task 202106131152285573461_secure_add_example_0 0 on guest 10000
+[ERROR] [2021-06-13 11:53:21,645] [8:139726518462208] - job_tracker.py[line:475]: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_guest_10000/e113f474-cc3d-11eb-990b-0242ac110002'
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 386, in cleanup
+    shutil.rmtree(table)
+  File "/usr/local/lib/python3.6/shutil.py", line 490, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/usr/local/lib/python3.6/shutil.py", line 488, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_guest_10000/e113f474-cc3d-11eb-990b-0242ac110002'
+[INFO] [2021-06-13 11:53:21,674] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:21,824] [8:139726518462208] - job_saver.py[line:74]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status successfully: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': '0', 'role': 'host', 'party_id': '10000', 'status': 'success'}
+[INFO] [2021-06-13 11:53:22,082] [8:139726518462208] - resource_manager.py[line:286]: task 202106131152285573461_secure_add_example_0 0 return resource successfully
+[INFO] [2021-06-13 11:53:22,086] [8:139726518462208] - job_tracker.py[line:424]: clean task 202106131152285573461_secure_add_example_0 0 on host 10000
+[ERROR] [2021-06-13 11:53:22,136] [8:139726518462208] - job_tracker.py[line:475]: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_host_10000/e890df28-cc3d-11eb-91df-0242ac110002'
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 386, in cleanup
+    shutil.rmtree(table)
+  File "/usr/local/lib/python3.6/shutil.py", line 490, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/usr/local/lib/python3.6/shutil.py", line 488, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/fate/data/202106131152285573461_secure_add_example_0_0_host_10000/e890df28-cc3d-11eb-91df-0242ac110002'
+[INFO] [2021-06-13 11:53:22,155] [8:139726560425728] - federated_scheduler.py[line:195]: sync job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status success to all party success
+[INFO] [2021-06-13 11:53:22,155] [8:139726560425728] - federated_scheduler.py[line:202]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[INFO] [2021-06-13 11:53:22,175] [8:139726518462208] - job_utils.py[line:397]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 guest 10000 with success party status process pid:2671
+[INFO] [2021-06-13 11:53:22,176] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,181] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,182] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,183] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,184] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,185] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,186] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,187] [8:139726518462208] - job_utils.py[line:372]: []
+[INFO] [2021-06-13 11:53:22,189] [8:139726518462208] - job_utils.py[line:372]: []
+[INFO] [2021-06-13 11:53:22,189] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'guest', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/guest/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,190] [8:139726518462208] - job_utils.py[line:414]: successfully stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 guest 10000 process pid:2671
+[INFO] [2021-06-13 11:53:22,195] [8:139726518462208] - job_utils.py[line:424]: start run subprocess to stop task session 202106131152285573461_secure_add_example_0_0_guest_10000
+[INFO] [2021-06-13 11:53:22,196] [8:139726518462208] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_guest_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 11:53:22,204] [8:139726518462208] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_guest_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 2770
+[INFO] [2021-06-13 11:53:22,204] [8:139726518462208] - task_controller.py[line:255]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000 process 2671 kill success
+[INFO] [2021-06-13 11:53:22,205] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:22,212] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'guest', 'party_id': '10000', 'party_status': 'success'}
+[INFO] [2021-06-13 11:53:22,216] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[WARNING] [2021-06-13 11:53:22,225] [8:139726518462208] - job_saver.py[line:86]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update does not take effect
+[INFO] [2021-06-13 11:53:22,251] [8:139726518462208] - job_utils.py[line:397]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 host 10000 with success party status process pid:2673
+[INFO] [2021-06-13 11:53:22,252] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,254] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,255] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,257] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,259] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,262] [8:139726518462208] - job_utils.py[line:372]: []
+[INFO] [2021-06-13 11:53:22,263] [8:139726518462208] - job_utils.py[line:372]: []
+[INFO] [2021-06-13 11:53:22,264] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,264] [8:139726518462208] - job_utils.py[line:372]: []
+[INFO] [2021-06-13 11:53:22,265] [8:139726518462208] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106131152285573461', '-n', 'secure_add_example_0', '-t', '202106131152285573461_secure_add_example_0', '-v', '0', '-r', 'host', '-p', '10000', '-c', '/fate/jobs/202106131152285573461/host/10000/secure_add_example_0/202106131152285573461_secure_add_example_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-13 11:53:22,265] [8:139726518462208] - job_utils.py[line:414]: successfully stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 host 10000 process pid:2673
+[INFO] [2021-06-13 11:53:22,269] [8:139726518462208] - job_utils.py[line:424]: start run subprocess to stop task session 202106131152285573461_secure_add_example_0_0_host_10000
+[INFO] [2021-06-13 11:53:22,270] [8:139726518462208] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_host_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 11:53:22,277] [8:139726518462208] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_host_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 2772
+[INFO] [2021-06-13 11:53:22,278] [8:139726518462208] - task_controller.py[line:255]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on host 10000 process 2673 kill success
+[INFO] [2021-06-13 11:53:22,279] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:22,291] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'host', 'party_id': '10000', 'party_status': 'success'}
+[INFO] [2021-06-13 11:53:22,308] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[WARNING] [2021-06-13 11:53:22,318] [8:139726518462208] - job_saver.py[line:86]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update does not take effect
+[INFO] [2021-06-13 11:53:22,335] [8:139726560425728] - federated_scheduler.py[line:206]: stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 success
+[INFO] [2021-06-13 11:53:22,335] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:22,335] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is success, calculate by task status list: ['success']
+[INFO] [2021-06-13 11:53:22,335] [8:139726560425728] - federated_scheduler.py[line:58]: sync job 202106131152285573461 info to all party
+[INFO] [2021-06-13 11:53:22,344] [8:139726518462208] - job_saver.py[line:61]: try to update job 202106131152285573461
+[INFO] [2021-06-13 11:53:22,361] [8:139726518462208] - job_saver.py[line:64]: job 202106131152285573461 update successfully: {'job_id': '202106131152285573461', 'role': 'guest', 'party_id': '10000', 'progress': 100.0}
+[INFO] [2021-06-13 11:53:22,373] [8:139726518462208] - job_saver.py[line:61]: try to update job 202106131152285573461
+[INFO] [2021-06-13 11:53:22,553] [8:139726518462208] - job_saver.py[line:64]: job 202106131152285573461 update successfully: {'job_id': '202106131152285573461', 'role': 'host', 'party_id': '10000', 'progress': 100.0}
+[INFO] [2021-06-13 11:53:22,558] [8:139726560425728] - federated_scheduler.py[line:61]: sync job 202106131152285573461 info to all party successfully
+[INFO] [2021-06-13 11:53:22,575] [8:139726560425728] - job_saver.py[line:45]: try to update job 202106131152285573461 status to None
+[INFO] [2021-06-13 11:53:22,582] [8:139726560425728] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:22,582] [8:139726560425728] - job_saver.py[line:61]: try to update job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,166] [8:139726560425728] - job_saver.py[line:64]: job 202106131152285573461 update successfully: {'job_id': '202106131152285573461', 'role': 'host', 'party_id': '10000', 'progress': 100.0}
+[INFO] [2021-06-13 11:53:23,166] [8:139726560425728] - job_saver.py[line:45]: try to update job 202106131152285573461 status to None
+[INFO] [2021-06-13 11:53:23,173] [8:139726560425728] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:23,173] [8:139726560425728] - job_saver.py[line:61]: try to update job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,194] [8:139726560425728] - job_saver.py[line:64]: job 202106131152285573461 update successfully: {'job_id': '202106131152285573461', 'role': 'guest', 'party_id': '10000', 'progress': 100.0}
+[INFO] [2021-06-13 11:53:23,195] [8:139726560425728] - federated_scheduler.py[line:78]: try to save job 202106131152285573461 pipelined model
+[INFO] [2021-06-13 11:53:23,200] [8:139726518462208] - job_controller.py[line:331]: job 202106131152285573461 on guest 10000 start to save pipeline
+[INFO] [2021-06-13 11:53:23,249] [2770:140111433598784] - session_utils.py[line:38]: start stop session 202106131152285573461_secure_add_example_0_0_guest_10000
+[INFO] [2021-06-13 11:53:23,249] [2770:140111433598784] - session_utils.py[line:47]: stop session 202106131152285573461_secure_add_example_0_0_guest_10000 success
+[INFO] [2021-06-13 11:53:23,274] [8:139726518462208] - job_tracker.py[line:517]: save 202106131152285573461 model info done. model id: guest-10000#host-10000#model, model version: 202106131152285573461.
+[INFO] [2021-06-13 11:53:23,275] [8:139726518462208] - job_controller.py[line:374]: job 202106131152285573461 on guest 10000 save pipeline successfully
+[INFO] [2021-06-13 11:53:23,282] [2772:140697137674048] - session_utils.py[line:38]: start stop session 202106131152285573461_secure_add_example_0_0_host_10000
+[INFO] [2021-06-13 11:53:23,282] [2772:140697137674048] - session_utils.py[line:47]: stop session 202106131152285573461_secure_add_example_0_0_host_10000 success
+[INFO] [2021-06-13 11:53:23,287] [8:139726518462208] - job_controller.py[line:331]: job 202106131152285573461 on host 10000 start to save pipeline
+[INFO] [2021-06-13 11:53:23,396] [8:139726518462208] - job_tracker.py[line:517]: save 202106131152285573461 model info done. model id: guest-10000#host-10000#model, model version: 202106131152285573461.
+[INFO] [2021-06-13 11:53:23,397] [8:139726518462208] - job_controller.py[line:374]: job 202106131152285573461 on host 10000 save pipeline successfully
+[INFO] [2021-06-13 11:53:23,408] [8:139726560425728] - federated_scheduler.py[line:81]: save job 202106131152285573461 pipelined model success
+[INFO] [2021-06-13 11:53:23,408] [8:139726560425728] - federated_scheduler.py[line:68]: job 202106131152285573461 is success, sync to all party
+[INFO] [2021-06-13 11:53:23,415] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:23,453] [8:139726518462208] - job_saver.py[line:48]: update job 202106131152285573461 status successfully
+[INFO] [2021-06-13 11:53:23,493] [8:139726518462208] - resource_manager.py[line:176]: return job 202106131152285573461 resource(cores 2 memory 0) on guest 10000 successfully, remaining cores: 18 remaining memory: 0
+[INFO] [2021-06-13 11:53:23,500] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:23,517] [8:139726518462208] - job_saver.py[line:48]: update job 202106131152285573461 status successfully
+[INFO] [2021-06-13 11:53:23,563] [8:139726518462208] - resource_manager.py[line:176]: return job 202106131152285573461 resource(cores 2 memory 0) on host 10000 successfully, remaining cores: 20 remaining memory: 0
+[INFO] [2021-06-13 11:53:23,566] [8:139726560425728] - federated_scheduler.py[line:71]: sync job 202106131152285573461 status success to all party success
+[INFO] [2021-06-13 11:53:23,572] [8:139726560425728] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:23,577] [8:139726560425728] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:23,577] [8:139726560425728] - job_saver.py[line:61]: try to update job 202106131152285573461
+[WARNING] [2021-06-13 11:53:23,582] [8:139726560425728] - job_saver.py[line:66]: job 202106131152285573461 update does not take effect: {'job_id': '202106131152285573461', 'role': 'host', 'party_id': '10000', 'status': 'success'}
+[INFO] [2021-06-13 11:53:23,583] [8:139726560425728] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:23,591] [8:139726560425728] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:23,591] [8:139726560425728] - job_saver.py[line:61]: try to update job 202106131152285573461
+[WARNING] [2021-06-13 11:53:23,599] [8:139726560425728] - job_saver.py[line:66]: job 202106131152285573461 update does not take effect: {'job_id': '202106131152285573461', 'role': 'guest', 'party_id': '10000', 'status': 'success'}
+[INFO] [2021-06-13 11:53:23,599] [8:139726560425728] - dag_scheduler.py[line:502]: Job 202106131152285573461 finished with success, do something...
+[INFO] [2021-06-13 11:53:23,599] [8:139726560425728] - dag_scheduler.py[line:436]: request stop job 202106131152285573461 with success
+[INFO] [2021-06-13 11:53:23,606] [8:139726560425728] - dag_scheduler.py[line:445]: request stop job 202106131152285573461 with success to all party
+[INFO] [2021-06-13 11:53:23,606] [8:139726560425728] - federated_scheduler.py[line:88]: try to stop job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,626] [8:139726518462208] - job_utils.py[line:397]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 guest 10000 with success party status process pid:2671
+[INFO] [2021-06-13 11:53:23,627] [8:139726518462208] - job_utils.py[line:400]: can not found job 202106131152285573461 task 202106131152285573461_secure_add_example_0 guest 10000 with success party status process pid:2671
+[INFO] [2021-06-13 11:53:23,630] [8:139726518462208] - job_utils.py[line:424]: start run subprocess to stop task session 202106131152285573461_secure_add_example_0_0_guest_10000
+[INFO] [2021-06-13 11:53:23,630] [8:139726518462208] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_guest_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 11:53:23,636] [8:139726518462208] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_guest_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 2798
+[INFO] [2021-06-13 11:53:23,639] [8:139726518462208] - task_controller.py[line:255]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000 process 2671 kill success
+[INFO] [2021-06-13 11:53:23,640] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:23,650] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'guest', 'party_id': '10000', 'party_status': 'success'}
+[INFO] [2021-06-13 11:53:23,659] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[WARNING] [2021-06-13 11:53:23,668] [8:139726518462208] - job_saver.py[line:86]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update does not take effect
+[INFO] [2021-06-13 11:53:23,674] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:23,682] [8:139726518462208] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:23,704] [8:139726518462208] - job_utils.py[line:397]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 host 10000 with success party status process pid:2673
+[INFO] [2021-06-13 11:53:23,704] [8:139726518462208] - job_utils.py[line:400]: can not found job 202106131152285573461 task 202106131152285573461_secure_add_example_0 host 10000 with success party status process pid:2673
+[INFO] [2021-06-13 11:53:23,708] [8:139726518462208] - job_utils.py[line:424]: start run subprocess to stop task session 202106131152285573461_secure_add_example_0_0_host_10000
+[INFO] [2021-06-13 11:53:23,709] [8:139726518462208] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_host_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 11:53:23,714] [8:139726518462208] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_host_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 2800
+[INFO] [2021-06-13 11:53:23,715] [8:139726518462208] - task_controller.py[line:255]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on host 10000 process 2673 kill success
+[INFO] [2021-06-13 11:53:23,715] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:23,732] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'host', 'party_id': '10000', 'party_status': 'success'}
+[INFO] [2021-06-13 11:53:23,739] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[WARNING] [2021-06-13 11:53:23,745] [8:139726518462208] - job_saver.py[line:86]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update does not take effect
+[INFO] [2021-06-13 11:53:23,751] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:23,760] [8:139726518462208] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:23,767] [8:139726560425728] - federated_scheduler.py[line:92]: stop job 202106131152285573461 success
+[INFO] [2021-06-13 11:53:23,767] [8:139726560425728] - dag_scheduler.py[line:448]: stop job 202106131152285573461 with success successfully
+[INFO] [2021-06-13 11:53:23,767] [8:139726560425728] - federated_scheduler.py[line:107]: try to clean job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,775] [8:139726518462208] - job_controller.py[line:379]: Job 202106131152285573461 on guest 10000 start to clean
+[INFO] [2021-06-13 11:53:23,775] [8:139726518462208] - job_controller.py[line:382]: job 202106131152285573461 on guest 10000 clean done
+[INFO] [2021-06-13 11:53:23,786] [8:139726518462208] - job_controller.py[line:379]: Job 202106131152285573461 on host 10000 start to clean
+[INFO] [2021-06-13 11:53:23,786] [8:139726518462208] - job_controller.py[line:382]: job 202106131152285573461 on host 10000 clean done
+[INFO] [2021-06-13 11:53:23,796] [8:139726560425728] - federated_scheduler.py[line:110]: clean job 202106131152285573461 success
+[INFO] [2021-06-13 11:53:23,796] [8:139726560425728] - dag_scheduler.py[line:505]: Job 202106131152285573461 finished with success, done
+[INFO] [2021-06-13 11:53:23,796] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,884] [8:139726560425728] - dag_scheduler.py[line:298]: scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,887] [8:139726560425728] - task_scheduler.py[line:28]: scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:23,913] [8:139726560425728] - task_scheduler.py[line:143]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status is success, calculate by task party status list: ['success', 'success']
+[INFO] [2021-06-13 11:53:23,913] [8:139726560425728] - task_scheduler.py[line:75]: finish scheduling job 202106131152285573461 tasks
+[INFO] [2021-06-13 11:53:23,914] [8:139726560425728] - dag_scheduler.py[line:310]: Job 202106131152285573461 status is success, calculate by task status list: ['success']
+[INFO] [2021-06-13 11:53:23,914] [8:139726560425728] - dag_scheduler.py[line:502]: Job 202106131152285573461 finished with success, do something...
+[INFO] [2021-06-13 11:53:23,914] [8:139726560425728] - dag_scheduler.py[line:436]: request stop job 202106131152285573461 with success
+[INFO] [2021-06-13 11:53:23,922] [8:139726560425728] - dag_scheduler.py[line:445]: request stop job 202106131152285573461 with success to all party
+[INFO] [2021-06-13 11:53:23,922] [8:139726560425728] - federated_scheduler.py[line:88]: try to stop job 202106131152285573461
+[INFO] [2021-06-13 11:53:23,951] [8:139726518462208] - job_utils.py[line:397]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 guest 10000 with success party status process pid:2671
+[INFO] [2021-06-13 11:53:23,952] [8:139726518462208] - job_utils.py[line:400]: can not found job 202106131152285573461 task 202106131152285573461_secure_add_example_0 guest 10000 with success party status process pid:2671
+[INFO] [2021-06-13 11:53:23,963] [8:139726518462208] - job_utils.py[line:424]: start run subprocess to stop task session 202106131152285573461_secure_add_example_0_0_guest_10000
+[INFO] [2021-06-13 11:53:23,963] [8:139726518462208] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_guest_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 11:53:23,970] [8:139726518462208] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_guest_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 2804
+[INFO] [2021-06-13 11:53:23,970] [8:139726518462208] - task_controller.py[line:255]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on guest 10000 process 2671 kill success
+[INFO] [2021-06-13 11:53:23,971] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:23,984] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'guest', 'party_id': '10000', 'party_status': 'success'}
+[INFO] [2021-06-13 11:53:24,001] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[WARNING] [2021-06-13 11:53:24,017] [8:139726518462208] - job_saver.py[line:86]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update does not take effect
+[INFO] [2021-06-13 11:53:24,030] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:24,042] [8:139726518462208] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:24,075] [8:139726518462208] - job_utils.py[line:397]: try to stop job 202106131152285573461 task 202106131152285573461_secure_add_example_0 host 10000 with success party status process pid:2673
+[INFO] [2021-06-13 11:53:24,075] [8:139726518462208] - job_utils.py[line:400]: can not found job 202106131152285573461 task 202106131152285573461_secure_add_example_0 host 10000 with success party status process pid:2673
+[INFO] [2021-06-13 11:53:24,079] [8:139726518462208] - job_utils.py[line:424]: start run subprocess to stop task session 202106131152285573461_secure_add_example_0_0_host_10000
+[INFO] [2021-06-13 11:53:24,080] [8:139726518462208] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_host_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 11:53:24,091] [8:139726518462208] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106131152285573461_secure_add_example_0_0_host_10000 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 2807
+[INFO] [2021-06-13 11:53:24,092] [8:139726518462208] - task_controller.py[line:255]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 on host 10000 process 2673 kill success
+[INFO] [2021-06-13 11:53:24,093] [8:139726518462208] - job_saver.py[line:71]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status
+[INFO] [2021-06-13 11:53:24,099] [8:139726518462208] - job_saver.py[line:76]: update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 status update does not take effect: {'job_id': '202106131152285573461', 'task_id': '202106131152285573461_secure_add_example_0', 'task_version': 0, 'role': 'host', 'party_id': '10000', 'party_status': 'success'}
+[INFO] [2021-06-13 11:53:24,108] [8:139726518462208] - job_saver.py[line:81]: try to update job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0
+[WARNING] [2021-06-13 11:53:24,114] [8:139726518462208] - job_saver.py[line:86]: job 202106131152285573461 task 202106131152285573461_secure_add_example_0 0 update does not take effect
+[INFO] [2021-06-13 11:53:24,123] [8:139726518462208] - job_saver.py[line:45]: try to update job 202106131152285573461 status to success
+[INFO] [2021-06-13 11:53:24,132] [8:139726518462208] - job_saver.py[line:56]: update job 202106131152285573461 status does not take effect
+[INFO] [2021-06-13 11:53:24,146] [8:139726560425728] - federated_scheduler.py[line:92]: stop job 202106131152285573461 success
+[INFO] [2021-06-13 11:53:24,146] [8:139726560425728] - dag_scheduler.py[line:448]: stop job 202106131152285573461 with success successfully
+[INFO] [2021-06-13 11:53:24,147] [8:139726560425728] - federated_scheduler.py[line:107]: try to clean job 202106131152285573461
+[INFO] [2021-06-13 11:53:24,156] [8:139726518462208] - job_controller.py[line:379]: Job 202106131152285573461 on guest 10000 start to clean
+[INFO] [2021-06-13 11:53:24,160] [8:139726518462208] - job_controller.py[line:382]: job 202106131152285573461 on guest 10000 clean done
+[INFO] [2021-06-13 11:53:24,196] [8:139726518462208] - job_controller.py[line:379]: Job 202106131152285573461 on host 10000 start to clean
+[INFO] [2021-06-13 11:53:24,197] [8:139726518462208] - job_controller.py[line:382]: job 202106131152285573461 on host 10000 clean done
+[INFO] [2021-06-13 11:53:24,214] [8:139726560425728] - federated_scheduler.py[line:110]: clean job 202106131152285573461 success
+[INFO] [2021-06-13 11:53:24,214] [8:139726560425728] - dag_scheduler.py[line:505]: Job 202106131152285573461 finished with success, done
+[INFO] [2021-06-13 11:53:24,214] [8:139726560425728] - dag_scheduler.py[line:325]: finish scheduling job 202106131152285573461
+[INFO] [2021-06-13 11:53:24,962] [2798:139949089670976] - session_utils.py[line:38]: start stop session 202106131152285573461_secure_add_example_0_0_guest_10000
+[INFO] [2021-06-13 11:53:24,963] [2798:139949089670976] - session_utils.py[line:47]: stop session 202106131152285573461_secure_add_example_0_0_guest_10000 success
+[INFO] [2021-06-13 11:53:25,120] [2800:140238098499392] - session_utils.py[line:38]: start stop session 202106131152285573461_secure_add_example_0_0_host_10000
+[INFO] [2021-06-13 11:53:25,121] [2800:140238098499392] - session_utils.py[line:47]: stop session 202106131152285573461_secure_add_example_0_0_host_10000 success
+[INFO] [2021-06-13 11:53:25,213] [2804:140366162818880] - session_utils.py[line:38]: start stop session 202106131152285573461_secure_add_example_0_0_guest_10000
+[INFO] [2021-06-13 11:53:25,213] [2804:140366162818880] - session_utils.py[line:47]: stop session 202106131152285573461_secure_add_example_0_0_guest_10000 success
+[INFO] [2021-06-13 11:53:25,353] [2807:140596950374208] - session_utils.py[line:38]: start stop session 202106131152285573461_secure_add_example_0_0_host_10000
+[INFO] [2021-06-13 11:53:25,354] [2807:140596950374208] - session_utils.py[line:47]: stop session 202106131152285573461_secure_add_example_0_0_host_10000 success
+[INFO] [2021-06-13 11:53:26,251] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:28,287] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:30,354] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:32,413] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:34,453] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:36,504] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:38,545] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:40,575] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:42,613] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:44,645] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:46,675] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:48,741] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:50,792] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:52,831] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:54,867] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:56,918] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:53:58,952] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:00,998] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:03,025] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:05,064] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:07,102] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:09,165] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:11,219] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:13,309] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:15,383] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:17,415] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:19,480] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:21,546] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:23,625] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:25,668] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:27,704] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:29,749] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:31,799] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:33,849] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:35,880] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:37,934] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:40,016] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:42,065] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:44,115] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:46,154] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:48,198] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:50,257] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:52,299] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:54,332] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:56,377] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:54:58,420] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:00,465] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:02,513] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:04,561] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:06,619] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:08,667] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:10,714] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:12,762] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:14,817] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:16,867] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:18,907] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:20,957] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:23,003] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:25,063] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:27,109] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:29,161] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:31,203] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:33,245] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:35,292] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:37,344] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:39,389] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:41,431] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:43,474] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:45,521] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:47,553] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:49,600] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:51,650] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:53,698] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:55,738] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:57,798] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:55:59,841] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:01,888] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:03,949] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:05,988] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:08,041] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:10,090] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:12,143] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:14,185] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:16,242] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:18,302] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:20,333] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:22,380] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:24,406] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:26,447] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:28,477] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:30,511] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:32,555] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:34,591] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:36,616] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:38,657] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:40,723] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:42,769] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:44,820] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:46,862] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:48,911] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:50,978] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:53,040] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:55,089] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:57,130] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:56:59,194] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:01,241] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:03,294] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:05,343] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:07,389] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:09,436] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:11,477] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:13,518] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:15,568] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:17,616] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:19,652] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:21,723] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:23,755] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:25,786] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:27,844] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:29,892] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:31,936] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:33,985] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:36,032] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:38,075] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:40,123] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:42,160] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:44,207] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:46,239] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:48,294] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:50,341] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:52,384] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:54,427] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:56,475] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:57:58,520] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:00,565] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:02,631] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:04,676] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:06,720] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:08,768] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:10,817] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:12,858] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:14,907] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:16,941] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:18,987] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:21,020] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 11:58:23,064] [8:139726560425728] - dag_scheduler.py[line:193]: the number of updates has been exceeded

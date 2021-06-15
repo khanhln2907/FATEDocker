@@ -1,0 +1,22 @@
+[INFO] [2021-06-13 12:07:14,384] [3133:139991430018880] - control_client.py[line:42]: request update job 202106131207115802213 task 202106131207115802213_secure_add_example_0 0 on guest 10000
+[DEBUG] [2021-06-13 12:07:14,694] [3133:139991430018880] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f524b2f7748>, federation_session_id=202106131207115802213_secure_add_example_0_0, party=Party(role=guest, party_id=10000)
+[DEBUG] [2021-06-13 12:07:14,703] [3133:139991430018880] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 12:07:15,082] [3133:139991430018880] - secure_add_guest.py[line:99]: begin to init parameters of secure add example guest
+[INFO] [2021-06-13 12:07:15,082] [3133:139991430018880] - secure_add_guest.py[line:102]: begin to make guest data
+[INFO] [2021-06-13 12:07:15,326] [3133:139991430018880] - secure_add_guest.py[line:105]: split data into two random parts
+[INFO] [2021-06-13 12:07:18,449] [3133:139991430018880] - secure_add_guest.py[line:108]: share one random part data to host
+[DEBUG] [2021-06-13 12:07:18,450] [3133:139991430018880] - _standalone.py[line:535]: [federation.standalone.remote.hash.5041d1ce9a14064a36e7.guest_share.default]remote data, type=<class 'fate_arch._standalone.Table'>
+[DEBUG] [2021-06-13 12:07:18,450] [3133:139991430018880] - _standalone.py[line:539]: [federation.standalone.remote.hash.5041d1ce9a14064a36e7.guest_share.default]remote Table(namespace=202106131207115802213_secure_add_example_0_0_guest_10000, name=e4a7972e-cc3f-11eb-821d-0242ac110002, partitions=48)
+[DEBUG] [2021-06-13 12:07:18,450] [3133:139991430018880] - _standalone.py[line:550]: [federation.standalone.remote.hash.5041d1ce9a14064a36e7.guest_share.default]save Table(namespace=202106131207115802213_secure_add_example_0_0_guest_10000, name=e4a7972e-cc3f-11eb-821d-0242ac110002, partitions=48) as Table(namespace=202106131207115802213_secure_add_example_0_0_guest_10000, name=e6589df2-cc3f-11eb-821d-0242ac110002, partitions=48)
+[INFO] [2021-06-13 12:07:25,713] [3133:139991430018880] - secure_add_guest.py[line:111]: get share of one random part data from host
+[DEBUG] [2021-06-13 12:07:25,713] [3133:139991430018880] - _standalone.py[line:564]: [federation.standalone.get.hash.d80c5eb8797618002f85.host_share.default]
+[DEBUG] [2021-06-13 12:07:30,284] [3133:139991430018880] - _standalone.py[line:643]: [GET] Got 202106131207115802213_secure_add_example_0_0-hash.d80c5eb8797618002f85.host_share-default-host-10000-guest-10000 type Table
+[DEBUG] [2021-06-13 12:07:30,285] [3133:139991430018880] - _standalone.py[line:581]: [federation.standalone.get.hash.d80c5eb8797618002f85.host_share.default] got Table(namespace=202106131207115802213_secure_add_example_0_0_host_10000, name=eab06f92-cc3f-11eb-9d43-0242ac110002, partitions=48)
+[INFO] [2021-06-13 12:07:30,287] [3133:139991430018880] - secure_add_guest.py[line:114]: begin to get sum of guest and host
+[INFO] [2021-06-13 12:07:30,922] [3133:139991430018880] - secure_add_guest.py[line:117]: receive host sum from guest
+[DEBUG] [2021-06-13 12:07:30,923] [3133:139991430018880] - _standalone.py[line:564]: [federation.standalone.get.hash.202137af1a7fdcf8862f.host_sum.default]
+[DEBUG] [2021-06-13 12:07:30,924] [3133:139991430018880] - _standalone.py[line:643]: [GET] Got 202106131207115802213_secure_add_example_0_0-hash.202137af1a7fdcf8862f.host_sum-default-host-10000-guest-10000 type Object
+[DEBUG] [2021-06-13 12:07:30,929] [3133:139991430018880] - _standalone.py[line:592]: [federation.standalone.get.hash.202137af1a7fdcf8862f.host_sum.default] got object with type: <class 'float'>
+[INFO] [2021-06-13 12:07:30,934] [3133:139991430018880] - secure_add_guest.py[line:124]: success to calculate secure_sum, it is 2000.0
+[INFO] [2021-06-13 12:07:31,053] [3133:139991430018880] - control_client.py[line:42]: request update job 202106131207115802213 task 202106131207115802213_secure_add_example_0 0 on guest 10000
+[INFO] [2021-06-13 12:07:32,655] [3133:139991430018880] - control_client.py[line:42]: request update job 202106131207115802213 task 202106131207115802213_secure_add_example_0 0 on guest 10000

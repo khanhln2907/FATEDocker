@@ -1,0 +1,19 @@
+[INFO] [2021-06-13 16:39:21,473] [3348:140412132239168] - task_executor.py[line:313]: report task 202106131639166246114_reader_0 0 guest 9999 to driver
+[INFO] [2021-06-13 16:39:21,936] [3348:140412132239168] - task_executor.py[line:150]: Run 202106131639166246114 reader_0 202106131639166246114_reader_0 guest 9999 task
+[INFO] [2021-06-13 16:39:21,936] [3348:140412132239168] - task_executor.py[line:151]: Component parameters on party {'ReaderParam': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dsl_version': 2, 'initiator': {'role': 'guest', 'party_id': 9999}, 'role': {'host': [10000], 'guest': [9999]}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'arbiter-10000#guest-9999#host-10000#model', 'model_version': '202106131639166246114', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 4, 'task_memory_per_node': 0, 'request_task_cores': 4, 'if_initiator_baseline': False}}, 'component_parameters': {'role': {'guest': {'0': {'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}}}, 'host': {'0': {'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}}}}, 'common': {'hetero_lr_0': {'optimizer': 'rmsprop', 'learning_rate': 0.15, 'max_iter': 10, 'early_stop': 'diff'}}}, 'dsl_path': '/tmp/tmp7f44hgum/job_dsl.json', 'conf_path': '/tmp/tmp7f44hgum/job_runtime_conf.json', 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'fate_flow/components/reader.py/Reader', 'module': 'Reader', 'output_data_name': ['data']}
+[INFO] [2021-06-13 16:39:21,937] [3348:140412132239168] - task_executor.py[line:152]: Task input dsl {}
+[ERROR] [2021-06-13 16:39:22,082] [3348:140412132239168] - task_executor.py[line:191]: can not found table name: breast_hetero_guest namespace: experiment
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/fate_flow/components/reader.py", line 51, in run
+    output_storage_address=output_storage_address)
+  File "/fate/python/fate_flow/components/reader.py", line 125, in convert_check
+    raise RuntimeError(f"can not found table name: {input_name} namespace: {input_namespace}")
+RuntimeError: can not found table name: breast_hetero_guest namespace: experiment
+[INFO] [2021-06-13 16:39:22,083] [3348:140412132239168] - task_executor.py[line:313]: report task 202106131639166246114_reader_0 0 guest 9999 to driver
+[INFO] [2021-06-13 16:39:22,153] [3348:140412132239168] - task_executor.py[line:202]: task 202106131639166246114_reader_0 guest 9999 start time: 2021-06-13 16:39:21
+[INFO] [2021-06-13 16:39:22,153] [3348:140412132239168] - task_executor.py[line:204]: task 202106131639166246114_reader_0 guest 9999 end time: 2021-06-13 16:39:22
+[INFO] [2021-06-13 16:39:22,154] [3348:140412132239168] - task_executor.py[line:206]: task 202106131639166246114_reader_0 guest 9999 takes 0.767s
+[INFO] [2021-06-13 16:39:22,154] [3348:140412132239168] - task_executor.py[line:209]: Finish 202106131639166246114 reader_0 202106131639166246114_reader_0 0 guest 9999 task failed
+[INFO] [2021-06-13 16:39:22,154] [3348:140412132239168] - task_executor.py[line:313]: report task 202106131639166246114_reader_0 0 guest 9999 to driver

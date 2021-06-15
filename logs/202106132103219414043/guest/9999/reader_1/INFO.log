@@ -1,0 +1,37 @@
+[INFO] [2021-06-13 21:03:25,386] [332:140326896633664] - task_executor.py[line:313]: report task 202106132103219414043_reader_1 0 guest 9999 to driver
+[INFO] [2021-06-13 21:03:25,387] [332:140326896633664] - control_client.py[line:42]: request update job 202106132103219414043 task 202106132103219414043_reader_1 0 on guest 9999
+[INFO] [2021-06-13 21:03:25,874] [332:140326896633664] - task_executor.py[line:150]: Run 202106132103219414043 reader_1 202106132103219414043_reader_1 guest 9999 task
+[INFO] [2021-06-13 21:03:25,874] [332:140326896633664] - task_executor.py[line:151]: Component parameters on party {'ReaderParam': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dsl_version': 2, 'initiator': {'role': 'guest', 'party_id': 9999}, 'role': {'host': [9998], 'guest': [9999]}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '202106132103219414043', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 4, 'task_memory_per_node': 0, 'request_task_cores': 4, 'if_initiator_baseline': False}}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'guest': {'0': {'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}}}, 'host': {'0': {'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}, 'dataio_1': {'with_label': False}}}}}, 'conf_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_binary_conf.json', 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'fate_flow/components/reader.py/Reader', 'module': 'Reader', 'output_data_name': ['data']}
+[INFO] [2021-06-13 21:03:25,874] [332:140326896633664] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-13 21:03:26,034] [332:140326896633664] - reader.py[line:66]: the STANDALONE input table needs to be transform format
+[INFO] [2021-06-13 21:03:26,060] [332:140326896633664] - reader.py[line:166]: start copying table
+[INFO] [2021-06-13 21:03:26,061] [332:140326896633664] - reader.py[line:168]: source table name: breast_hetero_guest namespace: experiment engine: STANDALONE
+[INFO] [2021-06-13 21:03:26,061] [332:140326896633664] - reader.py[line:170]: destination table name: cbaf39b6cc8a11eba4510242ac110002 namespace: output_data_202106132103219414043_reader_1_0 engine: STANDALONE
+[INFO] [2021-06-13 21:03:26,162] [332:140326896633664] - reader.py[line:194]: copy successfully
+[INFO] [2021-06-13 21:03:26,215] [332:140326896633664] - tracker_client.py[line:127]: Request save job 202106132103219414043 task 202106132103219414043_reader_1 0 on guest 9999 data data info
+[INFO] [2021-06-13 21:03:26,243] [332:140326896633664] - tracker_client.py[line:103]: Request save job 202106132103219414043 task 202106132103219414043_reader_1 0 on guest 9999 metric reader_namespace reader_name meta
+[INFO] [2021-06-13 21:03:26,283] [332:140326896633664] - profile.py[line:249]: 
+Computing:
++----------+------------------------------------------+
+| function |                                          |
++----------+------------------------------------------+
+|  total   | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++----------+------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-13 21:03:26,284] [332:140326896633664] - task_executor.py[line:313]: report task 202106132103219414043_reader_1 0 guest 9999 to driver
+[INFO] [2021-06-13 21:03:26,284] [332:140326896633664] - control_client.py[line:42]: request update job 202106132103219414043 task 202106132103219414043_reader_1 0 on guest 9999
+[INFO] [2021-06-13 21:03:26,336] [332:140326896633664] - task_executor.py[line:202]: task 202106132103219414043_reader_1 guest 9999 start time: 2021-06-13 21:03:25
+[INFO] [2021-06-13 21:03:26,337] [332:140326896633664] - task_executor.py[line:204]: task 202106132103219414043_reader_1 guest 9999 end time: 2021-06-13 21:03:26
+[INFO] [2021-06-13 21:03:26,338] [332:140326896633664] - task_executor.py[line:206]: task 202106132103219414043_reader_1 guest 9999 takes 1.129s
+[INFO] [2021-06-13 21:03:26,338] [332:140326896633664] - task_executor.py[line:209]: Finish 202106132103219414043 reader_1 202106132103219414043_reader_1 0 guest 9999 task success
+[INFO] [2021-06-13 21:03:26,339] [332:140326896633664] - task_executor.py[line:313]: report task 202106132103219414043_reader_1 0 guest 9999 to driver
+[INFO] [2021-06-13 21:03:26,340] [332:140326896633664] - control_client.py[line:42]: request update job 202106132103219414043 task 202106132103219414043_reader_1 0 on guest 9999

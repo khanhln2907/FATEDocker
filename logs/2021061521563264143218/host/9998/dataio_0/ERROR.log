@@ -1,0 +1,13 @@
+[ERROR] [2021-06-15 21:56:52,087] [3074:139995760379712] - task_executor.py[line:191]: fit & transform data' header should be same
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/federatedml/model_base.py", line 98, in run
+    this_data_output = func(*real_param)
+  File "/fate/python/federatedml/util/data_io.py", line 895, in transform
+    return self.reader.read_data(data_inst, "transform")
+  File "/fate/python/federatedml/util/data_io.py", line 150, in read_data
+    data_instance = data_overview.header_alignment(data_instance, fit_header)
+  File "/fate/python/federatedml/statistic/data_overview.py", line 75, in header_alignment
+    raise ValueError("fit & transform data' header should be same")
+ValueError: fit & transform data' header should be same

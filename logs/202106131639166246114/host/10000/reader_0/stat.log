@@ -1,0 +1,5 @@
+[INFO] [2021-06-13 16:39:21,494] [3344:139924654421824] - control_client.py[line:42]: request update job 202106131639166246114 task 202106131639166246114_reader_0 0 on host 10000
+[DEBUG] [2021-06-13 16:39:21,981] [3344:139924654421824] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f427b8edb70>, federation_session_id=202106131639166246114_reader_0_0, party=Party(role=host, party_id=10000)
+[DEBUG] [2021-06-13 16:39:21,989] [3344:139924654421824] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 16:39:22,083] [3344:139924654421824] - control_client.py[line:42]: request update job 202106131639166246114 task 202106131639166246114_reader_0 0 on host 10000
+[INFO] [2021-06-13 16:39:22,183] [3344:139924654421824] - control_client.py[line:42]: request update job 202106131639166246114 task 202106131639166246114_reader_0 0 on host 10000

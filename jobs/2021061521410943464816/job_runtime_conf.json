@@ -1,0 +1,56 @@
+{
+    "initiator": {
+        "role": "local",
+        "party_id": 0
+    },
+    "job_parameters": {
+        "common": {
+            "job_type": "train",
+            "work_mode": 0,
+            "backend": 0,
+            "computing_engine": "STANDALONE",
+            "federation_engine": "STANDALONE",
+            "storage_engine": "STANDALONE",
+            "engines_address": {},
+            "federated_mode": "SINGLE",
+            "task_parallelism": 1,
+            "computing_partitions": 4,
+            "federated_status_collect_type": "PULL",
+            "model_id": "local-0#model",
+            "model_version": "2021061521410943464816",
+            "eggroll_run": {},
+            "spark_run": {},
+            "rabbitmq_run": {},
+            "pulsar_run": {},
+            "adaptation_parameters": {
+                "task_nodes": 1,
+                "task_cores_per_node": 4,
+                "task_memory_per_node": 0,
+                "request_task_cores": 4,
+                "if_initiator_baseline": true
+            }
+        }
+    },
+    "role": {
+        "local": [
+            0
+        ]
+    },
+    "component_parameters": {
+        "role": {
+            "local": {
+                "0": {
+                    "upload_0": {
+                        "partition": 16,
+                        "file": "/fate/jobs/2021061521410943464816/fate_upload_tmp/default_credit_hetero_guest.csv",
+                        "namespace": "experiment",
+                        "head": 1,
+                        "name": "default_credit_hetero_guest",
+                        "destroy": true
+                    }
+                }
+            }
+        }
+    },
+    "dsl_version": 2
+}

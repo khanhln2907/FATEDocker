@@ -1,0 +1,72 @@
+[INFO] [2021-06-15 22:05:30,754] [4271:140646451431232] - task_executor.py[line:313]: report task 2021061522050718069622_hetero_secure_boost_0 0 host 9998 to driver
+[INFO] [2021-06-15 22:05:30,755] [4271:140646451431232] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on host 9998
+[INFO] [2021-06-15 22:05:31,242] [4271:140646451431232] - task_executor.py[line:150]: Run 2021061522050718069622 hetero_secure_boost_0 2021061522050718069622_hetero_secure_boost_0 host 9998 task
+[INFO] [2021-06-15 22:05:31,242] [4271:140646451431232] - task_executor.py[line:151]: Component parameters on party {'HeteroSecureBoostParam': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy', 'params': None}, 'learning_rate': 0.3, 'num_trees': 3, 'subsample_feature_rate': 1.0, 'n_iter_no_change': True, 'tol': 0.0001, 'bin_num': 32, 'predict_param': {'threshold': 0.5}, 'cv_param': {'n_splits': 5, 'mode': 'hetero', 'role': 'guest', 'shuffle': True, 'random_seed': 1, 'need_cv': False, 'output_fold_history': True, 'history_value_type': 'score'}, 'validation_freqs': 1, 'metrics': None, 'random_seed': 100, 'binning_error': 0.0001, 'encrypt_param': {'method': 'iterativeAffine', 'key_length': 1024}, 'encrypted_mode_calculator_param': {'mode': 'strict', 're_encrypted_rate': 1}, 'early_stopping_rounds': None, 'use_first_metric_only': False, 'tree_param': {'criterion_method': 'xgboost', 'criterion_params': [0.1, 0], 'max_depth': 3, 'min_sample_split': 2, 'min_impurity_split': 0.001, 'min_leaf_node': 1, 'min_child_weight': 0, 'max_split_nodes': 65536, 'feature_importance_type': 'split', 'n_iter_no_change': True, 'tol': 0.001, 'use_missing': False, 'zero_as_missing': False, 'deterministic': False}, 'zero_as_missing': False, 'use_missing': False, 'complete_secure': False, 'sparse_optimization': False, 'run_goss': False, 'top_rate': 0.2, 'other_rate': 0.1, 'cipher_compress_error': None, 'new_ver': True}, 'dsl_version': 2, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061522023585229020', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'role': {'host': [9998], 'guest': [9999]}, 'initiator': {'party_id': 9999, 'role': 'guest'}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'host': {'0': {'dataio_0': {'with_label': False}, 'reader_0': {'table': {'namespace': 'experiment', 'name': 'breast_hetero_host'}}, 'dataio_1': {'with_label': False}, 'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}}}, 'guest': {'0': {'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'namespace': 'experiment', 'name': 'breast_hetero_guest'}}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}}}}}, 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'federatedml/ensemble/boosting/hetero/hetero_secureboost_host.py/HeteroSecureBoostingTreeHost', 'module': 'HeteroSecureBoost', 'output_data_name': ['data']}
+[INFO] [2021-06-15 22:05:31,242] [4271:140646451431232] - task_executor.py[line:152]: Task input dsl {'data': {'test_data': ['intersection_0.data']}, 'model': ['pipeline.hetero_secure_boost_0.model']}
+[INFO] [2021-06-15 22:05:31,243] [4271:140646451431232] - tracker_client.py[line:150]: Request read job 2021061522050718069622 task None None on host 9998 data data info
+[INFO] [2021-06-15 22:05:31,270] [4271:140646451431232] - task_executor.py[line:269]: load computing table use 4
+[INFO] [2021-06-15 22:05:31,398] [4271:140646451431232] - pipelined_model.py[line:185]: parse BoostingTreeModelMeta proto object normal
+[INFO] [2021-06-15 22:05:31,400] [4271:140646451431232] - pipelined_model.py[line:185]: parse BoostingTreeModelParam proto object normal
+[INFO] [2021-06-15 22:05:35,360] [4271:140646451431232] - boosting.py[line:527]: load model
+[INFO] [2021-06-15 22:05:35,466] [4271:140646451431232] - hetero_secureboost_host.py[line:195]: running prediction
+[INFO] [2021-06-15 22:05:36,895] [4271:140646451431232] - splitter.py[line:70]: splitter init!
+[INFO] [2021-06-15 22:05:36,895] [4271:140646451431232] - criterion.py[line:47]: splitter criterion setting done: l1 0.0, l2 0.1
+[INFO] [2021-06-15 22:05:36,896] [4271:140646451431232] - decision_tree.py[line:311]: load tree model
+[INFO] [2021-06-15 22:05:36,897] [4271:140646451431232] - boosting.py[line:393]: generate flowid, flowid predict
+[INFO] [2021-06-15 22:05:36,897] [4271:140646451431232] - decision_tree.py[line:130]: set flowid, flowid is predict.0.0
+[INFO] [2021-06-15 22:05:36,898] [4271:140646451431232] - splitter.py[line:70]: splitter init!
+[INFO] [2021-06-15 22:05:36,898] [4271:140646451431232] - criterion.py[line:47]: splitter criterion setting done: l1 0.0, l2 0.1
+[INFO] [2021-06-15 22:05:36,898] [4271:140646451431232] - decision_tree.py[line:311]: load tree model
+[INFO] [2021-06-15 22:05:36,899] [4271:140646451431232] - boosting.py[line:393]: generate flowid, flowid predict
+[INFO] [2021-06-15 22:05:36,900] [4271:140646451431232] - decision_tree.py[line:130]: set flowid, flowid is predict.1.0
+[INFO] [2021-06-15 22:05:36,900] [4271:140646451431232] - splitter.py[line:70]: splitter init!
+[INFO] [2021-06-15 22:05:36,900] [4271:140646451431232] - criterion.py[line:47]: splitter criterion setting done: l1 0.0, l2 0.1
+[INFO] [2021-06-15 22:05:36,901] [4271:140646451431232] - decision_tree.py[line:311]: load tree model
+[INFO] [2021-06-15 22:05:36,901] [4271:140646451431232] - boosting.py[line:393]: generate flowid, flowid predict
+[INFO] [2021-06-15 22:05:36,902] [4271:140646451431232] - decision_tree.py[line:130]: set flowid, flowid is predict.2.0
+[INFO] [2021-06-15 22:05:40,985] [4271:140646451431232] - tracker_client.py[line:173]: Request save job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on host 9998 component summary
+[INFO] [2021-06-15 22:05:41,351] [4271:140646451431232] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   1   1.396     1.396    1.396   |
+|          |    join      1   0.276     0.276    0.276   |
+|          |    count     4   0.018     0.004    0.007   |
+|          |    first     1   0.004     0.004    0.004   |
++----------+---------------------------------------------+
+|  total   |  n=7, sum=1.6935, mean=0.2419, max=1.3963   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 2 | 3.492  |  1.746  |  2.66   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.106  |  0.106  | 0.106   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 1 | 0.016  |  0.016  | 0.016   |
+|        |          iable.HeteroBoostingTransferVariable.predict_start_round          |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.101  |  0.101  | 0.101   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data  |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=5, sum=3.7146, mean=0.7429, max=2.6601                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-15 22:05:41,355] [4271:140646451431232] - pipelined_model.py[line:73]: Save hetero_secure_boost_0 default HeteroSecureBoostingTreeHostMeta buffer
+[INFO] [2021-06-15 22:05:41,356] [4271:140646451431232] - pipelined_model.py[line:73]: Save hetero_secure_boost_0 default HeteroSecureBoostingTreeHostParam buffer
+[INFO] [2021-06-15 22:05:41,381] [4271:140646451431232] - pipelined_model.py[line:78]: Save hetero_secure_boost_0 default successfully
+[INFO] [2021-06-15 22:05:41,381] [4271:140646451431232] - task_executor.py[line:313]: report task 2021061522050718069622_hetero_secure_boost_0 0 host 9998 to driver
+[INFO] [2021-06-15 22:05:41,382] [4271:140646451431232] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on host 9998
+[INFO] [2021-06-15 22:05:41,766] [4271:140646451431232] - task_executor.py[line:202]: task 2021061522050718069622_hetero_secure_boost_0 host 9998 start time: 2021-06-15 22:05:30
+[INFO] [2021-06-15 22:05:41,767] [4271:140646451431232] - task_executor.py[line:204]: task 2021061522050718069622_hetero_secure_boost_0 host 9998 end time: 2021-06-15 22:05:41
+[INFO] [2021-06-15 22:05:41,767] [4271:140646451431232] - task_executor.py[line:206]: task 2021061522050718069622_hetero_secure_boost_0 host 9998 takes 10.863s
+[INFO] [2021-06-15 22:05:41,767] [4271:140646451431232] - task_executor.py[line:209]: Finish 2021061522050718069622 hetero_secure_boost_0 2021061522050718069622_hetero_secure_boost_0 0 host 9998 task success
+[INFO] [2021-06-15 22:05:41,800] [4271:140646451431232] - task_executor.py[line:313]: report task 2021061522050718069622_hetero_secure_boost_0 0 host 9998 to driver
+[INFO] [2021-06-15 22:05:41,801] [4271:140646451431232] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_hetero_secure_boost_0 0 on host 9998

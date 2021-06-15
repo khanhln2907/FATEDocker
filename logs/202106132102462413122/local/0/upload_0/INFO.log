@@ -1,0 +1,43 @@
+[INFO] [2021-06-13 21:02:48,506] [263:140026860009280] - task_executor.py[line:313]: report task 202106132102462413122_upload_0 0 local 0 to driver
+[INFO] [2021-06-13 21:02:48,507] [263:140026860009280] - control_client.py[line:42]: request update job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0
+[INFO] [2021-06-13 21:02:48,790] [263:140026860009280] - task_executor.py[line:150]: Run 202106132102462413122 upload_0 202106132102462413122_upload_0 local 0 task
+[INFO] [2021-06-13 21:02:48,791] [263:140026860009280] - task_executor.py[line:151]: Component parameters on party {'UploadParam': {'file': '/fate/jobs/202106132102462413122/fate_upload_tmp/breast_hetero_guest.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'breast_hetero_guest', 'storage_engine': '', 'storage_address': None, 'destroy': False}, 'initiator': {'role': 'local', 'party_id': 0}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'local-0#model', 'model_version': '202106132102462413122', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 4, 'task_memory_per_node': 0, 'request_task_cores': 4, 'if_initiator_baseline': False}}, 'role': {'local': [0]}, 'component_parameters': {'role': {'local': {'0': {'upload_0': {'head': 1, 'name': 'breast_hetero_guest', 'partition': 16, 'namespace': 'experiment', 'file': '/fate/jobs/202106132102462413122/fate_upload_tmp/breast_hetero_guest.csv', 'destroy': False}}}}}, 'dsl_version': 2, 'local': {'role': 'local', 'party_id': 0}, 'CodePath': 'fate_flow/components/upload.py/Upload', 'module': 'Upload', 'output_data_name': None}
+[INFO] [2021-06-13 21:02:48,791] [263:140026860009280] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-13 21:02:48,867] [263:140026860009280] - upload.py[line:41]: {'file': '/fate/jobs/202106132102462413122/fate_upload_tmp/breast_hetero_guest.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'breast_hetero_guest', 'storage_engine': '', 'storage_address': None, 'destroy': False}
+[INFO] [2021-06-13 21:02:48,868] [263:140026860009280] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7f5a46b52b70>}
+[INFO] [2021-06-13 21:02:48,904] [263:140026860009280] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'breast_hetero_guest', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[INFO] [2021-06-13 21:02:48,935] [263:140026860009280] - control_client.py[line:26]: request update job 202106132102462413122 on local 0
+[INFO] [2021-06-13 21:02:49,172] [263:140026860009280] - tracker_client.py[line:127]: Request save job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0 data upload info
+[INFO] [2021-06-13 21:02:49,193] [263:140026860009280] - tracker_client.py[line:70]: Request save job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0 metric upload data_access data
+[INFO] [2021-06-13 21:02:49,215] [263:140026860009280] - tracker_client.py[line:103]: Request save job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0 metric upload data_access meta
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:108]: ------------load data finish!-----------------
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:112]: remove tmp upload file
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:113]: /fate/jobs/202106132102462413122/fate_upload_tmp
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:117]: file: /fate/jobs/202106132102462413122/fate_upload_tmp/breast_hetero_guest.csv
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:118]: total data_count: 569
+[INFO] [2021-06-13 21:02:49,262] [263:140026860009280] - upload.py[line:119]: table name: breast_hetero_guest, table namespace: experiment
+[INFO] [2021-06-13 21:02:49,268] [263:140026860009280] - profile.py[line:249]: 
+Computing:
++----------+------------------------------------------+
+| function |                                          |
++----------+------------------------------------------+
+|  total   | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++----------+------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-13 21:02:49,269] [263:140026860009280] - task_executor.py[line:313]: report task 202106132102462413122_upload_0 0 local 0 to driver
+[INFO] [2021-06-13 21:02:49,269] [263:140026860009280] - control_client.py[line:42]: request update job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0
+[INFO] [2021-06-13 21:02:49,316] [263:140026860009280] - task_executor.py[line:202]: task 202106132102462413122_upload_0 local 0 start time: 2021-06-13 21:02:48
+[INFO] [2021-06-13 21:02:49,316] [263:140026860009280] - task_executor.py[line:204]: task 202106132102462413122_upload_0 local 0 end time: 2021-06-13 21:02:49
+[INFO] [2021-06-13 21:02:49,317] [263:140026860009280] - task_executor.py[line:206]: task 202106132102462413122_upload_0 local 0 takes 0.769s
+[INFO] [2021-06-13 21:02:49,317] [263:140026860009280] - task_executor.py[line:209]: Finish 202106132102462413122 upload_0 202106132102462413122_upload_0 0 local 0 task success
+[INFO] [2021-06-13 21:02:49,317] [263:140026860009280] - task_executor.py[line:313]: report task 202106132102462413122_upload_0 0 local 0 to driver
+[INFO] [2021-06-13 21:02:49,317] [263:140026860009280] - control_client.py[line:42]: request update job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0

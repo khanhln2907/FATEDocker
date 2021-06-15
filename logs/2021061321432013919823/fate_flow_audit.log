@@ -1,0 +1,8 @@
+[INFO] [2021-06-13 21:43:20,140] [7:140266400880384] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/model/deploy/do
+[INFO] [2021-06-13 21:43:20,295] [7:140266400880384] - api_utils.py[line:129]: {"retcode":0,"retmsg":"deploy model of role host 9998 success"}
+
+[INFO] [2021-06-13 21:43:20,295] [7:140266400880384] - api_utils.py[line:131]: remote http api response: /v1/model/deploy/do {'retcode': 0, 'retmsg': 'deploy model of role host 9998 success'}
+[INFO] [2021-06-13 21:43:20,296] [7:140266400880384] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/model/deploy/do
+[INFO] [2021-06-13 21:43:20,446] [7:140266400880384] - api_utils.py[line:129]: {"retcode":0,"retmsg":"deploy model of role guest 9999 success"}
+
+[INFO] [2021-06-13 21:43:20,447] [7:140266400880384] - api_utils.py[line:131]: remote http api response: /v1/model/deploy/do {'retcode': 0, 'retmsg': 'deploy model of role guest 9999 success'}

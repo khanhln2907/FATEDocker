@@ -1,0 +1,53 @@
+{
+    "components": {
+        "dataio_0": {
+            "module": "DataIO",
+            "input": {
+                "model": [
+                    "pipeline.dataio_0.model"
+                ]
+            },
+            "output": {
+                "data": [
+                    "data"
+                ]
+            },
+            "CodePath": "federatedml/util/data_io.py/DataIO"
+        },
+        "intersection_0": {
+            "module": "Intersection",
+            "output": {
+                "data": [
+                    "data"
+                ]
+            },
+            "input": {
+                "data": {
+                    "data": [
+                        "dataio_0.data"
+                    ]
+                }
+            },
+            "CodePath": "federatedml/statistic/intersect/intersect_model.py/IntersectGuest"
+        },
+        "hetero_secure_boost_0": {
+            "module": "HeteroSecureBoost",
+            "input": {
+                "model": [
+                    "pipeline.hetero_secure_boost_0.model"
+                ],
+                "data": {
+                    "test_data": [
+                        "intersection_0.data"
+                    ]
+                }
+            },
+            "output": {
+                "data": [
+                    "data"
+                ]
+            },
+            "CodePath": "federatedml/ensemble/boosting/hetero/hetero_secureboost_guest.py/HeteroSecureBoostingTreeGuest"
+        }
+    }
+}

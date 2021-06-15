@@ -1,0 +1,104 @@
+[INFO] [2021-06-13 12:07:14,506] [3135:140487242139456] - task_executor.py[line:313]: report task 202106131207115802213_secure_add_example_0 0 host 10000 to driver
+[INFO] [2021-06-13 12:07:14,507] [3135:140487242139456] - control_client.py[line:42]: request update job 202106131207115802213 task 202106131207115802213_secure_add_example_0 0 on host 10000
+[DEBUG] [2021-06-13 12:07:14,922] [3135:140487242139456] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7fc5bbe40748>, federation_session_id=202106131207115802213_secure_add_example_0_0, party=Party(role=host, party_id=10000)
+[DEBUG] [2021-06-13 12:07:14,932] [3135:140487242139456] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 12:07:14,933] [3135:140487242139456] - task_executor.py[line:150]: Run 202106131207115802213 secure_add_example_0 202106131207115802213_secure_add_example_0 host 10000 task
+[INFO] [2021-06-13 12:07:14,933] [3135:140487242139456] - task_executor.py[line:151]: Component parameters on party {'SecureAddExampleParam': {'seed': 321, 'partition': 48, 'data_num': 1000}, 'initiator': {'role': 'guest', 'party_id': 10000}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_cores': 2, 'task_parallelism': 1, 'computing_partitions': 2, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-10000#host-10000#model', 'model_version': '202106131207115802213', 'eggroll_run': {'eggroll.session.processors.per.node': 2}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 2, 'task_memory_per_node': 0, 'request_task_cores': 2, 'if_initiator_baseline': False}}, 'role': {'guest': [10000], 'host': [10000]}, 'config': '/fate/KhanhsTests/test/toy_example_conf.json_1623586030_7713', 'dsl': '/fate/KhanhsTests/../examples/toy_example/toy_example_dsl.json', 'function': 'submit_job', 'local': {'role': 'host', 'party_id': 10000}, 'CodePath': 'federatedml/toy_example/secure_add_host.py/SecureAddHost', 'module': 'SecureAddExample', 'output_data_name': None}
+[INFO] [2021-06-13 12:07:14,934] [3135:140487242139456] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-13 12:07:15,275] [3135:140487242139456] - secure_add_host.py[line:87]: begin to init parameters of secure add example host
+[INFO] [2021-06-13 12:07:15,276] [3135:140487242139456] - secure_add_host.py[line:90]: begin to make host data
+[INFO] [2021-06-13 12:07:15,659] [3135:140487242139456] - secure_add_host.py[line:93]: split data into two random parts
+[DEBUG] [2021-06-13 12:07:15,660] [3135:140487242139456] - profile.py[line:84]: [computing#22f4a65d94]function_stack: [secure_add_host.py:64]secure <-[secure_add_host.py:94]run
+[DEBUG] [2021-06-13 12:07:15,661] [3135:140487242139456] - profile.py[line:87]: [computing#22f4a65d94]start
+[DEBUG] [2021-06-13 12:07:20,003] [3135:140487242139456] - profile.py[line:93]: [computing#22f4a65d94]done, elapse: 4.342498779296875, function: mapValues(self: Table(partition=48), func: method) -> Table(partition=48)
+[DEBUG] [2021-06-13 12:07:20,007] [3135:140487242139456] - profile.py[line:84]: [computing#6c384ecb9e]function_stack: [secure_add_host.py:65]secure <-[secure_add_host.py:94]run
+[DEBUG] [2021-06-13 12:07:20,007] [3135:140487242139456] - profile.py[line:87]: [computing#6c384ecb9e]start
+[DEBUG] [2021-06-13 12:07:23,826] [3135:140487242139456] - profile.py[line:93]: [computing#6c384ecb9e]done, elapse: 3.819821357727051, function: mapValues(self: Table(partition=48), func: function) -> Table(partition=48)
+[DEBUG] [2021-06-13 12:07:23,827] [3135:140487242139456] - profile.py[line:84]: [computing#9a6a1b9345]function_stack: [secure_add_host.py:66]secure <-[secure_add_host.py:94]run
+[DEBUG] [2021-06-13 12:07:23,828] [3135:140487242139456] - profile.py[line:87]: [computing#9a6a1b9345]start
+[DEBUG] [2021-06-13 12:07:25,386] [3135:140487242139456] - profile.py[line:93]: [computing#9a6a1b9345]done, elapse: 1.5582854747772217, function: mapValues(self: Table(partition=48), func: function) -> Table(partition=48)
+[INFO] [2021-06-13 12:07:25,627] [3135:140487242139456] - secure_add_host.py[line:96]: get share of one random part data from guest
+[DEBUG] [2021-06-13 12:07:25,628] [3135:140487242139456] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.guest_share.default]host<-[Party(role=guest, party_id=10000)] start
+[DEBUG] [2021-06-13 12:07:25,629] [3135:140487242139456] - _standalone.py[line:564]: [federation.standalone.get.hash.5041d1ce9a14064a36e7.guest_share.default]
+[DEBUG] [2021-06-13 12:07:25,732] [3135:140487242139456] - _standalone.py[line:643]: [GET] Got 202106131207115802213_secure_add_example_0_0-hash.5041d1ce9a14064a36e7.guest_share-default-guest-10000-host-10000 type Table
+[DEBUG] [2021-06-13 12:07:25,734] [3135:140487242139456] - _standalone.py[line:581]: [federation.standalone.get.hash.5041d1ce9a14064a36e7.guest_share.default] got Table(namespace=202106131207115802213_secure_add_example_0_0_guest_10000, name=e6589df2-cc3f-11eb-821d-0242ac110002, partitions=48)
+[DEBUG] [2021-06-13 12:07:25,735] [3135:140487242139456] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.guest_share.default]host<-[Party(role=guest, party_id=10000)] done
+[INFO] [2021-06-13 12:07:25,735] [3135:140487242139456] - secure_add_host.py[line:99]: share one random part data to guest
+[DEBUG] [2021-06-13 12:07:25,736] [3135:140487242139456] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_share.default]host->[Party(role=guest, party_id=10000)] start
+[DEBUG] [2021-06-13 12:07:25,736] [3135:140487242139456] - _standalone.py[line:535]: [federation.standalone.remote.hash.d80c5eb8797618002f85.host_share.default]remote data, type=<class 'fate_arch._standalone.Table'>
+[DEBUG] [2021-06-13 12:07:25,736] [3135:140487242139456] - _standalone.py[line:539]: [federation.standalone.remote.hash.d80c5eb8797618002f85.host_share.default]remote Table(namespace=202106131207115802213_secure_add_example_0_0_host_10000, name=e7464ea8-cc3f-11eb-9d43-0242ac110002, partitions=48)
+[DEBUG] [2021-06-13 12:07:25,736] [3135:140487242139456] - _standalone.py[line:550]: [federation.standalone.remote.hash.d80c5eb8797618002f85.host_share.default]save Table(namespace=202106131207115802213_secure_add_example_0_0_host_10000, name=e7464ea8-cc3f-11eb-9d43-0242ac110002, partitions=48) as Table(namespace=202106131207115802213_secure_add_example_0_0_host_10000, name=eab06f92-cc3f-11eb-9d43-0242ac110002, partitions=48)
+[DEBUG] [2021-06-13 12:07:30,200] [3135:140487242139456] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_share.default]host->[Party(role=guest, party_id=10000)] done
+[INFO] [2021-06-13 12:07:30,201] [3135:140487242139456] - secure_add_host.py[line:102]: begin to get sum of host and guest
+[DEBUG] [2021-06-13 12:07:30,202] [3135:140487242139456] - profile.py[line:84]: [computing#ddff236459]function_stack: [secure_add_host.py:69]add <-[secure_add_host.py:103]run
+[DEBUG] [2021-06-13 12:07:30,202] [3135:140487242139456] - profile.py[line:87]: [computing#ddff236459]start
+[DEBUG] [2021-06-13 12:07:30,840] [3135:140487242139456] - profile.py[line:93]: [computing#ddff236459]done, elapse: 0.6387026309967041, function: join(self: Table(partition=48), other: Table(partition=48), func: function) -> Table(partition=48)
+[DEBUG] [2021-06-13 12:07:30,841] [3135:140487242139456] - profile.py[line:84]: [computing#dd97fc8f89]function_stack: [secure_add_host.py:70]add <-[secure_add_host.py:103]run
+[DEBUG] [2021-06-13 12:07:30,842] [3135:140487242139456] - profile.py[line:87]: [computing#dd97fc8f89]start
+[DEBUG] [2021-06-13 12:07:30,901] [3135:140487242139456] - profile.py[line:93]: [computing#dd97fc8f89]done, elapse: 0.05979037284851074, function: reduce(self: Table(partition=48), func: function) -> float
+[INFO] [2021-06-13 12:07:30,902] [3135:140487242139456] - secure_add_host.py[line:105]: send host sum to guest
+[DEBUG] [2021-06-13 12:07:30,902] [3135:140487242139456] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_sum.default]host->[Party(role=guest, party_id=10000)] start
+[DEBUG] [2021-06-13 12:07:30,902] [3135:140487242139456] - _standalone.py[line:535]: [federation.standalone.remote.hash.202137af1a7fdcf8862f.host_sum.default]remote data, type=<class 'float'>
+[DEBUG] [2021-06-13 12:07:30,903] [3135:140487242139456] - _standalone.py[line:543]: [federation.standalone.remote.hash.202137af1a7fdcf8862f.host_sum.default]remote object with type: <class 'float'>
+[DEBUG] [2021-06-13 12:07:30,916] [3135:140487242139456] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.secure_add_example_transfer_variable.SecureAddExampleTransferVariable.host_sum.default]host->[Party(role=guest, party_id=10000)] done
+[INFO] [2021-06-13 12:07:31,041] [3135:140487242139456] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   3   9.721     3.24     4.342   |
+|          |    join      1   0.639     0.639    0.639   |
+|          |   reduce     1    0.06     0.06      0.06   |
++----------+---------------------------------------------+
+|  total   |  n=5, sum=10.4191, mean=2.0838, max=4.3425  |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 0.106  |  0.106  | 0.106   |
+|        |            variable.SecureAddExampleTransferVariable.guest_share           |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 4.464  |  4.464  | 4.464   |
+|        |            variable.SecureAddExampleTransferVariable.host_share            |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 0.014  |  0.014  | 0.014   |
+|        |             variable.SecureAddExampleTransferVariable.host_sum             |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=3, sum=4.5838, mean=1.5279, max=4.4641                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-13 12:07:31,041] [3135:140487242139456] - profile.py[line:250]: 
+Detailed Computing:
++-------+------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │             stack              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |  mapValues │ 1 │ 4.3425 │ 4.3425  │ 4.3425 │ 22f4a65d94 │ [secure_add_host.py:64]secure  |
+|       |            │   │        │         │        │            │ [secure_add_host.py:94]run     |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |  mapValues │ 1 │ 3.8198 │ 3.8198  │ 3.8198 │ 6c384ecb9e │ [secure_add_host.py:65]secure  |
+|       |            │   │        │         │        │            │ [secure_add_host.py:94]run     |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |  mapValues │ 1 │ 1.5583 │ 1.5583  │ 1.5583 │ 9a6a1b9345 │ [secure_add_host.py:66]secure  |
+|       |            │   │        │         │        │            │ [secure_add_host.py:94]run     |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |    join    │ 1 │ 0.6387 │ 0.6387  │ 0.6387 │ ddff236459 │ [secure_add_host.py:69]add     |
+|       |            │   │        │         │        │            │ [secure_add_host.py:103]run    |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────── |
+|       |   reduce   │ 1 │ 0.0598 │ 0.0598  │ 0.0598 │ dd97fc8f89 │ [secure_add_host.py:70]add     |
+|       |            │   │        │         │        │            │ [secure_add_host.py:103]run    |
++-------+------------------------------------------------------------------------------------------+
+| total |                        n=5, sum=10.4191, mean=2.0838, max=4.3425                         |
++-------+------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-13 12:07:31,042] [3135:140487242139456] - task_executor.py[line:313]: report task 202106131207115802213_secure_add_example_0 0 host 10000 to driver
+[INFO] [2021-06-13 12:07:31,042] [3135:140487242139456] - control_client.py[line:42]: request update job 202106131207115802213 task 202106131207115802213_secure_add_example_0 0 on host 10000
+[INFO] [2021-06-13 12:07:31,148] [3135:140487242139456] - task_executor.py[line:202]: task 202106131207115802213_secure_add_example_0 host 10000 start time: 2021-06-13 12:07:14
+[INFO] [2021-06-13 12:07:31,148] [3135:140487242139456] - task_executor.py[line:204]: task 202106131207115802213_secure_add_example_0 host 10000 end time: 2021-06-13 12:07:31
+[INFO] [2021-06-13 12:07:31,148] [3135:140487242139456] - task_executor.py[line:206]: task 202106131207115802213_secure_add_example_0 host 10000 takes 16.644s
+[INFO] [2021-06-13 12:07:31,148] [3135:140487242139456] - task_executor.py[line:209]: Finish 202106131207115802213 secure_add_example_0 202106131207115802213_secure_add_example_0 0 host 10000 task success
+[INFO] [2021-06-13 12:07:32,662] [3135:140487242139456] - task_executor.py[line:313]: report task 202106131207115802213_secure_add_example_0 0 host 10000 to driver
+[INFO] [2021-06-13 12:07:32,662] [3135:140487242139456] - control_client.py[line:42]: request update job 202106131207115802213 task 202106131207115802213_secure_add_example_0 0 on host 10000

@@ -1,0 +1,13 @@
+[ERROR] [2021-06-12 20:27:19,901] [7:140654046856960] - job_tracker.py[line:475]: [Errno 39] Directory not empty: '/fate/data/202106122027103567691_secure_add_example_0_0_guest_10000/93dfdda2-cbbc-11eb-a23a-0242ac110002'
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 386, in cleanup
+    shutil.rmtree(table)
+  File "/usr/local/lib/python3.6/shutil.py", line 490, in rmtree
+    onerror(os.rmdir, path, sys.exc_info())
+  File "/usr/local/lib/python3.6/shutil.py", line 488, in rmtree
+    os.rmdir(path)
+OSError: [Errno 39] Directory not empty: '/fate/data/202106122027103567691_secure_add_example_0_0_guest_10000/93dfdda2-cbbc-11eb-a23a-0242ac110002'

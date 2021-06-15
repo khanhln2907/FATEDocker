@@ -1,0 +1,88 @@
+[INFO] [2021-06-13 21:02:46,265] [7:140267417118464] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/create
+[INFO] [2021-06-13 21:02:46,358] [7:140267417118464] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:46,358] [7:140267417118464] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/create {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:46,595] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/resource/apply
+[INFO] [2021-06-13 21:02:46,629] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:46,630] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/resource/apply {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:46,639] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/start
+[INFO] [2021-06-13 21:02:46,693] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:46,693] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/start {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:46,775] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/status/running
+[INFO] [2021-06-13 21:02:46,793] [7:140266826163968] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 21:02:46,793] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/status/running {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 21:02:46,796] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/start
+[INFO] [2021-06-13 21:02:46,881] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:46,881] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/start {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:48,507] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/report
+[INFO] [2021-06-13 21:02:48,556] [263:140026860009280] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 21:02:48,557] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/report {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 21:02:48,936] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/update
+[INFO] [2021-06-13 21:02:49,044] [263:140026860009280] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:49,045] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/update {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:49,053] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/collect
+[INFO] [2021-06-13 21:02:49,069] [7:140266826163968] - api_utils.py[line:129]: {"data":{"elapsed":null,"end_time":null,"job_id":"202106132102462413122","party_id":"0","party_status":"running","role":"local","start_time":1623618166817,"status":"running","task_id":"202106132102462413122_upload_0","task_version":0,"update_time":1623618166294},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:49,070] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/collect {'data': {'elapsed': None, 'end_time': None, 'job_id': '202106132102462413122', 'party_id': '0', 'party_status': 'running', 'role': 'local', 'start_time': 1623618166817, 'status': 'running', 'task_id': '202106132102462413122_upload_0', 'task_version': 0, 'update_time': 1623618166294}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:49,173] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/tracker/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/output_data_info/save
+[INFO] [2021-06-13 21:02:49,193] [263:140026860009280] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:49,193] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/tracker/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/output_data_info/save {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:49,194] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/tracker/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/metric_data/save
+[INFO] [2021-06-13 21:02:49,215] [263:140026860009280] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:49,215] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/tracker/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/metric_data/save {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:49,215] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/tracker/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/metric_meta/save
+[INFO] [2021-06-13 21:02:49,243] [263:140026860009280] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:49,243] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/tracker/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/metric_meta/save {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:49,269] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/report
+[INFO] [2021-06-13 21:02:49,316] [263:140026860009280] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:49,316] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/report {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:49,317] [263:140026860009280] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/report
+[INFO] [2021-06-13 21:02:49,350] [263:140026860009280] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 21:02:49,350] [263:140026860009280] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/report {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 21:02:51,169] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/collect
+[INFO] [2021-06-13 21:02:51,186] [7:140266826163968] - api_utils.py[line:129]: {"data":{"elapsed":769,"end_time":1623618169269,"job_id":"202106132102462413122","party_id":"0","party_status":"success","role":"local","start_time":1623618166817,"status":"running","task_id":"202106132102462413122_upload_0","task_version":0,"update_time":1623618166294},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,186] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/collect {'data': {'elapsed': 769, 'end_time': 1623618169269, 'job_id': '202106132102462413122', 'party_id': '0', 'party_status': 'success', 'role': 'local', 'start_time': 1623618166817, 'status': 'running', 'task_id': '202106132102462413122_upload_0', 'task_version': 0, 'update_time': 1623618166294}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,227] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/status/success
+[INFO] [2021-06-13 21:02:51,282] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,282] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/status/success {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,285] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/stop/success
+[INFO] [2021-06-13 21:02:51,343] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,344] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/upload_0/202106132102462413122_upload_0/0/local/0/stop/success {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,345] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/model
+[INFO] [2021-06-13 21:02:51,370] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,371] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/model {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,372] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/status/success
+[INFO] [2021-06-13 21:02:51,457] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,457] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/status/success {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,500] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/stop/success
+[INFO] [2021-06-13 21:02:51,578] [7:140266826163968] - api_utils.py[line:129]: {"data":{"202106132102462413122":{"202106132102462413122_upload_0":"success"}},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,578] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/stop/success {'data': {'202106132102462413122': {'202106132102462413122_upload_0': 'success'}}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,580] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/clean
+[INFO] [2021-06-13 21:02:51,592] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,592] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/clean {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,673] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/stop/success
+[INFO] [2021-06-13 21:02:51,815] [7:140266826163968] - api_utils.py[line:129]: {"data":{"202106132102462413122":{"202106132102462413122_upload_0":"success"}},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,816] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/stop/success {'data': {'202106132102462413122': {'202106132102462413122_upload_0': 'success'}}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 21:02:51,817] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/202106132102462413122/local/0/clean
+[INFO] [2021-06-13 21:02:51,827] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 21:02:51,828] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/202106132102462413122/local/0/clean {'retcode': 0, 'retmsg': 'success'}

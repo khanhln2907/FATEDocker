@@ -1,0 +1,16 @@
+[INFO] [2021-06-15 21:56:38,665] [2994:139943419057984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998
+[DEBUG] [2021-06-15 21:56:39,080] [2994:139943419057984] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f471bb53978>, federation_session_id=2021061521563264143218_reader_0_0, party=Party(role=host, party_id=9998)
+[DEBUG] [2021-06-15 21:56:39,092] [2994:139943419057984] - _federation.py[line:23]: [federation.standalone]init federation context done
+[DEBUG] [2021-06-15 21:56:39,517] [2994:139943419057984] - _session.py[line:147]: save session 2021061521563264143218_reader_0_0_host_9998_storage_8ff955b4ce2411eb9ef90242ac110002 record
+[INFO] [2021-06-15 21:56:39,577] [2994:139943419057984] - reader.py[line:66]: the STANDALONE input table needs to be transform format
+[DEBUG] [2021-06-15 21:56:39,673] [2994:139943419057984] - _session.py[line:147]: save session 2021061521563264143218_reader_0_0_host_9998_storage_900bf6d8ce2411eb9ef90242ac110002 record
+[INFO] [2021-06-15 21:56:39,692] [2994:139943419057984] - reader.py[line:166]: start copying table
+[INFO] [2021-06-15 21:56:39,693] [2994:139943419057984] - reader.py[line:168]: source table name: default_credit_hetero_host namespace: experiment engine: STANDALONE
+[INFO] [2021-06-15 21:56:39,693] [2994:139943419057984] - reader.py[line:170]: destination table name: 8fd3491ece2411eb9ef90242ac110002 namespace: output_data_2021061521563264143218_reader_0_0 engine: STANDALONE
+[INFO] [2021-06-15 21:56:40,746] [2994:139943419057984] - reader.py[line:194]: copy successfully
+[DEBUG] [2021-06-15 21:56:40,818] [2994:139943419057984] - _session.py[line:156]: delete session 2021061521563264143218_reader_0_0_host_9998_storage_900bf6d8ce2411eb9ef90242ac110002 record
+[DEBUG] [2021-06-15 21:56:40,828] [2994:139943419057984] - _session.py[line:156]: delete session 2021061521563264143218_reader_0_0_host_9998_storage_8ff955b4ce2411eb9ef90242ac110002 record
+[INFO] [2021-06-15 21:56:40,829] [2994:139943419057984] - tracker_client.py[line:127]: Request save job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998 data data info
+[INFO] [2021-06-15 21:56:41,494] [2994:139943419057984] - tracker_client.py[line:103]: Request save job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998 metric reader_namespace reader_name meta
+[INFO] [2021-06-15 21:56:41,555] [2994:139943419057984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998
+[INFO] [2021-06-15 21:56:41,604] [2994:139943419057984] - control_client.py[line:42]: request update job 2021061521563264143218 task 2021061521563264143218_reader_0 0 on host 9998

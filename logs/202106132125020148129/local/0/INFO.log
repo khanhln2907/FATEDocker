@@ -1,0 +1,62 @@
+[INFO] [2021-06-13 21:25:07,152] [1618:140390386353984] - task_executor.py[line:313]: report task 202106132125020148129_upload_0 0 local 0 to driver
+[INFO] [2021-06-13 21:25:07,152] [1618:140390386353984] - control_client.py[line:42]: request update job 202106132125020148129 task 202106132125020148129_upload_0 0 on local 0
+[INFO] [2021-06-13 21:25:07,594] [1618:140390386353984] - task_executor.py[line:150]: Run 202106132125020148129 upload_0 202106132125020148129_upload_0 local 0 task
+[INFO] [2021-06-13 21:25:07,595] [1618:140390386353984] - task_executor.py[line:151]: Component parameters on party {'UploadParam': {'file': '/fate/jobs/202106132125020148129/fate_upload_tmp/default_credit_hetero_host.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'default_credit_hetero_host', 'storage_engine': '', 'storage_address': None, 'destroy': False}, 'initiator': {'role': 'local', 'party_id': 0}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'local-0#model', 'model_version': '202106132125020148129', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 4, 'task_memory_per_node': 0, 'request_task_cores': 4, 'if_initiator_baseline': False}}, 'role': {'local': [0]}, 'component_parameters': {'role': {'local': {'0': {'upload_0': {'head': 1, 'name': 'default_credit_hetero_host', 'partition': 16, 'namespace': 'experiment', 'file': '/fate/jobs/202106132125020148129/fate_upload_tmp/default_credit_hetero_host.csv', 'destroy': False}}}}}, 'dsl_version': 2, 'local': {'role': 'local', 'party_id': 0}, 'CodePath': 'fate_flow/components/upload.py/Upload', 'module': 'Upload', 'output_data_name': None}
+[INFO] [2021-06-13 21:25:07,597] [1618:140390386353984] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-13 21:25:07,742] [1618:140390386353984] - upload.py[line:41]: {'file': '/fate/jobs/202106132125020148129/fate_upload_tmp/default_credit_hetero_host.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'default_credit_hetero_host', 'storage_engine': '', 'storage_address': None, 'destroy': False}
+[INFO] [2021-06-13 21:25:07,743] [1618:140390386353984] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7faeea90fb70>}
+[INFO] [2021-06-13 21:25:07,787] [1618:140390386353984] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'default_credit_hetero_host', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[ERROR] [2021-06-13 21:25:07,809] [1618:140390386353984] - task_executor.py[line:191]: ConstraintError: UNIQUE constraint failed: t_storage_table_meta.f_name, t_storage_table_meta.f_namespace
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/playhouse/apsw_ext.py", line 112, in execute_sql
+    cursor.execute(sql, params or ())
+  File "src/cursor.c", line 236, in resetcursor
+apsw.ConstraintError: ConstraintError: UNIQUE constraint failed: t_storage_table_meta.f_name, t_storage_table_meta.f_namespace
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/fate_flow/components/upload.py", line 101, in run
+    self.table = storage_session.create_table(address=address, **self.parameters)
+  File "/fate/python/fate_arch/storage/_session.py", line 90, in create_table
+    table_meta.create()
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 394, in inner
+    return fn(*args, **kwargs)
+  File "/fate/python/fate_arch/storage/_table.py", line 155, in create
+    raise e
+  File "/fate/python/fate_arch/storage/_table.py", line 147, in create
+    rows = table_meta.save(force_insert=True)
+  File "/fate/python/fate_arch/storage/metastore/base_model.py", line 89, in save
+    return super(BaseModel, self).save(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 5964, in save
+    self.insert(**field_dict).execute()
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 1737, in inner
+    return method(self, database, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 1808, in execute
+    return self._execute(database)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2512, in _execute
+    return super(Insert, self)._execute(database)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2275, in _execute
+    cursor = database.execute(self)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2888, in execute
+    return self.execute_sql(sql, params, commit=commit)
+  File "/usr/local/lib/python3.6/site-packages/playhouse/apsw_ext.py", line 112, in execute_sql
+    cursor.execute(sql, params or ())
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 2666, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "/usr/local/lib/python3.6/site-packages/peewee.py", line 179, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/playhouse/apsw_ext.py", line 112, in execute_sql
+    cursor.execute(sql, params or ())
+  File "src/cursor.c", line 236, in resetcursor
+peewee.IntegrityError: ConstraintError: UNIQUE constraint failed: t_storage_table_meta.f_name, t_storage_table_meta.f_namespace
+[INFO] [2021-06-13 21:25:07,811] [1618:140390386353984] - task_executor.py[line:313]: report task 202106132125020148129_upload_0 0 local 0 to driver
+[INFO] [2021-06-13 21:25:07,811] [1618:140390386353984] - control_client.py[line:42]: request update job 202106132125020148129 task 202106132125020148129_upload_0 0 on local 0
+[INFO] [2021-06-13 21:25:07,902] [1618:140390386353984] - task_executor.py[line:202]: task 202106132125020148129_upload_0 local 0 start time: 2021-06-13 21:25:07
+[INFO] [2021-06-13 21:25:07,903] [1618:140390386353984] - task_executor.py[line:204]: task 202106132125020148129_upload_0 local 0 end time: 2021-06-13 21:25:07
+[INFO] [2021-06-13 21:25:07,903] [1618:140390386353984] - task_executor.py[line:206]: task 202106132125020148129_upload_0 local 0 takes 0.665s
+[INFO] [2021-06-13 21:25:07,903] [1618:140390386353984] - task_executor.py[line:209]: Finish 202106132125020148129 upload_0 202106132125020148129_upload_0 0 local 0 task failed
+[INFO] [2021-06-13 21:25:07,903] [1618:140390386353984] - task_executor.py[line:313]: report task 202106132125020148129_upload_0 0 local 0 to driver
+[INFO] [2021-06-13 21:25:07,903] [1618:140390386353984] - control_client.py[line:42]: request update job 202106132125020148129 task 202106132125020148129_upload_0 0 on local 0

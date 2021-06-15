@@ -1,0 +1,324 @@
+[INFO] [2021-06-13 21:25:01,099] [7:140266400880384] - dag_scheduler.py[line:40]: submit job, job_id 202106132125008186828, body {'job_dsl': {'components': {'upload_0': {'module': 'Upload'}}}, 'job_runtime_conf': {'initiator': {'role': 'local', 'party_id': 0}, 'job_parameters': {'common': {'work_mode': 0, 'backend': 0}}, 'role': {'local': [0]}, 'component_parameters': {'role': {'local': {'0': {'upload_0': {'head': 1, 'name': 'default_credit_hetero_host', 'partition': 16, 'namespace': 'experiment', 'file': '/fate/jobs/202106132125008186828/fate_upload_tmp/default_credit_hetero_host.csv', 'destroy': False}}}}}, 'dsl_version': 2}}
+[INFO] [2021-06-13 21:25:01,113] [7:140265872402176] - job_controller.py[line:52]: job parameters:{'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'local-0#model', 'model_version': '202106132125008186828', 'eggroll_run': {}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 4, 'task_memory_per_node': 0, 'request_task_cores': 4, 'if_initiator_baseline': True}}
+[INFO] [2021-06-13 21:25:01,202] [7:140266400880384] - dag_scheduler.py[line:122]: submit job successfully, job id is 202106132125008186828, model id is local-0#model
+[INFO] [2021-06-13 21:25:02,698] [7:140266826163968] - federated_scheduler.py[line:39]: try to apply job 202106132125008186828 resource
+[INFO] [2021-06-13 21:25:02,726] [7:140266400880384] - resource_manager.py[line:176]: apply job 202106132125008186828 resource(cores 4 memory 0) on local 0 successfully, remaining cores: 16 remaining memory: 0
+[INFO] [2021-06-13 21:25:02,729] [7:140266826163968] - federated_scheduler.py[line:42]: apply job 202106132125008186828 resource successfully
+[INFO] [2021-06-13 21:25:02,729] [7:140266826163968] - dag_scheduler.py[line:279]: try to start job 202106132125008186828 on initiator local 0
+[INFO] [2021-06-13 21:25:02,739] [7:140266400880384] - job_controller.py[line:261]: try to start job 202106132125008186828 on local 0
+[INFO] [2021-06-13 21:25:02,739] [7:140266400880384] - job_saver.py[line:45]: try to update job 202106132125008186828 status to running
+[INFO] [2021-06-13 21:25:02,757] [7:140266400880384] - job_saver.py[line:48]: update job 202106132125008186828 status successfully
+[INFO] [2021-06-13 21:25:02,757] [7:140266400880384] - job_saver.py[line:61]: try to update job 202106132125008186828
+[INFO] [2021-06-13 21:25:02,770] [7:140266400880384] - job_saver.py[line:64]: job 202106132125008186828 update successfully: {'job_id': '202106132125008186828', 'role': 'local', 'party_id': 0, 'status': 'running', 'start_time': 1623619502739}
+[INFO] [2021-06-13 21:25:02,770] [7:140266400880384] - job_controller.py[line:275]: start job 202106132125008186828 on local 0 successfully
+[INFO] [2021-06-13 21:25:02,773] [7:140266826163968] - dag_scheduler.py[line:292]: start job 202106132125008186828 on initiator local 0
+[INFO] [2021-06-13 21:25:02,783] [7:140266826163968] - dag_scheduler.py[line:247]: reset job 202106132125008186828 ready signal True
+[INFO] [2021-06-13 21:25:02,788] [7:140266826163968] - dag_scheduler.py[line:298]: scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:02,789] [7:140266826163968] - task_scheduler.py[line:28]: scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:02,800] [7:140266826163968] - task_scheduler.py[line:143]: job 202106132125008186828 task 202106132125008186828_upload_0 0 status is waiting, calculate by task party status list: ['waiting']
+[INFO] [2021-06-13 21:25:02,800] [7:140266826163968] - task_scheduler.py[line:80]: try to start job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0
+[INFO] [2021-06-13 21:25:02,813] [7:140266826163968] - resource_manager.py[line:286]: task 202106132125008186828_upload_0 0 apply resource successfully
+[INFO] [2021-06-13 21:25:02,813] [7:140266826163968] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:02,825] [7:140266826163968] - job_saver.py[line:74]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status successfully: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': 0, 'role': 'local', 'party_id': '0', 'status': 'running'}
+[INFO] [2021-06-13 21:25:02,826] [7:140266826163968] - task_scheduler.py[line:93]: start job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0
+[INFO] [2021-06-13 21:25:02,826] [7:140266826163968] - federated_scheduler.py[line:192]: job 202106132125008186828 task 202106132125008186828_upload_0 0 is running, sync to all party
+[INFO] [2021-06-13 21:25:02,840] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:02,846] [7:140266400880384] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': '0', 'role': 'local', 'party_id': '0', 'status': 'running'}
+[WARNING] [2021-06-13 21:25:02,854] [7:140266826163968] - federated_scheduler.py[line:260]: an error occurred while status/running the task to role local party 0: 
+update task status failed
+[INFO] [2021-06-13 21:25:02,854] [7:140266826163968] - federated_scheduler.py[line:197]: sync job 202106132125008186828 task 202106132125008186828_upload_0 0 status running to all party failed: 
+{'local': {0: {'retcode': 103, 'retmsg': 'update task status failed'}}}
+[INFO] [2021-06-13 21:25:02,861] [7:140266400880384] - task_controller.py[line:71]: try to start job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0 executor subprocess
+[INFO] [2021-06-13 21:25:02,864] [7:140266400880384] - task_controller.py[line:90]: use computing engine STANDALONE
+[INFO] [2021-06-13 21:25:02,864] [7:140266400880384] - task_controller.py[line:145]: job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0 executor subprocess is ready
+[INFO] [2021-06-13 21:25:02,864] [7:140266400880384] - job_utils.py[line:310]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106132125008186828 -n upload_0 -t 202106132125008186828_upload_0 -v 0 -r local -p 0 -c /fate/jobs/202106132125008186828/local/0/upload_0/202106132125008186828_upload_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380
+[INFO] [2021-06-13 21:25:02,877] [7:140266400880384] - job_utils.py[line:334]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106132125008186828 -n upload_0 -t 202106132125008186828_upload_0 -v 0 -r local -p 0 -c /fate/jobs/202106132125008186828/local/0/upload_0/202106132125008186828_upload_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380 successfully, pid is 1603
+[INFO] [2021-06-13 21:25:02,877] [7:140266400880384] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:02,889] [7:140266400880384] - job_saver.py[line:84]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update successfully
+[INFO] [2021-06-13 21:25:02,893] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:02,908] [7:140266400880384] - job_saver.py[line:74]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status successfully: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': '0', 'role': 'local', 'party_id': '0', 'party_status': 'running', 'start_time': 1623619502877}
+[INFO] [2021-06-13 21:25:02,912] [7:140266400880384] - task_controller.py[line:164]: job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0 executor subprocess start success
+[INFO] [2021-06-13 21:25:02,916] [7:140266826163968] - task_scheduler.py[line:75]: finish scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:02,916] [7:140266826163968] - dag_scheduler.py[line:310]: Job 202106132125008186828 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 21:25:02,916] [7:140266826163968] - dag_scheduler.py[line:325]: finish scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:04,745] [1603:140076935096128] - task_executor.py[line:56]: enter task process
+[INFO] [2021-06-13 21:25:04,746] [1603:140076935096128] - task_executor.py[line:57]: Namespace(component_name='upload_0', config='/fate/jobs/202106132125008186828/local/0/upload_0/202106132125008186828_upload_0/0/task_parameters.json', job_id='202106132125008186828', job_server='127.0.0.1:9380', party_id=0, role='local', run_ip='127.0.0.1', task_id='202106132125008186828_upload_0', task_version=0)
+[INFO] [2021-06-13 21:25:04,767] [7:140266400880384] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:04,788] [7:140266400880384] - job_saver.py[line:84]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update successfully
+[INFO] [2021-06-13 21:25:04,796] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:04,803] [7:140266400880384] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'job_id': '202106132125008186828', 'component_name': 'upload_0', 'task_id': '202106132125008186828_upload_0', 'task_version': '0', 'role': 'local', 'party_id': '0', 'run_ip': '127.0.0.1', 'run_pid': 1603, 'party_status': 'running'}
+[INFO] [2021-06-13 21:25:05,064] [7:140266826163968] - dag_scheduler.py[line:298]: scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:05,066] [7:140266826163968] - task_scheduler.py[line:28]: scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:05,102] [7:140266826163968] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:05,106] [7:140266826163968] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106132125008186828', 'party_id': '0', 'party_status': 'running', 'role': 'local', 'start_time': 1623619502877, 'status': 'running', 'task_id': '202106132125008186828_upload_0', 'task_version': 0, 'update_time': 1623619501139}
+[INFO] [2021-06-13 21:25:05,107] [7:140266826163968] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:05,119] [7:140266826163968] - job_saver.py[line:84]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update successfully
+[INFO] [2021-06-13 21:25:05,125] [7:140266826163968] - task_scheduler.py[line:143]: job 202106132125008186828 task 202106132125008186828_upload_0 0 status is running, calculate by task party status list: ['running']
+[INFO] [2021-06-13 21:25:05,125] [7:140266826163968] - task_scheduler.py[line:75]: finish scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:05,125] [7:140266826163968] - dag_scheduler.py[line:310]: Job 202106132125008186828 status is running, calculate by task status list: ['running']
+[INFO] [2021-06-13 21:25:05,125] [7:140266826163968] - dag_scheduler.py[line:325]: finish scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:05,509] [7:140266400880384] - job_saver.py[line:61]: try to update job 202106132125008186828
+[INFO] [2021-06-13 21:25:05,521] [7:140266400880384] - job_saver.py[line:64]: job 202106132125008186828 update successfully: {'progress': 100.0, 'job_id': '202106132125008186828', 'role': 'local', 'party_id': '0'}
+[INFO] [2021-06-13 21:25:06,253] [7:140266400880384] - job_tracker.py[line:74]: save job 202106132125008186828 component upload_0 on local 0 upload data_access metric data
+[INFO] [2021-06-13 21:25:06,280] [7:140266400880384] - job_tracker.py[line:97]: save job 202106132125008186828 component upload_0 on local 0 upload data_access metric meta
+[INFO] [2021-06-13 21:25:06,328] [1603:140076935096128] - job_tracker.py[line:159]: task id 202106132125008186828_upload_0 output data table is none
+[INFO] [2021-06-13 21:25:06,334] [7:140266400880384] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:06,360] [7:140266400880384] - job_saver.py[line:84]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update successfully
+[INFO] [2021-06-13 21:25:06,365] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:06,378] [7:140266400880384] - job_saver.py[line:74]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status successfully: {'job_id': '202106132125008186828', 'component_name': 'upload_0', 'task_id': '202106132125008186828_upload_0', 'task_version': '0', 'role': 'local', 'party_id': '0', 'run_ip': '127.0.0.1', 'run_pid': 1603, 'party_status': 'success', 'end_time': 1623619506328, 'elapsed': 1582}
+[INFO] [2021-06-13 21:25:06,389] [7:140266400880384] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:06,403] [7:140266400880384] - job_saver.py[line:84]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update successfully
+[INFO] [2021-06-13 21:25:06,408] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:06,413] [7:140266400880384] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'job_id': '202106132125008186828', 'component_name': 'upload_0', 'task_id': '202106132125008186828_upload_0', 'task_version': '0', 'role': 'local', 'party_id': '0', 'run_ip': '127.0.0.1', 'run_pid': 1603, 'party_status': 'success', 'end_time': 1623619506328, 'elapsed': 1582}
+[INFO] [2021-06-13 21:25:07,391] [7:140266826163968] - dag_scheduler.py[line:298]: scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:07,393] [7:140266826163968] - task_scheduler.py[line:28]: scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:07,429] [7:140266826163968] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:07,437] [7:140266826163968] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'elapsed': 1582, 'end_time': 1623619506328, 'job_id': '202106132125008186828', 'party_id': '0', 'party_status': 'success', 'role': 'local', 'start_time': 1623619502877, 'status': 'running', 'task_id': '202106132125008186828_upload_0', 'task_version': 0, 'update_time': 1623619501139}
+[INFO] [2021-06-13 21:25:07,437] [7:140266826163968] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:07,465] [7:140266826163968] - job_saver.py[line:84]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update successfully
+[INFO] [2021-06-13 21:25:07,472] [7:140266826163968] - task_scheduler.py[line:143]: job 202106132125008186828 task 202106132125008186828_upload_0 0 status is success, calculate by task party status list: ['success']
+[INFO] [2021-06-13 21:25:07,472] [7:140266826163968] - federated_scheduler.py[line:192]: job 202106132125008186828 task 202106132125008186828_upload_0 0 is success, sync to all party
+[INFO] [2021-06-13 21:25:07,483] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:07,505] [7:140266400880384] - job_saver.py[line:74]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status successfully: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': '0', 'role': 'local', 'party_id': '0', 'status': 'success'}
+[INFO] [2021-06-13 21:25:07,523] [7:140266400880384] - resource_manager.py[line:286]: task 202106132125008186828_upload_0 0 return resource successfully
+[INFO] [2021-06-13 21:25:07,532] [7:140266400880384] - job_tracker.py[line:424]: clean task 202106132125008186828_upload_0 0 on local 0
+[ERROR] [2021-06-13 21:25:07,534] [7:140266400880384] - job_tracker.py[line:475]: namespace dir /fate/data/202106132125008186828_upload_0_0_local_0 does not exist
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 383, in cleanup
+    raise EnvironmentError(f"namespace dir {namespace_dir} does not exist")
+OSError: namespace dir /fate/data/202106132125008186828_upload_0_0_local_0 does not exist
+[INFO] [2021-06-13 21:25:07,547] [7:140266826163968] - federated_scheduler.py[line:195]: sync job 202106132125008186828 task 202106132125008186828_upload_0 0 status success to all party success
+[INFO] [2021-06-13 21:25:07,547] [7:140266826163968] - federated_scheduler.py[line:202]: try to stop job 202106132125008186828 task 202106132125008186828_upload_0 0
+[INFO] [2021-06-13 21:25:07,561] [7:140266400880384] - job_utils.py[line:397]: try to stop job 202106132125008186828 task 202106132125008186828_upload_0 local 0 with success party status process pid:1603
+[INFO] [2021-06-13 21:25:07,562] [7:140266400880384] - job_utils.py[line:400]: can not found job 202106132125008186828 task 202106132125008186828_upload_0 local 0 with success party status process pid:1603
+[INFO] [2021-06-13 21:25:07,565] [7:140266400880384] - job_utils.py[line:424]: start run subprocess to stop task session 202106132125008186828_upload_0_0_local_0
+[INFO] [2021-06-13 21:25:07,566] [7:140266400880384] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106132125008186828_upload_0_0_local_0 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 21:25:07,574] [7:140266400880384] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106132125008186828_upload_0_0_local_0 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 1637
+[INFO] [2021-06-13 21:25:07,574] [7:140266400880384] - task_controller.py[line:255]: job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0 process 1603 kill success
+[INFO] [2021-06-13 21:25:07,574] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:07,581] [7:140266400880384] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': 0, 'role': 'local', 'party_id': '0', 'party_status': 'success'}
+[INFO] [2021-06-13 21:25:07,588] [7:140266400880384] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[WARNING] [2021-06-13 21:25:07,602] [7:140266400880384] - job_saver.py[line:86]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update does not take effect
+[INFO] [2021-06-13 21:25:07,618] [7:140266826163968] - federated_scheduler.py[line:206]: stop job 202106132125008186828 task 202106132125008186828_upload_0 0 success
+[INFO] [2021-06-13 21:25:07,618] [7:140266826163968] - task_scheduler.py[line:75]: finish scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:07,618] [7:140266826163968] - dag_scheduler.py[line:310]: Job 202106132125008186828 status is success, calculate by task status list: ['success']
+[INFO] [2021-06-13 21:25:07,618] [7:140266826163968] - federated_scheduler.py[line:78]: try to save job 202106132125008186828 pipelined model
+[INFO] [2021-06-13 21:25:07,625] [7:140266400880384] - job_controller.py[line:331]: job 202106132125008186828 on local 0 start to save pipeline
+[INFO] [2021-06-13 21:25:07,640] [7:140266400880384] - job_controller.py[line:374]: job 202106132125008186828 on local 0 save pipeline successfully
+[INFO] [2021-06-13 21:25:07,645] [7:140266826163968] - federated_scheduler.py[line:81]: save job 202106132125008186828 pipelined model success
+[INFO] [2021-06-13 21:25:07,645] [7:140266826163968] - federated_scheduler.py[line:68]: job 202106132125008186828 is success, sync to all party
+[INFO] [2021-06-13 21:25:07,652] [7:140266400880384] - job_saver.py[line:45]: try to update job 202106132125008186828 status to success
+[INFO] [2021-06-13 21:25:07,670] [7:140266400880384] - job_saver.py[line:48]: update job 202106132125008186828 status successfully
+[INFO] [2021-06-13 21:25:07,701] [7:140266400880384] - resource_manager.py[line:176]: return job 202106132125008186828 resource(cores 4 memory 0) on local 0 successfully, remaining cores: 16 remaining memory: 0
+[INFO] [2021-06-13 21:25:07,705] [7:140266826163968] - federated_scheduler.py[line:71]: sync job 202106132125008186828 status success to all party success
+[INFO] [2021-06-13 21:25:07,714] [7:140266826163968] - job_saver.py[line:45]: try to update job 202106132125008186828 status to success
+[INFO] [2021-06-13 21:25:07,720] [7:140266826163968] - job_saver.py[line:56]: update job 202106132125008186828 status does not take effect
+[INFO] [2021-06-13 21:25:07,720] [7:140266826163968] - job_saver.py[line:61]: try to update job 202106132125008186828
+[WARNING] [2021-06-13 21:25:07,726] [7:140266826163968] - job_saver.py[line:66]: job 202106132125008186828 update does not take effect: {'job_id': '202106132125008186828', 'role': 'local', 'party_id': '0', 'status': 'success'}
+[INFO] [2021-06-13 21:25:07,726] [7:140266826163968] - dag_scheduler.py[line:502]: Job 202106132125008186828 finished with success, do something...
+[INFO] [2021-06-13 21:25:07,727] [7:140266826163968] - dag_scheduler.py[line:436]: request stop job 202106132125008186828 with success
+[INFO] [2021-06-13 21:25:07,732] [7:140266826163968] - dag_scheduler.py[line:445]: request stop job 202106132125008186828 with success to all party
+[INFO] [2021-06-13 21:25:07,732] [7:140266826163968] - federated_scheduler.py[line:88]: try to stop job 202106132125008186828
+[INFO] [2021-06-13 21:25:07,753] [7:140266400880384] - job_utils.py[line:397]: try to stop job 202106132125008186828 task 202106132125008186828_upload_0 local 0 with success party status process pid:1603
+[INFO] [2021-06-13 21:25:07,753] [7:140266400880384] - job_utils.py[line:400]: can not found job 202106132125008186828 task 202106132125008186828_upload_0 local 0 with success party status process pid:1603
+[INFO] [2021-06-13 21:25:07,767] [7:140266400880384] - job_utils.py[line:424]: start run subprocess to stop task session 202106132125008186828_upload_0_0_local_0
+[INFO] [2021-06-13 21:25:07,768] [7:140266400880384] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106132125008186828_upload_0_0_local_0 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 21:25:07,775] [7:140266400880384] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106132125008186828_upload_0_0_local_0 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 1641
+[INFO] [2021-06-13 21:25:07,776] [7:140266400880384] - task_controller.py[line:255]: job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0 process 1603 kill success
+[INFO] [2021-06-13 21:25:07,776] [7:140266400880384] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:07,790] [7:140266400880384] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': 0, 'role': 'local', 'party_id': '0', 'party_status': 'success'}
+[INFO] [2021-06-13 21:25:07,798] [7:140266400880384] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[WARNING] [2021-06-13 21:25:07,805] [7:140266400880384] - job_saver.py[line:86]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update does not take effect
+[INFO] [2021-06-13 21:25:07,809] [7:140266400880384] - job_saver.py[line:45]: try to update job 202106132125008186828 status to success
+[INFO] [2021-06-13 21:25:07,814] [7:140266400880384] - job_saver.py[line:56]: update job 202106132125008186828 status does not take effect
+[INFO] [2021-06-13 21:25:07,825] [7:140266826163968] - federated_scheduler.py[line:92]: stop job 202106132125008186828 success
+[INFO] [2021-06-13 21:25:07,826] [7:140266826163968] - dag_scheduler.py[line:448]: stop job 202106132125008186828 with success successfully
+[INFO] [2021-06-13 21:25:07,826] [7:140266826163968] - federated_scheduler.py[line:107]: try to clean job 202106132125008186828
+[INFO] [2021-06-13 21:25:07,836] [7:140266400880384] - job_controller.py[line:379]: Job 202106132125008186828 on local 0 start to clean
+[INFO] [2021-06-13 21:25:07,836] [7:140266400880384] - job_controller.py[line:382]: job 202106132125008186828 on local 0 clean done
+[INFO] [2021-06-13 21:25:07,841] [7:140266826163968] - federated_scheduler.py[line:110]: clean job 202106132125008186828 success
+[INFO] [2021-06-13 21:25:07,841] [7:140266826163968] - dag_scheduler.py[line:505]: Job 202106132125008186828 finished with success, done
+[INFO] [2021-06-13 21:25:07,841] [7:140266826163968] - dag_scheduler.py[line:325]: finish scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:08,372] [1637:140347770648384] - session_utils.py[line:38]: start stop session 202106132125008186828_upload_0_0_local_0
+[INFO] [2021-06-13 21:25:08,373] [1637:140347770648384] - session_utils.py[line:47]: stop session 202106132125008186828_upload_0_0_local_0 success
+[INFO] [2021-06-13 21:25:08,523] [1641:139814423566144] - session_utils.py[line:38]: start stop session 202106132125008186828_upload_0_0_local_0
+[INFO] [2021-06-13 21:25:08,524] [1641:139814423566144] - session_utils.py[line:47]: stop session 202106132125008186828_upload_0_0_local_0 success
+[INFO] [2021-06-13 21:25:08,526] [7:140266826163968] - dag_scheduler.py[line:298]: scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:08,528] [7:140266826163968] - task_scheduler.py[line:28]: scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:08,548] [7:140266826163968] - task_scheduler.py[line:143]: job 202106132125008186828 task 202106132125008186828_upload_0 0 status is success, calculate by task party status list: ['success']
+[INFO] [2021-06-13 21:25:08,548] [7:140266826163968] - task_scheduler.py[line:75]: finish scheduling job 202106132125008186828 tasks
+[INFO] [2021-06-13 21:25:08,549] [7:140266826163968] - dag_scheduler.py[line:310]: Job 202106132125008186828 status is success, calculate by task status list: ['success']
+[INFO] [2021-06-13 21:25:08,549] [7:140266826163968] - dag_scheduler.py[line:502]: Job 202106132125008186828 finished with success, do something...
+[INFO] [2021-06-13 21:25:08,549] [7:140266826163968] - dag_scheduler.py[line:436]: request stop job 202106132125008186828 with success
+[INFO] [2021-06-13 21:25:08,562] [7:140266826163968] - dag_scheduler.py[line:445]: request stop job 202106132125008186828 with success to all party
+[INFO] [2021-06-13 21:25:08,562] [7:140266826163968] - federated_scheduler.py[line:88]: try to stop job 202106132125008186828
+[INFO] [2021-06-13 21:25:08,595] [7:140265872402176] - job_utils.py[line:397]: try to stop job 202106132125008186828 task 202106132125008186828_upload_0 local 0 with success party status process pid:1603
+[INFO] [2021-06-13 21:25:08,599] [7:140265872402176] - job_utils.py[line:400]: can not found job 202106132125008186828 task 202106132125008186828_upload_0 local 0 with success party status process pid:1603
+[INFO] [2021-06-13 21:25:08,622] [7:140265872402176] - job_utils.py[line:424]: start run subprocess to stop task session 202106132125008186828_upload_0_0_local_0
+[INFO] [2021-06-13 21:25:08,623] [7:140265872402176] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106132125008186828_upload_0_0_local_0 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop
+[INFO] [2021-06-13 21:25:08,659] [7:140265872402176] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106132125008186828_upload_0_0_local_0 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c stop successfully, pid is 1680
+[INFO] [2021-06-13 21:25:08,660] [7:140265872402176] - task_controller.py[line:255]: job 202106132125008186828 task 202106132125008186828_upload_0 0 on local 0 process 1603 kill success
+[INFO] [2021-06-13 21:25:08,661] [7:140265872402176] - job_saver.py[line:71]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0 status
+[INFO] [2021-06-13 21:25:08,669] [7:140265872402176] - job_saver.py[line:76]: update job 202106132125008186828 task 202106132125008186828_upload_0 0 status update does not take effect: {'job_id': '202106132125008186828', 'task_id': '202106132125008186828_upload_0', 'task_version': 0, 'role': 'local', 'party_id': '0', 'party_status': 'success'}
+[INFO] [2021-06-13 21:25:08,676] [7:140265872402176] - job_saver.py[line:81]: try to update job 202106132125008186828 task 202106132125008186828_upload_0 0
+[WARNING] [2021-06-13 21:25:08,682] [7:140265872402176] - job_saver.py[line:86]: job 202106132125008186828 task 202106132125008186828_upload_0 0 update does not take effect
+[INFO] [2021-06-13 21:25:08,686] [7:140265872402176] - job_saver.py[line:45]: try to update job 202106132125008186828 status to success
+[INFO] [2021-06-13 21:25:08,691] [7:140265872402176] - job_saver.py[line:56]: update job 202106132125008186828 status does not take effect
+[INFO] [2021-06-13 21:25:08,695] [7:140266826163968] - federated_scheduler.py[line:92]: stop job 202106132125008186828 success
+[INFO] [2021-06-13 21:25:08,695] [7:140266826163968] - dag_scheduler.py[line:448]: stop job 202106132125008186828 with success successfully
+[INFO] [2021-06-13 21:25:08,695] [7:140266826163968] - federated_scheduler.py[line:107]: try to clean job 202106132125008186828
+[INFO] [2021-06-13 21:25:08,701] [7:140265872402176] - job_controller.py[line:379]: Job 202106132125008186828 on local 0 start to clean
+[INFO] [2021-06-13 21:25:08,702] [7:140265872402176] - job_controller.py[line:382]: job 202106132125008186828 on local 0 clean done
+[INFO] [2021-06-13 21:25:08,705] [7:140266826163968] - federated_scheduler.py[line:110]: clean job 202106132125008186828 success
+[INFO] [2021-06-13 21:25:08,705] [7:140266826163968] - dag_scheduler.py[line:505]: Job 202106132125008186828 finished with success, done
+[INFO] [2021-06-13 21:25:08,705] [7:140266826163968] - dag_scheduler.py[line:325]: finish scheduling job 202106132125008186828
+[INFO] [2021-06-13 21:25:09,435] [1680:139828101363520] - session_utils.py[line:38]: start stop session 202106132125008186828_upload_0_0_local_0
+[INFO] [2021-06-13 21:25:09,435] [1680:139828101363520] - session_utils.py[line:47]: stop session 202106132125008186828_upload_0_0_local_0 success
+[INFO] [2021-06-13 21:25:10,889] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:12,943] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:14,990] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:17,047] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:19,095] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:21,153] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:23,205] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:25,258] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:27,307] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:29,356] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:31,404] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:33,468] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:35,514] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:37,556] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:39,598] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:41,646] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:43,698] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:45,760] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:47,808] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:49,865] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:51,916] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:53,966] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:56,028] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:25:58,071] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:00,122] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:02,165] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:04,323] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:06,374] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:08,428] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:10,476] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:12,651] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:14,969] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:17,086] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:19,506] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:21,701] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:23,765] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:25,819] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:27,880] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:29,936] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:31,986] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:34,043] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:36,096] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:38,165] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:40,203] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:42,253] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:44,310] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:46,368] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:48,437] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:50,502] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:52,555] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:54,611] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:56,673] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:26:58,725] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:00,779] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:02,835] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:04,896] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:06,943] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:09,013] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:11,073] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:13,140] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:15,197] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:17,272] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:19,326] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:21,381] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:23,442] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:25,497] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:27,561] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:29,625] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:31,679] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:33,737] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:35,792] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:37,845] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:39,925] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:41,966] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:44,009] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:46,066] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:48,138] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:50,193] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:52,243] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:54,296] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:56,356] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:27:58,422] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:00,463] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:02,518] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:04,582] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:06,638] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:08,689] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:10,748] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:12,804] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:14,840] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:16,893] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:18,955] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:21,010] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:23,083] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:25,146] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:27,198] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:29,249] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:31,303] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:33,357] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:35,415] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:37,468] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:39,530] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:41,653] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:43,708] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:45,781] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:47,841] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:49,904] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:51,963] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:54,021] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:56,078] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:28:58,134] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:00,188] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:02,240] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:04,297] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:06,357] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:08,438] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:10,496] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:12,552] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:14,613] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:16,704] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:18,790] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:20,887] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:22,944] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:24,980] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:27,034] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:29,086] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:31,151] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:33,205] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:35,258] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:37,312] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:39,365] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:41,426] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:43,479] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:45,531] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:47,584] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:49,680] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:51,746] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:53,823] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:55,880] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:29:57,941] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:30:00,016] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:30:02,070] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:30:04,123] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-13 21:30:06,177] [7:140266826163968] - dag_scheduler.py[line:193]: the number of updates has been exceeded

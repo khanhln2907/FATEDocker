@@ -1,0 +1,43 @@
+[INFO] [2021-06-15 22:05:17,393] [4055:140633721222976] - task_executor.py[line:313]: report task 2021061522050718069622_dataio_0 0 host 9998 to driver
+[INFO] [2021-06-15 22:05:17,394] [4055:140633721222976] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on host 9998
+[INFO] [2021-06-15 22:05:17,866] [4055:140633721222976] - task_executor.py[line:150]: Run 2021061522050718069622 dataio_0 2021061522050718069622_dataio_0 host 9998 task
+[INFO] [2021-06-15 22:05:17,866] [4055:140633721222976] - task_executor.py[line:151]: Component parameters on party {'DataIOParam': {'input_format': 'dense', 'delimitor': ',', 'data_type': 'float64', 'exclusive_data_type': None, 'tag_with_value': False, 'tag_value_delimitor': ':', 'missing_fill': False, 'default_value': 0, 'missing_fill_method': None, 'missing_impute': None, 'outlier_replace': False, 'outlier_replace_method': None, 'outlier_impute': None, 'outlier_replace_value': 0, 'with_label': False, 'label_name': 'y', 'label_type': 'int', 'output_format': 'dense', 'need_run': True}, 'role': {'guest': [9999], 'host': [9998]}, 'conf_path': './examples/LDPDev/test_predict_conf.json', 'initiator': {'role': 'guest', 'party_id': 9999}, 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'component_parameters': {'role': {'guest': {'0': {'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}, 'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}}}, 'host': {'0': {'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_1': {'with_label': False}, 'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}}}}, 'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}}, 'dsl_version': 2, 'job_parameters': {'job_type': 'predict', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '2021061522023585229020', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': False, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}}, 'local': {'role': 'host', 'party_id': 9998}, 'CodePath': 'federatedml/util/data_io.py/DataIO', 'module': 'DataIO', 'output_data_name': ['data']}
+[INFO] [2021-06-15 22:05:17,866] [4055:140633721222976] - task_executor.py[line:152]: Task input dsl {'data': {'data': ['reader_0.data']}, 'model': ['pipeline.dataio_0.model']}
+[INFO] [2021-06-15 22:05:17,867] [4055:140633721222976] - tracker_client.py[line:150]: Request read job 2021061522050718069622 task None None on host 9998 data data info
+[INFO] [2021-06-15 22:05:17,894] [4055:140633721222976] - task_executor.py[line:269]: load computing table use 4
+[INFO] [2021-06-15 22:05:17,958] [4055:140633721222976] - pipelined_model.py[line:185]: parse DataIOMeta proto object normal
+[INFO] [2021-06-15 22:05:17,967] [4055:140633721222976] - pipelined_model.py[line:185]: parse DataIOParam proto object normal
+[WARNING] [2021-06-15 22:05:17,972] [4055:140633721222976] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[INFO] [2021-06-15 22:05:17,988] [4055:140633721222976] - data_io.py[line:118]: start to read dense data and change data to instance
+[INFO] [2021-06-15 22:05:18,164] [4055:140633721222976] - tracker_client.py[line:173]: Request save job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on host 9998 component summary
+[INFO] [2021-06-15 22:05:18,354] [4055:140633721222976] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   2   0.133     0.067    0.082   |
+|          |    count     4   0.017     0.004    0.007   |
++----------+---------------------------------------------+
+|  total   |  n=6, sum=0.1502, mean=0.0250, max=0.0817   |
++----------+---------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[INFO] [2021-06-15 22:05:18,481] [4055:140633721222976] - pipelined_model.py[line:73]: Save dataio_0 default DataIOMeta buffer
+[INFO] [2021-06-15 22:05:18,481] [4055:140633721222976] - pipelined_model.py[line:73]: Save dataio_0 default DataIOParam buffer
+[INFO] [2021-06-15 22:05:18,498] [4055:140633721222976] - pipelined_model.py[line:78]: Save dataio_0 default successfully
+[INFO] [2021-06-15 22:05:18,499] [4055:140633721222976] - task_executor.py[line:313]: report task 2021061522050718069622_dataio_0 0 host 9998 to driver
+[INFO] [2021-06-15 22:05:18,499] [4055:140633721222976] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on host 9998
+[INFO] [2021-06-15 22:05:18,574] [4055:140633721222976] - task_executor.py[line:202]: task 2021061522050718069622_dataio_0 host 9998 start time: 2021-06-15 22:05:17
+[INFO] [2021-06-15 22:05:18,575] [4055:140633721222976] - task_executor.py[line:204]: task 2021061522050718069622_dataio_0 host 9998 end time: 2021-06-15 22:05:18
+[INFO] [2021-06-15 22:05:18,575] [4055:140633721222976] - task_executor.py[line:206]: task 2021061522050718069622_dataio_0 host 9998 takes 1.257s
+[INFO] [2021-06-15 22:05:18,575] [4055:140633721222976] - task_executor.py[line:209]: Finish 2021061522050718069622 dataio_0 2021061522050718069622_dataio_0 0 host 9998 task success
+[INFO] [2021-06-15 22:05:18,622] [4055:140633721222976] - task_executor.py[line:313]: report task 2021061522050718069622_dataio_0 0 host 9998 to driver
+[INFO] [2021-06-15 22:05:18,622] [4055:140633721222976] - control_client.py[line:42]: request update job 2021061522050718069622 task 2021061522050718069622_dataio_0 0 on host 9998

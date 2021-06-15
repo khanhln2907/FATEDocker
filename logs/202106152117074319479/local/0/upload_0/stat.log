@@ -1,0 +1,23 @@
+[INFO] [2021-06-15 21:17:11,871] [1923:139697816266560] - control_client.py[line:42]: request update job 202106152117074319479 task 202106152117074319479_upload_0 0 on local 0
+[DEBUG] [2021-06-15 21:17:12,254] [1923:139697816266560] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f0dee7a38d0>, federation_session_id=202106152117074319479_upload_0_0, party=Party(role=local, party_id=0)
+[DEBUG] [2021-06-15 21:17:12,272] [1923:139697816266560] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-15 21:17:12,373] [1923:139697816266560] - upload.py[line:41]: {'file': '/fate/jobs/202106152117074319479/fate_upload_tmp/default_credit_hetero_host.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'default_credit_hetero_host', 'storage_engine': '', 'storage_address': None, 'destroy': True}
+[INFO] [2021-06-15 21:17:12,374] [1923:139697816266560] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7f0daa2c1b70>}
+[DEBUG] [2021-06-15 21:17:12,396] [1923:139697816266560] - _session.py[line:147]: save session 202106152117074319479_upload_0_0_local_0_storage_0d1562d2ce1f11eba4990242ac110002 record
+[INFO] [2021-06-15 21:17:12,407] [1923:139697816266560] - upload.py[line:79]: destroy table name: default_credit_hetero_host namespace: experiment engine: STANDALONE
+[DEBUG] [2021-06-15 21:17:12,569] [1923:139697816266560] - _session.py[line:156]: delete session 202106152117074319479_upload_0_0_local_0_storage_0d1562d2ce1f11eba4990242ac110002 record
+[DEBUG] [2021-06-15 21:17:12,581] [1923:139697816266560] - _session.py[line:147]: save session 202106152117074319479_upload_0_0_local_0_storage_0d334f18ce1f11eba4990242ac110002 record
+[INFO] [2021-06-15 21:17:12,583] [1923:139697816266560] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'default_credit_hetero_host', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[INFO] [2021-06-15 21:17:12,822] [1923:139697816266560] - control_client.py[line:26]: request update job 202106152117074319479 on local 0
+[INFO] [2021-06-15 21:17:13,516] [1923:139697816266560] - tracker_client.py[line:127]: Request save job 202106152117074319479 task 202106152117074319479_upload_0 0 on local 0 data upload info
+[INFO] [2021-06-15 21:17:13,543] [1923:139697816266560] - tracker_client.py[line:70]: Request save job 202106152117074319479 task 202106152117074319479_upload_0 0 on local 0 metric upload data_access data
+[INFO] [2021-06-15 21:17:13,572] [1923:139697816266560] - tracker_client.py[line:103]: Request save job 202106152117074319479 task 202106152117074319479_upload_0 0 on local 0 metric upload data_access meta
+[DEBUG] [2021-06-15 21:17:13,629] [1923:139697816266560] - _session.py[line:156]: delete session 202106152117074319479_upload_0_0_local_0_storage_0d334f18ce1f11eba4990242ac110002 record
+[INFO] [2021-06-15 21:17:13,629] [1923:139697816266560] - upload.py[line:108]: ------------load data finish!-----------------
+[INFO] [2021-06-15 21:17:13,630] [1923:139697816266560] - upload.py[line:112]: remove tmp upload file
+[INFO] [2021-06-15 21:17:13,630] [1923:139697816266560] - upload.py[line:113]: /fate/jobs/202106152117074319479/fate_upload_tmp
+[INFO] [2021-06-15 21:17:13,631] [1923:139697816266560] - upload.py[line:117]: file: /fate/jobs/202106152117074319479/fate_upload_tmp/default_credit_hetero_host.csv
+[INFO] [2021-06-15 21:17:13,632] [1923:139697816266560] - upload.py[line:118]: total data_count: 30000
+[INFO] [2021-06-15 21:17:13,632] [1923:139697816266560] - upload.py[line:119]: table name: default_credit_hetero_host, table namespace: experiment
+[INFO] [2021-06-15 21:17:13,647] [1923:139697816266560] - control_client.py[line:42]: request update job 202106152117074319479 task 202106152117074319479_upload_0 0 on local 0
+[INFO] [2021-06-15 21:17:13,713] [1923:139697816266560] - control_client.py[line:42]: request update job 202106152117074319479 task 202106152117074319479_upload_0 0 on local 0

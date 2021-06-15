@@ -1,0 +1,14 @@
+[WARNING] [2021-06-15 22:03:26,274] [3770:140701168691008] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[ERROR] [2021-06-15 22:03:29,554] [3770:140701168691008] - task_executor.py[line:191]: fit & transform data' header should be same
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/federatedml/model_base.py", line 98, in run
+    this_data_output = func(*real_param)
+  File "/fate/python/federatedml/util/data_io.py", line 895, in transform
+    return self.reader.read_data(data_inst, "transform")
+  File "/fate/python/federatedml/util/data_io.py", line 150, in read_data
+    data_instance = data_overview.header_alignment(data_instance, fit_header)
+  File "/fate/python/federatedml/statistic/data_overview.py", line 75, in header_alignment
+    raise ValueError("fit & transform data' header should be same")
+ValueError: fit & transform data' header should be same

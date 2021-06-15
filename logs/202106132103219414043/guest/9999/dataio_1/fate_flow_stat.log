@@ -1,0 +1,5 @@
+[INFO] [2021-06-13 21:03:42,326] [570:139903183644480] - pipelined_model.py[line:185]: parse DataIOMeta proto object normal
+[INFO] [2021-06-13 21:03:42,334] [570:139903183644480] - pipelined_model.py[line:185]: parse DataIOParam proto object normal
+[INFO] [2021-06-13 21:03:43,021] [570:139903183644480] - pipelined_model.py[line:73]: Save dataio_1 model DataIOMeta buffer
+[INFO] [2021-06-13 21:03:43,021] [570:139903183644480] - pipelined_model.py[line:73]: Save dataio_1 model DataIOParam buffer
+[INFO] [2021-06-13 21:03:43,029] [570:139903183644480] - pipelined_model.py[line:78]: Save dataio_1 model successfully

@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/coverage", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.6/site-packages/coverage/cmdline.py", line 756, in main
+    status = CoverageScript().command_line(argv)
+  File "/usr/local/lib/python3.6/site-packages/coverage/cmdline.py", line 491, in command_line
+    return self.do_run(options, args)
+  File "/usr/local/lib/python3.6/site-packages/coverage/cmdline.py", line 630, in do_run
+    self.run_python_file(filename, args)
+  File "/usr/local/lib/python3.6/site-packages/coverage/execfile.py", line 192, in run_python_file
+    exec(code, main_mod.__dict__)
+  File "/fate/python/federatedml/test/../statistic/test/statics_test.py", line 8, in <module>
+    from fate_arch.session import computing_session as session
+  File "/fate/python/fate_arch/session/__init__.py", line 18, in <module>
+    from fate_arch.computing import is_table
+  File "/fate/python/fate_arch/computing/__init__.py", line 19, in <module>
+    from fate_arch.computing._util import is_table
+  File "/fate/python/fate_arch/computing/_util.py", line 18, in <module>
+    from fate_arch.abc import CTableABC
+  File "/fate/python/fate_arch/abc/__init__.py", line 5, in <module>
+    from fate_arch.abc._storage import StorageTableABC, StorageSessionABC, StorageTableMetaABC
+  File "/fate/python/fate_arch/abc/_storage.py", line 21, in <module>
+    from fate_arch.common.log import getLogger
+  File "/fate/python/fate_arch/common/log.py", line 24, in <module>
+    from fate_arch.common import file_utils
+  File "/fate/python/fate_arch/common/file_utils.py", line 22, in <module>
+    from ruamel import yaml
+  File "/usr/local/lib/python3.6/site-packages/ruamel/yaml/__init__.py", line 54, in <module>
+    from .cyaml import *  # NOQA
+  File "/usr/local/lib/python3.6/site-packages/ruamel/yaml/cyaml.py", line 5, in <module>
+    from _ruamel_yaml import CParser, CEmitter  # type: ignore
+  File "_ruamel_yaml.pyx", line 25, in init _ruamel_yaml
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 764, in get_code
+  File "<frozen importlib._bootstrap_external>", line 833, in get_data
+KeyboardInterrupt

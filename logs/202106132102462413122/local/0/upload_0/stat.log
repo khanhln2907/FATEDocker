@@ -1,0 +1,22 @@
+[INFO] [2021-06-13 21:02:48,507] [263:140026860009280] - control_client.py[line:42]: request update job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0
+[DEBUG] [2021-06-13 21:02:48,769] [263:140026860009280] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f5a477c5ba8>, federation_session_id=202106132102462413122_upload_0_0, party=Party(role=local, party_id=0)
+[DEBUG] [2021-06-13 21:02:48,790] [263:140026860009280] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 21:02:48,867] [263:140026860009280] - upload.py[line:41]: {'file': '/fate/jobs/202106132102462413122/fate_upload_tmp/breast_hetero_guest.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'breast_hetero_guest', 'storage_engine': '', 'storage_address': None, 'destroy': False}
+[INFO] [2021-06-13 21:02:48,868] [263:140026860009280] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7f5a46b52b70>}
+[DEBUG] [2021-06-13 21:02:48,883] [263:140026860009280] - _session.py[line:147]: save session 202106132102462413122_upload_0_0_local_0_storage_b5915fb0cc8a11eb8b670242ac110002 record
+[DEBUG] [2021-06-13 21:02:48,892] [263:140026860009280] - _session.py[line:156]: delete session 202106132102462413122_upload_0_0_local_0_storage_b5915fb0cc8a11eb8b670242ac110002 record
+[DEBUG] [2021-06-13 21:02:48,902] [263:140026860009280] - _session.py[line:147]: save session 202106132102462413122_upload_0_0_local_0_storage_b59510b0cc8a11eb8b670242ac110002 record
+[INFO] [2021-06-13 21:02:48,904] [263:140026860009280] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'breast_hetero_guest', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[INFO] [2021-06-13 21:02:48,935] [263:140026860009280] - control_client.py[line:26]: request update job 202106132102462413122 on local 0
+[INFO] [2021-06-13 21:02:49,172] [263:140026860009280] - tracker_client.py[line:127]: Request save job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0 data upload info
+[INFO] [2021-06-13 21:02:49,193] [263:140026860009280] - tracker_client.py[line:70]: Request save job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0 metric upload data_access data
+[INFO] [2021-06-13 21:02:49,215] [263:140026860009280] - tracker_client.py[line:103]: Request save job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0 metric upload data_access meta
+[DEBUG] [2021-06-13 21:02:49,260] [263:140026860009280] - _session.py[line:156]: delete session 202106132102462413122_upload_0_0_local_0_storage_b59510b0cc8a11eb8b670242ac110002 record
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:108]: ------------load data finish!-----------------
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:112]: remove tmp upload file
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:113]: /fate/jobs/202106132102462413122/fate_upload_tmp
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:117]: file: /fate/jobs/202106132102462413122/fate_upload_tmp/breast_hetero_guest.csv
+[INFO] [2021-06-13 21:02:49,261] [263:140026860009280] - upload.py[line:118]: total data_count: 569
+[INFO] [2021-06-13 21:02:49,262] [263:140026860009280] - upload.py[line:119]: table name: breast_hetero_guest, table namespace: experiment
+[INFO] [2021-06-13 21:02:49,269] [263:140026860009280] - control_client.py[line:42]: request update job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0
+[INFO] [2021-06-13 21:02:49,317] [263:140026860009280] - control_client.py[line:42]: request update job 202106132102462413122 task 202106132102462413122_upload_0 0 on local 0

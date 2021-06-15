@@ -1,0 +1,125 @@
+{
+    "components": {
+        "dataio_0": {
+            "input": {
+                "data": {
+                    "data": [
+                        "reader_0.data"
+                    ]
+                }
+            },
+            "module": "DataIO",
+            "output": {
+                "data": [
+                    "data"
+                ],
+                "model": [
+                    "model"
+                ]
+            }
+        },
+        "dataio_1": {
+            "input": {
+                "data": {
+                    "data": [
+                        "reader_1.data"
+                    ]
+                },
+                "model": [
+                    "dataio_0.model"
+                ]
+            },
+            "module": "DataIO",
+            "output": {
+                "data": [
+                    "data"
+                ],
+                "model": [
+                    "model"
+                ]
+            }
+        },
+        "evaluation_0": {
+            "input": {
+                "data": {
+                    "data": [
+                        "hetero_secure_boost_0.data"
+                    ]
+                }
+            },
+            "module": "Evaluation",
+            "output": {
+                "data": [
+                    "data"
+                ]
+            }
+        },
+        "hetero_secure_boost_0": {
+            "input": {
+                "data": {
+                    "train_data": [
+                        "intersection_0.data"
+                    ],
+                    "validate_data": [
+                        "intersection_1.data"
+                    ]
+                }
+            },
+            "module": "HeteroSecureBoost",
+            "output": {
+                "data": [
+                    "data"
+                ],
+                "model": [
+                    "model"
+                ]
+            }
+        },
+        "intersection_0": {
+            "input": {
+                "data": {
+                    "data": [
+                        "dataio_0.data"
+                    ]
+                }
+            },
+            "module": "Intersection",
+            "output": {
+                "data": [
+                    "data"
+                ]
+            }
+        },
+        "intersection_1": {
+            "input": {
+                "data": {
+                    "data": [
+                        "dataio_1.data"
+                    ]
+                }
+            },
+            "module": "Intersection",
+            "output": {
+                "data": [
+                    "data"
+                ]
+            }
+        },
+        "reader_0": {
+            "module": "Reader",
+            "output": {
+                "data": [
+                    "data"
+                ]
+            }
+        },
+        "reader_1": {
+            "module": "Reader",
+            "output": {
+                "data": [
+                    "data"
+                ]
+            }
+        }
+    }
+}

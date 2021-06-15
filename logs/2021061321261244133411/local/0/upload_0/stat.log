@@ -1,0 +1,22 @@
+[INFO] [2021-06-13 21:26:16,937] [1738:140209896253248] - control_client.py[line:42]: request update job 2021061321261244133411 task 2021061321261244133411_upload_0 0 on local 0
+[DEBUG] [2021-06-13 21:26:17,334] [1738:140209896253248] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f84e54bcb38>, federation_session_id=2021061321261244133411_upload_0_0, party=Party(role=local, party_id=0)
+[DEBUG] [2021-06-13 21:26:17,351] [1738:140209896253248] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 21:26:17,454] [1738:140209896253248] - upload.py[line:41]: {'file': '/fate/jobs/2021061321261244133411/fate_upload_tmp/default_credit_hetero_guest.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'default_credit_hetero_guest', 'storage_engine': '', 'storage_address': None, 'destroy': False}
+[INFO] [2021-06-13 21:26:17,455] [1738:140209896253248] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7f84e4848b00>}
+[DEBUG] [2021-06-13 21:26:17,472] [1738:140209896253248] - _session.py[line:147]: save session 2021061321261244133411_upload_0_0_local_0_storage_fd26b4d0cc8d11eb9cd30242ac110002 record
+[DEBUG] [2021-06-13 21:26:17,485] [1738:140209896253248] - _session.py[line:156]: delete session 2021061321261244133411_upload_0_0_local_0_storage_fd26b4d0cc8d11eb9cd30242ac110002 record
+[DEBUG] [2021-06-13 21:26:17,497] [1738:140209896253248] - _session.py[line:147]: save session 2021061321261244133411_upload_0_0_local_0_storage_fd2b4cfccc8d11eb9cd30242ac110002 record
+[INFO] [2021-06-13 21:26:17,499] [1738:140209896253248] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'default_credit_hetero_guest', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[INFO] [2021-06-13 21:26:17,839] [1738:140209896253248] - control_client.py[line:26]: request update job 2021061321261244133411 on local 0
+[INFO] [2021-06-13 21:26:18,722] [1738:140209896253248] - tracker_client.py[line:127]: Request save job 2021061321261244133411 task 2021061321261244133411_upload_0 0 on local 0 data upload info
+[INFO] [2021-06-13 21:26:18,749] [1738:140209896253248] - tracker_client.py[line:70]: Request save job 2021061321261244133411 task 2021061321261244133411_upload_0 0 on local 0 metric upload data_access data
+[INFO] [2021-06-13 21:26:18,780] [1738:140209896253248] - tracker_client.py[line:103]: Request save job 2021061321261244133411 task 2021061321261244133411_upload_0 0 on local 0 metric upload data_access meta
+[DEBUG] [2021-06-13 21:26:18,844] [1738:140209896253248] - _session.py[line:156]: delete session 2021061321261244133411_upload_0_0_local_0_storage_fd2b4cfccc8d11eb9cd30242ac110002 record
+[INFO] [2021-06-13 21:26:18,845] [1738:140209896253248] - upload.py[line:108]: ------------load data finish!-----------------
+[INFO] [2021-06-13 21:26:18,845] [1738:140209896253248] - upload.py[line:112]: remove tmp upload file
+[INFO] [2021-06-13 21:26:18,846] [1738:140209896253248] - upload.py[line:113]: /fate/jobs/2021061321261244133411/fate_upload_tmp
+[INFO] [2021-06-13 21:26:18,847] [1738:140209896253248] - upload.py[line:117]: file: /fate/jobs/2021061321261244133411/fate_upload_tmp/default_credit_hetero_guest.csv
+[INFO] [2021-06-13 21:26:18,848] [1738:140209896253248] - upload.py[line:118]: total data_count: 30000
+[INFO] [2021-06-13 21:26:18,848] [1738:140209896253248] - upload.py[line:119]: table name: default_credit_hetero_guest, table namespace: experiment
+[INFO] [2021-06-13 21:26:18,863] [1738:140209896253248] - control_client.py[line:42]: request update job 2021061321261244133411 task 2021061321261244133411_upload_0 0 on local 0
+[INFO] [2021-06-13 21:26:18,927] [1738:140209896253248] - control_client.py[line:42]: request update job 2021061321261244133411 task 2021061321261244133411_upload_0 0 on local 0

@@ -1,0 +1,2 @@
+[INFO] [2021-06-15 21:10:53,128] [1761:140248252319552] - task_executor.py[line:313]: report task 202106152110498671798_dataio_0 0 guest 9999 to driver
+[INFO] [2021-06-15 21:10:53,129] [1761:140248252319552] - control_client.py[line:42]: request update job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999

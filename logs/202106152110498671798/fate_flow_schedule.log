@@ -1,0 +1,474 @@
+[INFO] [2021-06-15 21:10:49,868] [7:140196725126912] - dag_scheduler.py[line:40]: submit job, job_id 202106152110498671798, body {'job_dsl': {}, 'job_runtime_conf': {'dsl_version': 2, 'initiator': {'role': 'guest', 'party_id': 9999}, 'role': {'host': [9998], 'guest': [9999]}, 'job_parameters': {'common': {'work_mode': 0, 'backend': 0, 'job_type': 'predict', 'model_id': 'guest-9999#host-9998#model', 'model_version': '202106152108460902496'}}, 'component_parameters': {'role': {'guest': {'0': {'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}}}, 'host': {'0': {'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}}}}}, 'conf_path': './examples/LDPDev/test_predict_conf.json'}}
+[INFO] [2021-06-15 21:10:49,955] [7:140196179863296] - job_controller.py[line:52]: job parameters:{'backend': 0, 'spark_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': True, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}, 'federation_engine': 'STANDALONE', 'computing_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'task_parallelism': 1, 'federated_status_collect_type': 'PULL', 'pulsar_run': {}, 'engines_address': {}, 'federated_mode': 'SINGLE', 'computing_partitions': 4, 'work_mode': 0, 'job_type': 'predict', 'eggroll_run': {}, 'model_version': '202106152108460902496', 'model_id': 'guest-9999#host-9998#model', 'rabbitmq_run': {}}
+[INFO] [2021-06-15 21:10:50,094] [7:140196179863296] - job_controller.py[line:52]: job parameters:{'backend': 0, 'spark_run': {}, 'adaptation_parameters': {'task_memory_per_node': 0, 'if_initiator_baseline': True, 'task_cores_per_node': 4, 'request_task_cores': 4, 'task_nodes': 1}, 'federation_engine': 'STANDALONE', 'computing_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'task_parallelism': 1, 'federated_status_collect_type': 'PULL', 'pulsar_run': {}, 'engines_address': {}, 'federated_mode': 'SINGLE', 'computing_partitions': 4, 'work_mode': 0, 'job_type': 'predict', 'eggroll_run': {}, 'model_version': '202106152108460902496', 'model_id': 'guest-9999#host-9998#model', 'rabbitmq_run': {}}
+[INFO] [2021-06-15 21:10:50,203] [7:140196725126912] - dag_scheduler.py[line:122]: submit job successfully, job id is 202106152110498671798, model id is guest-9999#host-9998#model
+[INFO] [2021-06-15 21:10:50,541] [7:140197562341120] - federated_scheduler.py[line:39]: try to apply job 202106152110498671798 resource
+[INFO] [2021-06-15 21:10:50,569] [7:140196725126912] - resource_manager.py[line:176]: apply job 202106152110498671798 resource(cores 4 memory 0) on host 9998 successfully, remaining cores: 16 remaining memory: 0
+[INFO] [2021-06-15 21:10:50,603] [7:140196725126912] - resource_manager.py[line:176]: apply job 202106152110498671798 resource(cores 4 memory 0) on guest 9999 successfully, remaining cores: 12 remaining memory: 0
+[INFO] [2021-06-15 21:10:50,607] [7:140197562341120] - federated_scheduler.py[line:42]: apply job 202106152110498671798 resource successfully
+[INFO] [2021-06-15 21:10:50,607] [7:140197562341120] - dag_scheduler.py[line:279]: try to start job 202106152110498671798 on initiator guest 9999
+[INFO] [2021-06-15 21:10:50,623] [7:140196725126912] - job_controller.py[line:261]: try to start job 202106152110498671798 on host 9998
+[INFO] [2021-06-15 21:10:50,623] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to running
+[INFO] [2021-06-15 21:10:50,649] [7:140196725126912] - job_saver.py[line:48]: update job 202106152110498671798 status successfully
+[INFO] [2021-06-15 21:10:50,650] [7:140196725126912] - job_saver.py[line:61]: try to update job 202106152110498671798
+[INFO] [2021-06-15 21:10:50,680] [7:140196725126912] - job_saver.py[line:64]: job 202106152110498671798 update successfully: {'job_id': '202106152110498671798', 'role': 'host', 'party_id': 9998, 'status': 'running', 'start_time': 1623791450623}
+[INFO] [2021-06-15 21:10:50,680] [7:140196725126912] - job_controller.py[line:275]: start job 202106152110498671798 on host 9998 successfully
+[INFO] [2021-06-15 21:10:50,693] [7:140196725126912] - job_controller.py[line:261]: try to start job 202106152110498671798 on guest 9999
+[INFO] [2021-06-15 21:10:50,694] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to running
+[INFO] [2021-06-15 21:10:50,716] [7:140196725126912] - job_saver.py[line:48]: update job 202106152110498671798 status successfully
+[INFO] [2021-06-15 21:10:50,716] [7:140196725126912] - job_saver.py[line:61]: try to update job 202106152110498671798
+[INFO] [2021-06-15 21:10:50,735] [7:140196725126912] - job_saver.py[line:64]: job 202106152110498671798 update successfully: {'job_id': '202106152110498671798', 'role': 'guest', 'party_id': 9999, 'status': 'running', 'start_time': 1623791450694}
+[INFO] [2021-06-15 21:10:50,735] [7:140196725126912] - job_controller.py[line:275]: start job 202106152110498671798 on guest 9999 successfully
+[INFO] [2021-06-15 21:10:50,740] [7:140197562341120] - dag_scheduler.py[line:292]: start job 202106152110498671798 on initiator guest 9999
+[INFO] [2021-06-15 21:10:50,753] [7:140197562341120] - dag_scheduler.py[line:247]: reset job 202106152110498671798 ready signal True
+[INFO] [2021-06-15 21:10:50,763] [7:140197562341120] - dag_scheduler.py[line:298]: scheduling job 202106152110498671798
+[INFO] [2021-06-15 21:10:50,777] [7:140197562341120] - task_scheduler.py[line:28]: scheduling job 202106152110498671798 tasks
+[INFO] [2021-06-15 21:10:50,796] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:50,807] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:50,817] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:50,817] [7:140197562341120] - task_scheduler.py[line:80]: try to start job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999
+[INFO] [2021-06-15 21:10:50,831] [7:140197562341120] - resource_manager.py[line:286]: task 202106152110498671798_dataio_0 0 apply resource successfully
+[INFO] [2021-06-15 21:10:50,831] [7:140197562341120] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:50,843] [7:140197562341120] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'status': 'running'}
+[INFO] [2021-06-15 21:10:50,843] [7:140197562341120] - task_scheduler.py[line:93]: start job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999
+[INFO] [2021-06-15 21:10:50,844] [7:140197562341120] - federated_scheduler.py[line:192]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 is running, sync to all party
+[INFO] [2021-06-15 21:10:50,864] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:50,870] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'guest', 'party_id': '9999', 'status': 'running'}
+[WARNING] [2021-06-15 21:10:50,880] [7:140197562341120] - federated_scheduler.py[line:260]: an error occurred while status/running the task to role guest party 9999: 
+update task status failed
+[INFO] [2021-06-15 21:10:50,886] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:50,905] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'host', 'party_id': '9998', 'status': 'running'}
+[INFO] [2021-06-15 21:10:50,918] [7:140197562341120] - federated_scheduler.py[line:197]: sync job 202106152110498671798 task 202106152110498671798_dataio_0 0 status running to all party failed: 
+{'guest': {9999: {'retcode': 103, 'retmsg': 'update task status failed'}}, 'host': {9998: {'retcode': 0, 'retmsg': 'success'}}}
+[INFO] [2021-06-15 21:10:50,944] [7:140196725126912] - task_controller.py[line:71]: try to start job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999 executor subprocess
+[INFO] [2021-06-15 21:10:50,949] [7:140196725126912] - task_controller.py[line:90]: use computing engine STANDALONE
+[INFO] [2021-06-15 21:10:50,949] [7:140196725126912] - task_controller.py[line:145]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999 executor subprocess is ready
+[INFO] [2021-06-15 21:10:50,949] [7:140196725126912] - job_utils.py[line:310]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106152110498671798 -n dataio_0 -t 202106152110498671798_dataio_0 -v 0 -r guest -p 9999 -c /fate/jobs/202106152110498671798/guest/9999/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380
+[INFO] [2021-06-15 21:10:50,959] [7:140196725126912] - job_utils.py[line:334]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106152110498671798 -n dataio_0 -t 202106152110498671798_dataio_0 -v 0 -r guest -p 9999 -c /fate/jobs/202106152110498671798/guest/9999/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380 successfully, pid is 1761
+[INFO] [2021-06-15 21:10:50,960] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:50,979] [7:140196725126912] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:50,986] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:51,004] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'guest', 'party_id': '9999', 'party_status': 'running', 'start_time': 1623791450960}
+[INFO] [2021-06-15 21:10:51,010] [7:140196725126912] - task_controller.py[line:164]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999 executor subprocess start success
+[INFO] [2021-06-15 21:10:51,026] [7:140196725126912] - task_controller.py[line:71]: try to start job 202106152110498671798 task 202106152110498671798_dataio_0 0 on host 9998 executor subprocess
+[INFO] [2021-06-15 21:10:51,031] [7:140196725126912] - task_controller.py[line:90]: use computing engine STANDALONE
+[INFO] [2021-06-15 21:10:51,031] [7:140196725126912] - task_controller.py[line:145]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on host 9998 executor subprocess is ready
+[INFO] [2021-06-15 21:10:51,031] [7:140196725126912] - job_utils.py[line:310]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106152110498671798 -n dataio_0 -t 202106152110498671798_dataio_0 -v 0 -r host -p 9998 -c /fate/jobs/202106152110498671798/host/9998/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380
+[INFO] [2021-06-15 21:10:51,041] [7:140196725126912] - job_utils.py[line:334]: start process command: /usr/local/bin/python /fate/python/fate_flow/operation/task_executor.py -j 202106152110498671798 -n dataio_0 -t 202106152110498671798_dataio_0 -v 0 -r host -p 9998 -c /fate/jobs/202106152110498671798/host/9998/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json --run_ip 127.0.0.1 --job_server 127.0.0.1:9380 successfully, pid is 1763
+[INFO] [2021-06-15 21:10:51,041] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:51,059] [7:140196725126912] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:51,066] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:51,085] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'host', 'party_id': '9998', 'party_status': 'running', 'start_time': 1623791451041}
+[INFO] [2021-06-15 21:10:51,095] [7:140196725126912] - task_controller.py[line:164]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on host 9998 executor subprocess start success
+[INFO] [2021-06-15 21:10:51,102] [7:140197562341120] - task_scheduler.py[line:75]: finish scheduling job 202106152110498671798 tasks
+[INFO] [2021-06-15 21:10:51,102] [7:140197562341120] - dag_scheduler.py[line:310]: Job 202106152110498671798 status is running, calculate by task status list: ['running', 'waiting', 'waiting']
+[INFO] [2021-06-15 21:10:51,102] [7:140197562341120] - dag_scheduler.py[line:325]: finish scheduling job 202106152110498671798
+[INFO] [2021-06-15 21:10:52,540] [1763:140455588374336] - task_executor.py[line:56]: enter task process
+[INFO] [2021-06-15 21:10:52,540] [1763:140455588374336] - task_executor.py[line:57]: Namespace(component_name='dataio_0', config='/fate/jobs/202106152110498671798/host/9998/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json', job_id='202106152110498671798', job_server='127.0.0.1:9380', party_id=9998, role='host', run_ip='127.0.0.1', task_id='202106152110498671798_dataio_0', task_version=0)
+[INFO] [2021-06-15 21:10:52,658] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:52,707] [7:140196725126912] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:52,711] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:52,715] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'component_name': 'dataio_0', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'host', 'party_id': '9998', 'run_ip': '127.0.0.1', 'run_pid': 1763, 'party_status': 'running'}
+[INFO] [2021-06-15 21:10:52,972] [1761:140248252319552] - task_executor.py[line:56]: enter task process
+[INFO] [2021-06-15 21:10:52,973] [1761:140248252319552] - task_executor.py[line:57]: Namespace(component_name='dataio_0', config='/fate/jobs/202106152110498671798/guest/9999/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json', job_id='202106152110498671798', job_server='127.0.0.1:9380', party_id=9999, role='guest', run_ip='127.0.0.1', task_id='202106152110498671798_dataio_0', task_version=0)
+[INFO] [2021-06-15 21:10:53,037] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:53,050] [7:140196725126912] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:53,054] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,066] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'component_name': 'dataio_0', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'host', 'party_id': '9998', 'run_ip': '127.0.0.1', 'run_pid': 1763, 'party_status': 'failed', 'end_time': 1623791453032, 'elapsed': 492}
+[INFO] [2021-06-15 21:10:53,080] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:53,097] [7:140196725126912] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:53,103] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,109] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'component_name': 'dataio_0', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'host', 'party_id': '9998', 'run_ip': '127.0.0.1', 'run_pid': 1763, 'party_status': 'failed', 'end_time': 1623791453032, 'elapsed': 492}
+[INFO] [2021-06-15 21:10:53,139] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:53,145] [7:140197562341120] - dag_scheduler.py[line:298]: scheduling job 202106152110498671798
+[INFO] [2021-06-15 21:10:53,159] [7:140197562341120] - task_scheduler.py[line:28]: scheduling job 202106152110498671798 tasks
+[INFO] [2021-06-15 21:10:53,162] [7:140196725126912] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:53,168] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,175] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'component_name': 'dataio_0', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'guest', 'party_id': '9999', 'run_ip': '127.0.0.1', 'run_pid': 1761, 'party_status': 'running'}
+[INFO] [2021-06-15 21:10:53,224] [7:140197562341120] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,232] [7:140197562341120] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'elapsed': None, 'end_time': None, 'job_id': '202106152110498671798', 'party_id': '9999', 'party_status': 'running', 'role': 'guest', 'start_time': 1623791450960, 'status': 'running', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'update_time': 1623791450120}
+[INFO] [2021-06-15 21:10:53,233] [7:140197562341120] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:53,248] [7:140197562341120] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:53,248] [7:140197562341120] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,255] [7:140197562341120] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'elapsed': 492, 'end_time': 1623791453032, 'job_id': '202106152110498671798', 'party_id': '9998', 'party_status': 'failed', 'role': 'host', 'start_time': 1623791451041, 'status': 'running', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'update_time': 1623791449980}
+[INFO] [2021-06-15 21:10:53,256] [7:140197562341120] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:53,275] [7:140197562341120] - job_saver.py[line:84]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update successfully
+[INFO] [2021-06-15 21:10:53,282] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 status is failed, calculate by task party status list: ['failed', 'running']
+[INFO] [2021-06-15 21:10:53,283] [7:140197562341120] - federated_scheduler.py[line:192]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 is failed, sync to all party
+[INFO] [2021-06-15 21:10:53,305] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,325] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'guest', 'party_id': '9999', 'status': 'failed'}
+[INFO] [2021-06-15 21:10:53,341] [7:140196725126912] - resource_manager.py[line:286]: task 202106152110498671798_dataio_0 0 return resource successfully
+[INFO] [2021-06-15 21:10:53,346] [7:140196725126912] - job_tracker.py[line:424]: clean task 202106152110498671798_dataio_0 0 on guest 9999
+[ERROR] [2021-06-15 21:10:53,348] [7:140196725126912] - job_tracker.py[line:475]: namespace dir /fate/data/202106152110498671798_dataio_0_0_guest_9999 does not exist
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 383, in cleanup
+    raise EnvironmentError(f"namespace dir {namespace_dir} does not exist")
+OSError: namespace dir /fate/data/202106152110498671798_dataio_0_0_guest_9999 does not exist
+[INFO] [2021-06-15 21:10:53,364] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,382] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': '0', 'role': 'host', 'party_id': '9998', 'status': 'failed'}
+[INFO] [2021-06-15 21:10:53,399] [7:140196725126912] - resource_manager.py[line:286]: task 202106152110498671798_dataio_0 0 return resource successfully
+[INFO] [2021-06-15 21:10:53,406] [7:140196725126912] - job_tracker.py[line:424]: clean task 202106152110498671798_dataio_0 0 on host 9998
+[ERROR] [2021-06-15 21:10:53,408] [7:140196725126912] - job_tracker.py[line:475]: namespace dir /fate/data/202106152110498671798_dataio_0_0_host_9998 does not exist
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 437, in clean_task
+    sess.computing.cleanup(namespace=computing_temp_namespace, name="*")
+  File "/fate/python/fate_arch/computing/standalone/_csession.py", line 73, in cleanup
+    return self._session.cleanup(name=name, namespace=namespace)
+  File "/fate/python/fate_arch/_standalone.py", line 383, in cleanup
+    raise EnvironmentError(f"namespace dir {namespace_dir} does not exist")
+OSError: namespace dir /fate/data/202106152110498671798_dataio_0_0_host_9998 does not exist
+[INFO] [2021-06-15 21:10:53,421] [7:140197562341120] - federated_scheduler.py[line:195]: sync job 202106152110498671798 task 202106152110498671798_dataio_0 0 status failed to all party success
+[INFO] [2021-06-15 21:10:53,422] [7:140197562341120] - federated_scheduler.py[line:202]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[INFO] [2021-06-15 21:10:53,442] [7:140196725126912] - job_utils.py[line:397]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 guest 9999 with running party status process pid:1761
+[INFO] [2021-06-15 21:10:53,443] [7:140196725126912] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106152110498671798', '-n', 'dataio_0', '-t', '202106152110498671798_dataio_0', '-v', '0', '-r', 'guest', '-p', '9999', '-c', '/fate/jobs/202106152110498671798/guest/9999/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-15 21:10:53,445] [7:140196725126912] - job_utils.py[line:372]: ['/usr/local/bin/python', '/fate/python/fate_flow/operation/task_executor.py', '-j', '202106152110498671798', '-n', 'dataio_0', '-t', '202106152110498671798_dataio_0', '-v', '0', '-r', 'guest', '-p', '9999', '-c', '/fate/jobs/202106152110498671798/guest/9999/dataio_0/202106152110498671798_dataio_0/0/task_parameters.json', '--run_ip', '127.0.0.1', '--job_server', '127.0.0.1:9380']
+[INFO] [2021-06-15 21:10:53,446] [7:140196725126912] - job_utils.py[line:414]: successfully stop job 202106152110498671798 task 202106152110498671798_dataio_0 guest 9999 process pid:1761
+[INFO] [2021-06-15 21:10:53,448] [7:140196725126912] - job_utils.py[line:424]: start run subprocess to stop task session 202106152110498671798_dataio_0_0_guest_9999
+[INFO] [2021-06-15 21:10:53,448] [7:140196725126912] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_guest_9999 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill
+[INFO] [2021-06-15 21:10:53,455] [7:140196725126912] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_guest_9999 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill successfully, pid is 1789
+[INFO] [2021-06-15 21:10:53,456] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999 process 1761 kill success
+[INFO] [2021-06-15 21:10:53,456] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,467] [7:140196725126912] - job_saver.py[line:74]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status successfully: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:53,471] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[WARNING] [2021-06-15 21:10:53,474] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:53,492] [7:140196725126912] - job_utils.py[line:397]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 host 9998 with failed party status process pid:1763
+[INFO] [2021-06-15 21:10:53,492] [7:140196725126912] - job_utils.py[line:400]: can not found job 202106152110498671798 task 202106152110498671798_dataio_0 host 9998 with failed party status process pid:1763
+[INFO] [2021-06-15 21:10:53,495] [7:140196725126912] - job_utils.py[line:424]: start run subprocess to stop task session 202106152110498671798_dataio_0_0_host_9998
+[INFO] [2021-06-15 21:10:53,495] [7:140196725126912] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_host_9998 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill
+[INFO] [2021-06-15 21:10:53,503] [7:140196725126912] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_host_9998 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill successfully, pid is 1791
+[INFO] [2021-06-15 21:10:53,504] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on host 9998 process 1763 kill success
+[INFO] [2021-06-15 21:10:53,504] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:53,508] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:53,511] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[WARNING] [2021-06-15 21:10:53,515] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:53,524] [7:140197562341120] - federated_scheduler.py[line:206]: stop job 202106152110498671798 task 202106152110498671798_dataio_0 0 success
+[INFO] [2021-06-15 21:10:53,540] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:53,557] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:53,557] [7:140197562341120] - task_scheduler.py[line:75]: finish scheduling job 202106152110498671798 tasks
+[INFO] [2021-06-15 21:10:53,558] [7:140197562341120] - dag_scheduler.py[line:310]: Job 202106152110498671798 status is failed, calculate by task status list: ['failed', 'waiting', 'waiting']
+[INFO] [2021-06-15 21:10:53,558] [7:140197562341120] - federated_scheduler.py[line:58]: sync job 202106152110498671798 info to all party
+[INFO] [2021-06-15 21:10:53,565] [7:140196725126912] - job_saver.py[line:61]: try to update job 202106152110498671798
+[INFO] [2021-06-15 21:10:53,583] [7:140196725126912] - job_saver.py[line:64]: job 202106152110498671798 update successfully: {'job_id': '202106152110498671798', 'role': 'host', 'party_id': '9998', 'progress': 33.33333333333333}
+[INFO] [2021-06-15 21:10:53,595] [7:140196725126912] - job_saver.py[line:61]: try to update job 202106152110498671798
+[INFO] [2021-06-15 21:10:53,613] [7:140196725126912] - job_saver.py[line:64]: job 202106152110498671798 update successfully: {'job_id': '202106152110498671798', 'role': 'guest', 'party_id': '9999', 'progress': 33.33333333333333}
+[INFO] [2021-06-15 21:10:53,618] [7:140197562341120] - federated_scheduler.py[line:61]: sync job 202106152110498671798 info to all party successfully
+[INFO] [2021-06-15 21:10:53,634] [7:140197562341120] - job_saver.py[line:45]: try to update job 202106152110498671798 status to None
+[INFO] [2021-06-15 21:10:53,646] [7:140197562341120] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:53,646] [7:140197562341120] - job_saver.py[line:61]: try to update job 202106152110498671798
+[INFO] [2021-06-15 21:10:53,666] [7:140197562341120] - job_saver.py[line:64]: job 202106152110498671798 update successfully: {'job_id': '202106152110498671798', 'role': 'host', 'party_id': '9998', 'progress': 33.33333333333333}
+[INFO] [2021-06-15 21:10:53,666] [7:140197562341120] - job_saver.py[line:45]: try to update job 202106152110498671798 status to None
+[INFO] [2021-06-15 21:10:53,674] [7:140197562341120] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:53,674] [7:140197562341120] - job_saver.py[line:61]: try to update job 202106152110498671798
+[INFO] [2021-06-15 21:10:53,689] [7:140197562341120] - job_saver.py[line:64]: job 202106152110498671798 update successfully: {'job_id': '202106152110498671798', 'role': 'guest', 'party_id': '9999', 'progress': 33.33333333333333}
+[INFO] [2021-06-15 21:10:53,689] [7:140197562341120] - federated_scheduler.py[line:78]: try to save job 202106152110498671798 pipelined model
+[INFO] [2021-06-15 21:10:53,694] [7:140196725126912] - job_controller.py[line:331]: job 202106152110498671798 on host 9998 start to save pipeline
+[INFO] [2021-06-15 21:10:53,706] [7:140196725126912] - job_controller.py[line:331]: job 202106152110498671798 on guest 9999 start to save pipeline
+[INFO] [2021-06-15 21:10:53,715] [7:140197562341120] - federated_scheduler.py[line:81]: save job 202106152110498671798 pipelined model success
+[INFO] [2021-06-15 21:10:53,716] [7:140197562341120] - federated_scheduler.py[line:68]: job 202106152110498671798 is failed, sync to all party
+[INFO] [2021-06-15 21:10:53,720] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:53,734] [7:140196725126912] - job_saver.py[line:48]: update job 202106152110498671798 status successfully
+[INFO] [2021-06-15 21:10:53,795] [7:140196725126912] - resource_manager.py[line:176]: return job 202106152110498671798 resource(cores 4 memory 0) on host 9998 successfully, remaining cores: 16 remaining memory: 0
+[INFO] [2021-06-15 21:10:53,823] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:53,868] [7:140196725126912] - job_saver.py[line:48]: update job 202106152110498671798 status successfully
+[INFO] [2021-06-15 21:10:53,945] [7:140196725126912] - resource_manager.py[line:176]: return job 202106152110498671798 resource(cores 4 memory 0) on guest 9999 successfully, remaining cores: 20 remaining memory: 0
+[INFO] [2021-06-15 21:10:53,948] [7:140197562341120] - federated_scheduler.py[line:71]: sync job 202106152110498671798 status failed to all party success
+[INFO] [2021-06-15 21:10:53,957] [7:140197562341120] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:53,965] [7:140197562341120] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:53,965] [7:140197562341120] - job_saver.py[line:61]: try to update job 202106152110498671798
+[WARNING] [2021-06-15 21:10:53,970] [7:140197562341120] - job_saver.py[line:66]: job 202106152110498671798 update does not take effect: {'job_id': '202106152110498671798', 'role': 'host', 'party_id': '9998', 'status': 'failed'}
+[INFO] [2021-06-15 21:10:53,971] [7:140197562341120] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:53,975] [7:140197562341120] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:53,976] [7:140197562341120] - job_saver.py[line:61]: try to update job 202106152110498671798
+[WARNING] [2021-06-15 21:10:53,981] [7:140197562341120] - job_saver.py[line:66]: job 202106152110498671798 update does not take effect: {'job_id': '202106152110498671798', 'role': 'guest', 'party_id': '9999', 'status': 'failed'}
+[INFO] [2021-06-15 21:10:53,981] [7:140197562341120] - dag_scheduler.py[line:502]: Job 202106152110498671798 finished with failed, do something...
+[INFO] [2021-06-15 21:10:53,981] [7:140197562341120] - dag_scheduler.py[line:436]: request stop job 202106152110498671798 with failed
+[INFO] [2021-06-15 21:10:53,988] [7:140197562341120] - dag_scheduler.py[line:445]: request stop job 202106152110498671798 with failed to all party
+[INFO] [2021-06-15 21:10:53,989] [7:140197562341120] - federated_scheduler.py[line:88]: try to stop job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,006] [7:140196725126912] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 host 9998 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,007] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 on host 9998 process None kill success
+[INFO] [2021-06-15 21:10:54,007] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status
+[INFO] [2021-06-15 21:10:54,012] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_hetero_secure_boost_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,017] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0
+[WARNING] [2021-06-15 21:10:54,023] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,028] [7:140196725126912] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_intersection_0 host 9998 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,028] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 on host 9998 process None kill success
+[INFO] [2021-06-15 21:10:54,028] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status
+[INFO] [2021-06-15 21:10:54,033] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_intersection_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,038] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0
+[WARNING] [2021-06-15 21:10:54,042] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,046] [7:140196725126912] - job_utils.py[line:397]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 host 9998 with failed party status process pid:1763
+[INFO] [2021-06-15 21:10:54,047] [7:140196725126912] - job_utils.py[line:400]: can not found job 202106152110498671798 task 202106152110498671798_dataio_0 host 9998 with failed party status process pid:1763
+[INFO] [2021-06-15 21:10:54,050] [7:140196725126912] - job_utils.py[line:424]: start run subprocess to stop task session 202106152110498671798_dataio_0_0_host_9998
+[INFO] [2021-06-15 21:10:54,051] [7:140196725126912] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_host_9998 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill
+[INFO] [2021-06-15 21:10:54,053] [1789:140138033514304] - session_utils.py[line:38]: start kill session 202106152110498671798_dataio_0_0_guest_9999
+[INFO] [2021-06-15 21:10:54,054] [1789:140138033514304] - session_utils.py[line:47]: kill session 202106152110498671798_dataio_0_0_guest_9999 success
+[INFO] [2021-06-15 21:10:54,059] [7:140196725126912] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_host_9998 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill successfully, pid is 1815
+[INFO] [2021-06-15 21:10:54,059] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on host 9998 process 1763 kill success
+[INFO] [2021-06-15 21:10:54,059] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:54,065] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,070] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[WARNING] [2021-06-15 21:10:54,075] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,080] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:54,086] [7:140196725126912] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:54,106] [7:140196725126912] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 guest 9999 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,106] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 on guest 9999 process None kill success
+[INFO] [2021-06-15 21:10:54,106] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status
+[INFO] [2021-06-15 21:10:54,113] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_hetero_secure_boost_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,125] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0
+[WARNING] [2021-06-15 21:10:54,129] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,134] [7:140196725126912] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_intersection_0 guest 9999 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,134] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 on guest 9999 process None kill success
+[INFO] [2021-06-15 21:10:54,134] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status
+[INFO] [2021-06-15 21:10:54,138] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_intersection_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,144] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0
+[WARNING] [2021-06-15 21:10:54,152] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,159] [7:140196725126912] - job_utils.py[line:397]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 guest 9999 with failed party status process pid:1761
+[INFO] [2021-06-15 21:10:54,159] [7:140196725126912] - job_utils.py[line:400]: can not found job 202106152110498671798 task 202106152110498671798_dataio_0 guest 9999 with failed party status process pid:1761
+[INFO] [2021-06-15 21:10:54,194] [7:140196725126912] - job_utils.py[line:424]: start run subprocess to stop task session 202106152110498671798_dataio_0_0_guest_9999
+[INFO] [2021-06-15 21:10:54,194] [7:140196725126912] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_guest_9999 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill
+[INFO] [2021-06-15 21:10:54,212] [7:140196725126912] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_guest_9999 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill successfully, pid is 1817
+[INFO] [2021-06-15 21:10:54,213] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999 process 1761 kill success
+[INFO] [2021-06-15 21:10:54,213] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:54,213] [1791:140552550082368] - session_utils.py[line:38]: start kill session 202106152110498671798_dataio_0_0_host_9998
+[INFO] [2021-06-15 21:10:54,214] [1791:140552550082368] - session_utils.py[line:47]: kill session 202106152110498671798_dataio_0_0_host_9998 success
+[INFO] [2021-06-15 21:10:54,233] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,252] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[WARNING] [2021-06-15 21:10:54,263] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,270] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:54,280] [7:140196725126912] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:54,287] [7:140197562341120] - federated_scheduler.py[line:92]: stop job 202106152110498671798 success
+[INFO] [2021-06-15 21:10:54,287] [7:140197562341120] - dag_scheduler.py[line:448]: stop job 202106152110498671798 with failed successfully
+[INFO] [2021-06-15 21:10:54,288] [7:140197562341120] - federated_scheduler.py[line:107]: try to clean job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,296] [7:140196725126912] - job_controller.py[line:379]: Job 202106152110498671798 on host 9998 start to clean
+[INFO] [2021-06-15 21:10:54,297] [7:140196725126912] - job_controller.py[line:382]: job 202106152110498671798 on host 9998 clean done
+[INFO] [2021-06-15 21:10:54,309] [7:140196725126912] - job_controller.py[line:379]: Job 202106152110498671798 on guest 9999 start to clean
+[INFO] [2021-06-15 21:10:54,310] [7:140196725126912] - job_controller.py[line:382]: job 202106152110498671798 on guest 9999 clean done
+[INFO] [2021-06-15 21:10:54,314] [7:140197562341120] - federated_scheduler.py[line:110]: clean job 202106152110498671798 success
+[INFO] [2021-06-15 21:10:54,315] [7:140197562341120] - dag_scheduler.py[line:505]: Job 202106152110498671798 finished with failed, done
+[INFO] [2021-06-15 21:10:54,315] [7:140197562341120] - dag_scheduler.py[line:325]: finish scheduling job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,348] [7:140197562341120] - dag_scheduler.py[line:298]: scheduling job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,357] [7:140197562341120] - task_scheduler.py[line:28]: scheduling job 202106152110498671798 tasks
+[INFO] [2021-06-15 21:10:54,371] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 status is failed, calculate by task party status list: ['failed', 'failed']
+[INFO] [2021-06-15 21:10:54,379] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:54,391] [7:140197562341120] - task_scheduler.py[line:143]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status is waiting, calculate by task party status list: ['waiting', 'waiting']
+[INFO] [2021-06-15 21:10:54,391] [7:140197562341120] - task_scheduler.py[line:75]: finish scheduling job 202106152110498671798 tasks
+[INFO] [2021-06-15 21:10:54,392] [7:140197562341120] - dag_scheduler.py[line:310]: Job 202106152110498671798 status is failed, calculate by task status list: ['failed', 'waiting', 'waiting']
+[INFO] [2021-06-15 21:10:54,392] [7:140197562341120] - dag_scheduler.py[line:502]: Job 202106152110498671798 finished with failed, do something...
+[INFO] [2021-06-15 21:10:54,392] [7:140197562341120] - dag_scheduler.py[line:436]: request stop job 202106152110498671798 with failed
+[INFO] [2021-06-15 21:10:54,398] [7:140197562341120] - dag_scheduler.py[line:445]: request stop job 202106152110498671798 with failed to all party
+[INFO] [2021-06-15 21:10:54,398] [7:140197562341120] - federated_scheduler.py[line:88]: try to stop job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,412] [7:140196725126912] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 host 9998 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,413] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 on host 9998 process None kill success
+[INFO] [2021-06-15 21:10:54,413] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status
+[INFO] [2021-06-15 21:10:54,417] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_hetero_secure_boost_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,421] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0
+[WARNING] [2021-06-15 21:10:54,426] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,431] [7:140196725126912] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_intersection_0 host 9998 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,431] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 on host 9998 process None kill success
+[INFO] [2021-06-15 21:10:54,432] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status
+[INFO] [2021-06-15 21:10:54,437] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_intersection_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,443] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0
+[WARNING] [2021-06-15 21:10:54,449] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,454] [7:140196725126912] - job_utils.py[line:397]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 host 9998 with failed party status process pid:1763
+[INFO] [2021-06-15 21:10:54,454] [7:140196725126912] - job_utils.py[line:400]: can not found job 202106152110498671798 task 202106152110498671798_dataio_0 host 9998 with failed party status process pid:1763
+[INFO] [2021-06-15 21:10:54,458] [7:140196725126912] - job_utils.py[line:424]: start run subprocess to stop task session 202106152110498671798_dataio_0_0_host_9998
+[INFO] [2021-06-15 21:10:54,459] [7:140196725126912] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_host_9998 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill
+[INFO] [2021-06-15 21:10:54,473] [7:140196725126912] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_host_9998 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill successfully, pid is 1829
+[INFO] [2021-06-15 21:10:54,474] [7:140196725126912] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on host 9998 process 1763 kill success
+[INFO] [2021-06-15 21:10:54,474] [7:140196725126912] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:54,480] [7:140196725126912] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'host', 'party_id': '9998', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,488] [7:140196725126912] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[WARNING] [2021-06-15 21:10:54,500] [7:140196725126912] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,507] [7:140196725126912] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:54,515] [7:140196725126912] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:54,540] [7:140196179863296] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 guest 9999 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,541] [7:140196179863296] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 on guest 9999 process None kill success
+[INFO] [2021-06-15 21:10:54,541] [7:140196179863296] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status
+[INFO] [2021-06-15 21:10:54,556] [7:140196179863296] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_hetero_secure_boost_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,562] [7:140196179863296] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0
+[WARNING] [2021-06-15 21:10:54,569] [7:140196179863296] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_hetero_secure_boost_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,576] [7:140196179863296] - job_utils.py[line:393]: job 202106152110498671798 task 202106152110498671798_intersection_0 guest 9999 with waiting party status no process pid
+[INFO] [2021-06-15 21:10:54,576] [7:140196179863296] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 on guest 9999 process None kill success
+[INFO] [2021-06-15 21:10:54,576] [7:140196179863296] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status
+[INFO] [2021-06-15 21:10:54,583] [7:140196179863296] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_intersection_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_intersection_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,590] [7:140196179863296] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_intersection_0 0
+[WARNING] [2021-06-15 21:10:54,597] [7:140196179863296] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_intersection_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,603] [7:140196179863296] - job_utils.py[line:397]: try to stop job 202106152110498671798 task 202106152110498671798_dataio_0 guest 9999 with failed party status process pid:1761
+[INFO] [2021-06-15 21:10:54,603] [7:140196179863296] - job_utils.py[line:400]: can not found job 202106152110498671798 task 202106152110498671798_dataio_0 guest 9999 with failed party status process pid:1761
+[INFO] [2021-06-15 21:10:54,606] [7:140196179863296] - job_utils.py[line:424]: start run subprocess to stop task session 202106152110498671798_dataio_0_0_guest_9999
+[INFO] [2021-06-15 21:10:54,606] [7:140196179863296] - job_utils.py[line:310]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_guest_9999 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill
+[INFO] [2021-06-15 21:10:54,625] [7:140196179863296] - job_utils.py[line:334]: start process command: python3 /fate/python/fate_flow/utils/session_utils.py -j 202106152110498671798_dataio_0_0_guest_9999 --computing STANDALONE --federation STANDALONE --storage STANDALONE -c kill successfully, pid is 1839
+[INFO] [2021-06-15 21:10:54,626] [7:140196179863296] - task_controller.py[line:255]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 on guest 9999 process 1761 kill success
+[INFO] [2021-06-15 21:10:54,626] [7:140196179863296] - job_saver.py[line:71]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status
+[INFO] [2021-06-15 21:10:54,634] [7:140196179863296] - job_saver.py[line:76]: update job 202106152110498671798 task 202106152110498671798_dataio_0 0 status update does not take effect: {'job_id': '202106152110498671798', 'task_id': '202106152110498671798_dataio_0', 'task_version': 0, 'role': 'guest', 'party_id': '9999', 'party_status': 'failed'}
+[INFO] [2021-06-15 21:10:54,642] [7:140196179863296] - job_saver.py[line:81]: try to update job 202106152110498671798 task 202106152110498671798_dataio_0 0
+[WARNING] [2021-06-15 21:10:54,651] [7:140196179863296] - job_saver.py[line:86]: job 202106152110498671798 task 202106152110498671798_dataio_0 0 update does not take effect
+[INFO] [2021-06-15 21:10:54,657] [7:140196179863296] - job_saver.py[line:45]: try to update job 202106152110498671798 status to failed
+[INFO] [2021-06-15 21:10:54,670] [7:140196179863296] - job_saver.py[line:56]: update job 202106152110498671798 status does not take effect
+[INFO] [2021-06-15 21:10:54,675] [7:140197562341120] - federated_scheduler.py[line:92]: stop job 202106152110498671798 success
+[INFO] [2021-06-15 21:10:54,675] [7:140197562341120] - dag_scheduler.py[line:448]: stop job 202106152110498671798 with failed successfully
+[INFO] [2021-06-15 21:10:54,675] [7:140197562341120] - federated_scheduler.py[line:107]: try to clean job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,693] [7:140196725126912] - job_controller.py[line:379]: Job 202106152110498671798 on host 9998 start to clean
+[INFO] [2021-06-15 21:10:54,693] [7:140196725126912] - job_controller.py[line:382]: job 202106152110498671798 on host 9998 clean done
+[INFO] [2021-06-15 21:10:54,702] [7:140196725126912] - job_controller.py[line:379]: Job 202106152110498671798 on guest 9999 start to clean
+[INFO] [2021-06-15 21:10:54,703] [7:140196725126912] - job_controller.py[line:382]: job 202106152110498671798 on guest 9999 clean done
+[INFO] [2021-06-15 21:10:54,708] [7:140197562341120] - federated_scheduler.py[line:110]: clean job 202106152110498671798 success
+[INFO] [2021-06-15 21:10:54,708] [7:140197562341120] - dag_scheduler.py[line:505]: Job 202106152110498671798 finished with failed, done
+[INFO] [2021-06-15 21:10:54,708] [7:140197562341120] - dag_scheduler.py[line:325]: finish scheduling job 202106152110498671798
+[INFO] [2021-06-15 21:10:54,831] [1815:139649697929024] - session_utils.py[line:38]: start kill session 202106152110498671798_dataio_0_0_host_9998
+[INFO] [2021-06-15 21:10:54,832] [1815:139649697929024] - session_utils.py[line:47]: kill session 202106152110498671798_dataio_0_0_host_9998 success
+[INFO] [2021-06-15 21:10:55,183] [1817:140142339266368] - session_utils.py[line:38]: start kill session 202106152110498671798_dataio_0_0_guest_9999
+[INFO] [2021-06-15 21:10:55,183] [1817:140142339266368] - session_utils.py[line:47]: kill session 202106152110498671798_dataio_0_0_guest_9999 success
+[INFO] [2021-06-15 21:10:55,399] [1839:140679309190976] - session_utils.py[line:38]: start kill session 202106152110498671798_dataio_0_0_guest_9999
+[INFO] [2021-06-15 21:10:55,400] [1839:140679309190976] - session_utils.py[line:47]: kill session 202106152110498671798_dataio_0_0_guest_9999 success
+[INFO] [2021-06-15 21:10:55,401] [1829:140476858414912] - session_utils.py[line:38]: start kill session 202106152110498671798_dataio_0_0_host_9998
+[INFO] [2021-06-15 21:10:55,401] [1829:140476858414912] - session_utils.py[line:47]: kill session 202106152110498671798_dataio_0_0_host_9998 success
+[INFO] [2021-06-15 21:10:56,758] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:10:58,802] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:00,849] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:02,895] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:04,943] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:06,993] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:09,040] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:11,121] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:13,177] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:15,228] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:17,282] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:19,329] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:21,376] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:23,436] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:25,470] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:27,520] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:29,566] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:31,607] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:33,657] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:35,698] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:37,808] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:39,860] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:41,903] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:43,956] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:46,007] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:48,054] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:50,087] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:52,140] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:54,188] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:56,226] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:11:58,290] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:00,341] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:02,379] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:04,411] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:06,461] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:08,508] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:10,555] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:12,599] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:14,644] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:16,681] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:18,730] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:20,780] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:22,831] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:24,877] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:26,922] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:28,983] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:31,034] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:33,080] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:35,132] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:37,184] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:39,234] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:41,282] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:43,357] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:45,400] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:47,447] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:49,494] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:51,542] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:53,588] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:55,666] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:57,717] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:12:59,763] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:01,808] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:03,862] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:05,910] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:07,957] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:10,007] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:12,053] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:14,099] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:16,145] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:18,196] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:20,243] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:22,290] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:24,340] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:26,395] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:28,456] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:30,509] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:32,557] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:34,609] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:36,659] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:38,706] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:40,754] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:42,812] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:44,857] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:46,905] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:48,951] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:51,000] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:53,053] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:55,101] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:57,176] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:13:59,230] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:01,278] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:03,330] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:05,377] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:07,428] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:09,478] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:11,526] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:13,581] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:15,627] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:17,674] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:19,722] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:21,771] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:23,822] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:25,870] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:27,917] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:29,967] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:32,014] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:34,062] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:36,109] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:38,156] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:40,203] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:42,254] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:44,301] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:46,346] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:48,396] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:50,442] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:52,488] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:54,534] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:56,580] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:14:58,627] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:00,674] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:02,719] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:04,766] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:06,818] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:08,864] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:10,911] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:12,959] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:15,010] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:17,064] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:19,112] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:21,161] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:23,215] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:25,278] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:27,333] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:29,383] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:31,429] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:33,477] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:35,531] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:37,576] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:39,622] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:41,648] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:43,694] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:45,749] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:47,797] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:49,851] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded
+[INFO] [2021-06-15 21:15:51,898] [7:140197562341120] - dag_scheduler.py[line:193]: the number of updates has been exceeded

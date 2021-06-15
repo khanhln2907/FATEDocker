@@ -1,0 +1,59 @@
+[INFO] [2021-06-15 21:01:43,926] [737:140342711281472] - task_executor.py[line:313]: report task 202106152101093465361_intersection_1 0 guest 9999 to driver
+[INFO] [2021-06-15 21:01:43,927] [737:140342711281472] - control_client.py[line:42]: request update job 202106152101093465361 task 202106152101093465361_intersection_1 0 on guest 9999
+[INFO] [2021-06-15 21:01:44,294] [737:140342711281472] - task_executor.py[line:150]: Run 202106152101093465361 intersection_1 202106152101093465361_intersection_1 guest 9999 task
+[INFO] [2021-06-15 21:01:44,294] [737:140342711281472] - task_executor.py[line:151]: Component parameters on party {'IntersectParam': {'intersect_method': 'raw', 'random_bit': 128, 'sync_intersect_ids': True, 'join_role': 'guest', 'with_encode': False, 'encode_params': {'salt': '', 'encode_method': 'none', 'base64': False}, 'rsa_params': {'salt': '', 'hash_method': 'sha256', 'final_hash_method': 'sha256', 'split_calculation': False, 'random_base_fraction': None, 'key_length': 1024}, 'only_output_key': False, 'intersect_cache_param': {'use_cache': False, 'id_type': 'phone', 'encrypt_type': 'sha256'}, 'repeated_id_process': False, 'repeated_id_owner': 'guest', 'allow_info_share': False, 'info_owner': 'guest', 'with_sample_id': False}, 'dsl_version': 2, 'initiator': {'role': 'guest', 'party_id': 9999}, 'role': {'host': [9998], 'guest': [9999]}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_parallelism': 1, 'computing_partitions': 4, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-9999#host-9998#model', 'model_version': '202106152101093465361', 'eggroll_run': {'eggroll.session.processors.per.node': 4}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 4, 'task_memory_per_node': 0, 'request_task_cores': 4, 'if_initiator_baseline': False}}, 'component_parameters': {'common': {'hetero_secure_boost_0': {'task_type': 'classification', 'objective_param': {'objective': 'cross_entropy'}, 'num_trees': 3, 'validation_freqs': 1, 'encrypt_param': {'method': 'iterativeAffine'}, 'tree_param': {'max_depth': 3}}, 'evaluation_0': {'eval_type': 'binary'}}, 'role': {'guest': {'0': {'reader_1': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'reader_0': {'table': {'name': 'breast_hetero_guest', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': True, 'output_format': 'dense'}, 'dataio_1': {'with_label': True, 'output_format': 'dense'}}}, 'host': {'0': {'reader_1': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'reader_0': {'table': {'name': 'breast_hetero_host', 'namespace': 'experiment'}}, 'dataio_0': {'with_label': False}, 'dataio_1': {'with_label': False}}}}}, 'conf_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_binary_conf.json', 'dsl_path': './examples/LDPDev/dsl/v2/hetero_secureboost/test_secureboost_train_dsl.json', 'local': {'role': 'guest', 'party_id': 9999}, 'CodePath': 'federatedml/statistic/intersect/intersect_model.py/IntersectGuest', 'module': 'Intersection', 'output_data_name': ['data']}
+[INFO] [2021-06-15 21:01:44,294] [737:140342711281472] - task_executor.py[line:152]: Task input dsl {'data': {'data': ['dataio_1.data']}}
+[INFO] [2021-06-15 21:01:44,295] [737:140342711281472] - tracker_client.py[line:150]: Request read job 202106152101093465361 task None None on guest 9999 data data info
+[INFO] [2021-06-15 21:01:44,326] [737:140342711281472] - task_executor.py[line:269]: load computing table use 4
+[WARNING] [2021-06-15 21:01:45,801] [737:140342711281472] - intersect_param.py[line:63]: 'EncodeParam' will be renamed to 'RawParam' in future release.Please do not rely on current param naming in application.
+[INFO] [2021-06-15 21:01:45,809] [737:140342711281472] - intersect_model.py[line:50]: Using raw intersection, role is guest
+[INFO] [2021-06-15 21:01:45,809] [737:140342711281472] - intersect_guest.py[line:239]: Start raw intersection
+[INFO] [2021-06-15 21:01:45,810] [737:140342711281472] - intersect.py[line:349]: Join id role is guest
+[INFO] [2021-06-15 21:01:45,901] [737:140342711281472] - intersect.py[line:373]: Get ids_list from role-send, ids_list size is 1
+[INFO] [2021-06-15 21:01:45,961] [737:140342711281472] - intersect.py[line:384]: Finish intersect_ids computing
+[INFO] [2021-06-15 21:01:46,004] [737:140342711281472] - intersect.py[line:399]: Remote intersect ids to role-send
+[INFO] [2021-06-15 21:01:46,048] [737:140342711281472] - intersect.py[line:84]: obtain intersect data_instances!
+[INFO] [2021-06-15 21:01:46,114] [737:140342711281472] - intersect.py[line:421]: save guest_0's id in name:202106152101093465361_intersection_1_0_0, namespace:9999#None#mountain
+[INFO] [2021-06-15 21:01:46,174] [737:140342711281472] - intersect_model.py[line:136]: Finish intersection
+[INFO] [2021-06-15 21:01:46,180] [737:140342711281472] - tracker_client.py[line:70]: Request save job 202106152101093465361 task 202106152101093465361_intersection_1 0 on guest 9999 metric train intersection data
+[INFO] [2021-06-15 21:01:46,206] [737:140342711281472] - tracker_client.py[line:103]: Request save job 202106152101093465361 task 202106152101093465361_intersection_1 0 on guest 9999 metric train intersection meta
+[INFO] [2021-06-15 21:01:46,251] [737:140342711281472] - tracker_client.py[line:173]: Request save job 202106152101093465361 task 202106152101093465361_intersection_1 0 on guest 9999 component summary
+[INFO] [2021-06-15 21:01:46,620] [737:140342711281472] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |    join      2    0.1      0.05     0.057   |
+|          |  mapValues   1   0.081     0.081    0.081   |
+|          |    save      1   0.039     0.039    0.039   |
+|          |    count     4    0.01     0.002    0.003   |
+|          |   collect    1   0.001     0.001    0.001   |
++----------+---------------------------------------------+
+|  total   |  n=9, sum=0.2293, mean=0.0255, max=0.0806   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.008  |  0.008  | 0.008   |
+|        |               ble.RawIntersectTransferVariable.send_ids_host               |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.042  |  0.042  | 0.042   |
+|        |            ble.RawIntersectTransferVariable.intersect_ids_guest            |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=2, sum=0.0496, mean=0.0248, max=0.0421                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-15 21:01:46,623] [737:140342711281472] - intersect_model.py[line:154]: intersect_ids count:569
+[INFO] [2021-06-15 21:01:46,623] [737:140342711281472] - intersect_model.py[line:155]: intersect_ids header schema:{'header': ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9'], 'sid_name': 'id', 'label_name': 'y'}
+[INFO] [2021-06-15 21:01:46,711] [737:140342711281472] - task_executor.py[line:313]: report task 202106152101093465361_intersection_1 0 guest 9999 to driver
+[INFO] [2021-06-15 21:01:46,712] [737:140342711281472] - control_client.py[line:42]: request update job 202106152101093465361 task 202106152101093465361_intersection_1 0 on guest 9999
+[INFO] [2021-06-15 21:01:46,761] [737:140342711281472] - task_executor.py[line:202]: task 202106152101093465361_intersection_1 guest 9999 start time: 2021-06-15 21:01:43
+[INFO] [2021-06-15 21:01:46,761] [737:140342711281472] - task_executor.py[line:204]: task 202106152101093465361_intersection_1 guest 9999 end time: 2021-06-15 21:01:46
+[INFO] [2021-06-15 21:01:46,762] [737:140342711281472] - task_executor.py[line:206]: task 202106152101093465361_intersection_1 guest 9999 takes 2.978s
+[INFO] [2021-06-15 21:01:46,762] [737:140342711281472] - task_executor.py[line:209]: Finish 202106152101093465361 intersection_1 202106152101093465361_intersection_1 0 guest 9999 task success
+[INFO] [2021-06-15 21:01:46,804] [737:140342711281472] - task_executor.py[line:313]: report task 202106152101093465361_intersection_1 0 guest 9999 to driver
+[INFO] [2021-06-15 21:01:46,805] [737:140342711281472] - control_client.py[line:42]: request update job 202106152101093465361 task 202106152101093465361_intersection_1 0 on guest 9999

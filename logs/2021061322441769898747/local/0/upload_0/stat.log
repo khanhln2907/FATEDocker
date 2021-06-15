@@ -1,0 +1,23 @@
+[INFO] [2021-06-13 22:44:21,878] [3201:139976793536320] - control_client.py[line:42]: request update job 2021061322441769898747 task 2021061322441769898747_upload_0 0 on local 0
+[DEBUG] [2021-06-13 22:44:22,225] [3201:139976793536320] - _federation.py[line:15]: [federation.standalone]init federation: standalone_session=<fate_arch._standalone.Session object at 0x7f4e9f4a9ba8>, federation_session_id=2021061322441769898747_upload_0_0, party=Party(role=local, party_id=0)
+[DEBUG] [2021-06-13 22:44:22,234] [3201:139976793536320] - _federation.py[line:23]: [federation.standalone]init federation context done
+[INFO] [2021-06-13 22:44:22,349] [3201:139976793536320] - upload.py[line:41]: {'file': '/fate/jobs/2021061322441769898747/fate_upload_tmp/breast_hetero_host.csv', 'head': 1, 'id_delimiter': ',', 'partition': 16, 'namespace': 'experiment', 'name': 'breast_hetero_host', 'storage_engine': '', 'storage_address': None, 'destroy': True}
+[INFO] [2021-06-13 22:44:22,349] [3201:139976793536320] - upload.py[line:42]: {'job_parameters': <fate_flow.entity.types.RunParameters object at 0x7f4e9e835b70>}
+[DEBUG] [2021-06-13 22:44:22,374] [3201:139976793536320] - _session.py[line:147]: save session 2021061322441769898747_upload_0_0_local_0_storage_e590db2ecc9811eba41d0242ac110002 record
+[INFO] [2021-06-13 22:44:22,385] [3201:139976793536320] - upload.py[line:79]: destroy table name: breast_hetero_host namespace: experiment engine: STANDALONE
+[DEBUG] [2021-06-13 22:44:22,483] [3201:139976793536320] - _session.py[line:156]: delete session 2021061322441769898747_upload_0_0_local_0_storage_e590db2ecc9811eba41d0242ac110002 record
+[DEBUG] [2021-06-13 22:44:22,490] [3201:139976793536320] - _session.py[line:147]: save session 2021061322441769898747_upload_0_0_local_0_storage_e5a54a64cc9811eba41d0242ac110002 record
+[INFO] [2021-06-13 22:44:22,491] [3201:139976793536320] - upload.py[line:97]: upload to STANDALONE storage, address: {'nodes': 1, 'cores_per_node': 20, 'name': 'breast_hetero_host', 'namespace': 'experiment', 'storage_type': 'LMDB'}
+[INFO] [2021-06-13 22:44:22,514] [3201:139976793536320] - control_client.py[line:26]: request update job 2021061322441769898747 on local 0
+[INFO] [2021-06-13 22:44:22,664] [3201:139976793536320] - tracker_client.py[line:127]: Request save job 2021061322441769898747 task 2021061322441769898747_upload_0 0 on local 0 data upload info
+[INFO] [2021-06-13 22:44:22,687] [3201:139976793536320] - tracker_client.py[line:70]: Request save job 2021061322441769898747 task 2021061322441769898747_upload_0 0 on local 0 metric upload data_access data
+[INFO] [2021-06-13 22:44:22,709] [3201:139976793536320] - tracker_client.py[line:103]: Request save job 2021061322441769898747 task 2021061322441769898747_upload_0 0 on local 0 metric upload data_access meta
+[DEBUG] [2021-06-13 22:44:22,753] [3201:139976793536320] - _session.py[line:156]: delete session 2021061322441769898747_upload_0_0_local_0_storage_e5a54a64cc9811eba41d0242ac110002 record
+[INFO] [2021-06-13 22:44:22,753] [3201:139976793536320] - upload.py[line:108]: ------------load data finish!-----------------
+[INFO] [2021-06-13 22:44:22,753] [3201:139976793536320] - upload.py[line:112]: remove tmp upload file
+[INFO] [2021-06-13 22:44:22,754] [3201:139976793536320] - upload.py[line:113]: /fate/jobs/2021061322441769898747/fate_upload_tmp
+[INFO] [2021-06-13 22:44:22,754] [3201:139976793536320] - upload.py[line:117]: file: /fate/jobs/2021061322441769898747/fate_upload_tmp/breast_hetero_host.csv
+[INFO] [2021-06-13 22:44:22,754] [3201:139976793536320] - upload.py[line:118]: total data_count: 569
+[INFO] [2021-06-13 22:44:22,754] [3201:139976793536320] - upload.py[line:119]: table name: breast_hetero_host, table namespace: experiment
+[INFO] [2021-06-13 22:44:22,763] [3201:139976793536320] - control_client.py[line:42]: request update job 2021061322441769898747 task 2021061322441769898747_upload_0 0 on local 0
+[INFO] [2021-06-13 22:44:22,822] [3201:139976793536320] - control_client.py[line:42]: request update job 2021061322441769898747 task 2021061322441769898747_upload_0 0 on local 0

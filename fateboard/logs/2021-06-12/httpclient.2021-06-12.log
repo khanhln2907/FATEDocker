@@ -1,0 +1,8 @@
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor2] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"host","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"guest":[10000]},"roles":{"host":[10000]}},"retcode":0,"retmsg":"success"}
+
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor1] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"guest","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"host":[10000]},"roles":{"guest":[10000],"host":[10000]}},"retcode":0,"retmsg":"success"}
+
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor3] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"guest","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"host":[10000]},"roles":{"guest":[10000],"host":[10000]}},"retcode":0,"retmsg":"success"}
+
+[INFO ] 2021-06-12 20:14:49 [asyncServiceExecutor4] c.w.a.f.board.utils.HttpClientPool - httpclient sent url http://localhost:9380/v1/tracking/job/data_view request {"role":"host","job_id":"202106122027103567691","party_id":"10000"} result: {"data":{"dataset":{},"model_summary":{},"partner":{"guest":[10000]},"roles":{"host":[10000]}},"retcode":0,"retmsg":"success"}
+

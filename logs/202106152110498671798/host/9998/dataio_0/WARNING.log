@@ -1,0 +1,10 @@
+[WARNING] [2021-06-15 21:10:53,030] [1763:140455588374336] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[ERROR] [2021-06-15 21:10:53,031] [1763:140455588374336] - task_executor.py[line:191]: not enough values to unpack (expected 4, got 2)
+Traceback (most recent call last):
+  File "/fate/python/fate_flow/operation/task_executor.py", line 168, in run_task
+    run_object.run(component_parameters_on_party, task_run_args)
+  File "/fate/python/federatedml/model_base.py", line 87, in run
+    running_funcs = self.component_properties.extract_running_rules(args, self)
+  File "/fate/python/federatedml/util/component_properties.py", line 238, in extract_running_rules
+    train_data, validate_data, test_data, data = self.extract_input_data(args, model)
+ValueError: not enough values to unpack (expected 4, got 2)

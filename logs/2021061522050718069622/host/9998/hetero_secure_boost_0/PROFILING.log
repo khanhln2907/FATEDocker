@@ -1,0 +1,109 @@
+[DEBUG] [2021-06-15 22:05:35,458] [4271:140646451431232] - profile.py[line:84]: [computing#ee81c7eeaf]function_stack: [io_check.py:28]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,459] [4271:140646451431232] - profile.py[line:87]: [computing#ee81c7eeaf]start
+[DEBUG] [2021-06-15 22:05:35,465] [4271:140646451431232] - profile.py[line:93]: [computing#ee81c7eeaf]done, elapse: 0.007114410400390625, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:35,468] [4271:140646451431232] - profile.py[line:84]: [computing#dd9be069ad]function_stack: [abnormal_detection.py:27]empty_table_detection <-[boosting.py:207]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,469] [4271:140646451431232] - profile.py[line:87]: [computing#dd9be069ad]start
+[DEBUG] [2021-06-15 22:05:35,472] [4271:140646451431232] - profile.py[line:93]: [computing#dd9be069ad]done, elapse: 0.0038328170776367188, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:35,474] [4271:140646451431232] - profile.py[line:84]: [computing#6d1d7b4507]function_stack: [data_overview.py:30]get_features_shape <-[data_overview.py:136]is_empty_feature <-[abnormal_detection.py:33]empty_feature_detection <-[boosting.py:208]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,474] [4271:140646451431232] - profile.py[line:87]: [computing#6d1d7b4507]start
+[DEBUG] [2021-06-15 22:05:35,478] [4271:140646451431232] - profile.py[line:93]: [computing#6d1d7b4507]done, elapse: 0.0037810802459716797, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 22:05:35,479] [4271:140646451431232] - profile.py[line:84]: [computing#91e0ec1b4b]function_stack: [boosting.py:210]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:35,480] [4271:140646451431232] - profile.py[line:87]: [computing#91e0ec1b4b]start
+[DEBUG] [2021-06-15 22:05:36,876] [4271:140646451431232] - profile.py[line:93]: [computing#91e0ec1b4b]done, elapse: 1.3962621688842773, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:36,878] [4271:140646451431232] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.predict]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:36,894] [4271:140646451431232] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.predict]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 22:05:36,903] [4271:140646451431232] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:39,563] [4271:140646451431232] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 22:05:39,564] [4271:140646451431232] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.predict.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:39,670] [4271:140646451431232] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.predict.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 22:05:39,672] [4271:140646451431232] - profile.py[line:84]: [computing#b2eddf319b]function_stack: [hetero_secureboost_host.py:184]boosting_fast_predict <-[hetero_secureboost_host.py:214]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:39,673] [4271:140646451431232] - profile.py[line:87]: [computing#b2eddf319b]start
+[DEBUG] [2021-06-15 22:05:39,948] [4271:140646451431232] - profile.py[line:93]: [computing#b2eddf319b]done, elapse: 0.2756376266479492, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:39,949] [4271:140646451431232] - profile.py[line:84]: [computing#b725cceb52]function_stack: [hetero_secureboost_host.py:185]boosting_fast_predict <-[hetero_secureboost_host.py:214]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 22:05:39,949] [4271:140646451431232] - profile.py[line:87]: [computing#b725cceb52]start
+[DEBUG] [2021-06-15 22:05:39,951] [4271:140646451431232] - profile.py[line:93]: [computing#b725cceb52]done, elapse: 0.0024781227111816406, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:39,956] [4271:140646451431232] - profile.py[line:87]: [computing#b725cceb52]start
+[DEBUG] [2021-06-15 22:05:39,960] [4271:140646451431232] - profile.py[line:93]: [computing#b725cceb52]done, elapse: 0.004362344741821289, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:39,961] [4271:140646451431232] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.predict.2.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:40,063] [4271:140646451431232] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.predict.2.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 22:05:40,063] [4271:140646451431232] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 22:05:40,895] [4271:140646451431232] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.predict.2.0.1]host<-[Party(role=guest, party_id=9999)] done
+[INFO] [2021-06-15 22:05:41,351] [4271:140646451431232] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   1   1.396     1.396    1.396   |
+|          |    join      1   0.276     0.276    0.276   |
+|          |    count     4   0.018     0.004    0.007   |
+|          |    first     1   0.004     0.004    0.004   |
++----------+---------------------------------------------+
+|  total   |  n=7, sum=1.6935, mean=0.2419, max=1.3963   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 2 | 3.492  |  1.746  |  2.66   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.106  |  0.106  | 0.106   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 1 | 0.016  |  0.016  | 0.016   |
+|        |          iable.HeteroBoostingTransferVariable.predict_start_round          |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 1 | 0.101  |  0.101  | 0.101   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data  |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=5, sum=3.7146, mean=0.7429, max=2.6601                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-15 22:05:41,351] [4271:140646451431232] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 1.3963 │ 1.3963  │ 1.3963 │ 91e0ec1b4b │ [boosting.py:210]data_alignment                    |
+|       |            │   │        │         │        │            │ [boosting.py:225]data_and_header_alignment         |
+|       |            │   │        │         │        │            │ [hetero_secureboost_host.py:197]predict            |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.2756 │ 0.2756  │ 0.2756 │ b2eddf319b │ [hetero_secureboost_host.py:184]boosting_fast_pre  |
+|       |            │   │        │         │        │            │ dict                                               |
+|       |            │   │        │         │        │            │ [hetero_secureboost_host.py:214]predict            |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0071 │ 0.0071  │ 0.0071 │ ee81c7eeaf │ [io_check.py:28]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 2 │ 0.0068 │ 0.0034  │ 0.0044 │ b725cceb52 │ [hetero_secureboost_host.py:185]boosting_fast_pre  |
+|       |            │   │        │         │        │            │ dict                                               |
+|       |            │   │        │         │        │            │ [hetero_secureboost_host.py:214]predict            |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0038 │ 0.0038  │ 0.0038 │ dd9be069ad │ [abnormal_detection.py:27]empty_table_detection    |
+|       |            │   │        │         │        │            │ [boosting.py:207]data_alignment                    |
+|       |            │   │        │         │        │            │ [boosting.py:225]data_and_header_alignment         |
+|       |            │   │        │         │        │            │ [hetero_secureboost_host.py:197]predict            |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    first   │ 1 │ 0.0038 │ 0.0038  │ 0.0038 │ 6d1d7b4507 │ [data_overview.py:30]get_features_shape            |
+|       |            │   │        │         │        │            │ [data_overview.py:136]is_empty_feature             |
+|       |            │   │        │         │        │            │ [abnormal_detection.py:33]empty_feature_detection  |
+|       |            │   │        │         │        │            │ [boosting.py:208]data_alignment                    |
+|       |            │   │        │         │        │            │ [boosting.py:225]data_and_header_alignment         |
+|       |            │   │        │         │        │            │ [hetero_secureboost_host.py:197]predict            |
+|       |            │   │        │         │        │            │ [io_check.py:31]_func                              |
+|       |            │   │        │         │        │            │ [model_base.py:101]run                             |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                   n=7, sum=1.6935, mean=0.2419, max=1.3963                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

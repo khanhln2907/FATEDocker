@@ -1,0 +1,5 @@
+[INFO] [2021-06-15 22:05:31,097] [4267:140282551203648] - pipelined_model.py[line:185]: parse BoostingTreeModelMeta proto object normal
+[INFO] [2021-06-15 22:05:31,099] [4267:140282551203648] - pipelined_model.py[line:185]: parse BoostingTreeModelParam proto object normal
+[INFO] [2021-06-15 22:05:43,275] [4267:140282551203648] - pipelined_model.py[line:73]: Save hetero_secure_boost_0 default HeteroSecureBoostingTreeGuestMeta buffer
+[INFO] [2021-06-15 22:05:43,276] [4267:140282551203648] - pipelined_model.py[line:73]: Save hetero_secure_boost_0 default HeteroSecureBoostingTreeGuestParam buffer
+[INFO] [2021-06-15 22:05:43,297] [4267:140282551203648] - pipelined_model.py[line:78]: Save hetero_secure_boost_0 default successfully

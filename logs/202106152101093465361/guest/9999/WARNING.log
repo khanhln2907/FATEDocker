@@ -1,0 +1,8 @@
+[WARNING] [2021-06-15 21:01:25,574] [485:140580380071744] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[WARNING] [2021-06-15 21:01:32,796] [558:139956870829888] - intersect_param.py[line:63]: 'EncodeParam' will be renamed to 'RawParam' in future release.Please do not rely on current param naming in application.
+[WARNING] [2021-06-15 21:01:38,641] [650:140013398787904] - data_io.py[line:855]: DataIO is deprecated, and will be removed in 1.7, use DataTransform module instead
+[WARNING] [2021-06-15 21:01:45,801] [737:140342711281472] - intersect_param.py[line:63]: 'EncodeParam' will be renamed to 'RawParam' in future release.Please do not rely on current param naming in application.
+[WARNING] [2021-06-15 21:02:09,588] [815:139802724972352] - evaluation_param.py[line:149]: use default metric ['auc', 'ks'] for eval type binary
+[WARNING] [2021-06-15 21:02:21,733] [815:139802724972352] - evaluation_param.py[line:149]: use default metric ['auc', 'ks'] for eval type binary
+[WARNING] [2021-06-15 21:02:35,042] [815:139802724972352] - evaluation_param.py[line:149]: use default metric ['auc', 'ks'] for eval type binary
+[WARNING] [2021-06-15 21:02:51,047] [1055:140673578129216] - evaluation_param.py[line:133]: use default metric ['auc', 'ks', 'lift', 'gain', 'accuracy', 'precision', 'recall', 'roc', 'confusion_mat', 'psi', 'f1_score', 'quantile_pr'] for eval type binary

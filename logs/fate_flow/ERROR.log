@@ -1,0 +1,130 @@
+[ERROR] [2021-06-15 20:59:10,361] [7:140195651385088] - model_app.py[line:51]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/model_app.py", line 601, in deploy
+    retcode, retmsg, model_info = model_utils.query_model_info_from_file(model_id=model_id, model_version=model_version, to_dict=True)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 105, in query_model_info_from_file
+    model_info = gather_model_info_data(pipeline_model, query_filters=query_filters)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 133, in gather_model_info_data
+    pipeline = model.read_component_model('pipeline', 'pipeline')['Pipeline']
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+[ERROR] [2021-06-15 21:00:29,570] [7:140195651385088] - model_app.py[line:51]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/model_app.py", line 601, in deploy
+    retcode, retmsg, model_info = model_utils.query_model_info_from_file(model_id=model_id, model_version=model_version, to_dict=True)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 105, in query_model_info_from_file
+    model_info = gather_model_info_data(pipeline_model, query_filters=query_filters)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 133, in gather_model_info_data
+    pipeline = model.read_component_model('pipeline', 'pipeline')['Pipeline']
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+[ERROR] [2021-06-15 21:00:33,105] [7:140195651385088] - model_app.py[line:51]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/model_app.py", line 601, in deploy
+    retcode, retmsg, model_info = model_utils.query_model_info_from_file(model_id=model_id, model_version=model_version, to_dict=True)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 105, in query_model_info_from_file
+    model_info = gather_model_info_data(pipeline_model, query_filters=query_filters)
+  File "/fate/python/fate_flow/utils/model_utils.py", line 133, in gather_model_info_data
+    pipeline = model.read_component_model('pipeline', 'pipeline')['Pipeline']
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/202106132103219414043/variables/data/pipeline/pipeline/Pipeline'
+[ERROR] [2021-06-15 21:06:17,817] [7:140196188256000] - api_utils.py[line:49]: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/2021061322283590321442/variables/data/pipeline/pipeline/Pipeline'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/job_app.py", line 50, in submit_job
+    submit_result = DAGScheduler.submit(request.json)
+  File "/fate/python/fate_flow/scheduler/dag_scheduler.py", line 61, in submit
+    pipeline_model = tracker.get_output_model('pipeline')
+  File "/fate/python/fate_flow/operation/job_tracker.py", line 188, in get_output_model
+    model_alias=model_alias)
+  File "/fate/python/fate_flow/pipelined_model/pipelined_model.py", line 86, in read_component_model
+    with open(os.path.join(component_model_storage_path, model_name), "rb") as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/fate/model_local_cache/guest#9999#guest-9999#host-9998#model/2021061322283590321442/variables/data/pipeline/pipeline/Pipeline'
+[ERROR] [2021-06-15 21:08:16,283] [7:140196188256000] - api_utils.py[line:49]: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/job_app.py", line 50, in submit_job
+    submit_result = DAGScheduler.submit(request.json)
+  File "/fate/python/fate_flow/scheduler/dag_scheduler.py", line 67, in submit
+    raise Exception(f"Model {common_job_parameters.model_id} {common_job_parameters.model_version} has not been deployed yet.")
+Exception: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+[ERROR] [2021-06-15 21:08:49,786] [7:140196725126912] - api_utils.py[line:49]: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/fate/python/fate_flow/apps/job_app.py", line 50, in submit_job
+    submit_result = DAGScheduler.submit(request.json)
+  File "/fate/python/fate_flow/scheduler/dag_scheduler.py", line 67, in submit
+    raise Exception(f"Model {common_job_parameters.model_id} {common_job_parameters.model_version} has not been deployed yet.")
+Exception: Model guest-9999#host-9998#model 202106152101093465361 has not been deployed yet.

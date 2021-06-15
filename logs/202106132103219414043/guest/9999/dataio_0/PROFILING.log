@@ -1,0 +1,77 @@
+[DEBUG] [2021-06-13 21:03:36,694] [443:140636116653888] - profile.py[line:84]: [computing#41d092c3c4]function_stack: [component_properties.py:225]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-13 21:03:36,694] [443:140636116653888] - profile.py[line:87]: [computing#41d092c3c4]start
+[DEBUG] [2021-06-13 21:03:36,698] [443:140636116653888] - profile.py[line:93]: [computing#41d092c3c4]done, elapse: 0.004515886306762695, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-13 21:03:36,701] [443:140636116653888] - profile.py[line:84]: [computing#c20dcf4011]function_stack: [abnormal_detection.py:27]empty_table_detection <-[data_io.py:120]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-13 21:03:36,701] [443:140636116653888] - profile.py[line:87]: [computing#c20dcf4011]start
+[DEBUG] [2021-06-13 21:03:36,707] [443:140636116653888] - profile.py[line:93]: [computing#c20dcf4011]done, elapse: 0.006003141403198242, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-13 21:03:36,709] [443:140636116653888] - profile.py[line:84]: [computing#de9bef7544]function_stack: [data_overview.py:123]get_data_shape <-[data_io.py:131]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-13 21:03:36,709] [443:140636116653888] - profile.py[line:87]: [computing#de9bef7544]start
+[DEBUG] [2021-06-13 21:03:36,711] [443:140636116653888] - profile.py[line:93]: [computing#de9bef7544]done, elapse: 0.002221822738647461, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-13 21:03:36,712] [443:140636116653888] - profile.py[line:84]: [computing#abeb9774b0]function_stack: [data_io.py:136]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-13 21:03:36,712] [443:140636116653888] - profile.py[line:87]: [computing#abeb9774b0]start
+[DEBUG] [2021-06-13 21:03:36,825] [443:140636116653888] - profile.py[line:93]: [computing#abeb9774b0]done, elapse: 0.11337089538574219, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-13 21:03:36,827] [443:140636116653888] - profile.py[line:84]: [computing#235005a204]function_stack: [data_io.py:139]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-13 21:03:36,828] [443:140636116653888] - profile.py[line:87]: [computing#235005a204]start
+[DEBUG] [2021-06-13 21:03:36,898] [443:140636116653888] - profile.py[line:93]: [computing#235005a204]done, elapse: 0.0709693431854248, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-13 21:03:36,900] [443:140636116653888] - profile.py[line:84]: [computing#0227498663]function_stack: [data_io.py:224]gen_data_instance <-[data_io.py:161]fit <-[data_io.py:146]read_data <-[data_io.py:886]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-13 21:03:36,900] [443:140636116653888] - profile.py[line:87]: [computing#0227498663]start
+[DEBUG] [2021-06-13 21:03:36,944] [443:140636116653888] - profile.py[line:93]: [computing#0227498663]done, elapse: 0.04383659362792969, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[INFO] [2021-06-13 21:03:37,292] [443:140636116653888] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   2   0.184     0.092    0.113   |
+|          |    join      1   0.044     0.044    0.044   |
+|          |    count     2   0.011     0.005    0.006   |
+|          |    first     1   0.002     0.002    0.002   |
++----------+---------------------------------------------+
+|  total   |  n=6, sum=0.2409, mean=0.0402, max=0.1134   |
++----------+---------------------------------------------+
+
+Federation:
++--------+------------------------------------------+
+|  get   |                                          |
++--------+------------------------------------------+
+| remote |                                          |
++--------+------------------------------------------+
+| total  | n=0, sum=0.0000, mean=0.0000, max=0.0000 |
++--------+------------------------------------------+
+
+[DEBUG] [2021-06-13 21:03:37,293] [443:140636116653888] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.1134 │ 0.1134  │ 0.1134 │ abeb9774b0 │ [data_io.py:136]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.071  │  0.071  │ 0.071  │ 235005a204 │ [data_io.py:139]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0438 │ 0.0438  │ 0.0438 │ 227498663  │ [data_io.py:224]gen_data_instance                  |
+|       |            │   │        │         │        │            │ [data_io.py:161]fit                                |
+|       |            │   │        │         │        │            │ [data_io.py:146]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.006  │  0.006  │ 0.006  │ c20dcf4011 │ [abnormal_detection.py:27]empty_table_detection    |
+|       |            │   │        │         │        │            │ [data_io.py:120]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0045 │ 0.0045  │ 0.0045 │ 41d092c3c4 │ [component_properties.py:225]extract_input_data    |
+|       |            │   │        │         │        │            │ [component_properties.py:238]extract_running_rule  |
+|       |            │   │        │         │        │            │ s                                                  |
+|       |            │   │        │         │        │            │ [model_base.py:87]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    first   │ 1 │ 0.0022 │ 0.0022  │ 0.0022 │ de9bef7544 │ [data_overview.py:123]get_data_shape               |
+|       |            │   │        │         │        │            │ [data_io.py:131]read_data                          |
+|       |            │   │        │         │        │            │ [data_io.py:886]fit                                |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                   n=6, sum=0.2409, mean=0.0402, max=0.1134                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

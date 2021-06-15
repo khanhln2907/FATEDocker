@@ -1,0 +1,850 @@
+[DEBUG] [2021-06-15 21:01:55,833] [811:140231370778432] - profile.py[line:84]: [computing#a07e8b9a9c]function_stack: [component_properties.py:221]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 21:01:55,833] [811:140231370778432] - profile.py[line:87]: [computing#a07e8b9a9c]start
+[DEBUG] [2021-06-15 21:01:55,840] [811:140231370778432] - profile.py[line:93]: [computing#a07e8b9a9c]done, elapse: 0.007109880447387695, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:55,841] [811:140231370778432] - profile.py[line:84]: [computing#15f4099d8f]function_stack: [component_properties.py:228]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 21:01:55,841] [811:140231370778432] - profile.py[line:87]: [computing#15f4099d8f]start
+[DEBUG] [2021-06-15 21:01:55,845] [811:140231370778432] - profile.py[line:93]: [computing#15f4099d8f]done, elapse: 0.003743886947631836, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:55,848] [811:140231370778432] - profile.py[line:84]: [computing#4afd219436]function_stack: [abnormal_detection.py:27]empty_table_detection <-[boosting.py:207]data_alignment <-[boosting.py:253]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:55,849] [811:140231370778432] - profile.py[line:87]: [computing#4afd219436]start
+[DEBUG] [2021-06-15 21:01:55,852] [811:140231370778432] - profile.py[line:93]: [computing#4afd219436]done, elapse: 0.003435373306274414, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:55,854] [811:140231370778432] - profile.py[line:84]: [computing#773086eaa5]function_stack: [data_overview.py:30]get_features_shape <-[data_overview.py:136]is_empty_feature <-[abnormal_detection.py:33]empty_feature_detection <-[boosting.py:208]data_alignment <-[boosting.py:253]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:55,854] [811:140231370778432] - profile.py[line:87]: [computing#773086eaa5]start
+[DEBUG] [2021-06-15 21:01:55,857] [811:140231370778432] - profile.py[line:93]: [computing#773086eaa5]done, elapse: 0.0028066635131835938, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:01:55,858] [811:140231370778432] - profile.py[line:84]: [computing#ecfc178380]function_stack: [boosting.py:210]data_alignment <-[boosting.py:253]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:55,859] [811:140231370778432] - profile.py[line:87]: [computing#ecfc178380]start
+[DEBUG] [2021-06-15 21:01:56,090] [811:140231370778432] - profile.py[line:93]: [computing#ecfc178380]done, elapse: 0.23179030418395996, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:56,098] [811:140231370778432] - profile.py[line:84]: [computing#4673140fcc]function_stack: [data_overview.py:143]is_sparse_data <-[quantile_binning.py:85]fit_split_points <-[boosting.py:184]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:56,099] [811:140231370778432] - profile.py[line:87]: [computing#4673140fcc]start
+[DEBUG] [2021-06-15 21:01:56,105] [811:140231370778432] - profile.py[line:93]: [computing#4673140fcc]done, elapse: 0.006560087203979492, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:01:56,106] [811:140231370778432] - profile.py[line:84]: [computing#3557fb8a3e]function_stack: [quantile_binning.py:106]_fit_split_point <-[quantile_binning.py:87]fit_split_points <-[boosting.py:184]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:56,107] [811:140231370778432] - profile.py[line:87]: [computing#3557fb8a3e]start
+[DEBUG] [2021-06-15 21:01:58,168] [811:140231370778432] - profile.py[line:93]: [computing#3557fb8a3e]done, elapse: 2.0615506172180176, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,169] [811:140231370778432] - profile.py[line:84]: [computing#972209a774]function_stack: [quantile_binning.py:110]_fit_split_point <-[quantile_binning.py:87]fit_split_points <-[boosting.py:184]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,169] [811:140231370778432] - profile.py[line:87]: [computing#972209a774]start
+[DEBUG] [2021-06-15 21:01:58,171] [811:140231370778432] - profile.py[line:93]: [computing#972209a774]done, elapse: 0.0021009445190429688, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:58,172] [811:140231370778432] - profile.py[line:84]: [computing#7e3c8c8fb5]function_stack: [quantile_binning.py:111]_fit_split_point <-[quantile_binning.py:87]fit_split_points <-[boosting.py:184]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,172] [811:140231370778432] - profile.py[line:87]: [computing#7e3c8c8fb5]start
+[DEBUG] [2021-06-15 21:01:58,215] [811:140231370778432] - profile.py[line:93]: [computing#7e3c8c8fb5]done, elapse: 0.04298543930053711, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,239] [811:140231370778432] - profile.py[line:84]: [computing#5695b6b1d5]function_stack: [quantile_binning.py:120]_fit_split_point <-[quantile_binning.py:87]fit_split_points <-[boosting.py:184]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,239] [811:140231370778432] - profile.py[line:87]: [computing#5695b6b1d5]start
+[DEBUG] [2021-06-15 21:01:58,363] [811:140231370778432] - profile.py[line:93]: [computing#5695b6b1d5]done, elapse: 0.1234583854675293, function: mapValues(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,364] [811:140231370778432] - profile.py[line:87]: [computing#5695b6b1d5]start
+[DEBUG] [2021-06-15 21:01:58,364] [811:140231370778432] - profile.py[line:93]: [computing#5695b6b1d5]done, elapse: 0.0005092620849609375, function: collect(self: Table(partition=4)) -> generator
+[DEBUG] [2021-06-15 21:01:58,397] [811:140231370778432] - profile.py[line:84]: [computing#415f65c1b3]function_stack: [data_overview.py:143]is_sparse_data <-[base_binning.py:100]fit_category_features <-[quantile_binning.py:89]fit_split_points <-[boosting.py:184]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,397] [811:140231370778432] - profile.py[line:87]: [computing#415f65c1b3]start
+[DEBUG] [2021-06-15 21:01:58,400] [811:140231370778432] - profile.py[line:93]: [computing#415f65c1b3]done, elapse: 0.002946138381958008, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:01:58,401] [811:140231370778432] - profile.py[line:84]: [computing#fb4b972bca]function_stack: [data_overview.py:143]is_sparse_data <-[base_binning.py:190]convert_feature_to_bin <-[boosting.py:185]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,401] [811:140231370778432] - profile.py[line:87]: [computing#fb4b972bca]start
+[DEBUG] [2021-06-15 21:01:58,406] [811:140231370778432] - profile.py[line:93]: [computing#fb4b972bca]done, elapse: 0.00545954704284668, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:01:58,407] [811:140231370778432] - profile.py[line:84]: [computing#3183b46b97]function_stack: [base_binning.py:206]convert_feature_to_bin <-[boosting.py:185]convert_feature_to_bin <-[boosting.py:254]prepare_data <-[hetero_boosting.py:282]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,408] [811:140231370778432] - profile.py[line:87]: [computing#3183b46b97]start
+[DEBUG] [2021-06-15 21:01:58,575] [811:140231370778432] - profile.py[line:93]: [computing#3183b46b97]done, elapse: 0.16792607307434082, function: mapValues(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,600] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.booster_dim.fit]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:58,613] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.booster_dim.fit]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:58,648] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess.fit.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:58,652] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess.fit.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:58,653] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:58,767] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:58,769] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:58,773] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:58,776] [811:140231370778432] - profile.py[line:84]: [computing#cf57e6504b]function_stack: [hetero_decision_tree_host.py:377]update_instances_node_positions <-[hetero_decision_tree_host.py:523]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,777] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:01:58,858] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.08195114135742188, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,860] [811:140231370778432] - profile.py[line:84]: [computing#21a24a939c]function_stack: [decision_tree.py:202]count_node_sample_num <-[hetero_decision_tree_host.py:437]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,860] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:01:58,885] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.0252988338470459, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,888] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:01:58,903] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.01531076431274414, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:01:58,947] [811:140231370778432] - profile.py[line:84]: [computing#ea2b51cf28]function_stack: [feature_histogram.py:295]calculate_histogram <-[feature_histogram.py:238]compute_histogram <-[decision_tree.py:167]get_local_histograms <-[hetero_decision_tree_host.py:442]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,947] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:01:58,979] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.03206300735473633, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:58,980] [811:140231370778432] - profile.py[line:84]: [computing#bae84316da]function_stack: [feature_histogram.py:297]calculate_histogram <-[feature_histogram.py:238]compute_histogram <-[decision_tree.py:167]get_local_histograms <-[hetero_decision_tree_host.py:442]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,980] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:01:58,983] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.00281524658203125, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:01:58,984] [811:140231370778432] - profile.py[line:84]: [computing#07006bc4d7]function_stack: [feature_histogram.py:325]calculate_histogram <-[feature_histogram.py:238]compute_histogram <-[decision_tree.py:167]get_local_histograms <-[hetero_decision_tree_host.py:442]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:58,984] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:01:59,370] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.38568902015686035, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:59,371] [811:140231370778432] - profile.py[line:84]: [computing#28e61d894f]function_stack: [feature_histogram.py:580]_construct_table <-[feature_histogram.py:335]calculate_histogram <-[feature_histogram.py:238]compute_histogram <-[decision_tree.py:167]get_local_histograms <-[hetero_decision_tree_host.py:442]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:59,372] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:01:59,449] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.07799029350280762, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:59,495] [811:140231370778432] - profile.py[line:84]: [computing#e1545e4a5c]function_stack: [splitter.py:467]host_prepare_split_points <-[hetero_decision_tree_host.py:457]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:01:59,496] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:01:59,605] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.10940670967102051, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:01:59,605] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.0.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:59,653] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.0.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:59,653] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.0.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:59,866] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.0.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:59,866] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.0.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:01:59,879] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.0.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:01:59,907] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:01,127] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:01,128] [811:140231370778432] - profile.py[line:84]: [computing#c48ee032b4]function_stack: [hetero_decision_tree_host.py:368]assign_instances_to_new_node <-[hetero_decision_tree_host.py:538]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:01,129] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:01,145] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.01666116714477539, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,145] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:01,160] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:01,183] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.0.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:01,399] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.0.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:01,402] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.0.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:01,410] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.0.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:01,445] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:01,492] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.04703235626220703, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,521] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:01,543] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.021990060806274414, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,545] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:01,557] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.012393712997436523, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:01,605] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:01,661] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.05600476264953613, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,663] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:01,669] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.006242275238037109, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:01,671] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:01,826] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.15485286712646484, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,827] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:01,859] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.0314021110534668, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,902] [811:140231370778432] - profile.py[line:84]: [computing#291a470816]function_stack: [feature_histogram.py:1021]_table_subtraction <-[feature_histogram.py:263]compute_histogram <-[decision_tree.py:167]get_local_histograms <-[hetero_decision_tree_host.py:442]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:01,902] [811:140231370778432] - profile.py[line:87]: [computing#291a470816]start
+[DEBUG] [2021-06-15 21:02:01,924] [811:140231370778432] - profile.py[line:93]: [computing#291a470816]done, elapse: 0.021947622299194336, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:01,925] [811:140231370778432] - profile.py[line:84]: [computing#2d9f443605]function_stack: [feature_histogram.py:1022]_table_subtraction <-[feature_histogram.py:263]compute_histogram <-[decision_tree.py:167]get_local_histograms <-[hetero_decision_tree_host.py:442]compute_best_splits2 <-[hetero_decision_tree_host.py:531]fit <-[hetero_secureboost_host.py:126]fit_a_booster <-[hetero_boosting.py:294]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:01,925] [811:140231370778432] - profile.py[line:87]: [computing#2d9f443605]start
+[DEBUG] [2021-06-15 21:02:02,014] [811:140231370778432] - profile.py[line:93]: [computing#2d9f443605]done, elapse: 0.0896599292755127, function: mapPartitions(self: Table(partition=4), func: function, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:02,068] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:02,388] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.32016682624816895, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:02,389] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.0.0.1.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:02,480] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.0.0.1.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:02,481] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.0.0.1.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:02,695] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.0.0.1.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:02,697] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.0.0.1.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:02,710] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.0.0.1.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:02,740] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.0.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:03,353] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.0.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:03,376] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:03,389] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.01363682746887207, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:03,390] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.0.0.1]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:03,405] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.0.0.1]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:03,431] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.0.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:03,874] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.0.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:03,876] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.0.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:03,880] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.0.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:03,904] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:03,936] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.03177905082702637, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:03,966] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:03,987] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.02100539207458496, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:03,990] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:03,997] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.00775456428527832, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:04,029] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:04,701] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.67203688621521, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:04,702] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:04,705] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.0032672882080078125, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:04,706] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:04,842] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.13555622100830078, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:04,844] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:04,919] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.07473945617675781, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:04,992] [811:140231370778432] - profile.py[line:87]: [computing#291a470816]start
+[DEBUG] [2021-06-15 21:02:05,018] [811:140231370778432] - profile.py[line:93]: [computing#291a470816]done, elapse: 0.026038169860839844, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:05,019] [811:140231370778432] - profile.py[line:87]: [computing#2d9f443605]start
+[DEBUG] [2021-06-15 21:02:05,132] [811:140231370778432] - profile.py[line:93]: [computing#2d9f443605]done, elapse: 0.11267709732055664, function: mapPartitions(self: Table(partition=4), func: function, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:05,191] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:05,407] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.21587443351745605, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:05,408] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.0.0.2.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:05,526] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.0.0.2.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:05,526] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.0.0.2.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:05,841] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.0.0.2.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:05,843] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.0.0.2.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:05,855] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.0.0.2.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:05,893] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.0.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:06,610] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.0.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:06,630] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:06,644] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.013875007629394531, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:06,644] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.0.0.2]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:06,656] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.0.0.2]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:06,679] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree.fit.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:07,198] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree.fit.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:07,239] [811:140231370778432] - profile.py[line:84]: [computing#1b5288f72e]function_stack: [io_check.py:28]_func <-[validation_strategy.py:295]get_predict_result <-[validation_strategy.py:341]validate <-[hetero_boosting.py:301]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:07,239] [811:140231370778432] - profile.py[line:87]: [computing#1b5288f72e]start
+[DEBUG] [2021-06-15 21:02:07,243] [811:140231370778432] - profile.py[line:93]: [computing#1b5288f72e]done, elapse: 0.0038733482360839844, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:07,245] [811:140231370778432] - profile.py[line:84]: [computing#d5ac9dd2d4]function_stack: [abnormal_detection.py:27]empty_table_detection <-[boosting.py:207]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[validation_strategy.py:295]get_predict_result <-[validation_strategy.py:341]validate <-[hetero_boosting.py:301]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:07,246] [811:140231370778432] - profile.py[line:87]: [computing#d5ac9dd2d4]start
+[DEBUG] [2021-06-15 21:02:07,250] [811:140231370778432] - profile.py[line:93]: [computing#d5ac9dd2d4]done, elapse: 0.004658937454223633, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:07,252] [811:140231370778432] - profile.py[line:84]: [computing#f86af6c7a1]function_stack: [data_overview.py:30]get_features_shape <-[data_overview.py:136]is_empty_feature <-[abnormal_detection.py:33]empty_feature_detection <-[boosting.py:208]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[validation_strategy.py:295]get_predict_result <-[validation_strategy.py:341]validate <-[hetero_boosting.py:301]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:07,253] [811:140231370778432] - profile.py[line:87]: [computing#f86af6c7a1]start
+[DEBUG] [2021-06-15 21:02:07,258] [811:140231370778432] - profile.py[line:93]: [computing#f86af6c7a1]done, elapse: 0.005599260330200195, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:02:07,261] [811:140231370778432] - profile.py[line:84]: [computing#e023f811fa]function_stack: [boosting.py:210]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[validation_strategy.py:295]get_predict_result <-[validation_strategy.py:341]validate <-[hetero_boosting.py:301]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:07,262] [811:140231370778432] - profile.py[line:87]: [computing#e023f811fa]start
+[DEBUG] [2021-06-15 21:02:07,725] [811:140231370778432] - profile.py[line:93]: [computing#e023f811fa]done, elapse: 0.4637434482574463, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:07,725] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.fit_iteration_0_validate]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:08,446] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.fit_iteration_0_validate]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:08,448] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_0_validate.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:09,067] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_0_validate.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:09,068] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.stop_flag.fit.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:10,255] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.stop_flag.fit.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:10,258] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess.fit.1.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:10,364] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess.fit.1.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:10,364] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.1.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:10,477] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.1.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:10,481] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.1.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:10,486] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.1.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:10,489] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:10,538] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.04915308952331543, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:10,540] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:10,561] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.02078866958618164, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:10,562] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:10,570] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.007543325424194336, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:10,600] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:10,643] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.043599843978881836, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:10,645] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:10,648] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.002591848373413086, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:10,650] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:10,879] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.2290198802947998, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:10,880] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:10,903] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.022647619247436523, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:10,943] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:11,042] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.09918999671936035, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:11,042] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.1.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:11,085] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.1.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:11,085] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.1.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:11,299] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.1.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:11,300] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.1.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:11,311] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.1.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:11,343] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.1.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:11,855] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.1.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:11,857] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:11,873] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.015514612197875977, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:11,873] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.1.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:11,886] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.1.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:11,910] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.1.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:12,123] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.1.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:12,125] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.1.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:12,129] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.1.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:12,167] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:12,211] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.043579816818237305, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,237] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:12,253] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.016537904739379883, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,254] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:12,261] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.006306171417236328, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:12,287] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:12,327] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.03986096382141113, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,328] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:12,333] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.004546165466308594, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:12,335] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:12,482] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.14774084091186523, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,484] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:12,515] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.031037092208862305, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,559] [811:140231370778432] - profile.py[line:87]: [computing#291a470816]start
+[DEBUG] [2021-06-15 21:02:12,583] [811:140231370778432] - profile.py[line:93]: [computing#291a470816]done, elapse: 0.023756027221679688, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,584] [811:140231370778432] - profile.py[line:87]: [computing#2d9f443605]start
+[DEBUG] [2021-06-15 21:02:12,670] [811:140231370778432] - profile.py[line:93]: [computing#2d9f443605]done, elapse: 0.08612394332885742, function: mapPartitions(self: Table(partition=4), func: function, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,716] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:12,875] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.15920042991638184, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:12,875] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.1.0.1.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:12,967] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.1.0.1.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:12,967] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.1.0.1.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:13,181] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.1.0.1.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:13,183] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.1.0.1.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:13,192] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.1.0.1.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:13,224] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.1.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:13,938] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.1.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:13,970] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:14,016] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.04588174819946289, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:14,017] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.1.0.1]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:14,055] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.1.0.1]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:14,089] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.1.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:14,315] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.1.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:14,318] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.1.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:14,425] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.1.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:14,450] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:14,958] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.5084824562072754, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:14,984] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:15,007] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.02330303192138672, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:15,008] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:15,015] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.0072710514068603516, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:15,046] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:15,101] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.05518078804016113, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:15,102] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:15,105] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.002969026565551758, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:15,107] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:15,237] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.1305220127105713, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:15,239] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:15,316] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.07786393165588379, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:15,395] [811:140231370778432] - profile.py[line:87]: [computing#291a470816]start
+[DEBUG] [2021-06-15 21:02:15,435] [811:140231370778432] - profile.py[line:93]: [computing#291a470816]done, elapse: 0.039861202239990234, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:15,436] [811:140231370778432] - profile.py[line:87]: [computing#2d9f443605]start
+[DEBUG] [2021-06-15 21:02:15,930] [811:140231370778432] - profile.py[line:93]: [computing#2d9f443605]done, elapse: 0.4933953285217285, function: mapPartitions(self: Table(partition=4), func: function, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:16,286] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:16,480] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.1933753490447998, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:16,480] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.1.0.2.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:16,563] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.1.0.2.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:16,563] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.1.0.2.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:17,186] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.1.0.2.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:17,188] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.1.0.2.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:17,200] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.1.0.2.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:17,232] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.1.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:17,946] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.1.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:17,974] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:18,018] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.044338226318359375, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:18,019] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.1.0.2]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:18,061] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.1.0.2]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:18,083] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree.fit.1.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:18,701] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree.fit.1.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:18,868] [811:140231370778432] - profile.py[line:87]: [computing#1b5288f72e]start
+[DEBUG] [2021-06-15 21:02:18,872] [811:140231370778432] - profile.py[line:93]: [computing#1b5288f72e]done, elapse: 0.004014253616333008, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:18,872] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.fit_iteration_1_validate]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:19,389] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.fit_iteration_1_validate]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:19,391] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_1_validate.1.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:20,014] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_1_validate.1.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:20,014] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.fit_iteration_1_validate.1.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:20,120] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.fit_iteration_1_validate.1.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:20,121] [811:140231370778432] - profile.py[line:84]: [computing#b5ab04fe3c]function_stack: [hetero_secureboost_host.py:184]boosting_fast_predict <-[hetero_secureboost_host.py:214]predict <-[io_check.py:31]_func <-[validation_strategy.py:295]get_predict_result <-[validation_strategy.py:341]validate <-[hetero_boosting.py:301]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:20,121] [811:140231370778432] - profile.py[line:87]: [computing#b5ab04fe3c]start
+[DEBUG] [2021-06-15 21:02:20,269] [811:140231370778432] - profile.py[line:93]: [computing#b5ab04fe3c]done, elapse: 0.14810919761657715, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:20,270] [811:140231370778432] - profile.py[line:84]: [computing#3ca967c3b6]function_stack: [hetero_secureboost_host.py:185]boosting_fast_predict <-[hetero_secureboost_host.py:214]predict <-[io_check.py:31]_func <-[validation_strategy.py:295]get_predict_result <-[validation_strategy.py:341]validate <-[hetero_boosting.py:301]fit <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:20,270] [811:140231370778432] - profile.py[line:87]: [computing#3ca967c3b6]start
+[DEBUG] [2021-06-15 21:02:20,272] [811:140231370778432] - profile.py[line:93]: [computing#3ca967c3b6]done, elapse: 0.002397775650024414, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:20,273] [811:140231370778432] - profile.py[line:87]: [computing#3ca967c3b6]start
+[DEBUG] [2021-06-15 21:02:20,275] [811:140231370778432] - profile.py[line:93]: [computing#3ca967c3b6]done, elapse: 0.0014646053314208984, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:20,275] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.fit_iteration_1_validate.1.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:20,329] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.fit_iteration_1_validate.1.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:20,329] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_1_validate.1.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:20,950] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_1_validate.1.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:21,006] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.stop_flag.fit.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:22,374] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.stop_flag.fit.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:22,378] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess.fit.2.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:22,586] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess.fit.2.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:22,587] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:22,700] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:22,704] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:22,709] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:22,711] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:22,778] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.0670623779296875, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:22,780] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:22,809] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.02886652946472168, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:22,816] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:22,831] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.015274286270141602, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:22,890] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:22,937] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.04738593101501465, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:22,939] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:22,943] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.0038628578186035156, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:22,944] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:23,186] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.24242043495178223, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:23,188] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:23,211] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.023927688598632812, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:23,255] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:23,358] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.10329532623291016, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:23,359] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.2.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:23,414] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.2.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:23,414] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.2.0.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:23,628] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.2.0.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:23,629] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.2.0.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:23,637] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.2.0.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:23,765] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:24,174] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:24,175] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:24,189] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.013587713241577148, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:24,190] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.2.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:24,203] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.2.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:24,229] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.2.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:24,443] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.2.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:24,448] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.2.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:24,553] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.2.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:24,779] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:24,824] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.044364213943481445, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:24,851] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:24,878] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.026569366455078125, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:24,880] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:24,889] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.009246587753295898, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:24,915] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:24,971] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.055783987045288086, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:24,973] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:24,975] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.0025141239166259766, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:24,976] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:25,180] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.20354771614074707, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:25,182] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:25,235] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.05292844772338867, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:25,282] [811:140231370778432] - profile.py[line:87]: [computing#291a470816]start
+[DEBUG] [2021-06-15 21:02:25,306] [811:140231370778432] - profile.py[line:93]: [computing#291a470816]done, elapse: 0.024092435836791992, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:25,307] [811:140231370778432] - profile.py[line:87]: [computing#2d9f443605]start
+[DEBUG] [2021-06-15 21:02:25,393] [811:140231370778432] - profile.py[line:93]: [computing#2d9f443605]done, elapse: 0.08602619171142578, function: mapPartitions(self: Table(partition=4), func: function, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:25,443] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:25,963] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.5198814868927002, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:25,963] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.2.0.1.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:26,029] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.2.0.1.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:26,029] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.2.0.1.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:26,240] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.2.0.1.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:26,241] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.2.0.1.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:26,250] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.2.0.1.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:26,271] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.2.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:26,983] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.2.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:27,004] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:27,019] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.015160560607910156, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,020] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.2.0.1]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:27,033] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.2.0.1]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:27,055] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.2.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:27,371] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree_node_queue.fit.2.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:27,374] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.2.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:27,378] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.node_positions.fit.2.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:27,409] [811:140231370778432] - profile.py[line:87]: [computing#cf57e6504b]start
+[DEBUG] [2021-06-15 21:02:27,458] [811:140231370778432] - profile.py[line:93]: [computing#cf57e6504b]done, elapse: 0.0489649772644043, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,489] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:27,514] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.025258779525756836, function: applyPartitions(self: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,516] [811:140231370778432] - profile.py[line:87]: [computing#21a24a939c]start
+[DEBUG] [2021-06-15 21:02:27,523] [811:140231370778432] - profile.py[line:93]: [computing#21a24a939c]done, elapse: 0.0073087215423583984, function: reduce(self: Table(partition=4), func: function) -> ndarray
+[DEBUG] [2021-06-15 21:02:27,553] [811:140231370778432] - profile.py[line:87]: [computing#ea2b51cf28]start
+[DEBUG] [2021-06-15 21:02:27,600] [811:140231370778432] - profile.py[line:93]: [computing#ea2b51cf28]done, elapse: 0.047204017639160156, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,602] [811:140231370778432] - profile.py[line:87]: [computing#bae84316da]start
+[DEBUG] [2021-06-15 21:02:27,604] [811:140231370778432] - profile.py[line:93]: [computing#bae84316da]done, elapse: 0.002515554428100586, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:27,605] [811:140231370778432] - profile.py[line:87]: [computing#07006bc4d7]start
+[DEBUG] [2021-06-15 21:02:27,726] [811:140231370778432] - profile.py[line:93]: [computing#07006bc4d7]done, elapse: 0.12084436416625977, function: mapReducePartitions(self: Table(partition=4), mapper: partial, reducer: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,728] [811:140231370778432] - profile.py[line:87]: [computing#28e61d894f]start
+[DEBUG] [2021-06-15 21:02:27,817] [811:140231370778432] - profile.py[line:93]: [computing#28e61d894f]done, elapse: 0.08923912048339844, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,878] [811:140231370778432] - profile.py[line:87]: [computing#291a470816]start
+[DEBUG] [2021-06-15 21:02:27,908] [811:140231370778432] - profile.py[line:93]: [computing#291a470816]done, elapse: 0.029582500457763672, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:27,909] [811:140231370778432] - profile.py[line:87]: [computing#2d9f443605]start
+[DEBUG] [2021-06-15 21:02:28,027] [811:140231370778432] - profile.py[line:93]: [computing#2d9f443605]done, elapse: 0.11783242225646973, function: mapPartitions(self: Table(partition=4), func: function, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:28,070] [811:140231370778432] - profile.py[line:87]: [computing#e1545e4a5c]start
+[DEBUG] [2021-06-15 21:02:28,222] [811:140231370778432] - profile.py[line:93]: [computing#e1545e4a5c]done, elapse: 0.1522209644317627, function: mapPartitions(self: Table(partition=4), func: partial, use_previous_behavior: bool) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:28,222] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.2.0.2.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:28,318] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host.fit.2.0.2.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:28,318] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.2.0.2.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:28,936] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_host.fit.2.0.2.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:28,937] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.2.0.2.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:28,944] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host.fit.2.0.2.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:28,968] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.2.0.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:29,680] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host.fit.2.0.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:29,703] [811:140231370778432] - profile.py[line:87]: [computing#c48ee032b4]start
+[DEBUG] [2021-06-15 21:02:29,744] [811:140231370778432] - profile.py[line:93]: [computing#c48ee032b4]done, elapse: 0.04184222221374512, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:29,745] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.2.0.2]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:29,776] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result.fit.2.0.2]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:29,805] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree.fit.2.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:31,035] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfer_variable.HeteroDecisionTreeTransferVariable.tree.fit.2.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:31,325] [811:140231370778432] - profile.py[line:87]: [computing#1b5288f72e]start
+[DEBUG] [2021-06-15 21:02:31,330] [811:140231370778432] - profile.py[line:93]: [computing#1b5288f72e]done, elapse: 0.0044782161712646484, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:31,331] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.fit_iteration_2_validate]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:32,355] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.fit_iteration_2_validate]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:32,358] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_2_validate.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:32,976] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_2_validate.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:32,976] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.fit_iteration_2_validate.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:32,978] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.fit_iteration_2_validate.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:32,979] [811:140231370778432] - profile.py[line:87]: [computing#b5ab04fe3c]start
+[DEBUG] [2021-06-15 21:02:33,077] [811:140231370778432] - profile.py[line:93]: [computing#b5ab04fe3c]done, elapse: 0.09773707389831543, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:33,078] [811:140231370778432] - profile.py[line:87]: [computing#3ca967c3b6]start
+[DEBUG] [2021-06-15 21:02:33,080] [811:140231370778432] - profile.py[line:93]: [computing#3ca967c3b6]done, elapse: 0.002227306365966797, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:33,081] [811:140231370778432] - profile.py[line:87]: [computing#3ca967c3b6]start
+[DEBUG] [2021-06-15 21:02:33,084] [811:140231370778432] - profile.py[line:93]: [computing#3ca967c3b6]done, elapse: 0.0022704601287841797, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:33,084] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.fit_iteration_2_validate.2.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:33,135] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.fit_iteration_2_validate.2.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:33,136] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_2_validate.2.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:33,690] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.fit_iteration_2_validate.2.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:34,022] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.stop_flag.fit.2]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:35,552] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.stop_flag.fit.2]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:35,709] [811:140231370778432] - profile.py[line:84]: [computing#ee81c7eeaf]function_stack: [io_check.py:28]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:35,709] [811:140231370778432] - profile.py[line:87]: [computing#ee81c7eeaf]start
+[DEBUG] [2021-06-15 21:02:35,712] [811:140231370778432] - profile.py[line:93]: [computing#ee81c7eeaf]done, elapse: 0.0030231475830078125, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:35,714] [811:140231370778432] - profile.py[line:84]: [computing#dd9be069ad]function_stack: [abnormal_detection.py:27]empty_table_detection <-[boosting.py:207]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:35,715] [811:140231370778432] - profile.py[line:87]: [computing#dd9be069ad]start
+[DEBUG] [2021-06-15 21:02:35,717] [811:140231370778432] - profile.py[line:93]: [computing#dd9be069ad]done, elapse: 0.002932310104370117, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:35,720] [811:140231370778432] - profile.py[line:84]: [computing#6d1d7b4507]function_stack: [data_overview.py:30]get_features_shape <-[data_overview.py:136]is_empty_feature <-[abnormal_detection.py:33]empty_feature_detection <-[boosting.py:208]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:35,721] [811:140231370778432] - profile.py[line:87]: [computing#6d1d7b4507]start
+[DEBUG] [2021-06-15 21:02:35,726] [811:140231370778432] - profile.py[line:93]: [computing#6d1d7b4507]done, elapse: 0.006422758102416992, function: first(self: Table(partition=4)) -> tuple
+[DEBUG] [2021-06-15 21:02:35,728] [811:140231370778432] - profile.py[line:84]: [computing#91e0ec1b4b]function_stack: [boosting.py:210]data_alignment <-[boosting.py:225]data_and_header_alignment <-[hetero_secureboost_host.py:197]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:35,728] [811:140231370778432] - profile.py[line:87]: [computing#91e0ec1b4b]start
+[DEBUG] [2021-06-15 21:02:35,964] [811:140231370778432] - profile.py[line:93]: [computing#91e0ec1b4b]done, elapse: 0.2365586757659912, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:35,965] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.validate]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:35,983] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.validate]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:35,991] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.validate.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:36,815] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.validate.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:36,815] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.validate.2.0.0]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:36,818] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data.validate.2.0.0]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:36,819] [811:140231370778432] - profile.py[line:84]: [computing#b2eddf319b]function_stack: [hetero_secureboost_host.py:184]boosting_fast_predict <-[hetero_secureboost_host.py:214]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:36,819] [811:140231370778432] - profile.py[line:87]: [computing#b2eddf319b]start
+[DEBUG] [2021-06-15 21:02:37,017] [811:140231370778432] - profile.py[line:93]: [computing#b2eddf319b]done, elapse: 0.1985921859741211, function: join(self: Table(partition=4), other: Table(partition=4), func: partial) -> Table(partition=4)
+[DEBUG] [2021-06-15 21:02:37,018] [811:140231370778432] - profile.py[line:84]: [computing#b725cceb52]function_stack: [hetero_secureboost_host.py:185]boosting_fast_predict <-[hetero_secureboost_host.py:214]predict <-[io_check.py:31]_func <-[model_base.py:101]run
+[DEBUG] [2021-06-15 21:02:37,019] [811:140231370778432] - profile.py[line:87]: [computing#b725cceb52]start
+[DEBUG] [2021-06-15 21:02:37,020] [811:140231370778432] - profile.py[line:93]: [computing#b725cceb52]done, elapse: 0.0016486644744873047, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:37,021] [811:140231370778432] - profile.py[line:87]: [computing#b725cceb52]start
+[DEBUG] [2021-06-15 21:02:37,024] [811:140231370778432] - profile.py[line:93]: [computing#b725cceb52]done, elapse: 0.0026171207427978516, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:37,024] [811:140231370778432] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.validate.2.0.0]host->[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:37,083] [811:140231370778432] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data.validate.2.0.0]host->[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:37,084] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.validate.2.0.1]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:38,314] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predict_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag.validate.2.0.1]host<-[Party(role=guest, party_id=9999)] done
+[DEBUG] [2021-06-15 21:02:38,368] [811:140231370778432] - profile.py[line:87]: [computing#ee81c7eeaf]start
+[DEBUG] [2021-06-15 21:02:38,374] [811:140231370778432] - profile.py[line:93]: [computing#ee81c7eeaf]done, elapse: 0.005461454391479492, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 21:02:38,375] [811:140231370778432] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.predict]host<-[Party(role=guest, party_id=9999)] start
+[DEBUG] [2021-06-15 21:02:38,997] [811:140231370778432] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_variable.HeteroBoostingTransferVariable.predict_start_round.predict]host<-[Party(role=guest, party_id=9999)] done
+[INFO] [2021-06-15 21:02:40,423] [811:140231370778432] - profile.py[line:249]: 
+Computing:
++----------+--------------------------------------------------------+
+| function |       function         n    sum(s)   mean(s)   max(s)  |
+|          | --------------------- ---- -------- --------- -------- |
+|          |  mapReducePartitions   10   3.812     0.381    2.062   |
+|          |     mapPartitions      15   2.858     0.191     0.52   |
+|          |         join           36   2.802     0.078    0.672   |
+|          |       mapValues        16   1.749     0.109    0.464   |
+|          |    applyPartitions     18   0.298     0.017    0.029   |
+|          |         count          26   0.089     0.003    0.007   |
+|          |         first          6     0.03     0.005    0.007   |
++----------+--------------------------------------------------------+
+|  total   |      n=127, sum=11.6371, mean=0.0916, max=2.0616       |
++----------+--------------------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 | 6.319  |  0.702  | 1.219   |
+|        |      r_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host      |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 7 | 5.087  |  0.727  |  1.23   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.predict_stop_flag  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 3 | 4.084  |  1.361  | 1.529   |
+|        |               iable.HeteroBoostingTransferVariable.stop_flag               |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 5 |  2.9   |  0.58   | 1.024   |
+|        |          iable.HeteroBoostingTransferVariable.predict_start_round          |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 | 2.833  |  0.315  | 0.623   |
+|        |  r_variable.HeteroDecisionTreeTransferVariable.federated_best_splitinfo_ho |   |        |         |         |
+|        |                                     st                                     |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 3 | 2.365  |  0.788  | 1.229   |
+|        |             r_variable.HeteroDecisionTreeTransferVariable.tree             |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 | 1.968  |  0.219  | 0.443   |
+|        |        r_variable.HeteroDecisionTreeTransferVariable.tree_node_queue       |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 3 | 0.316  |  0.105  | 0.207   |
+|        |    r_variable.HeteroDecisionTreeTransferVariable.encrypted_grad_and_hess   |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 | 0.244  |  0.027  | 0.106   |
+|        |        r_variable.HeteroDecisionTreeTransferVariable.node_positions        |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 3 | 0.109  |  0.036  | 0.105   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.guest_predict_data |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_boosting_transfer_var | 1 | 0.013  |  0.013  | 0.013   |
+|        |              iable.HeteroBoostingTransferVariable.booster_dim              |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 | 0.687  |  0.076  | 0.117   |
+|        |   r_variable.HeteroDecisionTreeTransferVariable.encrypted_splitinfo_host   |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 | 0.189  |  0.021  | 0.042   |
+|        |   r_variable.HeteroDecisionTreeTransferVariable.dispatch_node_host_result  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_secure_boosting_predi | 3 | 0.163  |  0.054  | 0.059   |
+|        |  ct_transfer_variable.HeteroSecureBoostTransferVariable.host_predict_data  |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.hetero_decision_tree_transfe | 9 |  0.09  |  0.01   | 0.013   |
+|        |     r_variable.HeteroDecisionTreeTransferVariable.final_splitinfo_host     |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                 n=91, sum=27.3657, mean=0.3007, max=1.5294                                  |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-15 21:02:40,424] [811:140231370778432] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |    function    │ n  │ sum(s) │ mean(s) │ max(s) │ stack_hash │                    stack                      |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |  mapReducePart │ 1  │ 2.0616 │ 2.0616  │ 2.0616 │ 3557fb8a3e │ [quantile_binning.py:106]_fit_split_point     |
+|       |     itions     │    │        │         │        │            │                                               |
+|       |                │    │        │         │        │            │ [quantile_binning.py:87]fit_split_points      |
+|       |                │    │        │         │        │            │ [boosting.py:184]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |  mapPartitions │ 9  │ 1.8726 │ 0.2081  │ 0.5199 │ e1545e4a5c │ [splitter.py:467]host_prepare_split_points    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:457]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |  mapReducePart │ 9  │ 1.7502 │ 0.1945  │ 0.3857 │ 07006bc4d7 │ [feature_histogram.py:325]calculate_histogra  |
+|       |     itions     │    │        │         │        │            │ m                                             |
+|       |                │    │        │         │        │            │ [feature_histogram.py:238]compute_histogram   |
+|       |                │    │        │         │        │            │ [decision_tree.py:167]get_local_histograms    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:442]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      join      │ 9  │ 1.0491 │ 0.1166  │ 0.672  │ ea2b51cf28 │ [feature_histogram.py:295]calculate_histogra  |
+|       |                │    │        │         │        │            │ m                                             |
+|       |                │    │        │         │        │            │ [feature_histogram.py:238]compute_histogram   |
+|       |                │    │        │         │        │            │ [decision_tree.py:167]get_local_histograms    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:442]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |  mapPartitions │ 6  │ 0.9857 │ 0.1643  │ 0.4934 │ 2d9f443605 │ [feature_histogram.py:1022]_table_subtractio  |
+|       |                │    │        │         │        │            │ n                                             |
+|       |                │    │        │         │        │            │ [feature_histogram.py:263]compute_histogram   |
+|       |                │    │        │         │        │            │ [decision_tree.py:167]get_local_histograms    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:442]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      join      │ 9  │ 0.9224 │ 0.1025  │ 0.5085 │ cf57e6504b │ [hetero_decision_tree_host.py:377]update_ins  |
+|       |                │    │        │         │        │            │ tances_node_positions                         |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:523]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 9  │ 0.4818 │ 0.0535  │ 0.0892 │ 28e61d894f │ [feature_histogram.py:580]_construct_table    |
+|       |                │    │        │         │        │            │ [feature_histogram.py:335]calculate_histogra  |
+|       |                │    │        │         │        │            │ m                                             |
+|       |                │    │        │         │        │            │ [feature_histogram.py:238]compute_histogram   |
+|       |                │    │        │         │        │            │ [decision_tree.py:167]get_local_histograms    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:442]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 1  │ 0.4637 │ 0.4637  │ 0.4637 │ e023f811fa │ [boosting.py:210]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:225]data_and_header_alignment    |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:197]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [validation_strategy.py:295]get_predict_resu  |
+|       |                │    │        │         │        │            │ lt                                            |
+|       |                │    │        │         │        │            │ [validation_strategy.py:341]validate          |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:301]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |  applyPartitio │ 18 │ 0.298  │ 0.0166  │ 0.0289 │ 21a24a939c │ [decision_tree.py:202]count_node_sample_num   |
+|       |       ns       │    │        │         │        │            │                                               |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:437]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      join      │ 2  │ 0.2458 │ 0.1229  │ 0.1481 │ b5ab04fe3c │ [hetero_secureboost_host.py:184]boosting_fas  |
+|       |                │    │        │         │        │            │ t_predict                                     |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:214]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [validation_strategy.py:295]get_predict_resu  |
+|       |                │    │        │         │        │            │ lt                                            |
+|       |                │    │        │         │        │            │ [validation_strategy.py:341]validate          |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:301]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 1  │ 0.2366 │ 0.2366  │ 0.2366 │ 91e0ec1b4b │ [boosting.py:210]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:225]data_and_header_alignment    |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:197]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 1  │ 0.2318 │ 0.2318  │ 0.2318 │ ecfc178380 │ [boosting.py:210]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:253]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      join      │ 9  │ 0.2205 │ 0.0245  │ 0.0459 │ c48ee032b4 │ [hetero_decision_tree_host.py:368]assign_ins  |
+|       |                │    │        │         │        │            │ tances_to_new_node                            |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:538]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      join      │ 1  │ 0.1986 │ 0.1986  │ 0.1986 │ b2eddf319b │ [hetero_secureboost_host.py:184]boosting_fas  |
+|       |                │    │        │         │        │            │ t_predict                                     |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:214]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 1  │ 0.1679 │ 0.1679  │ 0.1679 │ 3183b46b97 │ [base_binning.py:206]convert_feature_to_bin   |
+|       |                │    │        │         │        │            │ [boosting.py:185]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      join      │ 6  │ 0.1653 │ 0.0275  │ 0.0399 │ 291a470816 │ [feature_histogram.py:1021]_table_subtractio  |
+|       |                │    │        │         │        │            │ n                                             |
+|       |                │    │        │         │        │            │ [feature_histogram.py:263]compute_histogram   |
+|       |                │    │        │         │        │            │ [decision_tree.py:167]get_local_histograms    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:442]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 2  │ 0.124  │  0.062  │ 0.1235 │ 5695b6b1d5 │ [quantile_binning.py:120]_fit_split_point     |
+|       |                │    │        │         │        │            │ [quantile_binning.py:87]fit_split_points      |
+|       |                │    │        │         │        │            │ [boosting.py:184]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |    mapValues   │ 1  │ 0.043  │  0.043  │ 0.043  │ 7e3c8c8fb5 │ [quantile_binning.py:111]_fit_split_point     |
+|       |                │    │        │         │        │            │ [quantile_binning.py:87]fit_split_points      |
+|       |                │    │        │         │        │            │ [boosting.py:184]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 9  │ 0.0313 │ 0.0035  │ 0.0062 │ bae84316da │ [feature_histogram.py:297]calculate_histogra  |
+|       |                │    │        │         │        │            │ m                                             |
+|       |                │    │        │         │        │            │ [feature_histogram.py:238]compute_histogram   |
+|       |                │    │        │         │        │            │ [decision_tree.py:167]get_local_histograms    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:442]compute_be  |
+|       |                │    │        │         │        │            │ st_splits2                                    |
+|       |                │    │        │         │        │            │ [hetero_decision_tree_host.py:531]fit         |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:126]fit_a_booste  |
+|       |                │    │        │         │        │            │ r                                             |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:294]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 3  │ 0.0124 │ 0.0041  │ 0.0045 │ 1b5288f72e │ [io_check.py:28]_func                         |
+|       |                │    │        │         │        │            │ [validation_strategy.py:295]get_predict_resu  |
+|       |                │    │        │         │        │            │ lt                                            |
+|       |                │    │        │         │        │            │ [validation_strategy.py:341]validate          |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:301]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 2  │ 0.0085 │ 0.0042  │ 0.0055 │ ee81c7eeaf │ [io_check.py:28]_func                         |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 4  │ 0.0084 │ 0.0021  │ 0.0024 │ 3ca967c3b6 │ [hetero_secureboost_host.py:185]boosting_fas  |
+|       |                │    │        │         │        │            │ t_predict                                     |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:214]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [validation_strategy.py:295]get_predict_resu  |
+|       |                │    │        │         │        │            │ lt                                            |
+|       |                │    │        │         │        │            │ [validation_strategy.py:341]validate          |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:301]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 1  │ 0.0071 │ 0.0071  │ 0.0071 │ a07e8b9a9c │ [component_properties.py:221]extract_input_d  |
+|       |                │    │        │         │        │            │ ata                                           |
+|       |                │    │        │         │        │            │ [component_properties.py:238]extract_running  |
+|       |                │    │        │         │        │            │ _rules                                        |
+|       |                │    │        │         │        │            │ [model_base.py:87]run                         |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      first     │ 1  │ 0.0066 │ 0.0066  │ 0.0066 │ 4673140fcc │ [data_overview.py:143]is_sparse_data          |
+|       |                │    │        │         │        │            │ [quantile_binning.py:85]fit_split_points      |
+|       |                │    │        │         │        │            │ [boosting.py:184]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      first     │ 1  │ 0.0064 │ 0.0064  │ 0.0064 │ 6d1d7b4507 │ [data_overview.py:30]get_features_shape       |
+|       |                │    │        │         │        │            │ [data_overview.py:136]is_empty_feature        |
+|       |                │    │        │         │        │            │ [abnormal_detection.py:33]empty_feature_dete  |
+|       |                │    │        │         │        │            │ ction                                         |
+|       |                │    │        │         │        │            │ [boosting.py:208]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:225]data_and_header_alignment    |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:197]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      first     │ 1  │ 0.0056 │ 0.0056  │ 0.0056 │ f86af6c7a1 │ [data_overview.py:30]get_features_shape       |
+|       |                │    │        │         │        │            │ [data_overview.py:136]is_empty_feature        |
+|       |                │    │        │         │        │            │ [abnormal_detection.py:33]empty_feature_dete  |
+|       |                │    │        │         │        │            │ ction                                         |
+|       |                │    │        │         │        │            │ [boosting.py:208]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:225]data_and_header_alignment    |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:197]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [validation_strategy.py:295]get_predict_resu  |
+|       |                │    │        │         │        │            │ lt                                            |
+|       |                │    │        │         │        │            │ [validation_strategy.py:341]validate          |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:301]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      first     │ 1  │ 0.0055 │ 0.0055  │ 0.0055 │ fb4b972bca │ [data_overview.py:143]is_sparse_data          |
+|       |                │    │        │         │        │            │ [base_binning.py:190]convert_feature_to_bin   |
+|       |                │    │        │         │        │            │ [boosting.py:185]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 1  │ 0.0047 │ 0.0047  │ 0.0047 │ d5ac9dd2d4 │ [abnormal_detection.py:27]empty_table_detect  |
+|       |                │    │        │         │        │            │ ion                                           |
+|       |                │    │        │         │        │            │ [boosting.py:207]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:225]data_and_header_alignment    |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:197]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [validation_strategy.py:295]get_predict_resu  |
+|       |                │    │        │         │        │            │ lt                                            |
+|       |                │    │        │         │        │            │ [validation_strategy.py:341]validate          |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:301]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 2  │ 0.0043 │ 0.0021  │ 0.0026 │ b725cceb52 │ [hetero_secureboost_host.py:185]boosting_fas  |
+|       |                │    │        │         │        │            │ t_predict                                     |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:214]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 1  │ 0.0037 │ 0.0037  │ 0.0037 │ 15f4099d8f │ [component_properties.py:228]extract_input_d  |
+|       |                │    │        │         │        │            │ ata                                           |
+|       |                │    │        │         │        │            │ [component_properties.py:238]extract_running  |
+|       |                │    │        │         │        │            │ _rules                                        |
+|       |                │    │        │         │        │            │ [model_base.py:87]run                         |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 1  │ 0.0034 │ 0.0034  │ 0.0034 │ 4afd219436 │ [abnormal_detection.py:27]empty_table_detect  |
+|       |                │    │        │         │        │            │ ion                                           |
+|       |                │    │        │         │        │            │ [boosting.py:207]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:253]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      first     │ 1  │ 0.0029 │ 0.0029  │ 0.0029 │ 415f65c1b3 │ [data_overview.py:143]is_sparse_data          |
+|       |                │    │        │         │        │            │ [base_binning.py:100]fit_category_features    |
+|       |                │    │        │         │        │            │ [quantile_binning.py:89]fit_split_points      |
+|       |                │    │        │         │        │            │ [boosting.py:184]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 1  │ 0.0029 │ 0.0029  │ 0.0029 │ dd9be069ad │ [abnormal_detection.py:27]empty_table_detect  |
+|       |                │    │        │         │        │            │ ion                                           |
+|       |                │    │        │         │        │            │ [boosting.py:207]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:225]data_and_header_alignment    |
+|       |                │    │        │         │        │            │ [hetero_secureboost_host.py:197]predict       |
+|       |                │    │        │         │        │            │ [io_check.py:31]_func                         |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      first     │ 1  │ 0.0028 │ 0.0028  │ 0.0028 │ 773086eaa5 │ [data_overview.py:30]get_features_shape       |
+|       |                │    │        │         │        │            │ [data_overview.py:136]is_empty_feature        |
+|       |                │    │        │         │        │            │ [abnormal_detection.py:33]empty_feature_dete  |
+|       |                │    │        │         │        │            │ ction                                         |
+|       |                │    │        │         │        │            │ [boosting.py:208]data_alignment               |
+|       |                │    │        │         │        │            │ [boosting.py:253]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
+|       | ───────────────┼────┼────────┼─────────┼────────┼────────────┼────────────────────────────────────────────── |
+|       |      count     │ 1  │ 0.0021 │ 0.0021  │ 0.0021 │ 972209a774 │ [quantile_binning.py:110]_fit_split_point     |
+|       |                │    │        │         │        │            │ [quantile_binning.py:87]fit_split_points      |
+|       |                │    │        │         │        │            │ [boosting.py:184]convert_feature_to_bin       |
+|       |                │    │        │         │        │            │ [boosting.py:254]prepare_data                 |
+|       |                │    │        │         │        │            │ [hetero_boosting.py:282]fit                   |
+|       |                │    │        │         │        │            │ [model_base.py:101]run                        |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                 n=127, sum=11.6371, mean=0.0916, max=2.0616                                  |
++-------+--------------------------------------------------------------------------------------------------------------+
+

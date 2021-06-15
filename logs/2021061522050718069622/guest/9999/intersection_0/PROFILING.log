@@ -1,0 +1,116 @@
+[DEBUG] [2021-06-15 22:05:24,858] [4139:139980156176192] - profile.py[line:84]: [computing#41d092c3c4]function_stack: [component_properties.py:225]extract_input_data <-[component_properties.py:238]extract_running_rules <-[model_base.py:87]run
+[DEBUG] [2021-06-15 22:05:24,859] [4139:139980156176192] - profile.py[line:87]: [computing#41d092c3c4]start
+[DEBUG] [2021-06-15 22:05:24,862] [4139:139980156176192] - profile.py[line:93]: [computing#41d092c3c4]done, elapse: 0.003633260726928711, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:24,865] [4139:139980156176192] - profile.py[line:84]: [computing#88170bdc05]function_stack: [intersect.py:361]intersect_join_id <-[intersect_guest.py:244]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:24,865] [4139:139980156176192] - profile.py[line:87]: [computing#88170bdc05]start
+[DEBUG] [2021-06-15 22:05:24,942] [4139:139980156176192] - profile.py[line:93]: [computing#88170bdc05]done, elapse: 0.07687997817993164, function: mapValues(self: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:24,943] [4139:139980156176192] - profile.py[line:237]: [federation.get.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.send_ids_host.fit]guest<-[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:25,052] [4139:139980156176192] - profile.py[line:216]: [federation.get.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.send_ids_host.fit]guest<-[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:25,055] [4139:139980156176192] - profile.py[line:84]: [computing#e4ab06a603]function_stack: [intersect.py:376]intersect_join_id <-[intersect_guest.py:244]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,055] [4139:139980156176192] - profile.py[line:87]: [computing#e4ab06a603]start
+[DEBUG] [2021-06-15 22:05:25,089] [4139:139980156176192] - profile.py[line:93]: [computing#e4ab06a603]done, elapse: 0.03423571586608887, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:25,090] [4139:139980156176192] - profile.py[line:232]: [federation.remote.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.intersect_ids_guest.fit]guest->[Party(role=host, party_id=9998)] start
+[DEBUG] [2021-06-15 22:05:25,125] [4139:139980156176192] - profile.py[line:185]: [federation.remote.federatedml.transfer_variable.transfer_class.raw_intersect_transfer_variable.RawIntersectTransferVariable.intersect_ids_guest.fit]guest->[Party(role=host, party_id=9998)] done
+[DEBUG] [2021-06-15 22:05:25,127] [4139:139980156176192] - profile.py[line:84]: [computing#1e6e794ec8]function_stack: [intersect.py:82]_get_value_from_data <-[intersect.py:414]intersect_join_id <-[intersect_guest.py:244]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,127] [4139:139980156176192] - profile.py[line:87]: [computing#1e6e794ec8]start
+[DEBUG] [2021-06-15 22:05:25,170] [4139:139980156176192] - profile.py[line:93]: [computing#1e6e794ec8]done, elapse: 0.043082237243652344, function: join(self: Table(partition=4), other: Table(partition=4), func: function) -> Table(partition=4)
+[DEBUG] [2021-06-15 22:05:25,173] [4139:139980156176192] - profile.py[line:84]: [computing#c784b16772]function_stack: [job_tracker.py:139]save_output_data <-[job_tracker.py:332]save_as_table <-[intersect.py:420]intersect_join_id <-[intersect_guest.py:244]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,174] [4139:139980156176192] - profile.py[line:87]: [computing#c784b16772]start
+[DEBUG] [2021-06-15 22:05:25,206] [4139:139980156176192] - profile.py[line:93]: [computing#c784b16772]done, elapse: 0.03275179862976074, function: save(self: Table(partition=4), address: StandaloneAddress, partitions: int, schema: dict) -> NoneType
+[DEBUG] [2021-06-15 22:05:25,207] [4139:139980156176192] - profile.py[line:84]: [computing#a351b01960]function_stack: [job_tracker.py:142]save_output_data <-[job_tracker.py:332]save_as_table <-[intersect.py:420]intersect_join_id <-[intersect_guest.py:244]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,207] [4139:139980156176192] - profile.py[line:87]: [computing#a351b01960]start
+[DEBUG] [2021-06-15 22:05:25,207] [4139:139980156176192] - profile.py[line:93]: [computing#a351b01960]done, elapse: 0.0004019737243652344, function: collect(self: Table(partition=4)) -> generator
+[DEBUG] [2021-06-15 22:05:25,213] [4139:139980156176192] - profile.py[line:84]: [computing#ac0fa8963f]function_stack: [job_tracker.py:147]save_output_data <-[job_tracker.py:332]save_as_table <-[intersect.py:420]intersect_join_id <-[intersect_guest.py:244]run_intersect <-[intersect_model.py:115]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,213] [4139:139980156176192] - profile.py[line:87]: [computing#ac0fa8963f]start
+[DEBUG] [2021-06-15 22:05:25,217] [4139:139980156176192] - profile.py[line:93]: [computing#ac0fa8963f]done, elapse: 0.003700733184814453, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:25,327] [4139:139980156176192] - profile.py[line:84]: [computing#d211fdd088]function_stack: [intersect_model.py:139]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,327] [4139:139980156176192] - profile.py[line:87]: [computing#d211fdd088]start
+[DEBUG] [2021-06-15 22:05:25,330] [4139:139980156176192] - profile.py[line:93]: [computing#d211fdd088]done, elapse: 0.002649068832397461, function: count(self: Table(partition=4)) -> int
+[DEBUG] [2021-06-15 22:05:25,331] [4139:139980156176192] - profile.py[line:84]: [computing#1f115043d3]function_stack: [intersect_model.py:140]fit <-[model_base.py:98]run
+[DEBUG] [2021-06-15 22:05:25,331] [4139:139980156176192] - profile.py[line:87]: [computing#1f115043d3]start
+[DEBUG] [2021-06-15 22:05:25,336] [4139:139980156176192] - profile.py[line:93]: [computing#1f115043d3]done, elapse: 0.004970073699951172, function: count(self: Table(partition=4)) -> int
+[INFO] [2021-06-15 22:05:25,848] [4139:139980156176192] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |    join      2   0.077     0.039    0.043   |
+|          |  mapValues   1   0.077     0.077    0.077   |
+|          |    save      1   0.033     0.033    0.033   |
+|          |    count     4   0.015     0.004    0.005   |
+|          |   collect    1    0.0       0.0      0.0    |
++----------+---------------------------------------------+
+|  total   |  n=9, sum=0.2023, mean=0.0225, max=0.0769   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.108  |  0.108  | 0.108   |
+|        |               ble.RawIntersectTransferVariable.send_ids_host               |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.raw_intersect_transfer_varia | 1 | 0.036  |  0.036  | 0.036   |
+|        |            ble.RawIntersectTransferVariable.intersect_ids_guest            |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=2, sum=0.1440, mean=0.0720, max=0.1083                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[DEBUG] [2021-06-15 22:05:25,849] [4139:139980156176192] - profile.py[line:250]: 
+Detailed Computing:
++-------+--------------------------------------------------------------------------------------------------------------+
+| stack |  function  │ n │ sum(s) │ mean(s) │ max(s) │ stack_hash │                       stack                        |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |  mapValues │ 1 │ 0.0769 │ 0.0769  │ 0.0769 │ 88170bdc05 │ [intersect.py:361]intersect_join_id                |
+|       |            │   │        │         │        │            │ [intersect_guest.py:244]run_intersect              |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0431 │ 0.0431  │ 0.0431 │ 1e6e794ec8 │ [intersect.py:82]_get_value_from_data              |
+|       |            │   │        │         │        │            │ [intersect.py:414]intersect_join_id                |
+|       |            │   │        │         │        │            │ [intersect_guest.py:244]run_intersect              |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    join    │ 1 │ 0.0342 │ 0.0342  │ 0.0342 │ e4ab06a603 │ [intersect.py:376]intersect_join_id                |
+|       |            │   │        │         │        │            │ [intersect_guest.py:244]run_intersect              |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    save    │ 1 │ 0.0328 │ 0.0328  │ 0.0328 │ c784b16772 │ [job_tracker.py:139]save_output_data               |
+|       |            │   │        │         │        │            │ [job_tracker.py:332]save_as_table                  |
+|       |            │   │        │         │        │            │ [intersect.py:420]intersect_join_id                |
+|       |            │   │        │         │        │            │ [intersect_guest.py:244]run_intersect              |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.005  │  0.005  │ 0.005  │ 1f115043d3 │ [intersect_model.py:140]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0037 │ 0.0037  │ 0.0037 │ ac0fa8963f │ [job_tracker.py:147]save_output_data               |
+|       |            │   │        │         │        │            │ [job_tracker.py:332]save_as_table                  |
+|       |            │   │        │         │        │            │ [intersect.py:420]intersect_join_id                |
+|       |            │   │        │         │        │            │ [intersect_guest.py:244]run_intersect              |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0036 │ 0.0036  │ 0.0036 │ 41d092c3c4 │ [component_properties.py:225]extract_input_data    |
+|       |            │   │        │         │        │            │ [component_properties.py:238]extract_running_rule  |
+|       |            │   │        │         │        │            │ s                                                  |
+|       |            │   │        │         │        │            │ [model_base.py:87]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |    count   │ 1 │ 0.0026 │ 0.0026  │ 0.0026 │ d211fdd088 │ [intersect_model.py:139]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
+|       | ───────────┼───┼────────┼─────────┼────────┼────────────┼─────────────────────────────────────────────────── |
+|       |   collect  │ 1 │ 0.0004 │ 0.0004  │ 0.0004 │ a351b01960 │ [job_tracker.py:142]save_output_data               |
+|       |            │   │        │         │        │            │ [job_tracker.py:332]save_as_table                  |
+|       |            │   │        │         │        │            │ [intersect.py:420]intersect_join_id                |
+|       |            │   │        │         │        │            │ [intersect_guest.py:244]run_intersect              |
+|       |            │   │        │         │        │            │ [intersect_model.py:115]fit                        |
+|       |            │   │        │         │        │            │ [model_base.py:98]run                              |
++-------+--------------------------------------------------------------------------------------------------------------+
+| total |                                   n=9, sum=0.2023, mean=0.0225, max=0.0769                                   |
++-------+--------------------------------------------------------------------------------------------------------------+
+

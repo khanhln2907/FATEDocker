@@ -1,0 +1,50 @@
+[INFO] [2021-06-13 12:02:52,982] [2912:139897280685888] - task_executor.py[line:313]: report task 202106131202482924702_secure_add_example_0 0 host 10000 to driver
+[INFO] [2021-06-13 12:02:52,983] [2912:139897280685888] - control_client.py[line:42]: request update job 202106131202482924702 task 202106131202482924702_secure_add_example_0 0 on host 10000
+[INFO] [2021-06-13 12:02:53,425] [2912:139897280685888] - task_executor.py[line:150]: Run 202106131202482924702 secure_add_example_0 202106131202482924702_secure_add_example_0 host 10000 task
+[INFO] [2021-06-13 12:02:53,426] [2912:139897280685888] - task_executor.py[line:151]: Component parameters on party {'SecureAddExampleParam': {'seed': 321, 'partition': 48, 'data_num': 1000}, 'initiator': {'role': 'guest', 'party_id': 10000}, 'job_parameters': {'job_type': 'train', 'work_mode': 0, 'backend': 0, 'computing_engine': 'STANDALONE', 'federation_engine': 'STANDALONE', 'storage_engine': 'STANDALONE', 'engines_address': {'computing': {'nodes': 1, 'cores_per_node': 20}, 'federation': {'nodes': 1, 'cores_per_node': 20}, 'storage': {'nodes': 1, 'cores_per_node': 20}}, 'federated_mode': 'SINGLE', 'task_cores': 2, 'task_parallelism': 1, 'computing_partitions': 2, 'federated_status_collect_type': 'PULL', 'model_id': 'guest-10000#host-10000#model', 'model_version': '202106131202482924702', 'eggroll_run': {'eggroll.session.processors.per.node': 2}, 'spark_run': {}, 'rabbitmq_run': {}, 'pulsar_run': {}, 'adaptation_parameters': {'task_nodes': 1, 'task_cores_per_node': 2, 'task_memory_per_node': 0, 'request_task_cores': 2, 'if_initiator_baseline': False}}, 'role': {'guest': [10000], 'host': [10000]}, 'config': '/fate/examples/SMM_dev/test/toy_example_conf.json_1623585767_6442', 'dsl': '/fate/examples/SMM_dev/toy_example_dsl.json', 'function': 'submit_job', 'local': {'role': 'host', 'party_id': 10000}, 'CodePath': 'federatedml/toy_example/secure_add_host.py/SecureAddHost', 'module': 'SecureAddExample', 'output_data_name': None}
+[INFO] [2021-06-13 12:02:53,426] [2912:139897280685888] - task_executor.py[line:152]: Task input dsl {}
+[INFO] [2021-06-13 12:02:53,730] [2912:139897280685888] - secure_add_host.py[line:87]: begin to init parameters of secure add example host
+[INFO] [2021-06-13 12:02:53,730] [2912:139897280685888] - secure_add_host.py[line:90]: begin to make host data
+[INFO] [2021-06-13 12:02:54,376] [2912:139897280685888] - secure_add_host.py[line:93]: split data into two random parts
+[INFO] [2021-06-13 12:03:03,028] [2912:139897280685888] - secure_add_host.py[line:96]: get share of one random part data from guest
+[INFO] [2021-06-13 12:03:03,339] [2912:139897280685888] - secure_add_host.py[line:99]: share one random part data to guest
+[INFO] [2021-06-13 12:03:04,836] [2912:139897280685888] - secure_add_host.py[line:102]: begin to get sum of host and guest
+[INFO] [2021-06-13 12:03:05,852] [2912:139897280685888] - secure_add_host.py[line:105]: send host sum to guest
+[INFO] [2021-06-13 12:03:06,087] [2912:139897280685888] - profile.py[line:249]: 
+Computing:
++----------+---------------------------------------------+
+| function |  function    n   sum(s)   mean(s)   max(s)  |
+|          | ----------- --- -------- --------- -------- |
+|          |  mapValues   3   8.411     2.804     6.81   |
+|          |    join      1    0.94     0.94      0.94   |
+|          |   reduce     1   0.074     0.074    0.074   |
++----------+---------------------------------------------+
+|  total   |  n=5, sum=9.4245, mean=1.8849, max=6.8095   |
++----------+---------------------------------------------+
+
+Federation:
++--------+-------------------------------------------------------------------------------------------------------------+
+|  get   |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 |  0.31  |  0.31   |  0.31   |
+|        |            variable.SecureAddExampleTransferVariable.guest_share           |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| remote |                                    name                                    | n | sum(s) | mean(s) | max(s)  |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 1.496  |  1.496  | 1.496   |
+|        |            variable.SecureAddExampleTransferVariable.host_share            |   |        |         |         |
+|        | ---------------------------------------------------------------------------+---+--------+---------+-------- |
+|        |  federatedml.transfer_variable.transfer_class.secure_add_example_transfer_ | 1 | 0.048  |  0.048  | 0.048   |
+|        |             variable.SecureAddExampleTransferVariable.host_sum             |   |        |         |         |
++--------+-------------------------------------------------------------------------------------------------------------+
+| total  |                                  n=3, sum=1.8535, mean=0.6178, max=1.4958                                   |
++--------+-------------------------------------------------------------------------------------------------------------+
+
+[INFO] [2021-06-13 12:03:06,089] [2912:139897280685888] - task_executor.py[line:313]: report task 202106131202482924702_secure_add_example_0 0 host 10000 to driver
+[INFO] [2021-06-13 12:03:06,089] [2912:139897280685888] - control_client.py[line:42]: request update job 202106131202482924702 task 202106131202482924702_secure_add_example_0 0 on host 10000
+[INFO] [2021-06-13 12:03:06,142] [2912:139897280685888] - task_executor.py[line:202]: task 202106131202482924702_secure_add_example_0 host 10000 start time: 2021-06-13 12:02:52
+[INFO] [2021-06-13 12:03:06,142] [2912:139897280685888] - task_executor.py[line:204]: task 202106131202482924702_secure_add_example_0 host 10000 end time: 2021-06-13 12:03:06
+[INFO] [2021-06-13 12:03:06,143] [2912:139897280685888] - task_executor.py[line:206]: task 202106131202482924702_secure_add_example_0 host 10000 takes 13.286s
+[INFO] [2021-06-13 12:03:06,143] [2912:139897280685888] - task_executor.py[line:209]: Finish 202106131202482924702 secure_add_example_0 202106131202482924702_secure_add_example_0 0 host 10000 task success
+[INFO] [2021-06-13 12:03:07,780] [2912:139897280685888] - task_executor.py[line:313]: report task 202106131202482924702_secure_add_example_0 0 host 10000 to driver
+[INFO] [2021-06-13 12:03:07,780] [2912:139897280685888] - control_client.py[line:42]: request update job 202106131202482924702 task 202106131202482924702_secure_add_example_0 0 on host 10000

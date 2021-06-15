@@ -1,0 +1,68 @@
+{
+    "dsl_version": 2,
+    "initiator": {
+        "role": "guest",
+        "party_id": 9999
+    },
+    "role": {
+        "host": [
+            9998
+        ],
+        "guest": [
+            9999
+        ]
+    },
+    "job_parameters": {
+        "common": {
+            "job_type": "predict",
+            "work_mode": 0,
+            "backend": 0,
+            "computing_engine": "STANDALONE",
+            "federation_engine": "STANDALONE",
+            "storage_engine": "STANDALONE",
+            "engines_address": {},
+            "federated_mode": "SINGLE",
+            "task_parallelism": 1,
+            "computing_partitions": 4,
+            "federated_status_collect_type": "PULL",
+            "model_id": "guest-9999#host-9998#model",
+            "model_version": "2021061522023585229020",
+            "eggroll_run": {},
+            "spark_run": {},
+            "rabbitmq_run": {},
+            "pulsar_run": {},
+            "adaptation_parameters": {
+                "task_nodes": 1,
+                "task_cores_per_node": 4,
+                "task_memory_per_node": 0,
+                "request_task_cores": 4,
+                "if_initiator_baseline": true
+            }
+        }
+    },
+    "component_parameters": {
+        "role": {
+            "guest": {
+                "0": {
+                    "reader_0": {
+                        "table": {
+                            "name": "default_credit_hetero_guest",
+                            "namespace": "experiment"
+                        }
+                    }
+                }
+            },
+            "host": {
+                "0": {
+                    "reader_0": {
+                        "table": {
+                            "name": "default_credit_hetero_host",
+                            "namespace": "experiment"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "conf_path": "./examples/LDPDev/test_predict_conf.json"
+}

@@ -1,0 +1,1 @@
+[WARNING] [2021-06-13 21:05:16,440] [1041:140360005736256] - evaluation_param.py[line:133]: use default metric ['auc', 'ks', 'lift', 'gain', 'accuracy', 'precision', 'recall', 'roc', 'confusion_mat', 'psi', 'f1_score', 'quantile_pr'] for eval type binary

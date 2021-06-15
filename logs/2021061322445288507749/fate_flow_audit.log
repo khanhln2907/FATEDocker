@@ -1,0 +1,152 @@
+[INFO] [2021-06-13 22:44:52,936] [7:140266442843904] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/create
+[INFO] [2021-06-13 22:44:53,074] [7:140266442843904] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:53,075] [7:140266442843904] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/create {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:53,075] [7:140266442843904] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/create
+[INFO] [2021-06-13 22:44:53,172] [7:140266442843904] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:53,172] [7:140266442843904] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/create {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,299] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/resource/apply
+[INFO] [2021-06-13 22:44:54,326] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,327] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/resource/apply {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,327] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/resource/apply
+[INFO] [2021-06-13 22:44:54,357] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,358] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/resource/apply {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,368] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/start
+[INFO] [2021-06-13 22:44:54,410] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,410] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/start {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,410] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/start
+[INFO] [2021-06-13 22:44:54,458] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,459] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/start {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,568] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/status/running
+[INFO] [2021-06-13 22:44:54,609] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,610] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/status/running {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,610] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/status/running
+[INFO] [2021-06-13 22:44:54,634] [7:140266826163968] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 22:44:54,634] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/status/running {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 22:44:54,644] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/start
+[INFO] [2021-06-13 22:44:54,737] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,740] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/start {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:54,741] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/start
+[INFO] [2021-06-13 22:44:54,856] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:54,857] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/start {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:56,725] [3327:140067579737920] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/report
+[INFO] [2021-06-13 22:44:56,792] [3327:140067579737920] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 22:44:56,793] [3327:140067579737920] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/report {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 22:44:56,949] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/collect
+[INFO] [2021-06-13 22:44:56,964] [7:140266826163968] - api_utils.py[line:129]: {"data":{"elapsed":null,"end_time":null,"job_id":"2021061322445288507749","party_id":"9998","party_status":"running","role":"host","start_time":1623624294671,"status":"running","task_id":"2021061322445288507749_dataio_0","task_version":0,"update_time":1623624292967},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:56,965] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/collect {'data': {'elapsed': None, 'end_time': None, 'job_id': '2021061322445288507749', 'party_id': '9998', 'party_status': 'running', 'role': 'host', 'start_time': 1623624294671, 'status': 'running', 'task_id': '2021061322445288507749_dataio_0', 'task_version': 0, 'update_time': 1623624292967}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:56,965] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/collect
+[INFO] [2021-06-13 22:44:56,982] [7:140266826163968] - api_utils.py[line:129]: {"data":{"elapsed":null,"end_time":null,"job_id":"2021061322445288507749","party_id":"9999","party_status":"running","role":"guest","start_time":1623624294793,"status":"running","task_id":"2021061322445288507749_dataio_0","task_version":0,"update_time":1623624293108},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:56,983] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/collect {'data': {'elapsed': None, 'end_time': None, 'job_id': '2021061322445288507749', 'party_id': '9999', 'party_status': 'running', 'role': 'guest', 'start_time': 1623624294793, 'status': 'running', 'task_id': '2021061322445288507749_dataio_0', 'task_version': 0, 'update_time': 1623624293108}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:56,990] [3329:140633750624064] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/report
+[INFO] [2021-06-13 22:44:57,102] [3329:140633750624064] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 22:44:57,102] [3329:140633750624064] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/report {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 22:44:57,219] [3327:140067579737920] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/report
+[INFO] [2021-06-13 22:44:57,293] [3327:140067579737920] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:57,293] [3327:140067579737920] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/report {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:57,295] [3327:140067579737920] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/report
+[INFO] [2021-06-13 22:44:57,331] [3327:140067579737920] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 22:44:57,332] [3327:140067579737920] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/report {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 22:44:57,490] [3329:140633750624064] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/report
+[INFO] [2021-06-13 22:44:57,565] [3329:140633750624064] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:57,565] [3329:140633750624064] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/report {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:57,567] [3329:140633750624064] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/report
+[INFO] [2021-06-13 22:44:57,597] [3329:140633750624064] - api_utils.py[line:129]: {"retcode":103,"retmsg":"update task status failed"}
+
+[INFO] [2021-06-13 22:44:57,597] [3329:140633750624064] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/report {'retcode': 103, 'retmsg': 'update task status failed'}
+[INFO] [2021-06-13 22:44:59,207] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/collect
+[INFO] [2021-06-13 22:44:59,225] [7:140266826163968] - api_utils.py[line:129]: {"data":{"elapsed":607,"end_time":1623624297219,"job_id":"2021061322445288507749","party_id":"9998","party_status":"failed","role":"host","start_time":1623624294671,"status":"running","task_id":"2021061322445288507749_dataio_0","task_version":0,"update_time":1623624292967},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,226] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/collect {'data': {'elapsed': 607, 'end_time': 1623624297219, 'job_id': '2021061322445288507749', 'party_id': '9998', 'party_status': 'failed', 'role': 'host', 'start_time': 1623624294671, 'status': 'running', 'task_id': '2021061322445288507749_dataio_0', 'task_version': 0, 'update_time': 1623624292967}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,226] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/collect
+[INFO] [2021-06-13 22:44:59,240] [7:140266826163968] - api_utils.py[line:129]: {"data":{"elapsed":643,"end_time":1623624297489,"job_id":"2021061322445288507749","party_id":"9999","party_status":"failed","role":"guest","start_time":1623624294793,"status":"running","task_id":"2021061322445288507749_dataio_0","task_version":0,"update_time":1623624293108},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,241] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/collect {'data': {'elapsed': 643, 'end_time': 1623624297489, 'job_id': '2021061322445288507749', 'party_id': '9999', 'party_status': 'failed', 'role': 'guest', 'start_time': 1623624294793, 'status': 'running', 'task_id': '2021061322445288507749_dataio_0', 'task_version': 0, 'update_time': 1623624293108}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,433] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/status/failed
+[INFO] [2021-06-13 22:44:59,477] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,478] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/status/failed {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,478] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/status/failed
+[INFO] [2021-06-13 22:44:59,563] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,563] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/status/failed {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,576] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/stop/failed
+[INFO] [2021-06-13 22:44:59,634] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,635] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/host/9998/stop/failed {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,636] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/stop/failed
+[INFO] [2021-06-13 22:44:59,723] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,724] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/dataio_0/2021061322445288507749_dataio_0/0/guest/9999/stop/failed {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,764] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/update
+[INFO] [2021-06-13 22:44:59,811] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,812] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/update {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,812] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/update
+[INFO] [2021-06-13 22:44:59,835] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,835] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/update {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,948] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/model
+[INFO] [2021-06-13 22:44:59,959] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,959] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/model {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,959] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/model
+[INFO] [2021-06-13 22:44:59,971] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:44:59,972] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/model {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:44:59,973] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/status/failed
+[INFO] [2021-06-13 22:45:00,068] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:00,070] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/status/failed {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:00,070] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/status/failed
+[INFO] [2021-06-13 22:45:00,224] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:00,224] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/status/failed {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:00,317] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/stop/failed
+[INFO] [2021-06-13 22:45:00,431] [7:140266826163968] - api_utils.py[line:129]: {"data":{"2021061322445288507749":{"2021061322445288507749_dataio_0":"success","2021061322445288507749_hetero_secure_boost_0":"success","2021061322445288507749_intersection_0":"success"}},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:00,432] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/stop/failed {'data': {'2021061322445288507749': {'2021061322445288507749_dataio_0': 'success', '2021061322445288507749_hetero_secure_boost_0': 'success', '2021061322445288507749_intersection_0': 'success'}}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:00,432] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/stop/failed
+[INFO] [2021-06-13 22:45:00,641] [7:140266826163968] - api_utils.py[line:129]: {"data":{"2021061322445288507749":{"2021061322445288507749_dataio_0":"success","2021061322445288507749_hetero_secure_boost_0":"success","2021061322445288507749_intersection_0":"success"}},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:00,642] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/stop/failed {'data': {'2021061322445288507749': {'2021061322445288507749_dataio_0': 'success', '2021061322445288507749_hetero_secure_boost_0': 'success', '2021061322445288507749_intersection_0': 'success'}}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:00,643] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/clean
+[INFO] [2021-06-13 22:45:00,656] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:00,656] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/clean {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:00,657] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/clean
+[INFO] [2021-06-13 22:45:00,667] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:00,668] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/clean {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:00,821] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/stop/failed
+[INFO] [2021-06-13 22:45:01,022] [7:140266826163968] - api_utils.py[line:129]: {"data":{"2021061322445288507749":{"2021061322445288507749_dataio_0":"success","2021061322445288507749_hetero_secure_boost_0":"success","2021061322445288507749_intersection_0":"success"}},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:01,023] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/stop/failed {'data': {'2021061322445288507749': {'2021061322445288507749_dataio_0': 'success', '2021061322445288507749_hetero_secure_boost_0': 'success', '2021061322445288507749_intersection_0': 'success'}}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:01,032] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/stop/failed
+[INFO] [2021-06-13 22:45:01,217] [7:140266826163968] - api_utils.py[line:129]: {"data":{"2021061322445288507749":{"2021061322445288507749_dataio_0":"success","2021061322445288507749_hetero_secure_boost_0":"success","2021061322445288507749_intersection_0":"success"}},"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:01,218] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/stop/failed {'data': {'2021061322445288507749': {'2021061322445288507749_dataio_0': 'success', '2021061322445288507749_hetero_secure_boost_0': 'success', '2021061322445288507749_intersection_0': 'success'}}, 'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:01,220] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/host/9998/clean
+[INFO] [2021-06-13 22:45:01,231] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:01,232] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/host/9998/clean {'retcode': 0, 'retmsg': 'success'}
+[INFO] [2021-06-13 22:45:01,232] [7:140266826163968] - api_utils.py[line:122]: remote http api request: http://127.0.0.1:9380/v1/party/2021061322445288507749/guest/9999/clean
+[INFO] [2021-06-13 22:45:01,246] [7:140266826163968] - api_utils.py[line:129]: {"retcode":0,"retmsg":"success"}
+
+[INFO] [2021-06-13 22:45:01,246] [7:140266826163968] - api_utils.py[line:131]: remote http api response: /v1/party/2021061322445288507749/guest/9999/clean {'retcode': 0, 'retmsg': 'success'}
