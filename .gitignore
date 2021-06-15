@@ -9,4 +9,4 @@ model_local_cache/*
 jdk-8u192/*
 .pyc
 */__pycache__/*
-*/__pycache
+*/*/__pycache
