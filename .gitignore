@@ -2,8 +2,6 @@ bin/*
 conf/*
 *.yaml
 data/*
-*.log
-*/logs/*
 *.tar
 *.tar.gz
 model_local_cache/*
