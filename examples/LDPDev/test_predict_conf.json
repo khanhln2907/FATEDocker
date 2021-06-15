@@ -27,7 +27,7 @@
                 "0": {
                     "reader_0": {
                         "table": {
-                            "name": "default_credit_hetero_guest",
+                            "name": "breast_hetero_guest",
                             "namespace": "experiment"
                         }
                     }
@@ -37,7 +37,7 @@
                 "0": {
                     "reader_0": {
                         "table": {
-                            "name": "default_credit_hetero_host",
+                            "name": "breast_hetero_host",
                             "namespace": "experiment"
                         }
                     }
