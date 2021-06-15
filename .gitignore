@@ -8,4 +8,4 @@ model_local_cache/*
 *.db
 jdk-8u192/*
 .pyc
-
+*/__pycache__/*
